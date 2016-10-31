@@ -6,11 +6,11 @@
 
 
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+//#include <ctype.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+#include <nautilus/libccompat.h>
 #define lbaselib_c
 #define LUA_LIB
 
@@ -18,7 +18,7 @@
 
 #include "lua/lauxlib.h"
 #include "lua/lualib.h"
-
+//#include <nautilus/libccompat.h>
 
 static int luaB_print (lua_State *L) {
   int n = lua_gettop(L);  /* number of arguments */

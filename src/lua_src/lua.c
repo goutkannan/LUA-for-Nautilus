@@ -5,13 +5,13 @@
 */
 
 
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+//#include <signal.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
 
 #define lua_c
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lauxlib.h"

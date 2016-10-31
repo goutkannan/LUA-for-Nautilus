@@ -5,12 +5,12 @@
 */
 
 
-#include <stdarg.h>
-#include <string.h>
+//#include <stdarg.h>
+//#include <string.h>
 
 #define lapi_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lapi.h"

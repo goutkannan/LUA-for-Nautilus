@@ -9,9 +9,9 @@
 #define lauxlib_h
 
 
-#include <stddef.h>
-#include <stdio.h>
-
+//#include <stddef.h>
+//#include <stdio.h>
+#include "libdump.h"
 #include "lua/lua.h"
 
 

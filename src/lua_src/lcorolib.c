@@ -5,9 +5,9 @@
 */
 
 
-#include <stdlib.h>
+//#include <stdlib.h>
 
-
+#include <nautilus/libccompat.h>
 #define lcorolib_c
 #define LUA_LIB
 

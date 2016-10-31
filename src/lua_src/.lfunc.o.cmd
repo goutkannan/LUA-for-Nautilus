@@ -36,23 +36,40 @@ deps_src/lua_src/lfunc.o := \
     $(wildcard include/config/hpet.h) \
     $(wildcard include/config/hz.h) \
     $(wildcard include/config/virtio/pci.h) \
-  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
-  include/lua/lua.h \
+  include/nautilus/libccompat.h \
+  include/nautilus/nautilus.h \
+  include/nautilus/printk.h \
   /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+  include/nautilus/naut_types.h \
+  include/dev/serial.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+  include/nautilus/instrument.h \
+  include/nautilus/vc.h \
+  include/dev/kbd.h \
+  include/dev/ioapic.h \
+  include/nautilus/intrinsics.h \
+  include/dev/timer.h \
+  include/nautilus/idt.h \
+  include/asm/lowlevel.h \
+  include/nautilus/gdt.h \
+  include/nautilus/naut_string.h \
+  include/nautilus/smp.h \
+  include/dev/apic.h \
+  include/nautilus/spinlock.h \
+  include/nautilus/atomic.h \
+  include/nautilus/cpu.h \
+  include/nautilus/mm.h \
+  include/nautilus/list.h \
+  include/nautilus/queue.h \
+  include/nautilus/paging.h \
+    $(wildcard include/config/hrt/hihalf/offset.h) \
+  include/nautilus/limits.h \
+  include/nautilus/naut_assert.h \
+  include/nautilus/barrier.h \
+  include/nautilus/numa.h \
+  include/arch/x64/main.h \
+  include/lua/lua.h \
   include/lua/luaconf.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h \
-  /usr/include/limits.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   include/lua/lfunc.h \
   include/lua/lobject.h \
   include/lua/llimits.h \

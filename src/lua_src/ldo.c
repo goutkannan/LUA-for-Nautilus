@@ -5,10 +5,10 @@
 */
 
 
-#include <setjmp.h>
-#include <stdlib.h>
-#include <string.h>
-
+//#include <setjmp.h>
+//#include <stdlib.h>
+//#include <string.h>
+#include <nautilus/libccompat.h>
 #define ldo_c
 #define LUA_CORE
 
@@ -30,6 +30,7 @@
 #include "lua/lundump.h"
 #include "lua/lvm.h"
 #include "lua/lzio.h"
+
 
 
 
@@ -114,7 +115,7 @@ l_noret luaD_throw (lua_State *L, int errcode) {
     else {  /* no handler at all; abort */
       if (G(L)->panic) {  /* panic function? */
         lua_unlock(L);
-        G(L)->panic(L);  /* call it (last chance to jump out) */
+        (G(L)->panic)(L);  /* call it (last chance to jump out) */
       }
       abort();
     }

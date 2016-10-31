@@ -33,7 +33,8 @@
 #define SHRT_MIN    ((s16)(-SHRT_MAX - 1))
 #endif
 #ifndef INT_MAX
-#define INT_MAX     ((int)(~0U>>1))
+//#define INT_MAX     ((int)(~0U>>1))
+#define INT_MAX 2147483647
 #endif
 #ifndef INT_MIN
 #define INT_MIN     (-INT_MAX - 1)

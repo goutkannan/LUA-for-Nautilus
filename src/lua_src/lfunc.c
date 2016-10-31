@@ -5,11 +5,11 @@
 */
 
 
-#include <stddef.h>
+//#include <stddef.h>
 
 #define lfunc_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lfunc.h"

@@ -63,6 +63,8 @@ typedef char          sint8_t;
 typedef ulong_t addr_t;
 typedef uchar_t bool_t;
 
+
+
 //#define NULL ((void *)0)
 #ifndef NULL
 #define NULL 0

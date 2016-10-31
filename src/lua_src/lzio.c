@@ -5,11 +5,11 @@
 */
 
 
-#include <string.h>
+//#include <string.h>
 
 #define lzio_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/llimits.h"

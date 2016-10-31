@@ -5,12 +5,12 @@
 */
 
 
-#include <locale.h>
-#include <string.h>
+
+//#include <string.h>
 
 #define llex_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lctype.h"
@@ -22,7 +22,7 @@
 #include "lua/lstring.h"
 #include "lua/ltable.h"
 #include "lua/lzio.h"
-
+//#include "lua/llocale.h"
 
 
 #define next(ls) (ls->current = zgetc(ls->z))
@@ -202,7 +202,8 @@ static void buffreplace (LexState *ls, char from, char to) {
 
 
 #if !defined(getlocaledecpoint)
-#define getlocaledecpoint()	(localeconv()->decimal_point[0])
+//#define getlocaledecpoint()	(localeconv()->decimal_point[0])
+#define getlocaledecpoint()	(1.2)
 #endif
 
 

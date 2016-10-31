@@ -12,23 +12,23 @@
 /*
 ** if needed, includes windows header before everything else
 */
-#if defined(_WIN32)
-#include <windows.h>
-#endif
-
+//#if defined(_WIN32)
+//#include <windows.h>
+//#endif
+/*
 
 #include <stdlib.h>
 #include <string.h>
-
+*/
 
 #define loadlib_c
 #define LUA_LIB
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lauxlib.h"
 #include "lua/lualib.h"
-
+#include <nautilus/libccompat.h>
 
 /*
 ** LUA_PATH and LUA_CPATH are the names of the environment

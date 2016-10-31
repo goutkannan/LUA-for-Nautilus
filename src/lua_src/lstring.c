@@ -5,11 +5,11 @@
 */
 
 
-#include <string.h>
-
+//#include <string.h>
+//#include <nautilus/libccompat.h>
 #define lstring_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lmem.h"

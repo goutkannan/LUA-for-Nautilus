@@ -6,7 +6,7 @@
 
 #define lbitlib_c
 #define LUA_LIB
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lauxlib.h"

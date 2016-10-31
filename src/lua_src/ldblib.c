@@ -4,13 +4,16 @@
 ** See Copyright Notice in lua.h
 */
 
-
+/*Changed to  Nautillus 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+*/
+#include <nautilus/libccompat.h>
 #define ldblib_c
 #define LUA_LIB
+
+//#include<nautilus/libccompat.h>
 
 #include "lua/lua.h"
 

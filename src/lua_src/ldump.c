@@ -4,11 +4,11 @@
 ** See Copyright Notice in lua.h
 */
 
-#include <stddef.h>
+//#include <stddef.h>
 
 #define ldump_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lobject.h"

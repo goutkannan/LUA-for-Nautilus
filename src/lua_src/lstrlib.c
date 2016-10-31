@@ -5,15 +5,15 @@
 */
 
 
-#include <ctype.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+//#include <ctype.h>
+//#include <stddef.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
 
 #define lstrlib_c
 #define LUA_LIB
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lauxlib.h"

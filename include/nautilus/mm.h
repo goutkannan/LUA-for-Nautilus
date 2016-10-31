@@ -87,7 +87,9 @@ struct mem_region * kmem_get_region_by_addr(ulong_t addr);
 void kmem_add_memory(struct mem_region * mem, ulong_t base_addr, size_t size);
 void * malloc(size_t size);
 void free(void * addr);
-
+//Lua
+void *realloc(void *ptr, size_t size);
+// 
 
 /* arch specific */
 void arch_detect_mem_map (mmap_info_t * mm_info, mem_map_entry_t * memory_map, unsigned long mbd);

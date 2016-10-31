@@ -5,11 +5,12 @@
 */
 
 
-#include <string.h>
+//#include <string.h>
 
+#define SHRT_MAX 1
 #define lparser_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lcode.h"
@@ -24,7 +25,6 @@
 #include "lua/lstate.h"
 #include "lua/lstring.h"
 #include "lua/ltable.h"
-
 
 
 /* maximum number of local variables per function (must be smaller

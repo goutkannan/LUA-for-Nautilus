@@ -4,11 +4,11 @@
 ** See Copyright Notice in lua.h
 */
 
-#include <string.h>
+//#include <string.h>
 
 #define lgc_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/ldebug.h"

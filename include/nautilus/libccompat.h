@@ -28,13 +28,14 @@ extern "C" {
 #endif
 
 #include <nautilus/nautilus.h>
-
+#include <nautilus/naut_types.h>
 #ifndef NAUT_CONFIG_SILENCE_UNDEF_ERR
 #define UNDEF_FUN_ERR() ERROR_PRINT("Function (%s) undefined\n", __func__)
 #else
 #define UNDEF_FUN_ERR() 
 #endif
 
+//#define SHRT_MAX 0x7FFF
 #define RAND_MAX    2147483647
 
 typedef int clockid_t;
@@ -50,26 +51,94 @@ typedef int clockid_t;
 #define CLOCK_BOOTTIME_ALARM            9
 #define CLOCK_SGI_CYCLE                 10      /* Hardware specific */
 #define CLOCK_TAI                       11
- 
+
+//lua
+#define EOF 				0
+#define EXIT_FAILURE			0
+#define EXIT_SUCCESS			1
+
+#define LC_ALL				0 
+#define LC_COLLATE			0
+#define LC_CTYPE			0
+#define LC_MONETARY			0
+#define LC_NUMERIC			0
+#define LC_TIME				0
+#define UCHAR_MAX			255
+#define SIGINT				0
+#define SIG_DFL				0
+
+#define stdin				0
+#define stdout				1
+#define stderr				2
+
+
+#define _JBLEN ((9 * 2) + 3 + 16)
+typedef int jmp_buf[_JBLEN];
+//int clock(); - better definition found later
+
+// 
 typedef long time_t;
 typedef void FILE;
 typedef uint64_t off_t;
-
+typedef long int clock_t;
 typedef int nl_item;
 typedef unsigned long int nfds_t;
-
-struct timespec {
-    time_t tv_sec;
-    long tv_nsec;
-};
-
+typedef __SIZE_TYPE__ size_t;
 struct pollfd {
     int fd;
     short events;
     short revents;
 };
 
+//lua
 typedef void* locale_t;
+
+struct timespec {
+    time_t tv_sec;
+    long tv_nsec;
+};
+
+struct tm {
+int    tm_sec ;  
+int    tm_min ;
+int    tm_hour;
+int    tm_mday;
+int    tm_mon;
+int    tm_year;
+int    tm_wday;
+int    tm_yday;
+int    tm_isdst;
+};
+
+#define SEEK_END  0
+
+#define SEEK_CUR  1
+#define SEEK_SET  2
+#define _IOFBF  0               /* setvbuf should set fully buffered */
+#define _IOLBF  1               /* setvbuf should set line buffered */
+#define _IONBF  2               /* setvbuf should set unbuffered */
+#define L_tmpnam	1024
+#define CLOCKS_PER_SEC	1000000l /* found from time.h*/
+#ifdef LIBCCOMPAT
+extern int errno;
+#else 
+extern int errno;
+#endif 
+/*
+typedef struct { unsigned long int _val[1024/(8 *sizeof (unsigned long int))];
+} __sigset_t; 
+struct __jmp_buf_tag { 
+	long long int __jmpbuf;
+	int __mask_was_saved;
+	__sigset_t __saved_mask;
+};
+typedef struct __jmp_buf_tag jmp_buf[1]; 
+*/
+void longjmp(int *,int __val);
+int setjmp(int *);
+
+
+//end lua
 
 time_t time(time_t * timer);
 void abort(void);
@@ -86,10 +155,15 @@ double drand48(void);
 char * strerror(int);
 
 int fclose(FILE*);
-FILE * fopen(const char*, FILE*);
+#ifndef LIB_LUA
+FILE * fopen(const char*, FILE*); // Default signature is fopen(cont*,cont*)
+#else
+FILE *fopen(const char *restrict filename, const char *restrict mode);
+#endif
+FILE *tmpfile(void);
 FILE * fopen64(const char*, FILE*);
 FILE *fdopen(int fd, const char *mode);
-int fflush(FILE*);
+int fflush(FILE *p);
 int fprintf(FILE*, const char*, ...);
 int fputc(int, FILE*);
 int fputs(const char*, FILE*);
@@ -113,8 +187,72 @@ char *__nl_langinfo_l(nl_item item, locale_t locale);
 char * gettext(const char * msgid);
 
 int printf(const char *, ...);
+//Goutham - Adding locale for lua 
+void *realloc(void *ptr, size_t size);
+int feof(FILE*);
+int getc(FILE*);
+
+char *fgets(char *restrict s, int n, FILE *restrict stream); 
+FILE *freopen(const char *fname, const char *mode,FILE *stream);
+
+int ferror(FILE *);
+long     ftell(FILE *);
+int fscanf(FILE *restrict stream, const char *restrict format, ... );
+void clearerr(FILE *stream); 
+
+int fseek(FILE *stream, long offset, int whence); 
+
+int setvbuf(FILE *restrict stream, char *restrict buf, int type,
+       size_t size);
+
+int system(const char *command);
+
+char *getenv(const char *name);
+
+int rename(const char *old, const char *new);
+
+int remove(const char *path);
+
+char *tmpnam(char *s);
+
+clock_t clock(void);
+// End Lua
+//#define GEN_HDR(x) int x (void);
 
 #define GEN_HDR(x) int x (void);
+
+struct lconv *localeconv(void);
+
+double pow(double x, double y);
+
+//LUA
+double difftime(time_t time1, time_t time2);
+void *memchr(const void *str, int c, size_t n);
+double fabs(double __x);
+double atan(double __x);
+double atan2(double y, double x);
+double fmod(double y, double x);
+double modf(double y, double *x);
+double frexp(double x, int *e);
+double ldexp(double x, int exp);
+double strtod(const char *str, char **endptr);
+double abs(double x);
+double sin(double x);
+double sinh(double x);
+double cos(double x);
+double cosh(double x);
+double tan(double x);
+double tanh(double x);
+double asin(double x);
+double acos(double x);
+double ceil(double x);
+double floor(double x);
+double sqrt(double x);
+double pow(double x, double y);
+double log(double x);
+double log10(double x);
+double exp(double x);
+
 
 GEN_HDR(writev)
 GEN_HDR(ungetwc)
@@ -122,13 +260,13 @@ GEN_HDR(__errno_location)
 GEN_HDR(write)
 GEN_HDR(wcrtomb)
 GEN_HDR(mbrtowc)
-GEN_HDR(getc)
+//GEN_HDR(getc) 
 GEN_HDR(__iswctype_l)
 GEN_HDR(wcslen)
 GEN_HDR(__strtof_l)
-GEN_HDR(stderr)
+//GEN_HDR(stderr)
 GEN_HDR(wmemset)
-GEN_HDR(stdin)
+//GEN_HDR(stdin)
 GEN_HDR(fileno)
 GEN_HDR(__fxstat64)
 GEN_HDR(putc)
@@ -149,13 +287,13 @@ GEN_HDR(__wcsxfrm_l)
 GEN_HDR(wcscmp)
 GEN_HDR(wcsnrtombs)
 GEN_HDR(__strcoll_l)
-GEN_HDR(stdout)
+//GEN_HDR(stdout)
 GEN_HDR(btowc)
-GEN_HDR(memchr)
+//GEN_HDR(memchr)
 GEN_HDR(strtold_l)
 GEN_HDR(wmemcmp)
 GEN_HDR(__strtod_l)
-GEN_HDR(setvbuf)
+//GEN_HDR(setvbuf) - Implmented above 
 GEN_HDR(__wctype_l)
 GEN_HDR(__towupper_l)
 GEN_HDR(__uselocale)

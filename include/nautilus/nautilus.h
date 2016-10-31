@@ -22,7 +22,6 @@
  */
 #ifndef __NAUTILUS_H__
 #define __NAUTILUS_H__
-
 #include <nautilus/printk.h>
 #include <dev/serial.h>
 #include <nautilus/naut_types.h>
@@ -38,7 +37,9 @@ extern "C" {
 #define WARN_PRINT(fmt, args...)    nk_vc_log_wrap("WARNING: " fmt, ##args)
 #define INFO_PRINT(fmt, args...)    nk_vc_log_wrap(fmt, ##args)
 
+#ifndef LIB_LUA
 #define panic(fmt, args...)         panic("PANIC at %s(%d): " fmt, __FILE__, __LINE__, ##args)
+#endif
 
 #ifndef NAUT_CONFIG_DEBUG_PRINTS
 #undef DEBUG_PRINT

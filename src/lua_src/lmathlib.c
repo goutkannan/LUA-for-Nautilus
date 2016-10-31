@@ -4,24 +4,27 @@
 ** See Copyright Notice in lua.h
 */
 
+//# define HUGE_VAL (__builtin_huge_val())
+#define HUGE_VAL (123456)
 
-#include <stdlib.h>
-#include <math.h>
+//#include <stdlib.h>
+//#include <math.h>
+
+#include <nautilus/naut_types.h>
+#include <nautilus/libccompat.h>
+//#include <nautilus/math.h>
 
 #define lmathlib_c
 #define LUA_LIB
-
 #include "lua/lua.h"
 
 #include "lua/lauxlib.h"
 #include "lua/lualib.h"
-
+#include "lua/luaconf.h"
 
 #undef PI
 #define PI	((lua_Number)(3.1415926535897932384626433832795))
 #define RADIANS_PER_DEGREE	((lua_Number)(PI/180.0))
-
-
 
 static int math_abs (lua_State *L) {
   lua_pushnumber(L, l_mathop(fabs)(luaL_checknumber(L, 1)));
@@ -242,7 +245,7 @@ static const luaL_Reg mathlib[] = {
   {"deg",   math_deg},
   {"exp",   math_exp},
   {"floor", math_floor},
-  {"fmod",   math_fmod},
+  {"fmod", math_fmod},
   {"frexp", math_frexp},
   {"ldexp", math_ldexp},
 #if defined(LUA_COMPAT_LOG10)

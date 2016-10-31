@@ -30,8 +30,10 @@ extern "C" {
 #define	PRINTK_BUFMAX	128
 #include <stdarg.h>
 #include <nautilus/naut_types.h>
-
+#ifndef LIB_LUA
 void panic (const char * fmt, ...);
+#endif
+
 int printk (const char * fmt, ...);
 int vprintk(const char * fmt, va_list args);
 int early_printk (const char * fmt, va_list args);

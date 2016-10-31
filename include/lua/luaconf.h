@@ -8,9 +8,9 @@
 #ifndef lconfig_h
 #define lconfig_h
 
-#include <limits.h>
-#include <stddef.h>
-
+//#include <limits.h>
+//#include <stddef.h>
+//#include <nautilus/libccompat.h>
 
 /*
 ** ==================================================================
@@ -210,7 +210,7 @@
 ** avoids including 'stdio.h' everywhere.)
 */
 #if defined(LUA_LIB) || defined(lua_c)
-#include <stdio.h>
+//#include <stdio.h>
 #define luai_writestring(s,l)	fwrite((s), sizeof(char), (l), stdout)
 #define luai_writeline()	(luai_writestring("\n", 1), fflush(stdout))
 #endif
@@ -369,9 +369,11 @@
 @@ LUAL_BUFFERSIZE is the buffer size used by the lauxlib buffer system.
 ** CHANGE it if it uses too much C-stack space.
 */
-#define LUAL_BUFFERSIZE		BUFSIZ
+// Old
 
+//#define LUAL_BUFFERSIZE		BUFSIZ
 
+#define LUAL_BUFFERSIZE			8192
 
 
 /*
@@ -391,8 +393,6 @@
 @* over a number.
 */
 #define LUAI_UACNUMBER	double
-
-
 /*
 @@ LUA_NUMBER_SCAN is the format for reading numbers.
 @@ LUA_NUMBER_FMT is the format for writing numbers.

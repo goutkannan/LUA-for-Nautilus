@@ -8,7 +8,7 @@
 #define lopcodes_c
 #define LUA_CORE
 
-
+#include <nautilus/libccompat.h>
 #include "lua/lopcodes.h"
 
 

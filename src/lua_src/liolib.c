@@ -14,15 +14,18 @@
 #define _FILE_OFFSET_BITS	64
 #endif
 
-
+/*
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+*/ 
+
 
 #define liolib_c
 #define LUA_LIB
-
+#define LIB_LUA
+#include <nautilus/libccompat.h>
 #include "lua/lua.h"
 
 #include "lua/lauxlib.h"
@@ -163,7 +166,7 @@ static FILE *tofile (lua_State *L) {
 /*
 ** When creating file handles, always creates a `closed' file handle
 ** before opening the actual file; so, if there is a memory error, the
-** file is not left opened.
+* file is not left opened.
 */
 static LStream *newprefile (lua_State *L) {
   LStream *p = (LStream *)lua_newuserdata(L, sizeof(LStream));

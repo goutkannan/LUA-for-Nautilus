@@ -3,7 +3,7 @@
 ** 'ctype' functions for Lua
 ** See Copyright Notice in lua.h
 */
-
+#include <nautilus/libccompat.h>
 #define lctype_c
 #define LUA_CORE
 
@@ -11,7 +11,7 @@
 
 #if !LUA_USE_CTYPE	/* { */
 
-#include <limits.h>
+//#include <limits.h>
 
 LUAI_DDEF const lu_byte luai_ctype_[UCHAR_MAX + 2] = {
   0x00,  /* EOZ */

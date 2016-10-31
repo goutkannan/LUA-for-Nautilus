@@ -27,6 +27,10 @@
  * 
  *
  */
+
+
+#define LIBCCOMPAT 1
+
 #include <nautilus/nautilus.h>
 #include <nautilus/libccompat.h>
 #include <nautilus/thread.h>
@@ -41,7 +45,38 @@
         return 0; \
     } 
 
+//Lua
+//
 
+struct lconv {
+    char *decimal_point;      //"."          LC_NUMERIC
+    char *grouping;           //""           LC_NUMERIC
+    char *thousands_sep;      //""           LC_NUMERIC
+
+    char *mon_decimal_point;  //""           LC_MONETARY
+    char *mon_grouping;       //""           LC_MONETARY
+    char *mon_thousands_sep;  //""           LC_MONETARY
+
+    char *negative_sign;      //""           LC_MONETARY
+    char *positive_sign;      //""           LC_MONETARY
+    char *currency_symbol;    //""           LC_MONETARY
+    char frac_digits;         //CHAR_MAX     LC_MONETARY
+    char n_cs_precedes;       //CHAR_MAX     LC_MONETARY
+    char n_sep_by_space;      //CHAR_MAX     LC_MONETARY
+    char n_sign_posn;         //CHAR_MAX     LC_MONETARY
+    char p_cs_precedes;       //CHAR_MAX     LC_MONETARY
+    char p_sep_by_space;      //CHAR_MAX     LC_MONETARY
+    char p_sign_posn;         //CHAR_MAX     LC_MONETARY
+
+    char *int_curr_symbol;
+    char int_frac_digits;
+    char int_n_cs_precedes;
+    char int_n_sep_by_space;
+    char int_n_sign_posn;
+    char int_p_cs_precedes;
+    char int_p_sep_by_space;
+    char int_p_sign_posn;
+};
 static uint64_t dummy_mono_clock = 0;
 
 time_t 
@@ -232,7 +267,25 @@ strerror (int errnum)
     UNDEF_FUN_ERR();
     return NULL;
 }
+FILE *tmpfile(void)
+{
 
+    UNDEF_FUN_ERR();
+    return NULL;
+
+}
+int 
+ferror (FILE * f)
+{
+    UNDEF_FUN_ERR();
+    return -1;
+}
+FILE *freopen(const char *fname, const char *mode,FILE *stream)
+{
+
+    UNDEF_FUN_ERR();
+    return NULL;
+}
 int 
 fclose (FILE * f)
 {
@@ -256,7 +309,7 @@ fopen64 (const char * path, FILE * f)
     return NULL;
 }
 
-
+//For LUA
 FILE * 
 fdopen (int fd, const char * mode)
 {
@@ -264,13 +317,56 @@ fdopen (int fd, const char * mode)
     return NULL;
 }
 
+char *getenv(const char *name)
+{
 
-int 
-fflush (FILE * f)
+    UNDEF_FUN_ERR();
+    return NULL;
+}
+//For LUA
+clock_t clock()
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+}
+//For LUA
+char *tmpnam(char *s)
+{
+
+    UNDEF_FUN_ERR();
+    return NULL;
+}
+
+//For LUA
+int remove(const char *path)
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+}
+//For LUA
+int rename(const char *old, const char *new)
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+}
+//For LUA
+int system(const char *command)
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+}
+//For LUA
+
+int fflush (FILE * f)
 {
     return 0;
 }
 
+//For LUA
 
 int 
 fprintf (FILE * f, const char * s, ...)
@@ -285,6 +381,33 @@ fprintf (FILE * f, const char * s, ...)
     va_end(arg);
     return 0;
 #endif
+}
+
+//For LUA
+int setvbuf(FILE *restrict stream, char *restrict buf, int type,
+       size_t size)
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+}
+
+
+//For LUA
+
+int fscanf(FILE *restrict stream, const char *restrict format, ... )
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+
+}
+//For LUA
+void clearerr(FILE *stream)
+{
+
+    UNDEF_FUN_ERR();
+    return NULL;
 }
 
 int 
@@ -348,6 +471,16 @@ __ctype_get_mb_cur_max (void)
 }
  
 
+
+//For LUA
+int fseek(FILE *stream, long offset, int whence)
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+
+}
+
 int 
 fseeko64 (FILE *fp, uint64_t offset, int whence)
 {
@@ -378,6 +511,13 @@ ftello64 (FILE *stream)
     return 0;
 }
 
+//For LUA
+long     ftell(FILE *x)
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+}
 int 
 poll (struct pollfd *fds, nfds_t nfds, int timeout)
 {
@@ -450,6 +590,142 @@ gettext (const char * msgid)
     return ret;
 }
 
+int getc(FILE* arg)
+{
+
+    UNDEF_FUN_ERR();
+    return -1;
+
+}
+//LUA SPECIFIC....................
+
+int feof(FILE * x)
+{
+    UNDEF_FUN_ERR();
+    return 0;
+}
+
+char *fgets(char *str, int n, FILE *stream)
+{
+    UNDEF_FUN_ERR();
+    return NULL;
+}
+void *memchr(const void *str, int c, size_t n)
+{
+    return NULL;
+}
+void longjmp(int *x, int __y)
+{
+    UNDEF_FUN_ERR();
+}
+
+int setjmp(int *x)
+{
+    return 0;
+}
+double fabs(double __x){
+    return 0;
+}
+double atan(double __x){
+    return 45.000;
+}
+double atan2(double y, double x){
+    return 135.00;
+}
+double fmod(double y, double x){
+    // this is replacement to actual fmod() (/nautilus/libccompat)
+    // defining own fmod similar to the one defined in (/gcc/libc)
+    return 2.0;
+}
+double modf(double y, double *x){
+  *x = 0;
+  return 0.000;
+}
+double frexp(double x, int *e){
+  *e = 0;
+  return 0.5;
+}
+double ldexp(double x, int exp){
+  return x;
+}
+double strtod(const char *str, char **endptr){
+    return 0.0;
+}
+/*----------*/
+double abs(double x)
+{
+//should return absolute value of x
+return x;
+}
+double sin(double x)
+{
+return x;
+}
+double sinh(double x)
+{
+return x;
+}
+double cos(double x)
+{
+return x;
+}
+double cosh(double x)
+{
+return x;
+}
+
+double tan(double x)
+{
+return x;
+}
+double tanh(double x)
+{
+return x;
+}
+double asin(double x)
+{
+return x;
+}
+double acos(double x)
+{
+return x;
+}
+// double atan2(double x)
+// {
+// return x;
+// }
+double ceil(double x)
+{
+return x;
+}
+double floor(double x)
+{
+return x;
+}
+double difftime(time_t time1, time_t time2)
+{
+    return 0;
+}
+double sqrt(double x)
+{
+return x;
+}
+double pow(double x, double y)
+{
+return x;
+}
+double log(double x)
+{
+return x;
+}
+double log10(double x)
+{
+return x;
+}
+double exp(double x)
+{
+return x;
+}
 
 /* became lazy... */
 GEN_DEF(writev)
@@ -458,13 +734,13 @@ GEN_DEF(__errno_location)
 GEN_DEF(write)
 GEN_DEF(wcrtomb)
 GEN_DEF(mbrtowc)
-GEN_DEF(getc)
+//GEN_DEF(getc)
 GEN_DEF(__iswctype_l)
 GEN_DEF(wcslen)
 GEN_DEF(__strtof_l)
-GEN_DEF(stderr)
+//GEN_DEF(stderr)
 GEN_DEF(wmemset)
-GEN_DEF(stdin)
+//GEN_DEF(stdin)
 GEN_DEF(fileno)
 GEN_DEF(__fxstat64)
 GEN_DEF(putc)
@@ -485,13 +761,13 @@ GEN_DEF(__wcsxfrm_l)
 GEN_DEF(wcscmp)
 GEN_DEF(wcsnrtombs)
 GEN_DEF(__strcoll_l)
-GEN_DEF(stdout)
+//GEN_DEF(stdout)
 GEN_DEF(btowc)
-GEN_DEF(memchr)
+//GEN_DEF(memchr)
 GEN_DEF(strtold_l)
 GEN_DEF(wmemcmp)
 GEN_DEF(__strtod_l)
-GEN_DEF(setvbuf)
+//GEN_DEF(setvbuf)
 GEN_DEF(__wctype_l)
 GEN_DEF(__towupper_l)
 GEN_DEF(__uselocale)
@@ -509,7 +785,7 @@ GEN_DEF(strftime)
 GEN_DEF(wcsftime)
 GEN_DEF(wctype)
 GEN_DEF(strtold)
-GEN_DEF(strtod)
+//GEN_DEF(strtod)
 GEN_DEF(strtof)
 GEN_DEF(__ctype_b_loc)
 GEN_DEF(__ctype_toupper_loc)

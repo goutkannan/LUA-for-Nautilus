@@ -504,4 +504,13 @@ free (void * addr)
     spin_unlock_irq_restore(&zone->lock, flags);
     block_hash_free_entry(hdr);
 }
+/* LUA unimplemented realloc */
+void *realloc(void *ptr, size_t size)
+{
+
+	
+
+}
+
+
 

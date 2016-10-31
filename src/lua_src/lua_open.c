@@ -5,12 +5,12 @@
 */
 
 
-#include <stddef.h>
-#include <string.h>
+//#include <stddef.h>
+//#include <string.h>
 
 #define lstate_c
 #define LUA_CORE
-
+#include <nautilus/libccompat.h>
 #include "lua/lapi.h"
 #include "lua/ldebug.h"
 #include "lua/ldo.h"
