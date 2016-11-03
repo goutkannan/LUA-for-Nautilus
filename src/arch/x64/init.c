@@ -22,6 +22,11 @@
  */
 #define __NAUTILUS_MAIN__
 
+#include <nautilus/libccompat.h>
+#include "lua/lua.h"
+#include "lua/lualib.h"
+#include "lua/lauxlib.h"
+
 #include <nautilus/nautilus.h>
 #include <nautilus/paging.h>
 #include <nautilus/idt.h>
@@ -307,16 +312,23 @@ init (unsigned long mbd,
 
     /* interrupts on */
     sti();
-
+    printk("Going to create LUA NewState\n");
+    lua_State *L;
+    L = luaL_newstate();
+    printk("Lua NewState Success !\n");
+    
     nk_vc_init();
 
     launch_vmm_environment();
-
+    printk("\n going for NEW SHEll.....");
     nk_launch_shell("root-shell",-1);
 
     runtime_init();
-
     printk("Nautilus boot thread yielding (indefinitely)\n");
+    //LUA Call
+    //lua_State *L;
+    //L = luaL_newstate();
+    //printk("Lua NewState Success !\n");
 
     /* we don't come back from this */
     idle(NULL, NULL);

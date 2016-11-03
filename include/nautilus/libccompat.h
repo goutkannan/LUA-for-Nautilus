@@ -71,6 +71,18 @@ typedef int clockid_t;
 #define stdout				1
 #define stderr				2
 
+// /* Standard streams.  */
+// extern struct _IO_FILE *stdin;		/* Standard input stream.  */
+// extern struct _IO_FILE *stdout;		/* Standard output stream.  */
+// extern struct _IO_FILE *stderr;		/* Standard error output stream.  */
+// #ifdef __STDC__
+// /* C89/C99 say they're macros.  Make them happy.  */
+// #define stdin stdin
+// #define stdout stdout
+// #define stderr stderr
+// #endif
+
+
 
 #define _JBLEN ((9 * 2) + 3 + 16)
 typedef int jmp_buf[_JBLEN];
@@ -93,22 +105,14 @@ struct pollfd {
 //lua
 typedef void* locale_t;
 
-struct timespec {
-    time_t tv_sec;
-    long tv_nsec;
-};
 
-struct tm {
-int    tm_sec ;  
-int    tm_min ;
-int    tm_hour;
-int    tm_mday;
-int    tm_mon;
-int    tm_year;
-int    tm_wday;
-int    tm_yday;
-int    tm_isdst;
-};
+#ifndef _STRUCT_TIMESPEC
+#define _STRUCT_TIMESPEC
+struct timespec {
+	time_t  tv_sec;         /* seconds */
+	long    tv_nsec;        /* nanoseconds */
+ };
+ #endif /* _STRUCT_TIMESPEC */
 
 #define SEEK_END  0
 
@@ -124,23 +128,9 @@ extern int errno;
 #else 
 extern int errno;
 #endif 
-/*
-typedef struct { unsigned long int _val[1024/(8 *sizeof (unsigned long int))];
-} __sigset_t; 
-struct __jmp_buf_tag { 
-	long long int __jmpbuf;
-	int __mask_was_saved;
-	__sigset_t __saved_mask;
-};
-typedef struct __jmp_buf_tag jmp_buf[1]; 
-*/
-void longjmp(int *,int __val);
-int setjmp(int *);
 
 
-//end lua
 
-time_t time(time_t * timer);
 void abort(void);
 int __popcountdi2(long long a);
 void exit(int status);
@@ -167,7 +157,7 @@ int fflush(FILE *p);
 int fprintf(FILE*, const char*, ...);
 int fputc(int, FILE*);
 int fputs(const char*, FILE*);
-size_t fwrite(const void*, size_t, size_t, FILE*);
+size_t fwrite(const void *, size_t, size_t, FILE *);
 size_t fread(void * ptr, size_t size, size_t count, FILE * stream);
 int getwc(FILE * stream);
 size_t __ctype_get_mb_cur_max(void);
@@ -213,19 +203,45 @@ int rename(const char *old, const char *new);
 
 int remove(const char *path);
 
-char *tmpnam(char *s);
 
-clock_t clock(void);
-// End Lua
-//#define GEN_HDR(x) int x (void);
+/*==================*
+*    				*
+*  LUA SPECIFICS    *
+*					*
+*===================*/					
+
+struct tm {
+   int tm_sec;         /* seconds,  range 0 to 59          */
+   int tm_min;         /* minutes, range 0 to 59           */
+   int tm_hour;        /* hours, range 0 to 23             */
+   int tm_mday;        /* day of the month, range 1 to 31  */
+   int tm_mon;         /* month, range 0 to 11             */
+   int tm_year;        /* The number of years since 1900   */
+   int tm_wday;        /* day of the week, range 0 to 6    */
+   int tm_yday;        /* day in the year, range 0 to 365  */
+   int tm_isdst;       /* daylight saving time             */   
+};
+
 
 #define GEN_HDR(x) int x (void);
 
+// Structures.
+
 struct lconv *localeconv(void);
+time_t mktime(struct tm *timeptr);
+struct tm *localtime(const time_t *timer);
+struct tm *gmtime(const time_t *timer);
+
+//Function prototypes
+int strcoll(const char *str1, const char *str2);
+size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr);
 
 double pow(double x, double y);
-
-//LUA
+char *tmpnam(char *s);
+clock_t clock(void);
+void longjmp(int *,int __val);
+int setjmp(int *);
+time_t time(time_t * timer);
 double difftime(time_t time1, time_t time2);
 void *memchr(const void *str, int c, size_t n);
 double fabs(double __x);
@@ -252,6 +268,8 @@ double pow(double x, double y);
 double log(double x);
 double log10(double x);
 double exp(double x);
+
+//=============END LUA HERE==================//
 
 
 GEN_HDR(writev)

@@ -134,6 +134,7 @@ static void stack_init (lua_State *L1, lua_State *L) {
   int i; CallInfo *ci;
   /* initialize stack array */
   L1->stack = luaM_newvector(L, BASIC_STACK_SIZE, TValue);
+  printk("\n after Stack newvector: = %p", L1->stack);
   L1->stacksize = BASIC_STACK_SIZE;
   for (i = 0; i < BASIC_STACK_SIZE; i++)
     setnilvalue(L1->stack + i);  /* erase new stack */
@@ -267,16 +268,20 @@ LUA_API lua_State *lua_newstate (lua_Alloc f, void *ud) {
   int i;
   lua_State *L;
   global_State *g;
+  printk("\n now CAST:");
   LG *l = cast(LG *, (*f)(ud, NULL, LUA_TTHREAD, sizeof(LG)));
   if (l == NULL) return NULL;
+  printk("\n CAST Done...");
   L = &l->l.l;
   g = &l->g;
   L->next = NULL;
   L->tt = LUA_TTHREAD;
+  printk("\n NOW BITMASK...");
   g->currentwhite = bit2mask(WHITE0BIT, FIXEDBIT);
   L->marked = luaC_white(g);
   g->gckind = KGC_NORMAL;
   preinit_state(L, g);
+  printk("\n After PRE-INIT...");
   g->frealloc = f;
   g->ud = ud;
   g->mainthread = L;
@@ -290,6 +295,7 @@ LUA_API lua_State *lua_newstate (lua_Alloc f, void *ud) {
   g->strt.hash = NULL;
   setnilvalue(&g->l_registry);
   luaZ_initbuffer(L, &g->buff);
+  printk("\n After INIT-BUFFER...");
   g->panic = NULL;
   g->version = NULL;
   g->gcstate = GCSpause;
@@ -305,11 +311,15 @@ LUA_API lua_State *lua_newstate (lua_Alloc f, void *ud) {
   g->gcmajorinc = LUAI_GCMAJOR;
   g->gcstepmul = LUAI_GCMUL;
   for (i=0; i < LUA_NUMTAGS; i++) g->mt[i] = NULL;
-  if (luaD_rawrunprotected(L, f_luaopen, NULL) != LUA_OK) {
+  printk("\n Now LUA F-OPEN");  
+  f_luaopen(L, NULL);
+  //if (luaD_rawrunprotected(L, f_luaopen, NULL) != LUA_OK) {
     /* memory allocation error: free partial state */
-    close_state(L);
-    L = NULL;
-  }
+    //close_state(L);
+    //L/ = NULL;
+  
+//}
+  printk("\n Now returning.....");
   return L;
 }
 

@@ -46,7 +46,7 @@
     } 
 
 //Lua
-//
+// LUA STRUCTURES....
 
 struct lconv {
     char *decimal_point;      //"."          LC_NUMERIC
@@ -77,10 +77,15 @@ struct lconv {
     char int_p_sep_by_space;
     char int_p_sign_posn;
 };
+
+
+
+
+
+//=========================================================
 static uint64_t dummy_mono_clock = 0;
 
-time_t 
-time (time_t * timer)
+time_t time (time_t * timer)
 {
     struct timespec tp;
     clock_gettime(CLOCK_MONOTONIC, &tp);
@@ -410,8 +415,7 @@ void clearerr(FILE *stream)
     return NULL;
 }
 
-int 
-printf (const char * s, ...)
+int printf (const char * s, ...)
 {
 #if 0
     UNDEF_FUN_ERR();
@@ -425,165 +429,125 @@ printf (const char * s, ...)
 #endif
 }
 
-int 
-fputc (int c, FILE * f) 
+int fputc (int c, FILE * f) 
 {
     printk("%c");
     return c;
 }
-
-
-int 
-fputs (const char * s, FILE * f)
+int fputs (const char *s, FILE *stream)
 {
-    printk("%s\n", s);
+    printk("%s\n", stream);
     return 0;
 }
-
-
-size_t 
-fwrite (const void * ptr, size_t size, size_t count, FILE * stream)
+size_t fwrite (const void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
     UNDEF_FUN_ERR();
-    return -1;
+    return 1;
 }
-
-size_t 
-fread (void * ptr, size_t size, size_t count, FILE * stream)
+size_t fread (void *ptr, size_t size, size_t count, FILE *stream)
 {
     UNDEF_FUN_ERR();
-    return -1;
+    return 1;
 }
 
-int
-getwc (FILE * stream)
+int getwc (FILE *stream)
 {
     UNDEF_FUN_ERR();
-    return -1;
+    return 1;
 }
-
-
-size_t 
-__ctype_get_mb_cur_max (void)
+size_t __ctype_get_mb_cur_max (void)
 {
     UNDEF_FUN_ERR();
     return 0;
 }
- 
-
-
 //For LUA
 int fseek(FILE *stream, long offset, int whence)
 {
 
     UNDEF_FUN_ERR();
-    return -1;
-
+    return 1;
 }
-
-int 
-fseeko64 (FILE *fp, uint64_t offset, int whence)
+int fseeko64 (FILE *fp, uint64_t offset, int whence)
 {
     UNDEF_FUN_ERR();
-    return -1;
+    return 1;
 }
-
-
-int 
-ungetc (int character, FILE * stream)
+int ungetc (int character, FILE * stream)
 {
     UNDEF_FUN_ERR();
-    return -1;
+    return 1;
 }
- 
-
-uint64_t 
-lseek64 (int fd, uint64_t offset, int whence)
+uint64_t lseek64 (int fd, uint64_t offset, int whence)
 {
     UNDEF_FUN_ERR();
-    return 0;
+    return 1;
 }
 
-uint64_t 
-ftello64 (FILE *stream)
+uint64_t ftello64 (FILE *stream)
 {
     UNDEF_FUN_ERR();
-    return 0;
+    return 1;
 }
-
 //For LUA
-long     ftell(FILE *x)
-{
-
-    UNDEF_FUN_ERR();
-    return -1;
-}
-int 
-poll (struct pollfd *fds, nfds_t nfds, int timeout)
+long ftell(FILE *x)
 {
     UNDEF_FUN_ERR();
     return -1;
 }
-
-int 
-ioctl (int d, unsigned long request, ...)
+int poll (struct pollfd *fds, nfds_t nfds, int timeout)
 {
     UNDEF_FUN_ERR();
-    return -1;
+    return 1;
 }
 
-int 
-syscall (int number, ...)
+int ioctl (int d, unsigned long request, ...)
 {
     UNDEF_FUN_ERR();
-    return -1;
+    return 1;
 }
 
+int syscall (int number, ...)
+{
+    UNDEF_FUN_ERR();
+    return 1;
+}
 
-
-char * 
-setlocale (int category, const char *locale)
+char *setlocale (int category, const char *locale)
 {
     UNDEF_FUN_ERR();
     return NULL;
 }
 
-locale_t 
-__duplocale (locale_t locobj)
+locale_t __duplocale (locale_t locobj)
 {
     UNDEF_FUN_ERR();
     return NULL;
 }
 
-char * 
-bindtextdomain (const char * domainname, const char * dirname)
+char *bindtextdomain (const char * domainname, const char * dirname)
 {
     UNDEF_FUN_ERR();
     return NULL;
 }
 
-char * 
-textdomain (const char * domainname)
+char *textdomain (const char * domainname)
 {
     UNDEF_FUN_ERR();
     return NULL;
 }
 
-locale_t 
-__newlocale (int category_mask, const char *locale, locale_t base)
+locale_t __newlocale (int category_mask, const char *locale, locale_t base)
 {
     return (locale_t)((ulong_t)base | (ulong_t)category_mask);
 }
 
-char *
-__nl_langinfo_l (nl_item item, locale_t locale)
+char *__nl_langinfo_l (nl_item item, locale_t locale)
 {
     UNDEF_FUN_ERR();
     return NULL;
 }
 
-char *
-gettext (const char * msgid)
+char *gettext (const char * msgid)
 {
     char * ret = (char*)msgid;
     UNDEF_FUN_ERR();
@@ -598,7 +562,10 @@ int getc(FILE* arg)
 
 }
 //LUA SPECIFIC....................
-
+size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr)
+{
+    return 0;
+}
 int feof(FILE * x)
 {
     UNDEF_FUN_ERR();
@@ -673,7 +640,22 @@ double cosh(double x)
 {
 return x;
 }
-
+time_t mktime(struct tm *timeptr)
+{
+    return 0;
+}
+struct tm *localtime(const time_t *timer)
+{
+    return NULL;
+}
+struct tm *gmtime(const time_t *timer)
+{
+    return NULL;
+}
+int strcoll(const char *str1, const char *str2)
+{
+    return 0;
+}
 double tan(double x)
 {
 return x;
@@ -690,10 +672,6 @@ double acos(double x)
 {
 return x;
 }
-// double atan2(double x)
-// {
-// return x;
-// }
 double ceil(double x)
 {
 return x;
@@ -777,11 +755,11 @@ GEN_DEF(pthread_mutex_init)
 GEN_DEF(pthread_mutex_lock)
 GEN_DEF(pthread_mutex_unlock)
 GEN_DEF(wcscoll)
-GEN_DEF(strcoll)
+//GEN_DEF(strcoll)
 GEN_DEF(towupper)
 GEN_DEF(towlower)
 GEN_DEF(iswctype)
-GEN_DEF(strftime)
+//GEN_DEF(strftime)
 GEN_DEF(wcsftime)
 GEN_DEF(wctype)
 GEN_DEF(strtold)
