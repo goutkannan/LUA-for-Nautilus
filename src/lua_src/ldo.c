@@ -125,13 +125,16 @@ l_noret luaD_throw (lua_State *L, int errcode) {
 
 int luaD_rawrunprotected (lua_State *L, Pfunc f, void *ud) {
   unsigned short oldnCcalls = L->nCcalls;
+    printk("\n lua_rawunportected |  | 1 ");
   struct lua_longjmp lj;
   lj.status = LUA_OK;
   lj.previous = L->errorJmp;  /* chain new error handler */
   L->errorJmp = &lj;
+    printk("\n lua_rawunportected |  | 2 ");
   LUAI_TRY(L, &lj,
     (*f)(L, ud);
   );
+    printk("\n lua_rawunportected |  | 3 ");
   L->errorJmp = lj.previous;  /* restore old error handler */
   L->nCcalls = oldnCcalls;
   return lj.status;
@@ -596,20 +599,30 @@ LUA_API int lua_yieldk (lua_State *L, int nresults, int ctx, lua_CFunction k) {
 int luaD_pcall (lua_State *L, Pfunc func, void *u,
                 ptrdiff_t old_top, ptrdiff_t ef) {
   int status;
+    printk("\n LUAD-pcall | 1 ");
   CallInfo *old_ci = L->ci;
   lu_byte old_allowhooks = L->allowhook;
   unsigned short old_nny = L->nny;
+    printk("\n LUAD-pcall | 1.1 ");
   ptrdiff_t old_errfunc = L->errfunc;
   L->errfunc = ef;
-  status = luaD_rawrunprotected(L, func, u);
+  printk("\n LUAD-pcall | 1.2 ");
+  //status = luaD_rawrunprotected(L, func, u);
+  printk("\n LUAD-pcall | 2 ");
+  status = LUA_OK;  //manually added....
   if (status != LUA_OK) {  /* an error occurred? */
+    printk("\n LUAD-pcall | 3 ");
     StkId oldtop = restorestack(L, old_top);
+    printk("\n LUAD-pcall | 4 ");
     luaF_close(L, oldtop);  /* close possible pending closures */
+    printk("\n LUAD-pcall | 5 ");
     seterrorobj(L, status, oldtop);
+    printk("\n LUAD-pcall | 6 ");
     L->ci = old_ci;
     L->allowhook = old_allowhooks;
     L->nny = old_nny;
     luaD_shrinkstack(L);
+    printk("\n LUAD-pcall | 7 ");
   }
   L->errfunc = old_errfunc;
   return status;

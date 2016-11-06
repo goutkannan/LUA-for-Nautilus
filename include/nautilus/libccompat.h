@@ -236,6 +236,8 @@ struct tm *gmtime(const time_t *timer);
 int strcoll(const char *str1, const char *str2);
 size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr);
 
+void (*signal(int sig, void (*func)(int)))(int);
+
 double pow(double x, double y);
 char *tmpnam(char *s);
 clock_t clock(void);

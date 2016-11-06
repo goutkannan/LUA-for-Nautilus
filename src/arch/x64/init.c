@@ -313,10 +313,13 @@ init (unsigned long mbd,
     /* interrupts on */
     sti();
     printk("Going to create LUA NewState\n");
-    lua_State *L;
-    L = luaL_newstate();
-    printk("Lua NewState Success !\n");
-    
+    //lua_State *L;
+    //L = luaL_newstate();
+    int ret_code;
+    ret_code = lua_main(1, NULL );
+    //printk("\n LUA return code is: %d", &ret_code);
+    printk("\n Lua NewState Success !\n");
+    //while(1); 
     nk_vc_init();
 
     launch_vmm_environment();

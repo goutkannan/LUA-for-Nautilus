@@ -20,7 +20,10 @@
  * This is free software.  You are permitted to use,
  * redistribute, and modify it as specified in the file "LICENSE.txt".
  */
-
+#include <nautilus/libccompat.h>
+#include "lua/lua.h"
+#include "lua/lualib.h"
+#include "lua/lauxlib.h"
 #include <nautilus/nautilus.h>
 #include <nautilus/shell.h>
 #include <nautilus/vc.h>
@@ -88,7 +91,8 @@ static void shell(void *in, void **out)
   nk_switch_to_vc(vc);
   
   nk_vc_clear(0x9f);
-   
+  int ret_code;
+  ret_code = lua_main(1, NULL); 
   while (1) {  
     nk_vc_printf("%s> ", (char*)in);
     nk_vc_gets(buf,80,1);
