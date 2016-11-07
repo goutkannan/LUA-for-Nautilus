@@ -16,7 +16,6 @@ deps_src/dev/kbd.o := \
     $(wildcard include/config/toolchain/root.h) \
     $(wildcard include/config/use/ticketlocks.h) \
     $(wildcard include/config/virtual/console/serial/mirror.h) \
-    $(wildcard include/config/virtual/console/serial/mirror/all.h) \
     $(wildcard include/config/fpu/save.h) \
     $(wildcard include/config/kick/schedule.h) \
     $(wildcard include/config/halt/while/idle.h) \

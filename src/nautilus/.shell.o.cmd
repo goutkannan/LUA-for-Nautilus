@@ -16,7 +16,6 @@ deps_src/nautilus/shell.o := \
     $(wildcard include/config/thread/exit/keycode.h) \
     $(wildcard include/config/use/ticketlocks.h) \
     $(wildcard include/config/virtual/console/serial/mirror.h) \
-    $(wildcard include/config/virtual/console/serial/mirror/all.h) \
     $(wildcard include/config/fpu/save.h) \
     $(wildcard include/config/kick/schedule.h) \
     $(wildcard include/config/halt/while/idle.h) \
@@ -56,6 +55,7 @@ deps_src/nautilus/shell.o := \
     $(wildcard include/config/hpet.h) \
     $(wildcard include/config/hz.h) \
     $(wildcard include/config/virtio/pci.h) \
+  include/nautilus/libccompat.h \
   include/nautilus/nautilus.h \
   include/nautilus/printk.h \
   /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
@@ -87,6 +87,11 @@ deps_src/nautilus/shell.o := \
   include/nautilus/barrier.h \
   include/nautilus/numa.h \
   include/arch/x64/main.h \
+  include/lua/lua.h \
+  include/lua/luaconf.h \
+  include/lua/lualib.h \
+  include/lua/lauxlib.h \
+  include/lua/libdump.h \
   include/nautilus/shell.h \
   include/nautilus/thread.h \
   include/nautilus/percpu.h \

@@ -476,22 +476,28 @@ static int pmain (lua_State *L) {
   return 1;
 }
 
-/*
-int bug_main (int argc, char **argv) {
+
+int lua_main (int argc, char **argv) {
   int status, result;
-  lua_State *L = luaL_newstate();   create state 
+  lua_State *L = luaL_newstate();   /*create state */
+  printk("\n LUA-MAIN | new state created. ");
   if (L == NULL) {
     l_message(argv[0], "cannot create state: not enough memory");
     return EXIT_FAILURE;
   }
-  * call 'pmain' in protected mode 
+  /* call 'pmain' in protected mode*/
+  printk("\n LUA-MAIN | executing lua_pushfunction. "); 
   lua_pushcfunction(L, &pmain);
-  lua_pushinteger(L, argc);  
-  lua_pushlightuserdata(L, argv);  2nd argument 
+  printk("\n LUA-MAIN | lua_pushfunction Success. ");
+  lua_pushinteger(L, argc);
+  printk("\n LUA-MAIN | lua_pushinteger Success. ");  
+  lua_pushlightuserdata(L, argv);  /*2nd argument */
+  printk("\n LUA-MAIN | lua_pushlightuserdata Success .");
   status = lua_pcall(L, 2, 1, 0);
+  printk("\n LUA-MAIN | pcall success.");
   result = lua_toboolean(L, -1);  
   finalreport(L, status);
   lua_close(L);
   return (result && status == LUA_OK) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
-*/
+
