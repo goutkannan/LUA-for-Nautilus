@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Nautilus version: 
- * Sat Nov  5 16:11:04 2016
+ * Sat Nov 12 18:59:58 2016
  */
 #define AUTOCONF_INCLUDED
 
@@ -31,7 +31,8 @@
  * Nautilus AeroKernel Configuration
  */
 #undef NAUT_CONFIG_USE_TICKETLOCKS
-#undef NAUT_CONFIG_VIRTUAL_CONSOLE_SERIAL_MIRROR
+#define NAUT_CONFIG_VIRTUAL_CONSOLE_SERIAL_MIRROR 1
+#define NAUT_CONFIG_VIRTUAL_CONSOLE_SERIAL_MIRROR_ALL 1
 
 /*
  * AeroKernel Performance Optimizations

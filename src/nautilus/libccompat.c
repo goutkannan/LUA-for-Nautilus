@@ -585,7 +585,7 @@ void *memchr(const void *str, int c, size_t n)
 {
     return NULL;
 }
-void longjmp(int *x, int __y)
+/*void longjmp(int *x, int __y)
 {
     UNDEF_FUN_ERR();
 }
@@ -593,7 +593,7 @@ void longjmp(int *x, int __y)
 int setjmp(int *x)
 {
     return 0;
-}
+} */
 double fabs(double __x){
     return 0;
 }

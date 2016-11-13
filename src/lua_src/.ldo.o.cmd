@@ -15,6 +15,7 @@ deps_src/lua_src/ldo.o := \
     $(wildcard include/config/thread/exit/keycode.h) \
     $(wildcard include/config/use/ticketlocks.h) \
     $(wildcard include/config/virtual/console/serial/mirror.h) \
+    $(wildcard include/config/virtual/console/serial/mirror/all.h) \
     $(wildcard include/config/fpu/save.h) \
     $(wildcard include/config/kick/schedule.h) \
     $(wildcard include/config/halt/while/idle.h) \
@@ -112,6 +113,7 @@ deps_src/lua_src/ldo.o := \
   include/lua/ltable.h \
   include/lua/lundump.h \
   include/lua/lvm.h \
+  include/nautilus/setjmp.h \
 
 src/lua_src/ldo.o: $(deps_src/lua_src/ldo.o)
 
