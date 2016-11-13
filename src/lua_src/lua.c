@@ -281,9 +281,13 @@ static int pushline (lua_State *L, int firstline) {
 static int loadline (lua_State *L) {
   int status;
   lua_settop(L, 0);
+  printk("\n LUA_loadline init call");
   if (!pushline(L, 1))
+  {
+	printk("\n LUA_loadline pushline failure");  
     return -1;  /* no input */
-  for (;;) {  /* repeat until gets a complete line */
+  }
+    for (;;) {  /* repeat until gets a complete line */
     size_t l;
     const char *line = lua_tolstring(L, 1, &l);
     status = luaL_loadbuffer(L, line, l, "=stdin");
@@ -356,6 +360,8 @@ static int handle_script (lua_State *L, char **argv, int n) {
 
 static int collectargs (char **argv, int *args) {
   int i;
+  
+  printk("\n In collect argsc");
   for (i = 1; argv[i] != NULL; i++) {
     if (argv[i][0] != '-')  /* not an option? */
         return i;
@@ -440,38 +446,55 @@ static int pmain (lua_State *L) {
   char **argv = (char **)lua_touserdata(L, 2);
   int script;
   int args[num_has];
-  args[has_i] = args[has_v] = args[has_e] = args[has_E] = 0;
+  printk("\n argc %d",argc);
+  printk("\n args %p",argv);
+  printk("\n pmain - line 5");
+
+  print_version();
+  dotty(L);
+  
+   /*args[has_i] = args[has_v] = args[has_e] = args[has_E] = 0;
   if (argv[0] && argv[0][0]) progname = argv[0];
   script = collectargs(argv, args);
-  if (script < 0) {  /* invalid arg? */
+  printk("\n after collectargs");
+  if (script < 0) {  * invalid arg? *
     print_usage(argv[-script]);
     return 0;
   }
   if (args[has_v]) print_version();
-  if (args[has_E]) {  /* option '-E'? */
-    lua_pushboolean(L, 1);  /* signal for libraries to ignore env. vars. */
+  if (args[has_E]) {  * option '-E'? *
+    lua_pushboolean(L, 1);  * signal for libraries to ignore env. vars. *
     lua_setfield(L, LUA_REGISTRYINDEX, "LUA_NOENV");
   }
-  /* open standard libraries */
+  printk("\n before open std libraries"); 
+  * open standard libraries *
   luaL_checkversion(L);
-  lua_gc(L, LUA_GCSTOP, 0);  /* stop collector during initialization */
-  luaL_openlibs(L);  /* open libraries */
+  printk("\n after check version");
+  lua_gc(L, LUA_GCSTOP, 0);  * stop collector during initialization *
+  
+  printk("after gc");
+  luaL_openlibs(L);  * open libraries *
+  printk("after openlibs");
+
   lua_gc(L, LUA_GCRESTART, 0);
+  printk("after gc");
+  
   if (!args[has_E] && handle_luainit(L) != LUA_OK)
-    return 0;  /* error running LUA_INIT */
-  /* execute arguments -e and -l */
+    return 0;  * error running LUA_INIT */
+  /* execute arguments -e and -l *
   if (!runargs(L, argv, (script > 0) ? script : argc)) return 0;
-  /* execute main script (if there is one) */
+  * execute main script (if there is one) *
   if (script && handle_script(L, argv, script) != LUA_OK) return 0;
-  if (args[has_i])  /* -i option? */
+  if (args[has_i])  * -i option? *
     dotty(L);
-  else if (script == 0 && !args[has_e] && !args[has_v]) {  /* no arguments? */
+  else if (script == 0 && !args[has_e] && !args[has_v]) {  * no arguments? *
     if (lua_stdin_is_tty()) {
       print_version();
       dotty(L);
     }
-    else dofile(L, NULL);  /* executes stdin as a file */
-  }
+    else dofile(L, NULL);  * executes stdin as a file *
+  } 
+  */
   lua_pushboolean(L, 1);  /* signal no errors */
   return 1;
 }
@@ -480,20 +503,21 @@ static int pmain (lua_State *L) {
 int lua_main (int argc, char **argv) {
   int status, result;
   lua_State *L = luaL_newstate();   /*create state */
-  printk("\n LUA-MAIN | new state created. ");
+  printk("\n LUA-MAIN | new state created. %d",argc);
   if (L == NULL) {
     l_message(argv[0], "cannot create state: not enough memory");
     return EXIT_FAILURE;
   }
   /* call 'pmain' in protected mode*/
   printk("\n LUA-MAIN | executing lua_pushfunction. "); 
-  lua_pushcfunction(L, &pmain);
+ lua_pushcfunction(L, &pmain); //temp calling direct
   printk("\n LUA-MAIN | lua_pushfunction Success. ");
   lua_pushinteger(L, argc);
   printk("\n LUA-MAIN | lua_pushinteger Success. ");  
   lua_pushlightuserdata(L, argv);  /*2nd argument */
   printk("\n LUA-MAIN | lua_pushlightuserdata Success .");
-  status = lua_pcall(L, 2, 1, 0);
+ // status = lua_pcall(L, 2, 1, 0); -- temp call
+  status = pmain(L); 
   printk("\n LUA-MAIN | pcall success.");
   result = lua_toboolean(L, -1);  
   finalreport(L, status);

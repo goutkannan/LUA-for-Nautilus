@@ -2703,7 +2703,7 @@ ERRLIB	src/lua_src/loadlib.c	102;"	d	file:
 ERROR	src/dev/kbd.c	37;"	d	file:
 ERROR	src/dev/virtio_pci.c	12;"	d	file:
 ERROR	src/nautilus/vc.c	48;"	d	file:
-ERRORSTACKSIZE	src/lua_src/ldo.c	163;"	d	file:
+ERRORSTACKSIZE	src/lua_src/ldo.c	165;"	d	file:
 ERROR_ACCESSING_EMPTY_FUTURE	src/legion_runtime/legion_types.h	/^      ERROR_ACCESSING_EMPTY_FUTURE = 87,$/;"	e	enum:LegionRuntime::HighLevel::LegionErrorType
 ERROR_ACQUIRE_MISMATCH	src/legion_runtime/legion_types.h	/^      ERROR_ACQUIRE_MISMATCH = 95,$/;"	e	enum:LegionRuntime::HighLevel::LegionErrorType
 ERROR_ALIASED_INTRA_TASK_REGIONS	src/legion_runtime/legion_types.h	/^      ERROR_ALIASED_INTRA_TASK_REGIONS = 53,$/;"	e	enum:LegionRuntime::HighLevel::LegionErrorType
@@ -4088,10 +4088,10 @@ LUAI_MEM	include/lua/luaconf.h	341;"	d
 LUAI_MEM	include/lua/luaconf.h	346;"	d
 LUAI_THROW	src/lua_src/ldo.c	55;"	d	file:
 LUAI_THROW	src/lua_src/ldo.c	62;"	d	file:
-LUAI_THROW	src/lua_src/ldo.c	68;"	d	file:
+LUAI_THROW	src/lua_src/ldo.c	69;"	d	file:
 LUAI_TRY	src/lua_src/ldo.c	56;"	d	file:
 LUAI_TRY	src/lua_src/ldo.c	63;"	d	file:
-LUAI_TRY	src/lua_src/ldo.c	69;"	d	file:
+LUAI_TRY	src/lua_src/ldo.c	70;"	d	file:
 LUAI_UACNUMBER	include/lua/luaconf.h	395;"	d
 LUAI_UMEM	include/lua/luaconf.h	340;"	d
 LUAI_UMEM	include/lua/luaconf.h	345;"	d
@@ -14914,8 +14914,8 @@ luai_ctype_	src/lua_src/lctype.c	/^LUAI_DDEF const lu_byte luai_ctype_[UCHAR_MAX
 luai_hashnum	include/lua/llimits.h	232;"	d
 luai_hashnum	include/lua/llimits.h	284;"	d
 luai_jmpbuf	src/lua_src/ldo.c	58;"	d	file:
-luai_jmpbuf	src/lua_src/ldo.c	64;"	d	file:
-luai_jmpbuf	src/lua_src/ldo.c	70;"	d	file:
+luai_jmpbuf	src/lua_src/ldo.c	65;"	d	file:
+luai_jmpbuf	src/lua_src/ldo.c	72;"	d	file:
 luai_makeseed	src/lua_src/lstate.c	51;"	d	file:
 luai_numadd	include/lua/luaconf.h	442;"	d
 luai_numdiv	include/lua/luaconf.h	445;"	d
@@ -15822,7 +15822,7 @@ nextView	scripts/kconfig/qconf.h	/^	ConfigView* nextView;$/;"	m	class:ConfigView
 next_alloc	src/legion_runtime/lowlevel_impl.h	/^      IT volatile next_alloc;$/;"	m	class:LegionRuntime::LowLevel::DynamicTableFreeList
 next_block_base_index	src/acpi/acpica/aclocal.h	/^	u32 next_block_base_index;$/;"	m	struct:acpi_gpe_device_info
 next_child	src/legion_runtime/region_tree.h	/^      Color next_child;$/;"	m	class:LegionRuntime::HighLevel::PathTraverser
-next_ci	src/lua_src/ldo.c	295;"	d	file:
+next_ci	src/lua_src/ldo.c	297;"	d	file:
 next_entry	src/legion_runtime/accessor.h	/^	  ptr_t *next_entry;$/;"	m	struct:LegionRuntime::Accessor::AccessorType::ReductionList::Untyped
 next_external_char	src/acpi/acpica/aclocal.h	/^	const char *next_external_char;$/;"	m	struct:acpi_namestring_info
 next_free	src/legion_runtime/lowlevel_impl.h	/^      Event::Impl *next_free;$/;"	m	class:LegionRuntime::LowLevel::Event::Impl
@@ -16970,9 +16970,9 @@ owner_id	include/acpi/actbl.h	/^	acpi_owner_id owner_id;$/;"	m	struct:acpi_table
 owner_id	src/acpi/acpica/aclocal.h	/^	acpi_owner_id owner_id;	\/* Node creator *\/$/;"	m	struct:acpi_namespace_node
 owner_id	src/acpi/acpica/aclocal.h	/^	acpi_owner_id owner_id;$/;"	m	struct:acpi_gpe_walk_info
 owner_space	src/legion_runtime/garbage_collection.h	/^      const AddressSpaceID owner_space;$/;"	m	class:LegionRuntime::HighLevel::DistributedCollectable
+p	include/lua/lobject.h	/^	  void *p;         \/* light userdata *\/$/;"	m	union:Value
 p	include/lua/lobject.h	/^  struct Proto **p;  \/* functions defined inside the function *\/$/;"	m	struct:Proto	typeref:struct:Proto::Proto
 p	include/lua/lobject.h	/^  struct Proto *p;$/;"	m	struct:LClosure	typeref:struct:LClosure::Proto
-p	include/lua/lobject.h	/^  void *p;         \/* light userdata *\/$/;"	m	union:Value
 p	include/lua/lstate.h	/^  struct Proto p;$/;"	m	union:GCObject	typeref:struct:GCObject::Proto
 p	include/lua/lzio.h	/^  const char *p;		\/* current position in buffer *\/$/;"	m	struct:Zio
 p	include/nautilus/idt.h	/^            uint8_t  p     : 1;$/;"	m	struct:gate_desc64::__anon56::__anon58

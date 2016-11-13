@@ -316,7 +316,7 @@ init (unsigned long mbd,
     //lua_State *L;
     //L = luaL_newstate();
     int ret_code;
-    ret_code = lua_main(1, NULL );
+    ret_code = lua_main(1, "./lua" );
     //printk("\n LUA return code is: %d", &ret_code);
     printk("\n Lua NewState Success !\n");
     //while(1); 

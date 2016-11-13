@@ -445,8 +445,9 @@ int fputs (const char *s, FILE *stream)
 }
 size_t fwrite (const void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
-    UNDEF_FUN_ERR();
-    return 1;
+    printk("%s\n",ptr);
+	//UNDEF_FUN_ERR();
+    return (int)size;
 }
 size_t fread (void *ptr, size_t size, size_t count, FILE *stream)
 {
