@@ -440,7 +440,7 @@ int fputc (int c, FILE * f)
 }
 int fputs (const char *s, FILE *stream)
 {
-    printk("%s\n", stream);
+    printk("\n %s\n", s);
     return 0;
 }
 size_t fwrite (const void *ptr, size_t size, size_t nmemb, FILE *stream)

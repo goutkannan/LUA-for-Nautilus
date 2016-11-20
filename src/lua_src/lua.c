@@ -16,6 +16,7 @@
 
 #include "lua/lauxlib.h"
 #include "lua/lualib.h"
+#include <nautilus/shell.h>
 
 
 #if !defined(LUA_PROMPT)
@@ -262,7 +263,13 @@ static int pushline (lua_State *L, int firstline) {
   char *b = buffer;
   size_t l;
   const char *prmt = get_prompt(L, firstline);
-  int readstatus = lua_readline(L, b, prmt);
+  char buf[80]; // for gets
+  // int readstatus = lua_readline(L, b, prmt);
+  
+  nk_vc_printf("%s> ","Sunny's"); 
+ int readstatus = nk_vc_gets(b,80,1);
+  
+ // int readstatus =1;
   lua_pop(L, 1);  /* remove result from 'get_prompt' */
   if (readstatus == 0)
     return 0;  /* no input */
@@ -447,63 +454,63 @@ static int pmain (lua_State *L) {
   int script;
   int args[num_has];
   printk("\n argc %d",argc);
-  printk("\n args %p",argv);
+  //printk("\n argv %s",argv[0]);
   printk("\n pmain - line 5");
+  args[has_i] = args[has_v] = args[has_e] = args[has_E] = 0;
+  printk("\n after has");
+//
+  //  if (argv[0] && argv[0][0]) progname = argv[0];
 
-  print_version();
-  dotty(L);
-  
-   /*args[has_i] = args[has_v] = args[has_e] = args[has_E] = 0;
-  if (argv[0] && argv[0][0]) progname = argv[0];
-  script = collectargs(argv, args);
-  printk("\n after collectargs");
-  if (script < 0) {  * invalid arg? *
-    print_usage(argv[-script]);
-    return 0;
-  }
-  if (args[has_v]) print_version();
-  if (args[has_E]) {  * option '-E'? *
-    lua_pushboolean(L, 1);  * signal for libraries to ignore env. vars. *
-    lua_setfield(L, LUA_REGISTRYINDEX, "LUA_NOENV");
-  }
-  printk("\n before open std libraries"); 
-  * open standard libraries *
+//  script = collectargs(argv, args);
+//  printk("\n after collectargs");
+//  if (script < 0) {  /* invalid arg? */
+//    print_usage(argv[-script]);
+//    return 0;
+//  }
+//  if (args[has_v]) print_version();
+//  if (args[has_E]) {  /* option '-E'? */
+ //   lua_pushboolean(L, 1);  /* signal for libraries to ignore env. vars. */
+//    lua_setfield(L, LUA_REGISTRYINDEX, "LUA_NOENV");
+//  }
+//  printk("\n before open std libraries"); 
+ /* open standard libraries */
   luaL_checkversion(L);
   printk("\n after check version");
-  lua_gc(L, LUA_GCSTOP, 0);  * stop collector during initialization *
+  lua_gc(L, LUA_GCSTOP, 0); /* stop collector during initialization */
   
   printk("after gc");
-  luaL_openlibs(L);  * open libraries *
+  luaL_openlibs(L); /* open libraries */
   printk("after openlibs");
 
   lua_gc(L, LUA_GCRESTART, 0);
   printk("after gc");
   
-  if (!args[has_E] && handle_luainit(L) != LUA_OK)
-    return 0;  * error running LUA_INIT */
-  /* execute arguments -e and -l *
-  if (!runargs(L, argv, (script > 0) ? script : argc)) return 0;
-  * execute main script (if there is one) *
-  if (script && handle_script(L, argv, script) != LUA_OK) return 0;
-  if (args[has_i])  * -i option? *
-    dotty(L);
-  else if (script == 0 && !args[has_e] && !args[has_v]) {  * no arguments? *
+//  if (!args[has_E] && handle_luainit(L) != LUA_OK)
+//    return 0;  /* error running LUA_INIT */
+  /* execute arguments -e and -l */
+//  if (!runargs(L, argv, (script > 0) ? script : argc)) return 0;
+  /* execute main script (if there is one) */
+//  if (script && handle_script(L, argv, script) != LUA_OK) return 0;
+//  if (args[has_i])  /* -i option? */
+//    dotty(L);
+//  else if (script == 0 && !args[has_e] && !args[has_v]) {  /* no arguments? */
     if (lua_stdin_is_tty()) {
       print_version();
       dotty(L);
     }
-    else dofile(L, NULL);  * executes stdin as a file *
-  } 
-  */
+    else dofile(L, NULL);  /* executes stdin as a file */
+ // } 
+  
   lua_pushboolean(L, 1);  /* signal no errors */
   return 1;
 }
 
 
 int lua_main (int argc, char **argv) {
+  printk("\n in Lua main : %s",*argv);
   int status, result;
   lua_State *L = luaL_newstate();   /*create state */
-  printk("\n LUA-MAIN | new state created. %d",argc);
+ // printk("\n LUA-MAIN | new state created. args %s",argv[0]);
   if (L == NULL) {
     l_message(argv[0], "cannot create state: not enough memory");
     return EXIT_FAILURE;
@@ -516,8 +523,8 @@ int lua_main (int argc, char **argv) {
   printk("\n LUA-MAIN | lua_pushinteger Success. ");  
   lua_pushlightuserdata(L, argv);  /*2nd argument */
   printk("\n LUA-MAIN | lua_pushlightuserdata Success .");
- // status = lua_pcall(L, 2, 1, 0); -- temp call
-  status = pmain(L); 
+  status = lua_pcall(L, 2, 1, 0);// -- temp call
+ // status = pmain(L); 
   printk("\n LUA-MAIN | pcall success.");
   result = lua_toboolean(L, -1);  
   finalreport(L, status);

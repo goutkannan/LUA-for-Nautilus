@@ -67,8 +67,8 @@
 #else
 /* default handling with long jumps */
 #define LUAI_THROW(L,c)		longjmp((c)->b, 1)
-#define LUAI_TRY(L,c,a)		 printk("in default"); \
-       				if (setjmp((c)->b) == 0) { a }
+#define LUAI_TRY(L,c,a)		 printk("\n in default \n"); \
+       				if (setjmp((c)->b) == 0)  { a }
 #define luai_jmpbuf		jmp_buf
 
 #endif
