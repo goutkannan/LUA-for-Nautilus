@@ -291,7 +291,8 @@ LUA_API int lua_rawequal (lua_State *L, int index1, int index2) {
 
 
 LUA_API void lua_arith (lua_State *L, int op) {
-  StkId o1;  /* 1st operand */
+ printk("\n lua_arith : In"); 
+       	StkId o1;  /* 1st operand */
   StkId o2;  /* 2nd operand */
   lua_lock(L);
   if (op != LUA_OPUNM) /* all other operations expect two operands */

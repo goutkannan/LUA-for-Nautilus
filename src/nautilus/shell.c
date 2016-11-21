@@ -101,7 +101,8 @@ static void shell(void *in, void **out)
     nk_vc_gets(buf,80,1);
 
     if (handle_cmd(buf,80)) { 
-      break;
+     	printk(" will i break ..?");
+	    break;
     }
   }
 

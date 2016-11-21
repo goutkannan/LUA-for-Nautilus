@@ -621,7 +621,9 @@ double ldexp(double x, int exp){
   return x;
 }
 double strtod(const char *str, char **endptr){
-    return 0.0;
+   printk("\n in str tod");
+      	UNDEF_FUN_ERR();
+    return 2.0;
 }
 /*----------*/
 double abs(double x)

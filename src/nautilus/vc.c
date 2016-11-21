@@ -978,6 +978,10 @@ int nk_vc_gets(char *buf, int n, int display)
     if (display) { 
       nk_vc_putchar(buf[i]);
     }
+    else
+    {
+	    printk("\n Checking putchar");
+    }
     if (buf[i] == '\n') {
       buf[i] = 0;
       return i;

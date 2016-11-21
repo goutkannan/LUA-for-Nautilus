@@ -611,8 +611,8 @@ int luaD_pcall (lua_State *L, Pfunc func, void *u,
   L->errfunc = ef;
   printk("\n LUAD-pcall | 1.2 ");
   status = luaD_rawrunprotected(L, func, u);
+//status =0; //manually adding to check arith   
   printk("\n LUAD-pcall | 2 ");
-  //status = LUA_OK;  //manually added....
   if (status != LUA_OK) {  /* an error occurred? */
     printk("\n LUAD-pcall | 3 ");
     StkId oldtop = restorestack(L, old_top);

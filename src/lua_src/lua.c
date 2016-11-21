@@ -266,12 +266,12 @@ static int pushline (lua_State *L, int firstline) {
   char buf[80]; // for gets
   // int readstatus = lua_readline(L, b, prmt);
   
-  nk_vc_printf("%s> ","Sunny's"); 
+  nk_vc_printf("\n %s> ","Sunny's"); 
  int readstatus = nk_vc_gets(b,80,1);
   
  // int readstatus =1;
   lua_pop(L, 1);  /* remove result from 'get_prompt' */
-  if (readstatus == 0)
+  if (readstatus == -1) // Changed from 0 to -1
     return 0;  /* no input */
   l = strlen(b);
   if (l > 0 && b[l-1] == '\n')  /* line ends with newline? */

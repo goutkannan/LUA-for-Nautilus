@@ -313,12 +313,12 @@ LUA_API lua_State *lua_newstate (lua_Alloc f, void *ud) {
   for (i=0; i < LUA_NUMTAGS; i++) g->mt[i] = NULL;
   printk("\n Now LUA F-OPEN");  
   f_luaopen(L, NULL);
-  //if (luaD_rawrunprotected(L, f_luaopen, NULL) != LUA_OK) {
+  if (luaD_rawrunprotected(L, f_luaopen, NULL) != LUA_OK) {
     /* memory allocation error: free partial state */
-    //close_state(L);
-    //L/ = NULL;
-  
-//}
+    close_state(L);
+    L = NULL;
+  }
+
   printk("\n Now returning.....");
   return L;
 }
