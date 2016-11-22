@@ -48,6 +48,27 @@
 //Lua
 // LUA STRUCTURES....
 
+
+
+static int maxExponent = 511;	/* Largest possible base 10 exponent.  Any
+				 * exponent larger than this will already
+				 * produce underflow or overflow, so there's
+				 * no need to worry about additional digits.
+				 */
+static double powersOf10[] = {	/* Table giving binary powers of 10.  Entry */
+    10.,			/* is 10^2^i.  Used to convert decimal */
+    100.,			/* exponents into floating-point numbers. */
+    1.0e4,
+    1.0e8,
+    1.0e16,
+    1.0e32,
+    1.0e64,
+    1.0e128,
+    1.0e256
+};
+
+
+
 struct lconv {
     char *decimal_point;      //"."          LC_NUMERIC
     char *grouping;           //""           LC_NUMERIC
@@ -416,7 +437,7 @@ void clearerr(FILE *stream)
 {
 
     UNDEF_FUN_ERR();
-    return NULL;
+   // return NULL;
 }
 
 int printf (const char * s, ...)
@@ -620,17 +641,29 @@ double frexp(double x, int *e){
 double ldexp(double x, int exp){
   return x;
 }
-double strtod(const char *str, char **endptr){
+
+
+int ischar(unsigned char *str)
+{
+
+	return 1;
+}
+
+
+double strtod(const char *string, char **endPtr)
+{
+   
    printk("\n in str tod");
-   printk("\n Values str %s",str);
+
+   printk("\n Values str %s",string);
   // printk("\n *endptr %p ---- %p",endptr,*endptr); 
 
   // *endptr = *endptr+1; 
 
       //	UNDEF_FUN_ERR();
-double
-strtod(string, endPtr)
-    CONST char *string;		/* A decimal ASCII floating-point number,
+
+//    const char *string;	
+	/* A decimal ASCII floating-point number,
 				 * optionally preceded by white space.
 				 * Must have form "-I.FE-X", where I is the
 				 * integer part of the mantissa, F is the
@@ -642,12 +675,13 @@ strtod(string, endPtr)
 				 * The "E" may actually be an "e".  E and X
 				 * may both be omitted (but not just one).
 				 */
-    char **endPtr;		/* If non-NULL, store terminating character's
+//    char **endPtr;	
+	/* If non-NULL, store terminating character's
 				 * address here. */
-{
+
     int sign, expSign = FALSE;
     double fraction, dblExp, *d;
-    register CONST char *p;
+    register const char *p;
     register int c;
     int exp = 0;		/* Exponent read from "EX" field. */
     int fracExp = 0;		/* Exponent that derives from the fractional
@@ -662,7 +696,7 @@ strtod(string, endPtr)
     int mantSize;		/* Number of digits in mantissa. */
     int decPt;			/* Number of mantissa digits BEFORE decimal
 				 * point. */
-    CONST char *pExp;		/* Temporarily holds location of exponent
+    const char *pExp;		/* Temporarily holds location of exponent
 				 * in string. */
 
     /*
@@ -670,7 +704,8 @@ strtod(string, endPtr)
      */
 
     p = string;
-    while (isspace(UCHAR(*p))) {
+   
+    while (isspace(( unsigned char)(*p))) {
 	p += 1;
     }
     if (*p == '-') {
@@ -683,7 +718,7 @@ strtod(string, endPtr)
 	sign = FALSE;
     }
 
-    /*
+    /*/
      * Count the number of digits in the mantissa (including the decimal
      * point), and also locate the decimal point.
      */
@@ -768,11 +803,11 @@ strtod(string, endPtr)
 	    }
 	    expSign = FALSE;
 	}
-	if (!isdigit(UCHAR(*p))) {
+	if (!isdigit((unsigned char)(*p))) {
 	    p = pExp;
 	    goto done;
 	}
-	while (isdigit(UCHAR(*p))) {
+	while (isdigit((unsigned char)(*p))) {
 	    exp = exp * 10 + (*p - '0');
 	    p += 1;
 	}
