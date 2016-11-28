@@ -643,6 +643,8 @@ int nk_vc_printf(char *fmt, ...)
   va_start(args, fmt);
   i=vsnprintf(buf,PRINT_MAX,fmt,args);
   va_end(args);
+// works fine  printk("\n before nk_vc_print %s",fmt);	
+// works fine what ever is in fmt gets to buf  printk("\n before nk_vc_print %s\n",buf);
   nk_vc_print(buf);
   return i;
 }

@@ -1089,6 +1089,9 @@ qualifier:
  */
 int vsnprintf(char *buf, size_t size, const char *fmt, va_list args)
 {
+	//printk("\n In vsnprintf");
+	//printk("\n In vsnprintf | %s",fmt);
+
 	unsigned long long num;
 	char *str, *end, c;
 	int read;
@@ -1114,7 +1117,6 @@ int vsnprintf(char *buf, size_t size, const char *fmt, va_list args)
 		read = format_decode(fmt, &spec);
 
 		fmt += read;
-
 		switch (spec.type) {
 		case FORMAT_TYPE_NONE: {
 			int copy = read;
@@ -1173,6 +1175,7 @@ int vsnprintf(char *buf, size_t size, const char *fmt, va_list args)
 			break;
 
 		case FORMAT_TYPE_INVALID:
+			printk("\n format type is invalid");
 			if (str < end)
 				*str = '%';
 			++str;
@@ -1352,12 +1355,14 @@ int vsprintf(char *buf, const char *fmt, va_list args)
  */
 int sprintf(char * buf, const char *fmt, ...)
 {
+
 	va_list args;
 	int i;
-
+	printf("\n In sprintf fmt %s ",fmt);
 	va_start(args, fmt);
 	i=vsnprintf(buf, INT_MAX, fmt, args);
 	va_end(args);
+	printf("\n In sprintf buf %g ",buf);
 	return i;
 }
 

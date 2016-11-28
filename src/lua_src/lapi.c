@@ -53,7 +53,8 @@ const char lua_ident[] =
 
 
 static TValue *index2addr (lua_State *L, int idx) {
-  CallInfo *ci = L->ci;
+  CallInfo *ci = L->ci; 
+//  printk("\n lapi.c | index2addr |idx = %d",idx);
   if (idx > 0) {
     TValue *o = ci->func + idx;
     api_check(L, idx <= ci->top - (ci->func + 1), "unacceptable index");
@@ -61,12 +62,17 @@ static TValue *index2addr (lua_State *L, int idx) {
     else return o;
   }
   else if (!ispseudo(idx)) {  /* negative index */
+  //  printk("\n lapi.c | index2addr |in else if ispseudo");
     api_check(L, idx != 0 && -idx <= L->top - (ci->func + 1), "invalid index");
     return L->top + idx;
   }
   else if (idx == LUA_REGISTRYINDEX)
-    return &G(L)->l_registry;
+  {
+    //  printk("\n lapi.c | index2addr |resigtryindex");
+      return &G(L)->l_registry;
+  }
   else {  /* upvalues */
+	printk("\n lapi.c | index2addr |else ");
     idx = LUA_REGISTRYINDEX - idx;
     api_check(L, idx <= MAXUPVAL + 1, "upvalue index too large");
     if (ttislcf(ci->func))  /* light C function? */
@@ -233,6 +239,7 @@ LUA_API void lua_copy (lua_State *L, int fromidx, int toidx) {
 
 
 LUA_API void lua_pushvalue (lua_State *L, int idx) {
+//  printk("\n lua_pushvalue %d",idx);
   lua_lock(L);
   setobj2s(L, L->top, index2addr(L, idx));
   api_incr_top(L);
@@ -388,8 +395,11 @@ LUA_API int lua_toboolean (lua_State *L, int idx) {
 
 
 LUA_API const char *lua_tolstring (lua_State *L, int idx, size_t *len) {
+//  printk("\n lapi.c | lua_tolstring | ");
   StkId o = index2addr(L, idx);
+ // printk("\n lapi.c | lua_tolstring object = %d",num_(o));
   if (!ttisstring(o)) {
+	 // printk("\n my understanding : not a string");
     lua_lock(L);  /* `luaV_tostring' may create a new string */
     if (!luaV_tostring(L, o)) {  /* conversion failed? */
       if (len != NULL) *len = 0;
@@ -1299,4 +1309,3 @@ LUA_API void lua_upvaluejoin (lua_State *L, int fidx1, int n1,
   *up1 = *up2;
   luaC_objbarrier(L, f1, *up2);
 }
-

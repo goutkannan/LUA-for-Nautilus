@@ -60,15 +60,13 @@
 #elif defined(LUA_USE_ULONGJMP)
 /* in Unix, try _longjmp/_setjmp (more efficient) */
 #define LUAI_THROW(L,c)		_longjmp((c)->b, 1)
-#define LUAI_TRY(L,c,a)	        printk("in unix"); \
-				if (_setjmp((c)->b) == 0) { a }
+#define LUAI_TRY(L,c,a)		if (_setjmp((c)->b) == 0) { a }
 #define luai_jmpbuf		jmp_buf
 
 #else
 /* default handling with long jumps */
 #define LUAI_THROW(L,c)		longjmp((c)->b, 1)
-#define LUAI_TRY(L,c,a)		 printk("\n in default \n"); \
-       				if (setjmp((c)->b) == 0)  { a }
+#define LUAI_TRY(L,c,a)		if (setjmp((c)->b) == 0)  { a }
 #define luai_jmpbuf		jmp_buf
 
 #endif
@@ -128,16 +126,16 @@ l_noret luaD_throw (lua_State *L, int errcode) {
 
 int luaD_rawrunprotected (lua_State *L, Pfunc f, void *ud) {
   unsigned short oldnCcalls = L->nCcalls;
-    printk("\n lua_rawunportected |  | 1 ");
+   // printk("\n lua_rawunportected |  | 1 ");
   struct lua_longjmp lj;
   lj.status = LUA_OK;
   lj.previous = L->errorJmp;  /* chain new error handler */
   L->errorJmp = &lj;
-    printk("\n lua_rawunportected |  | 2 ");
+   // printk("\n lua_rawunportected |  | 2 ");
   LUAI_TRY(L, &lj,
     (*f)(L, ud);
   );
-    printk("\n lua_rawunportected |  | 3 ");
+   // printk("\n lua_rawunportected |  | 3 ");
   L->errorJmp = lj.previous;  /* restore old error handler */
   L->nCcalls = oldnCcalls;
   return lj.status;

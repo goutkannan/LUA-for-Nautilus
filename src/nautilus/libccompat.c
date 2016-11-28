@@ -466,7 +466,12 @@ int fputs (const char *s, FILE *stream)
 }
 size_t fwrite (const void *ptr, size_t size, size_t nmemb, FILE *stream)
 {
-    printk("%s\n",ptr);
+
+//	printk("\n In fwrite");    
+
+//	printk("\n Size %d",(int)size);
+	
+	printk("\n %s",ptr);
 	//UNDEF_FUN_ERR();
     return (int)size;
 }
@@ -649,13 +654,10 @@ int ischar(unsigned char *str)
 	return 1;
 }
 
-
 double strtod(const char *string, char **endPtr)
 {
    
-   printk("\n in str tod");
-
-   printk("\n Values str %s",string);
+  
   // printk("\n *endptr %p ---- %p",endptr,*endptr); 
 
   // *endptr = *endptr+1; 

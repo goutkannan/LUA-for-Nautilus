@@ -1,4 +1,5 @@
 /*
+	iprintk("\n in while for spec %d",spec.type);
 ** $Id: lua.c,v 1.206.1.1 2013/04/12 18:48:47 roberto Exp $
 ** Lua stand-alone interpreter
 ** See Copyright Notice in lua.h
@@ -266,7 +267,7 @@ static int pushline (lua_State *L, int firstline) {
   char buf[80]; // for gets
   // int readstatus = lua_readline(L, b, prmt);
   
-  nk_vc_printf("\n %s> ","Sunny's"); 
+  nk_vc_printf("\n %s> ","LUA"); 
  int readstatus = nk_vc_gets(b,80,1);
   
  // int readstatus =1;

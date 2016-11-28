@@ -23,19 +23,34 @@
 static int luaB_print (lua_State *L) {
   int n = lua_gettop(L);  /* number of arguments */
   int i;
+//  printk("\n in LuaB_Print");
   lua_getglobal(L, "tostring");
+//  printf("lbaselib.c  | check for n %d",n);
+
   for (i=1; i<=n; i++) {
     const char *s;
     size_t l;
     lua_pushvalue(L, -1);  /* function to be called */
     lua_pushvalue(L, i);   /* value to print */
     lua_call(L, 1, 1);
-    s = lua_tolstring(L, -1, &l);  /* get result */
+//    int idx =-1;
+//    printk("\n lbaselib.c | luaB_print |idx =  %d",idx);
+    
+    s = lua_tolstring(L, -1 , &l);  /* get result */
+    
+//    printk("\n lbaselib.c | after tostring s = %s",s);
     if (s == NULL)
       return luaL_error(L,
          LUA_QL("tostring") " must return a string to " LUA_QL("print"));
     if (i>1) luai_writestring("\t", 1);
-    luai_writestring(s, l);
+
+    luai_writestring(s, l); //Trying to use vk print 
+//    nk_vc_printf("Testing an ineger\n");
+//    nk_vc_printf("%d",10); 
+    
+//    luai_writeline();
+//    nk_vc_printf(s);
+
     lua_pop(L, 1);  /* pop result */
   }
   luai_writeline();

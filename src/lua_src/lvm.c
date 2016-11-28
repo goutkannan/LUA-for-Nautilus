@@ -49,9 +49,14 @@ int luaV_tostring (lua_State *L, StkId obj) {
     return 0;
   else {
     char s[LUAI_MAXNUMBER2STR];
-    lua_Number n = nvalue(obj);
-    int l = lua_number2str(s, n);
+//    printk("\n lvm.c | luaV_tostring | num_=%d", num_(obj));
+    int n = nvalue(obj);
+  //  printf("\n lvm.c | luaV_tostring | actual n=%d\n", n);
+  //   lua_Number n1 =  32;
+  //  printf("\n lvm.c | luaV_tostring | mod  n1=%d \n", n1);
+    int l = lua_number2str(s, n); 
     setsvalue2s(L, obj, luaS_newlstr(L, s, l));
+
     return 1;
   }
 }
