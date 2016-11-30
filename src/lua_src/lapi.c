@@ -72,7 +72,7 @@ static TValue *index2addr (lua_State *L, int idx) {
       return &G(L)->l_registry;
   }
   else {  /* upvalues */
-	printk("\n lapi.c | index2addr |else ");
+	//printk("\n lapi.c | index2addr |else ");
     idx = LUA_REGISTRYINDEX - idx;
     api_check(L, idx <= MAXUPVAL + 1, "upvalue index too large");
     if (ttislcf(ci->func))  /* light C function? */
@@ -298,7 +298,7 @@ LUA_API int lua_rawequal (lua_State *L, int index1, int index2) {
 
 
 LUA_API void lua_arith (lua_State *L, int op) {
- printk("\n lua_arith : In"); 
+ //printk("\n lua_arith : In"); 
        	StkId o1;  /* 1st operand */
   StkId o2;  /* 2nd operand */
   lua_lock(L);
@@ -437,7 +437,7 @@ LUA_API lua_CFunction lua_tocfunction (lua_State *L, int idx) {
 
 LUA_API void *lua_touserdata (lua_State *L, int idx) {
   StkId o = index2addr(L, idx);
-  printk("\n in lua_touserdata %d",ttypenv(o));
+  //printk("\n in lua_touserdata %d",ttypenv(o));
   switch (ttypenv(o)) {
     case LUA_TUSERDATA: return (rawuvalue(o) + 1);
     case LUA_TLIGHTUSERDATA: return pvalue(o);
@@ -494,7 +494,7 @@ LUA_API void lua_pushnumber (lua_State *L, lua_Number n) {
 
 LUA_API void lua_pushinteger (lua_State *L, lua_Integer n) {
   lua_lock(L);
-  printk("\n lua_pushinteger of n %d",n);
+  //printk("\n lua_pushinteger of n %d",n);
 
   setnvalue(L->top, cast_num(n));
   api_incr_top(L);
@@ -945,18 +945,18 @@ LUA_API int lua_pcallk (lua_State *L, int nargs, int nresults, int errfunc,
   int status;
   ptrdiff_t func;
   lua_lock(L);
-  printk("\n lua_Pcallk |  lock() success");
+  //printk("\n lua_Pcallk |  lock() success");
   api_check(L, k == NULL || !isLua(L->ci),
     "cannot use continuations inside hooks");
-  printk("\n lua_pcallk | api-check success.");
+  //printk("\n lua_pcallk | api-check success.");
   api_checknelems(L, nargs+1);
-  printk("\n lua_pcallk | api-checklms success.");
+  //printk("\n lua_pcallk | api-checklms success.");
 api_check(L, L->status == LUA_OK, "cannot do calls on non-normal thread");
  
-  printk("\n lua_pcallk | api-check2 success.");
+  //printk("\n lua_pcallk | api-check2 success.");
  checkresults(L, nargs, nresults);
   
-  printk("\n lua_pcallk | check resiults success.");
+  //printk("\n lua_pcallk | check resiults success.");
   if (errfunc == 0)
     func = 0;
   else {
@@ -964,17 +964,17 @@ api_check(L, L->status == LUA_OK, "cannot do calls on non-normal thread");
     api_checkstackindex(L, errfunc, o);
     func = savestack(L, o);
 }
-  printk("\n lua_pcallk | if-else-errfunbc success.");
+  //printk("\n lua_pcallk | if-else-errfunbc success.");
   c.func = L->top - (nargs+1);  /* function to be called */
-  printk("\n lua_pcallk | sunc called... success.");
+  //printk("\n lua_pcallk | sunc called... success.");
   if (k == NULL || L->nny > 0) {  /* no continuation or no yieldable? */
-    printk("\n lua_pcallk | lua_docall | inside IF- called... success.");
+    //printk("\n lua_pcallk | lua_docall | inside IF- called... success.");
     c.nresults = nresults;  /* do a 'conventional' protected call */
     status = luaD_pcall(L, f_call, &c, savestack(L, c.func), func);
-    printk("\n lua_pcallk | lua_docall | d-call called... success.");
+   // printk("\n lua_pcallk | lua_docall | d-call called... success.");
   }
   else {  /* prepare continuation (call is already protected by 'resume') */
-  printk("\n lua_pcallk | lua_docall | inside ELSE called... success.");
+  //printk("\n lua_pcallk | lua_docall | inside ELSE called... success.");
     CallInfo *ci = L->ci;
     ci->u.c.k = k;  /* save continuation */
     ci->u.c.ctx = ctx;  /* save context */
@@ -990,9 +990,9 @@ api_check(L, L->status == LUA_OK, "cannot do calls on non-normal thread");
     L->errfunc = ci->u.c.old_errfunc;
     status = LUA_OK;  /* if it is here, there were no errors */
   }
-  printk("\n lua_pcallk | before final result success.");
+  //printk("\n lua_pcallk | before final result success.");
   adjustresults(L, nresults);
-  printk("\n lua_pcallk | adjustresult success.");
+  //printk("\n lua_pcallk | adjustresult success.");
   lua_unlock(L);
   return status;
 }

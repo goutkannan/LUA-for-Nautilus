@@ -941,13 +941,13 @@ static int lua_panic (lua_State *L) {
 
 
 LUALIB_API lua_State *luaL_newstate (void) {
-  printk("INSIDE LUA-NEWSTATE: going to execute LUA newstatei\n");
+  //printk("INSIDE LUA-NEWSTATE: going to execute LUA newstatei\n");
   lua_State *L = lua_newstate(l_alloc, NULL);
-  printk("INSIDE LUA-NEWSTATE: now out of function...\n");
+  //printk("INSIDE LUA-NEWSTATE: now out of function...\n");
   if (L){
-       printk("\n Now AT-PANIC....");
+      // printk("\n Now AT-PANIC....");
        lua_atpanic(L, &lua_panic);
-       printk("\n Out of AT-PANIC...");
+      // printk("\n Out of AT-PANIC...");
   }
   return L;
 }

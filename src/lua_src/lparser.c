@@ -69,7 +69,7 @@ static void anchor_token (LexState *ls) {
 
 /* semantic error */
 static l_noret semerror (LexState *ls, const char *msg) {
-  printk("\n semerror");
+ // printk("\n semerror");
 	ls->t.token = 0;  /* remove 'near to' from final message */
   luaX_syntaxerror(ls, msg);
 }
@@ -77,7 +77,7 @@ static l_noret semerror (LexState *ls, const char *msg) {
 
 static l_noret error_expected (LexState *ls, int token) {
   
-  printk("\n experror");
+  //printk("\n experror");
 	luaX_syntaxerror(ls,
       luaO_pushfstring(ls->L, "%s expected", luaX_token2str(ls, token)));
 }

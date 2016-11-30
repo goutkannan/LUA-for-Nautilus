@@ -93,15 +93,15 @@ static void shell(void *in, void **out)
   nk_vc_clear(0x9f);
   int st; 
   char *srg = "./lua";
-  printk("\n  Before main %s",srg); 
+  //printk("\n  Before main %s",srg); 
   st = lua_main(1,&srg); 
-  printk("\n after main");  
+ // printk("\n after main");  
   while (1) {  
     nk_vc_printf("%s> ", (char*)in);
     nk_vc_gets(buf,80,1);
 
     if (handle_cmd(buf,80)) { 
-     	printk(" will i break ..?");
+     //	printk(" will i break ..?");
 	    break;
     }
   }

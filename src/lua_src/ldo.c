@@ -600,30 +600,30 @@ LUA_API int lua_yieldk (lua_State *L, int nresults, int ctx, lua_CFunction k) {
 int luaD_pcall (lua_State *L, Pfunc func, void *u,
                 ptrdiff_t old_top, ptrdiff_t ef) {
   int status;
-    printk("\n LUAD-pcall | 1 ");
+   // printk("\n LUAD-pcall | 1 ");
   CallInfo *old_ci = L->ci;
   lu_byte old_allowhooks = L->allowhook;
   unsigned short old_nny = L->nny;
-    printk("\n LUAD-pcall | 1.1 ");
+    //printk("\n LUAD-pcall | 1.1 ");
   ptrdiff_t old_errfunc = L->errfunc;
   L->errfunc = ef;
-  printk("\n LUAD-pcall | 1.2 ");
+//  printk("\n LUAD-pcall | 1.2 ");
   status = luaD_rawrunprotected(L, func, u);
 //status =0; //manually adding to check arith   
-  printk("\n LUAD-pcall | 2 ");
+ // printk("\n LUAD-pcall | 2 ");
   if (status != LUA_OK) {  /* an error occurred? */
-    printk("\n LUAD-pcall | 3 ");
+  //  printk("\n LUAD-pcall | 3 ");
     StkId oldtop = restorestack(L, old_top);
-    printk("\n LUAD-pcall | 4 ");
+  //  printk("\n LUAD-pcall | 4 ");
     luaF_close(L, oldtop);  /* close possible pending closures */
-    printk("\n LUAD-pcall | 5 ");
+  // printk("\n LUAD-pcall | 5 ");
     seterrorobj(L, status, oldtop);
-    printk("\n LUAD-pcall | 6 ");
+  //  printk("\n LUAD-pcall | 6 ");
     L->ci = old_ci;
     L->allowhook = old_allowhooks;
     L->nny = old_nny;
     luaD_shrinkstack(L);
-    printk("\n LUAD-pcall | 7 ");
+  //  printk("\n LUAD-pcall | 7 ");
   }
   L->errfunc = old_errfunc;
   return status;

@@ -1,5 +1,5 @@
 /*
-	iprintk("\n in while for spec %d",spec.type);
+	
 ** $Id: lua.c,v 1.206.1.1 2013/04/12 18:48:47 roberto Exp $
 ** Lua stand-alone interpreter
 ** See Copyright Notice in lua.h
@@ -289,10 +289,10 @@ static int pushline (lua_State *L, int firstline) {
 static int loadline (lua_State *L) {
   int status;
   lua_settop(L, 0);
-  printk("\n LUA_loadline init call");
+//  printk("\n LUA_loadline init call");
   if (!pushline(L, 1))
   {
-	printk("\n LUA_loadline pushline failure");  
+//	printk("\n LUA_loadline pushline failure");  
     return -1;  /* no input */
   }
     for (;;) {  /* repeat until gets a complete line */
@@ -369,7 +369,7 @@ static int handle_script (lua_State *L, char **argv, int n) {
 static int collectargs (char **argv, int *args) {
   int i;
   
-  printk("\n In collect argsc");
+  //printk("\n In collect argsc");
   for (i = 1; argv[i] != NULL; i++) {
     if (argv[i][0] != '-')  /* not an option? */
         return i;
@@ -454,11 +454,11 @@ static int pmain (lua_State *L) {
   char **argv = (char **)lua_touserdata(L, 2);
   int script;
   int args[num_has];
-  printk("\n argc %d",argc);
+  //printk("\n argc %d",argc);
   //printk("\n argv %s",argv[0]);
-  printk("\n pmain - line 5");
+  //printk("\n pmain - line 5");
   args[has_i] = args[has_v] = args[has_e] = args[has_E] = 0;
-  printk("\n after has");
+//  printk("\n after has");
 //
   //  if (argv[0] && argv[0][0]) progname = argv[0];
 
@@ -476,15 +476,15 @@ static int pmain (lua_State *L) {
 //  printk("\n before open std libraries"); 
  /* open standard libraries */
   luaL_checkversion(L);
-  printk("\n after check version");
+ // printk("\n after check version");
   lua_gc(L, LUA_GCSTOP, 0); /* stop collector during initialization */
   
-  printk("after gc");
+ // printk("after gc");
   luaL_openlibs(L); /* open libraries */
-  printk("after openlibs");
+  //printk("after openlibs");
 
   lua_gc(L, LUA_GCRESTART, 0);
-  printk("after gc");
+  //printk("after gc");
   
 //  if (!args[has_E] && handle_luainit(L) != LUA_OK)
 //    return 0;  /* error running LUA_INIT */
@@ -508,7 +508,7 @@ static int pmain (lua_State *L) {
 
 
 int lua_main (int argc, char **argv) {
-  printk("\n in Lua main : %s",*argv);
+  //printk("\n in Lua main : %s",*argv);
   int status, result;
   lua_State *L = luaL_newstate();   /*create state */
  // printk("\n LUA-MAIN | new state created. args %s",argv[0]);
@@ -517,16 +517,16 @@ int lua_main (int argc, char **argv) {
     return EXIT_FAILURE;
   }
   /* call 'pmain' in protected mode*/
-  printk("\n LUA-MAIN | executing lua_pushfunction. "); 
+  //printk("\n LUA-MAIN | executing lua_pushfunction. "); 
  lua_pushcfunction(L, &pmain); //temp calling direct
-  printk("\n LUA-MAIN | lua_pushfunction Success. ");
+  //printk("\n LUA-MAIN | lua_pushfunction Success. ");
   lua_pushinteger(L, argc);
-  printk("\n LUA-MAIN | lua_pushinteger Success. ");  
+ // printk("\n LUA-MAIN | lua_pushinteger Success. ");  
   lua_pushlightuserdata(L, argv);  /*2nd argument */
-  printk("\n LUA-MAIN | lua_pushlightuserdata Success .");
+ // printk("\n LUA-MAIN | lua_pushlightuserdata Success .");
   status = lua_pcall(L, 2, 1, 0);// -- temp call
  // status = pmain(L); 
-  printk("\n LUA-MAIN | pcall success.");
+ // printk("\n LUA-MAIN | pcall success.");
   result = lua_toboolean(L, -1);  
   finalreport(L, status);
   lua_close(L);

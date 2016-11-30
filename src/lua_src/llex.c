@@ -103,7 +103,8 @@ static const char *txtToken (LexState *ls, int token) {
 
 static l_noret lexerror (LexState *ls, const char *msg, int token) {
   char buff[LUA_IDSIZE];
-  printk("\n In lexerror %s",msg);
+ // printk("\n In lexerror %s",msg);
+
 
   luaO_chunkid(buff, getstr(ls->source), LUA_IDSIZE);
   msg = luaO_pushfstring(ls->L, "%s:%d: %s", buff, ls->linenumber, msg);
@@ -219,7 +220,7 @@ static void trydecpoint (LexState *ls, SemInfo *seminfo) {
   char old = ls->decpoint;
   ls->decpoint = getlocaledecpoint();
   buffreplace(ls, old, ls->decpoint);  /* try new decimal separator */
-  printk("\n trydecpoint | Before buff2D");
+  //printk("\n trydecpoint | Before buff2D");
   if (!buff2d(ls->buff, &seminfo->r)) {
     /* format error with correct decimal point: no more options */
     buffreplace(ls, ls->decpoint, '.');  /* undo change (for error message) */

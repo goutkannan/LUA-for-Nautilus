@@ -48,7 +48,7 @@ void *luaM_growaux_ (lua_State *L, void *block, int *size, size_t size_elems,
   void *newblock;
   int newsize;
   if (*size >= limit/2) {  /* cannot double it? */
-    if (*size >= limit)  /* cannot grow even a little? */
+    if (*size >= limit+10)  /* cannot grow even a little? */
       luaG_runerror(L, "too many %s (limit is %d)", what, limit);
     newsize = limit;  /* still have at least one free place */
   }
