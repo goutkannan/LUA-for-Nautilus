@@ -87,6 +87,9 @@ deps_src/lua_src/lmathlib.o := \
   include/nautilus/barrier.h \
   include/nautilus/numa.h \
   include/arch/x64/main.h \
+  include/nautilus/math.h \
+  include/lib/bitops.h \
+  include/asm/bitops.h \
   include/lua/lua.h \
   include/lua/luaconf.h \
   include/lua/lauxlib.h \

@@ -267,7 +267,7 @@ static int pushline (lua_State *L, int firstline) {
   char buf[80]; // for gets
   // int readstatus = lua_readline(L, b, prmt);
   
-  nk_vc_printf("\n %s> ","LUA"); 
+  nk_vc_printf("\n %s%s ","LUA",prmt); 
  int readstatus = nk_vc_gets(b,80,1);
   
  // int readstatus =1;
@@ -460,19 +460,19 @@ static int pmain (lua_State *L) {
   args[has_i] = args[has_v] = args[has_e] = args[has_E] = 0;
 //  printk("\n after has");
 //
-  //  if (argv[0] && argv[0][0]) progname = argv[0];
+  if (argv[0] && argv[0][0]) progname = argv[0];
 
-//  script = collectargs(argv, args);
-//  printk("\n after collectargs");
-//  if (script < 0) {  /* invalid arg? */
-//    print_usage(argv[-script]);
-//    return 0;
-//  }
-//  if (args[has_v]) print_version();
-//  if (args[has_E]) {  /* option '-E'? */
- //   lua_pushboolean(L, 1);  /* signal for libraries to ignore env. vars. */
-//    lua_setfield(L, LUA_REGISTRYINDEX, "LUA_NOENV");
-//  }
+  script = collectargs(argv, args);
+  printk("\n after collectargs");
+  if (script < 0) {  /* invalid arg? */
+     print_usage(argv[-script]);
+    return 0;
+  }
+  if (args[has_v]) print_version();
+  if (args[has_E]) {  /* option '-E'? */
+   lua_pushboolean(L, 1);  /* signal for libraries to ignore env. vars. */
+   lua_setfield(L, LUA_REGISTRYINDEX, "LUA_NOENV");
+  }
 //  printk("\n before open std libraries"); 
  /* open standard libraries */
   luaL_checkversion(L);
@@ -486,22 +486,23 @@ static int pmain (lua_State *L) {
   lua_gc(L, LUA_GCRESTART, 0);
   //printk("after gc");
   
-//  if (!args[has_E] && handle_luainit(L) != LUA_OK)
-//    return 0;  /* error running LUA_INIT */
+  if (!args[has_E] && handle_luainit(L) != LUA_OK)
+     return 0;  /* error running LUA_INIT */
   /* execute arguments -e and -l */
-//  if (!runargs(L, argv, (script > 0) ? script : argc)) return 0;
+  if (!runargs(L, argv, (script > 0) ? script : argc)) return 0;
   /* execute main script (if there is one) */
-//  if (script && handle_script(L, argv, script) != LUA_OK) return 0;
-//  if (args[has_i])  /* -i option? */
-//    dotty(L);
-//  else if (script == 0 && !args[has_e] && !args[has_v]) {  /* no arguments? */
-    if (lua_stdin_is_tty()) {
-      print_version();
+    if (script && handle_script(L, argv, script) != LUA_OK) return 0;
+    if (args[has_i])  /* -i option? */
       dotty(L);
-    }
+    else if (script == 0 && !args[has_e] && !args[has_v]) \
+    {  /* no arguments? */
+       if (lua_stdin_is_tty()) 
+       {
+         print_version();
+         dotty(L);
+       }
     else dofile(L, NULL);  /* executes stdin as a file */
- // } 
-  
+    } 
   lua_pushboolean(L, 1);  /* signal no errors */
   return 1;
 }

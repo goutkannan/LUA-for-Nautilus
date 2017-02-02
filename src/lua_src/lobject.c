@@ -92,7 +92,7 @@ int luaO_hexavalue (int c) {
 
 #if !defined(lua_strx2number)
 
-#include <math.h>
+//#include <math.h>
 
 
 static int isneg (const char **s) {

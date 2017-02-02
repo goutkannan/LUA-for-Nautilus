@@ -633,10 +633,19 @@ double atan2(double y, double x){
 double fmod(double y, double x){
     // this is replacement to actual fmod() (/nautilus/libccompat)
     // defining own fmod similar to the one defined in (/gcc/libc)
-    return 2.0;
+    //printk("\n in fmod y %d,x %d",y,x); 
+	return y -x*(y/x);
+}
+ 
+double fmodnew(int y, int x){
+    // this is replacement to actual fmod() (/nautilus/libccompat)
+    // defining own fmod similar to the one defined in (/gcc/libc)
+  //  printk("\n in fmod y %d,x %d",y,x); 
+	return y -x*(y/x);
 }
 double modf(double y, double *x){
   *x = 0;
+//	printk("\n in modf");
   return 0.000;
 }
 double frexp(double x, int *e){

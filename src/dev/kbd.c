@@ -162,7 +162,9 @@ static nk_keycode_t flags = 0;
 
 static void queue_scancode(nk_scancode_t scan)
 {
-  if (switcher_num_queued==SCAN_MAX_QUEUE) { 
+  
+	///printk("\n in scancode");
+	if (switcher_num_queued==SCAN_MAX_QUEUE) { 
     ERROR("Out of room in switcher queue\n");
   } else {
     switcher_scancode_queue[switcher_num_queued++] = scan;
@@ -187,6 +189,9 @@ static void flush_scancodes()
 
 nk_keycode_t kbd_translate(nk_scancode_t scan)
 {
+ 
+ // printk("\n in kbd_translate");
+	
   int release;
   const nk_keycode_t *table=0;
   nk_keycode_t cur;
@@ -213,7 +218,7 @@ nk_keycode_t kbd_translate(nk_scancode_t scan)
   }    
   
   cur = table[scan];
-  
+  printk("\n cur %d",cur);
   flag = 0;
   switch (cur) { 
   case KEY_LSHIFT:

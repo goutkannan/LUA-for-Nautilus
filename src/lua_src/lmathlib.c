@@ -12,7 +12,7 @@
 
 #include <nautilus/naut_types.h>
 #include <nautilus/libccompat.h>
-//#include <nautilus/math.h>
+#include <nautilus/math.h>
 
 #define lmathlib_c
 #define LUA_LIB
@@ -93,14 +93,19 @@ static int math_floor (lua_State *L) {
 }
 
 static int math_fmod (lua_State *L) {
-  lua_pushnumber(L, l_mathop(fmod)(luaL_checknumber(L, 1),
-                               luaL_checknumber(L, 2)));
+  //printk("\n in math_fmod");
+  int y = luaL_checknumber(L,1); 
+  int x = luaL_checknumber(L,2); 
+  //printk("\n math_fmod : y %1f . x %1f ",y,x); 
+	lua_pushnumber(L, l_mathop(fmodnew)(y, x));
   return 1;
 }
 
 static int math_modf (lua_State *L) {
+ // printk("\n in math_modf");
   lua_Number ip;
   lua_Number fp = l_mathop(modf)(luaL_checknumber(L, 1), &ip);
+ 
   lua_pushnumber(L, ip);
   lua_pushnumber(L, fp);
   return 2;

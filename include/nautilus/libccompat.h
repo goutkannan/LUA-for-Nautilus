@@ -249,8 +249,10 @@ void *memchr(const void *str, int c, size_t n);
 double fabs(double __x);
 double atan(double __x);
 double atan2(double y, double x);
-double fmod(double y, double x);
+double fmodnew(int y, int x); //dupe for test
 double modf(double y, double *x);
+double fmod(double y, double x);
+
 double frexp(double x, int *e);
 double ldexp(double x, int exp);
 double strtod(const char *str, char **endptr);
