@@ -633,8 +633,9 @@ double atan2(double y, double x){
 double fmod(double y, double x){
     // this is replacement to actual fmod() (/nautilus/libccompat)
     // defining own fmod similar to the one defined in (/gcc/libc)
-    //printk("\n in fmod y %d,x %d",y,x); 
-	return y -x*(y/x);
+    printk("\n in fmod y %d,x %d",(int)y,(int)x); 
+//	return y -x*(y/x);
+      return (int)y% (int)x;
 }
  
 double fmodnew(int y, int x){

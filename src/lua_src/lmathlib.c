@@ -97,7 +97,7 @@ static int math_fmod (lua_State *L) {
   int y = luaL_checknumber(L,1); 
   int x = luaL_checknumber(L,2); 
   //printk("\n math_fmod : y %1f . x %1f ",y,x); 
-	lua_pushnumber(L, l_mathop(fmodnew)(y, x));
+	lua_pushnumber(L, l_mathop(fmod)(y, x));
   return 1;
 }
 

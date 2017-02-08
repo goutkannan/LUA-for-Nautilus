@@ -882,6 +882,7 @@ static void primaryexp (LexState *ls, expdesc *v) {
   switch (ls->t.token) {
     case '(': {
       int line = ls->linenumber;
+      printk("\n parse (");
       luaX_next(ls);
       expr(ls, v);
       check_match(ls, ')', '(', line);

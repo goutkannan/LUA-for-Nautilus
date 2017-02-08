@@ -22,7 +22,8 @@ obj-y += lmem.o\
 	 lopcodes.o \
 	 liolib.o \
 	 lmathlib.o \
-	 loadlib.o \
+	 lnautlib.o \
+         loadlib.o \
 	 lobject.o \
 	 lvm.o \
 	 loslib.o \
