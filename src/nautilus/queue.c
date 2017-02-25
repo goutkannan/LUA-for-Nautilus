@@ -30,6 +30,7 @@
 nk_queue_t*
 nk_queue_create (void)
 {
+    printk("In for test :\n");
     nk_queue_t * q = NULL;
     q = malloc(sizeof(nk_queue_t));
     if (unlikely(!q)) {

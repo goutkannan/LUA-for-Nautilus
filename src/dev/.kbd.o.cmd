@@ -1,4 +1,4 @@
-cmd_src/dev/kbd.o := gcc -Wp,-MD,src/dev/.kbd.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kbd)"  -D"KBUILD_MODNAME=KBUILD_STR(kbd)" -c -o src/dev/kbd.o src/dev/kbd.c
+cmd_src/dev/kbd.o := gcc -Wp,-MD,src/dev/.kbd.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -g -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kbd)"  -D"KBUILD_MODNAME=KBUILD_STR(kbd)" -c -o src/dev/kbd.o src/dev/kbd.c
 
 deps_src/dev/kbd.o := \
   src/dev/kbd.c \

@@ -332,8 +332,9 @@ CFLAGS:=   $(COMMON_FLAGS) \
 		   -Wno-unused-function \
 		   -Wno-unused-variable \
 		   -fno-common \
+		   -g \
 		   -std=gnu99 \
-		    $(call cc-option, -Wno-unused-but-set-variable,)
+		   $(call cc-option, -Wno-unused-but-set-variable,)
 		   #-mno-3dnow \
 		   #-Werror \
 		   #-Wmissing-prototypes \
@@ -682,6 +683,10 @@ nautilus: $(BIN_NAME)
 isoimage: nautilus
 	cp $(BIN_NAME) iso/boot
 	$(GRUBMKRESCUE) -o $(ISO_NAME) iso
+
+lua: nautilus 
+	python script.py 
+	$(call if_changed_rule,nautilus__)
 
 nautilus.asm: $(BIN_NAME)
 	$(OBJDUMP) --disassemble $< > $@

@@ -1,4 +1,4 @@
-cmd_src/dev/i8254.o := gcc -Wp,-MD,src/dev/.i8254.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(i8254)"  -D"KBUILD_MODNAME=KBUILD_STR(i8254)" -c -o src/dev/i8254.o src/dev/i8254.c
+cmd_src/dev/i8254.o := gcc -Wp,-MD,src/dev/.i8254.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -g -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(i8254)"  -D"KBUILD_MODNAME=KBUILD_STR(i8254)" -c -o src/dev/i8254.o src/dev/i8254.c
 
 deps_src/dev/i8254.o := \
   src/dev/i8254.c \

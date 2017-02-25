@@ -1,4 +1,4 @@
-cmd_src/test/ipi.o := gcc -Wp,-MD,src/test/.ipi.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(ipi)"  -D"KBUILD_MODNAME=KBUILD_STR(ipi)" -c -o src/test/ipi.o src/test/ipi.c
+cmd_src/test/ipi.o := gcc -Wp,-MD,src/test/.ipi.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -g -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(ipi)"  -D"KBUILD_MODNAME=KBUILD_STR(ipi)" -c -o src/test/ipi.o src/test/ipi.c
 
 deps_src/test/ipi.o := \
   src/test/ipi.c \

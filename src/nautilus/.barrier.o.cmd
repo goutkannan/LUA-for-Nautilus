@@ -1,4 +1,4 @@
-cmd_src/nautilus/barrier.o := gcc -Wp,-MD,src/nautilus/.barrier.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(barrier)"  -D"KBUILD_MODNAME=KBUILD_STR(barrier)" -c -o src/nautilus/barrier.o src/nautilus/barrier.c
+cmd_src/nautilus/barrier.o := gcc -Wp,-MD,src/nautilus/.barrier.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -g -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(barrier)"  -D"KBUILD_MODNAME=KBUILD_STR(barrier)" -c -o src/nautilus/barrier.o src/nautilus/barrier.c
 
 deps_src/nautilus/barrier.o := \
   src/nautilus/barrier.c \

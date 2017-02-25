@@ -155,6 +155,8 @@ out:
 void
 nemo_unregister_event_action (nemo_event_id_t id)
 {
+	printk("in for test with args %d\n",id);
+
 	ASSERT(id < NEMO_MAX_EVENTS && id >= 0);
 
 	NEMO_DEBUG("Unregister event %d\n", id);
@@ -178,6 +180,8 @@ nemo_event_await (void)
 int
 nemo_init (void)
 {
+
+	printk("in for test\n");
 
 	if (register_int_handler(NEMO_INT_VEC, nemo_ipi_event_recv, NULL) != 0) {
 		NEMO_ERR("Could not register Nemo interrupt handler\n");

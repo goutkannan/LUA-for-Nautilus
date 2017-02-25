@@ -1,4 +1,4 @@
-cmd_src/lua_src/lctype.o := gcc -Wp,-MD,src/lua_src/.lctype.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(lctype)"  -D"KBUILD_MODNAME=KBUILD_STR(lctype)" -c -o src/lua_src/lctype.o src/lua_src/lctype.c
+cmd_src/lua_src/lctype.o := gcc -Wp,-MD,src/lua_src/.lctype.o.d   -D__NAUTILUS__ -Iinclude  -include include/autoconf.h -D__NAUTILUS__ -O2 -fno-omit-frame-pointer -ffreestanding -fno-stack-protector -fno-strict-aliasing -mno-red-zone -mcmodel=large -Wall -Wno-unused-function -Wno-unused-variable -fno-common -g -std=gnu99  -Wno-unused-but-set-variable -fgnu89-inline -g -m64  -Wno-pointer-sign    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(lctype)"  -D"KBUILD_MODNAME=KBUILD_STR(lctype)" -c -o src/lua_src/lctype.o src/lua_src/lctype.c
 
 deps_src/lua_src/lctype.o := \
   src/lua_src/lctype.c \

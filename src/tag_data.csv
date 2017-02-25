@@ -1,0 +1,3474 @@
+ACPI_EXPORT_SYMBOL,acpi/acpica/utxferror.c,"/^ACPI_EXPORT_SYMBOL(acpi_error)$/;""","f
+"
+ACPI_EXPORT_SYMBOL,acpi/acpica/utxferror.c,"/^ACPI_EXPORT_SYMBOL(acpi_warning)$/;""","f
+"
+DumpBlock,lua_src/ldump.c,"/^static void DumpBlock(const void* b, size_t size, DumpState* D)$/;""",f,"file:
+"
+DumpChar,lua_src/ldump.c,"/^static void DumpChar(int y, DumpState* D)$/;""",f,"file:
+"
+DumpConstants,lua_src/ldump.c,"/^static void DumpConstants(const Proto* f, DumpState* D)$/;""",f,"file:
+"
+DumpDebug,lua_src/ldump.c,"/^static void DumpDebug(const Proto* f, DumpState* D)$/;""",f,"file:
+"
+DumpFunction,lua_src/ldump.c,"/^static void DumpFunction(const Proto* f, DumpState* D)$/;""",f,"file:
+"
+DumpHeader,lua_src/ldump.c,"/^static void DumpHeader(DumpState* D)$/;""",f,"file:
+"
+DumpInt,lua_src/ldump.c,"/^static void DumpInt(int x, DumpState* D)$/;""",f,"file:
+"
+DumpNumber,lua_src/ldump.c,"/^static void DumpNumber(lua_Number x, DumpState* D)$/;""",f,"file:
+"
+DumpString,lua_src/ldump.c,"/^static void DumpString(const TString* s, DumpState* D)$/;""",f,"file:
+"
+DumpUpvalues,lua_src/ldump.c,"/^static void DumpUpvalues(const Proto* f, DumpState* D)$/;""",f,"file:
+"
+DumpVector,lua_src/ldump.c,"/^static void DumpVector(const void* b, int n, size_t size, DumpState* D)$/;""",f,"file:
+"
+Format_Output,nautilus/fmtout.c,"/^int Format_Output(struct Output_Sink *q, const char *format, va_list ap)$/;""","f
+"
+GCTM,lua_src/lgc.c,"/^static void GCTM (lua_State *L, int propagateerrors) {$/;""",f,"file:
+"
+LoadBlock,lua_src/lundump.c,"/^static void LoadBlock(LoadState* S, void* b, size_t size)$/;""",f,"file:
+"
+LoadChar,lua_src/lundump.c,"/^static int LoadChar(LoadState* S)$/;""",f,"file:
+"
+LoadCode,lua_src/lundump.c,"/^static void LoadCode(LoadState* S, Proto* f)$/;""",f,"file:
+"
+LoadConstants,lua_src/lundump.c,"/^static void LoadConstants(LoadState* S, Proto* f)$/;""",f,"file:
+"
+LoadDebug,lua_src/lundump.c,"/^static void LoadDebug(LoadState* S, Proto* f)$/;""",f,"file:
+"
+LoadFunction,lua_src/lundump.c,"/^static void LoadFunction(LoadState* S, Proto* f)$/;""",f,"file:
+"
+LoadHeader,lua_src/lundump.c,"/^static void LoadHeader(LoadState* S)$/;""",f,"file:
+"
+LoadInt,lua_src/lundump.c,"/^static int LoadInt(LoadState* S)$/;""",f,"file:
+"
+LoadNumber,lua_src/lundump.c,"/^static lua_Number LoadNumber(LoadState* S)$/;""",f,"file:
+"
+LoadString,lua_src/lundump.c,"/^static TString* LoadString(LoadState* S)$/;""",f,"file:
+"
+LoadUpvalues,lua_src/lundump.c,"/^static void LoadUpvalues(LoadState* S, Proto* f)$/;""",f,"file:
+"
+Serial_Emit,dev/serial.c,"/^Serial_Emit (struct Output_Sink * o, int ch) $/;""",f,"file:
+"
+Serial_Finish,dev/serial.c,"/^Serial_Finish (struct Output_Sink * o) { return; }$/;""",f,"file:
+"
+__assert_fail,nautilus/libccompat.c,"/^__assert_fail (const char * assertion, const char * file, unsigned line, const char * function)$/;""","f
+"
+__associate_domains_adhoc,nautilus/numa.c,"/^__associate_domains_adhoc (struct nk_locality_info * loc)$/;""",f,"file:
+"
+__associate_domains_slit,nautilus/numa.c,"/^__associate_domains_slit (struct nk_locality_info * loc)$/;""",f,"file:
+"
+__clear_bit,nautilus/mm/buddy.c,"/^__clear_bit (int nr, volatile void * addr)$/;""",f,"file:
+"
+__clear_bit,nautilus/mm/buddy.c,"/^__clear_bit (ulong_t nr, volatile void * addr)$/;""",f,"file:
+"
+__coalesce_regions,nautilus/numa.c,"/^__coalesce_regions (struct numa_domain * d)$/;""",f,"file:
+"
+__construct_tables_1g,nautilus/paging.c,"/^__construct_tables_1g (pml4e_t * pml, ulong_t bytes)$/;""",f,"file:
+"
+__construct_tables_2m,nautilus/paging.c,"/^__construct_tables_2m (pml4e_t * pml, ulong_t bytes)$/;""",f,"file:
+"
+__construct_tables_4k,nautilus/paging.c,"/^__construct_tables_4k (pml4e_t * pml, ulong_t bytes)$/;""",f,"file:
+"
+__ctype_get_mb_cur_max,nautilus/libccompat.c,"/^size_t __ctype_get_mb_cur_max (void)$/;""","f
+"
+__do_backtrace,nautilus/backtrace.c,"/^__do_backtrace (void ** fp, unsigned depth)$/;""","f
+"
+__do_ctors_init,cxx/cxxinit.c,"/^__do_ctors_init (void) $/;""",f,"file:
+"
+__duplocale,nautilus/libccompat.c,"/^locale_t __duplocale (locale_t locobj)$/;""","f
+"
+__early_init_hrt,arch/hrt/hrt.c,"/^__early_init_hrt (struct naut_info * naut)$/;""","f
+"
+__early_init_mp,arch/x64/smp.c,"/^__early_init_mp (struct naut_info * naut)$/;""",f,"file:
+"
+__early_init_sfi,arch/k1om/sfi.c,"/^__early_init_sfi (struct naut_info * naut)$/;""","f
+"
+__fill_pd,nautilus/paging.c,"/^__fill_pd (pde_t * pd, $/;""",f,"file:
+"
+__fill_pdpt,nautilus/paging.c,"/^__fill_pdpt (pdpte_t * pdpt, $/;""",f,"file:
+"
+__fill_pml,nautilus/paging.c,"/^__fill_pml (pml4e_t * pml, $/;""",f,"file:
+"
+__fill_pt,nautilus/paging.c,"/^__fill_pt (pte_t * pt, $/;""",f,"file:
+"
+__ioapic_init,dev/ioapic.c,"/^__ioapic_init (struct ioapic * ioapic, uint8_t ioapic_id)$/;""",f,"file:
+"
+__mm_boot_alloc,nautilus/mm/boot_mm.c,"/^__mm_boot_alloc (ulong_t size, ulong_t align, ulong_t goal)$/;""","f
+"
+__newlocale,nautilus/libccompat.c,"/^locale_t __newlocale (int category_mask, const char *locale, locale_t base)$/;""","f
+"
+__nl_langinfo_l,nautilus/libccompat.c,"/^char *__nl_langinfo_l (nl_item item, locale_t locale)$/;""","f
+"
+__popcountdi2,nautilus/libccompat.c,"/^__popcountdi2 (long long a)$/;""","f
+"
+__rb_erase_color,nautilus/rbtree.c,"/^static void __rb_erase_color(struct rb_node *node, struct rb_node *parent,$/;""",f,"file:
+"
+__rb_rotate_left,nautilus/rbtree.c,"/^static void __rb_rotate_left(struct rb_node *node, struct rb_root *root)$/;""",f,"file:
+"
+__rb_rotate_right,nautilus/rbtree.c,"/^static void __rb_rotate_right(struct rb_node *node, struct rb_root *root)$/;""",f,"file:
+"
+__serial_print,dev/serial.c,"/^__serial_print (const char * format, va_list ap) $/;""","f
+"
+__set_bit,nautilus/mm/buddy.c,"/^__set_bit (int nr, volatile void * addr)$/;""",f,"file:
+"
+__set_bit,nautilus/mm/buddy.c,"/^__set_bit (ulong_t nr, volatile void * addr)$/;""",f,"file:
+"
+__thread_fork,nautilus/thread.c,"/^__thread_fork (void)$/;""","f
+"
+_destroy_vc,nautilus/vc.c,"/^static int _destroy_vc(struct nk_virtual_console *vc) $/;""",f,"file:
+"
+_doprnt,nautilus/doprnt.c,"/^void _doprnt (register const char * fmt, $/;""","f
+"
+_switch_to_vc,nautilus/vc.c,"/^static int _switch_to_vc(struct nk_virtual_console *vc) $/;""",f,"file:
+"
+_vc_clear_specific,nautilus/vc.c,"/^static int _vc_clear_specific(struct nk_virtual_console *vc, uint8_t attr)$/;""",f,"file:
+"
+_vc_display_char,nautilus/vc.c,"/^static int _vc_display_char(uint8_t c, uint8_t attr, uint8_t x, uint8_t y) $/;""",f,"file:
+"
+_vc_display_char_specific,nautilus/vc.c,"/^static int _vc_display_char_specific(struct nk_virtual_console *vc, uint8_t c, uint8_t attr, uint8_t x, uint8_t y) $/;""",f,"file:
+"
+_vc_print_specific,nautilus/vc.c,"/^static int _vc_print_specific(struct nk_virtual_console *vc, char *s) $/;""",f,"file:
+"
+_vc_putchar,nautilus/vc.c,"/^static int _vc_putchar(uint8_t c) $/;""",f,"file:
+"
+_vc_putchar_specific,nautilus/vc.c,"/^static int _vc_putchar_specific(struct nk_virtual_console *vc, uint8_t c) $/;""",f,"file:
+"
+_vc_scrollup_specific,nautilus/vc.c,"/^static int _vc_scrollup_specific(struct nk_virtual_console *vc) $/;""",f,"file:
+"
+_vc_setattr_specific,nautilus/vc.c,"/^static int _vc_setattr_specific(struct nk_virtual_console *vc, uint8_t attr)$/;""",f,"file:
+"
+_vc_setpos,nautilus/vc.c,"/^static int _vc_setpos(uint8_t x, uint8_t y) $/;""",f,"file:
+"
+_vc_setpos_specific,nautilus/vc.c,"/^static int _vc_setpos_specific(struct nk_virtual_console *vc, uint8_t x, uint8_t y) $/;""",f,"file:
+"
+abort,nautilus/libccompat.c,"/^abort(void) $/;""","f
+"
+abs,nautilus/libccompat.c,"/^double abs(double x)$/;""","f
+"
+acos,nautilus/libccompat.c,"/^double acos(double x)$/;""","f
+"
+acpi_error,acpi/acpica/utxferror.c,"/^acpi_error(const char *module_name, u32 line_number, const char *format, ...)$/;""","f
+"
+acpi_find_root_pointer,acpi/acpica/tbxfroot.c,"/^acpi_status acpi_find_root_pointer(acpi_size *table_address)$/;""","f
+"
+acpi_get_table_with_size,acpi/acpica/tbxface.c,"/^acpi_get_table_with_size(char *signature,$/;""","f
+"
+acpi_initialize_tables,acpi/acpica/tbxface.c,"/^acpi_initialize_tables(struct acpi_table_desc * initial_table_array,$/;""","f
+"
+acpi_os_get_root_pointer,acpi/osl.c,"/^acpi_physical_address acpi_os_get_root_pointer(void)$/;""","f
+"
+acpi_os_map_memory,acpi/osl.c,"/^acpi_os_map_memory(acpi_physical_address phys, acpi_size size)$/;""","f
+"
+acpi_os_printf,acpi/osl.c,"/^void acpi_os_printf(const char *fmt, ...)$/;""","f
+"
+acpi_os_unmap_memory,acpi/osl.c,"/^void __ref acpi_os_unmap_memory(void __iomem *virt, acpi_size size)$/;""","f
+"
+acpi_os_vprintf,acpi/osl.c,"/^void acpi_os_vprintf(const char *fmt, va_list args)$/;""","f
+"
+acpi_parse_memory_affinity,arch/x64/numa.c,"/^acpi_parse_memory_affinity(struct acpi_subtable_header * header,$/;""",f,"file:
+"
+acpi_parse_processor_affinity,arch/x64/numa.c,"/^acpi_parse_processor_affinity(struct acpi_subtable_header * header,$/;""",f,"file:
+"
+acpi_parse_slit,arch/x64/numa.c,"/^acpi_parse_slit(struct acpi_table_header *table, void * arg)$/;""",f,"file:
+"
+acpi_parse_srat,arch/x64/numa.c,"/^acpi_parse_srat (struct acpi_table_header * hdr, void * arg)$/;""",f,"file:
+"
+acpi_parse_x2apic_affinity,arch/x64/numa.c,"/^acpi_parse_x2apic_affinity(struct acpi_subtable_header *header,$/;""",f,"file:
+"
+acpi_reboot,arch/hrt/shutdown.c,"/^acpi_reboot (void)$/;""","f
+"
+acpi_reboot,arch/x64/shutdown.c,"/^acpi_reboot (void)$/;""","f
+"
+acpi_shutdown,arch/hrt/shutdown.c,"/^acpi_shutdown (void)$/;""","f
+"
+acpi_shutdown,arch/x64/shutdown.c,"/^acpi_shutdown (void)$/;""","f
+"
+acpi_table_init,acpi/tables.c,"/^int acpi_table_init(void)$/;""","f
+"
+acpi_table_parse,acpi/tables.c,"/^acpi_table_parse (char *id, acpi_table_handler handler, void * arg)$/;""","f
+"
+acpi_table_parse_entries,acpi/tables.c,"/^acpi_table_parse_entries(char *id,$/;""","f
+"
+acpi_table_parse_srat,arch/x64/numa.c,"/^acpi_table_parse_srat(enum acpi_srat_entry_id id,$/;""",f,"file:
+"
+acpi_table_print_madt_entry,acpi/tables.c,"/^void acpi_table_print_madt_entry(struct acpi_subtable_header *header)$/;""","f
+"
+acpi_table_print_srat_entry,arch/x64/numa.c,"/^acpi_table_print_srat_entry (struct acpi_subtable_header * header)$/;""",f,"file:
+"
+acpi_tb_check_xsdt,acpi/acpica/tbutils.c,"/^acpi_tb_check_xsdt(acpi_physical_address address)$/;""",f,"file:
+"
+acpi_tb_checksum,acpi/acpica/tbutils.c,"/^u8 acpi_tb_checksum(u8 *buffer, u32 length)$/;""","f
+"
+acpi_tb_cleanup_table_header,acpi/acpica/tbutils.c,"/^acpi_tb_cleanup_table_header(struct acpi_table_header *out_header,$/;""",f,"file:
+"
+acpi_tb_fix_string,acpi/acpica/tbutils.c,"/^static void acpi_tb_fix_string(char *string, acpi_size length)$/;""",f,"file:
+"
+acpi_tb_get_root_table_entry,acpi/acpica/tbutils.c,"/^acpi_tb_get_root_table_entry(u8 *table_entry, u32 table_entry_size)$/;""",f,"file:
+"
+acpi_tb_install_table,acpi/acpica/tbutils.c,"/^acpi_tb_install_table(acpi_physical_address address,$/;""","f
+"
+acpi_tb_parse_root_table,acpi/acpica/tbutils.c,"/^acpi_tb_parse_root_table(acpi_physical_address rsdp_address)$/;""","f
+"
+acpi_tb_print_table_header,acpi/acpica/tbutils.c,"/^acpi_tb_print_table_header(acpi_physical_address address,$/;""","f
+"
+acpi_tb_resize_root_table_list,acpi/acpica/tbinstal.c,"/^acpi_status acpi_tb_resize_root_table_list(void)$/;""","f
+"
+acpi_tb_scan_memory_for_rsdp,acpi/acpica/tbxfroot.c,"/^static u8 *acpi_tb_scan_memory_for_rsdp(u8 * start_address, u32 length)$/;""",f,"file:
+"
+acpi_tb_validate_rsdp,acpi/acpica/tbxfroot.c,"/^static acpi_status acpi_tb_validate_rsdp(struct acpi_table_rsdp *rsdp)$/;""",f,"file:
+"
+acpi_tb_verify_checksum,acpi/acpica/tbutils.c,"/^acpi_status acpi_tb_verify_checksum(struct acpi_table_header *table, u32 length)$/;""","f
+"
+acpi_tb_verify_table,acpi/acpica/tbinstal.c,"/^acpi_status acpi_tb_verify_table(struct acpi_table_desc *table_desc)$/;""","f
+"
+acpi_ut_allocate,acpi/acpica/utalloc.c,"/^void *acpi_ut_allocate(acpi_size size,$/;""","f
+"
+acpi_ut_allocate_zeroed,acpi/acpica/utalloc.c,"/^void *acpi_ut_allocate_zeroed(acpi_size size,$/;""","f
+"
+acpi_ut_set_integer_width,acpi/acpica/utmisc.c,"/^void acpi_ut_set_integer_width(u8 revision)$/;""","f
+"
+add_free_pages,nautilus/mm/boot_mm.c,"/^add_free_pages (struct mem_region * region) $/;""",f,"file:
+"
+add_s,lua_src/lstrlib.c,"/^static void add_s (MatchState *ms, luaL_Buffer *b, const char *s,$/;""",f,"file:
+"
+add_value,lua_src/lstrlib.c,"/^static void add_value (MatchState *ms, luaL_Buffer *b, const char *s,$/;""",f,"file:
+"
+addfield,lua_src/ltablib.c,"/^static void addfield (lua_State *L, luaL_Buffer *b, int i) {$/;""",f,"file:
+"
+addinfo,lua_src/ldebug.c,"/^static void addinfo (lua_State *L, const char *msg) {$/;""",f,"file:
+"
+addk,lua_src/lcode.c,"/^static int addk (FuncState *fs, TValue *key, TValue *v) {$/;""",f,"file:
+"
+addlenmod,lua_src/lstrlib.c,"/^static void addlenmod (char *form, const char *lenmod) {$/;""",f,"file:
+"
+addprototype,lua_src/lparser.c,"/^static Proto *addprototype (LexState *ls) {$/;""",f,"file:
+"
+addquoted,lua_src/lstrlib.c,"/^static void addquoted (lua_State *L, luaL_Buffer *b, int arg) {$/;""",f,"file:
+"
+adjust_assign,lua_src/lparser.c,"/^static void adjust_assign (LexState *ls, int nvars, int nexps, expdesc *e) {$/;""",f,"file:
+"
+adjust_varargs,lua_src/ldo.c,"/^static StkId adjust_varargs (lua_State *L, Proto *p, int actual) {$/;""",f,"file:
+"
+adjustlocalvars,lua_src/lparser.c,"/^static void adjustlocalvars (LexState *ls, int nvars) {$/;""",f,"file:
+"
+align_addr,nautilus/paging.c,"/^align_addr (ulong_t addr, ulong_t align) $/;""",f,"file:
+"
+allocate_event_id,nautilus/nemo.c,"/^allocate_event_id (void) $/;""",f,"file:
+"
+amd_fpu_init,nautilus/fpu.c,"/^amd_fpu_init (struct naut_info * naut)$/;""",f,"file:
+"
+amd_get_cmplegacy,nautilus/numa.c,"/^amd_get_cmplegacy (void)$/;""",f,"file:
+"
+amd_get_topo_secondary,nautilus/numa.c,"/^amd_get_topo_secondary (struct nk_topo_params * tp)$/;""",f,"file:
+"
+amd_has_3dnow,nautilus/fpu.c,"/^amd_has_3dnow (void)$/;""",f,"file:
+"
+amd_has_3dnow_ext,nautilus/fpu.c,"/^amd_has_3dnow_ext (void)$/;""",f,"file:
+"
+amd_has_ext_lvt,dev/apic.c,"/^amd_has_ext_lvt (struct apic_dev * apic)$/;""",f,"file:
+"
+amd_has_fma4,nautilus/fpu.c,"/^amd_has_fma4 (void)$/;""",f,"file:
+"
+amd_has_misal_sse,nautilus/fpu.c,"/^amd_has_misal_sse (void)$/;""",f,"file:
+"
+amd_has_mmx_ext,nautilus/fpu.c,"/^amd_has_mmx_ext (void)$/;""",f,"file:
+"
+amd_has_prefetch,nautilus/fpu.c,"/^amd_has_prefetch (void)$/;""",f,"file:
+"
+amd_has_sse4a,nautilus/fpu.c,"/^amd_has_sse4a (void)$/;""",f,"file:
+"
+amd_setup_ext_lvt,dev/apic.c,"/^amd_setup_ext_lvt (struct apic_dev * apic)$/;""",f,"file:
+"
+anchor_token,lua_src/lparser.c,"/^static void anchor_token (LexState *ls) {$/;""",f,"file:
+"
+andaux,lua_src/lbitlib.c,"/^static b_uint andaux (lua_State *L) {$/;""",f,"file:
+"
+apic_assign_spiv,dev/apic.c,"/^apic_assign_spiv (struct apic_dev * apic, uint8_t spiv_vec)$/;""",f,"file:
+"
+apic_bcast_deinit_iipi,dev/apic.c,"/^apic_bcast_deinit_iipi (struct apic_dev * apic)$/;""","f
+"
+apic_bcast_iipi,dev/apic.c,"/^apic_bcast_iipi (struct apic_dev * apic) $/;""","f
+"
+apic_bcast_sipi,dev/apic.c,"/^apic_bcast_sipi (struct apic_dev * apic, uint8_t target)$/;""","f
+"
+apic_deinit_iipi,dev/apic.c,"/^apic_deinit_iipi (struct apic_dev * apic, uint32_t remote_id)$/;""","f
+"
+apic_do_eoi,dev/apic.c,"/^apic_do_eoi (void)$/;""","f
+"
+apic_dump,dev/apic.c,"/^apic_dump (struct apic_dev * apic)$/;""",f,"file:
+"
+apic_get_base_addr,dev/apic.c,"/^apic_get_base_addr (void) $/;""",f,"file:
+"
+apic_get_id,dev/apic.c,"/^apic_get_id (struct apic_dev * apic)$/;""","f
+"
+apic_get_maxlvt,dev/apic.c,"/^apic_get_maxlvt (struct apic_dev * apic)$/;""","f
+"
+apic_get_version,dev/apic.c,"/^apic_get_version (struct apic_dev * apic)$/;""",f,"file:
+"
+apic_global_enable,dev/apic.c,"/^apic_global_enable (void)$/;""",f,"file:
+"
+apic_init,dev/apic.c,"/^apic_init (struct cpu * core)$/;""","f
+"
+apic_is_bsp,dev/apic.c,"/^apic_is_bsp (struct apic_dev * apic)$/;""",f,"file:
+"
+apic_read_timer,dev/apic.c,"/^apic_read_timer (struct apic_dev * apic)$/;""","f
+"
+apic_self_ipi,dev/apic.c,"/^apic_self_ipi (struct apic_dev * apic, uint_t vector)$/;""","f
+"
+apic_send_iipi,dev/apic.c,"/^apic_send_iipi (struct apic_dev * apic, uint32_t remote_id) $/;""","f
+"
+apic_send_sipi,dev/apic.c,"/^apic_send_sipi (struct apic_dev * apic, uint32_t remote_id, uint8_t target)$/;""","f
+"
+apic_set_base_addr,dev/apic.c,"/^apic_set_base_addr (struct apic_dev * apic, addr_t addr)$/;""",f,"file:
+"
+apic_sw_disable,dev/apic.c,"/^apic_sw_disable (struct apic_dev * apic)$/;""",f,"file:
+"
+apic_sw_enable,dev/apic.c,"/^apic_sw_enable (struct apic_dev * apic)$/;""",f,"file:
+"
+apic_timer_setup,dev/apic.c,"/^apic_timer_setup (struct apic_dev * apic, uint32_t quantum)$/;""","f
+"
+apic_wait_for_send,dev/apic.c,"/^apic_wait_for_send(struct apic_dev * apic)$/;""","f
+"
+arch_detect_mem_map,arch/hrt/early_mem.c,"/^arch_detect_mem_map (mmap_info_t * mm_info, $/;""","f
+"
+arch_detect_mem_map,arch/k1om/early_mem.c,"/^arch_detect_mem_map (mmap_info_t * mm_info, $/;""","f
+"
+arch_detect_mem_map,arch/x64/early_mem.c,"/^arch_detect_mem_map (mmap_info_t * mm_info, $/;""","f
+"
+arch_early_init,arch/hrt/smp.c,"/^arch_early_init (struct naut_info * naut)$/;""","f
+"
+arch_early_init,arch/k1om/smp.c,"/^arch_early_init (struct naut_info * naut)$/;""","f
+"
+arch_early_init,arch/x64/smp.c,"/^arch_early_init (struct naut_info * naut)$/;""","f
+"
+arch_numa_init,arch/hrt/numa.c,"/^arch_numa_init (struct sys_info * sys)$/;""","f
+"
+arch_numa_init,arch/k1om/numa.c,"/^arch_numa_init (struct sys_info * sys)$/;""","f
+"
+arch_numa_init,arch/x64/numa.c,"/^arch_numa_init (struct sys_info * sys)$/;""","f
+"
+arch_reserve_boot_regions,arch/hrt/early_mem.c,"/^arch_reserve_boot_regions (unsigned long mbd)$/;""","f
+"
+arch_reserve_boot_regions,arch/k1om/early_mem.c,"/^arch_reserve_boot_regions (unsigned long mbd)$/;""","f
+"
+arch_reserve_boot_regions,arch/x64/early_mem.c,"/^arch_reserve_boot_regions (unsigned long mbd)$/;""","f
+"
+arrayindex,lua_src/ltable.c,"/^static int arrayindex (const TValue *key) {$/;""",f,"file:
+"
+asin,nautilus/libccompat.c,"/^double asin(double x)$/;""","f
+"
+assign_core_coords,nautilus/numa.c,"/^assign_core_coords (struct cpu * me, struct nk_cpu_coords * coord, struct nk_topo_params *tp)$/;""",f,"file:
+"
+assign_perf_event,nautilus/pmc.c,"/^assign_perf_event (uint8_t event_id, uint8_t unit_mask)$/;""","f
+"
+assignment,lua_src/lparser.c,"/^static void assignment (LexState *ls, struct LHS_assign *lh, int nvars) {$/;""",f,"file:
+"
+associate_domains,nautilus/numa.c,"/^associate_domains (struct nk_locality_info * loc)$/;""",f,"file:
+"
+atan,nautilus/libccompat.c,"/^double atan(double __x){$/;""","f
+"
+atan2,nautilus/libccompat.c,"/^double atan2(double y, double x){$/;""","f
+"
+atoi,nautilus/naut_string.c,"/^atoi (const char * buf) $/;""","f
+"
+atomic,lua_src/lgc.c,"/^static l_mem atomic (lua_State *L) {$/;""",f,"file:
+"
+atox,nautilus/naut_string.c,"/^atox (const char * buf) {$/;""","f
+"
+aux_close,lua_src/liolib.c,"/^static int aux_close (lua_State *L) {$/;""",f,"file:
+"
+aux_lines,lua_src/liolib.c,"/^static void aux_lines (lua_State *L, int toclose) {$/;""",f,"file:
+"
+aux_upvalue,lua_src/lapi.c,"/^static const char *aux_upvalue (StkId fi, int n, TValue **val,$/;""",f,"file:
+"
+auxgetinfo,lua_src/ldebug.c,"/^static int auxgetinfo (lua_State *L, const char *what, lua_Debug *ar,$/;""",f,"file:
+"
+auxresume,lua_src/lcorolib.c,"/^static int auxresume (lua_State *L, lua_State *co, int narg) {$/;""",f,"file:
+"
+auxsort,lua_src/ltablib.c,"/^static void auxsort (lua_State *L, int l, int u) {$/;""",f,"file:
+"
+auxupvalue,lua_src/ldblib.c,"/^static int auxupvalue (lua_State *L, int get) {$/;""",f,"file:
+"
+b_and,lua_src/lbitlib.c,"/^static int b_and (lua_State *L) {$/;""",f,"file:
+"
+b_arshift,lua_src/lbitlib.c,"/^static int b_arshift (lua_State *L) {$/;""",f,"file:
+"
+b_extract,lua_src/lbitlib.c,"/^static int b_extract (lua_State *L) {$/;""",f,"file:
+"
+b_lrot,lua_src/lbitlib.c,"/^static int b_lrot (lua_State *L) {$/;""",f,"file:
+"
+b_lshift,lua_src/lbitlib.c,"/^static int b_lshift (lua_State *L) {$/;""",f,"file:
+"
+b_not,lua_src/lbitlib.c,"/^static int b_not (lua_State *L) {$/;""",f,"file:
+"
+b_or,lua_src/lbitlib.c,"/^static int b_or (lua_State *L) {$/;""",f,"file:
+"
+b_replace,lua_src/lbitlib.c,"/^static int b_replace (lua_State *L) {$/;""",f,"file:
+"
+b_rot,lua_src/lbitlib.c,"/^static int b_rot (lua_State *L, int i) {$/;""",f,"file:
+"
+b_rrot,lua_src/lbitlib.c,"/^static int b_rrot (lua_State *L) {$/;""",f,"file:
+"
+b_rshift,lua_src/lbitlib.c,"/^static int b_rshift (lua_State *L) {$/;""",f,"file:
+"
+b_shift,lua_src/lbitlib.c,"/^static int b_shift (lua_State *L, b_uint r, int i) {$/;""",f,"file:
+"
+b_test,lua_src/lbitlib.c,"/^static int b_test (lua_State *L) {$/;""",f,"file:
+"
+b_xor,lua_src/lbitlib.c,"/^static int b_xor (lua_State *L) {$/;""",f,"file:
+"
+barrier_func1,nautilus/barrier.c,"/^barrier_func1 (void * in, void ** out)$/;""",f,"file:
+"
+barrier_func2,nautilus/barrier.c,"/^barrier_func2 (void * in, void ** out)$/;""",f,"file:
+"
+barrier_xcall_handler,nautilus/barrier.c,"/^barrier_xcall_handler (void * arg) $/;""",f,"file:
+"
+bindtextdomain,nautilus/libccompat.c,"/^char *bindtextdomain (const char * domainname, const char * dirname)$/;""","f
+"
+blk_cksum_ok,arch/k1om/early_mem.c,"/^blk_cksum_ok (const uint8_t * cursor, unsigned len)$/;""",f,"file:
+"
+blk_cksum_ok,arch/x64/smp.c,"/^blk_cksum_ok (uint8_t * mp, unsigned len)$/;""",f,"file:
+"
+blk_cksum_ok,nautilus/sfi.c,"/^blk_cksum_ok (const uint8_t * cursor, unsigned len)$/;""",f,"file:
+"
+block,lua_src/lparser.c,"/^static void block (LexState *ls) {$/;""",f,"file:
+"
+block_follow,lua_src/lparser.c,"/^static int block_follow (LexState *ls, int withuntil) {$/;""",f,"file:
+"
+block_hash_alloc,nautilus/mm/kmem.c,"/^static inline struct kmem_block_hdr * block_hash_alloc(void *ptr)$/;""",f,"file:
+"
+block_hash_find_entry,nautilus/mm/kmem.c,"/^static inline struct kmem_block_hdr * block_hash_find_entry(const void *ptr)$/;""",f,"file:
+"
+block_hash_free,nautilus/mm/kmem.c,"/^static inline int block_hash_free(void *ptr)$/;""",f,"file:
+"
+block_hash_free_entry,nautilus/mm/kmem.c,"/^static inline void block_hash_free_entry(struct kmem_block_hdr *b)$/;""",f,"file:
+"
+block_hash_hash,nautilus/mm/kmem.c,"/^static inline uint64_t block_hash_hash(const void *ptr)$/;""",f,"file:
+"
+block_hash_init,nautilus/mm/kmem.c,"/^static int block_hash_init(uint64_t bytes)$/;""",f,"file:
+"
+block_to_id,nautilus/mm/buddy.c,"/^block_to_id (struct buddy_mempool *mp, struct block *block)$/;""",f,"file:
+"
+body,lua_src/lparser.c,"/^static void body (LexState *ls, expdesc *e, int ismethod, int line) {$/;""",f,"file:
+"
+boolK,lua_src/lcode.c,"/^static int boolK (FuncState *fs, int b) {$/;""",f,"file:
+"
+breaklabel,lua_src/lparser.c,"/^static void breaklabel (LexState *ls) {$/;""",f,"file:
+"
+bset,test/ipi.c,"/^bset(unsigned int nr, unsigned long * addr)$/;""",f,"file:
+"
+bspin_lock,nautilus/barrier.c,"/^bspin_lock (volatile int * lock)$/;""",f,"file:
+"
+bspin_unlock,nautilus/barrier.c,"/^bspin_unlock (volatile int * lock)$/;""",f,"file:
+"
+buddy_alloc,nautilus/mm/buddy.c,"/^buddy_alloc (struct buddy_mempool *mp, ulong_t order)$/;""","f
+"
+buddy_dump_mempool,nautilus/mm/buddy.c,"/^buddy_dump_mempool(struct buddy_mempool *mp)$/;""","f
+"
+buddy_free,nautilus/mm/buddy.c,"/^buddy_free($/;""","f
+"
+buddy_init,nautilus/mm/buddy.c,"/^buddy_init (ulong_t base_addr,$/;""","f
+"
+buffreplace,lua_src/llex.c,"/^static void buffreplace (LexState *ls, char from, char to) {$/;""",f,"file:
+"
+callTM,lua_src/lvm.c,"/^static void callTM (lua_State *L, const TValue *f, const TValue *p1,$/;""",f,"file:
+"
+call_binTM,lua_src/lvm.c,"/^static int call_binTM (lua_State *L, const TValue *p1, const TValue *p2,$/;""",f,"file:
+"
+call_orderTM,lua_src/lvm.c,"/^static int call_orderTM (lua_State *L, const TValue *p1, const TValue *p2,$/;""",f,"file:
+"
+callallpendingfinalizers,lua_src/lgc.c,"/^static void callallpendingfinalizers (lua_State *L, int propagateerrors) {$/;""",f,"file:
+"
+callhook,lua_src/ldo.c,"/^static void callhook (lua_State *L, CallInfo *ci) {$/;""",f,"file:
+"
+capture_to_close,lua_src/lstrlib.c,"/^static int capture_to_close (MatchState *ms) {$/;""",f,"file:
+"
+ceil,nautilus/libccompat.c,"/^double ceil(double x)$/;""","f
+"
+check,lua_src/lparser.c,"/^static void check (LexState *ls, int c) {$/;""",f,"file:
+"
+checkSizes,lua_src/lgc.c,"/^static void checkSizes (lua_State *L) {$/;""",f,"file:
+"
+check_apic_avail,dev/apic.c,"/^check_apic_avail (void)$/;""",f,"file:
+"
+check_capture,lua_src/lstrlib.c,"/^static int check_capture (MatchState *ms, int l) {$/;""",f,"file:
+"
+check_conflict,lua_src/lparser.c,"/^static void check_conflict (LexState *ls, struct LHS_assign *lh, expdesc *v) {$/;""",f,"file:
+"
+check_match,lua_src/lparser.c,"/^static void check_match (LexState *ls, int what, int who, int where) {$/;""",f,"file:
+"
+check_next,lua_src/llex.c,"/^static int check_next (LexState *ls, const char *set) {$/;""",f,"file:
+"
+checklimit,lua_src/lparser.c,"/^static void checklimit (FuncState *fs, int v, int l, const char *what) {$/;""",f,"file:
+"
+checkload,lua_src/loadlib.c,"/^static int checkload (lua_State *L, int stat, const char *filename) {$/;""",f,"file:
+"
+checkmode,lua_src/ldo.c,"/^static void checkmode (lua_State *L, const char *mode, const char *x) {$/;""",f,"file:
+"
+checkname,lua_src/lparser.c,"/^static void checkname (LexState *ls, expdesc *e) {$/;""",f,"file:
+"
+checknext,lua_src/lparser.c,"/^static void checknext (LexState *ls, int c) {$/;""",f,"file:
+"
+checkoption,lua_src/loslib.c,"/^static const char *checkoption (lua_State *L, const char *conv, char *buff) {$/;""",f,"file:
+"
+checkrepeated,lua_src/lparser.c,"/^static void checkrepeated (FuncState *fs, Labellist *ll, TString *label) {$/;""",f,"file:
+"
+checkstack,lua_src/ldblib.c,"/^static void checkstack (lua_State *L, lua_State *L1, int n) {$/;""",f,"file:
+"
+checkupval,lua_src/ldblib.c,"/^static int checkupval (lua_State *L, int argf, int argnup) {$/;""",f,"file:
+"
+classend,lua_src/lstrlib.c,"/^static const char *classend (MatchState *ms, const char *p) {$/;""",f,"file:
+"
+clearb,nautilus/mm/buddy.c,"/^static inline void clearb(ulong_t nr, volatile char *addr)$/;""",f,"file:
+"
+clearerr,nautilus/libccompat.c,"/^void clearerr(FILE *stream)$/;""","f
+"
+clearkeys,lua_src/lgc.c,"/^static void clearkeys (global_State *g, GCObject *l, GCObject *f) {$/;""",f,"file:
+"
+clearvalues,lua_src/lgc.c,"/^static void clearvalues (global_State *g, GCObject *l, GCObject *f) {$/;""",f,"file:
+"
+clock,nautilus/libccompat.c,"/^clock_t clock()$/;""","f
+"
+clock_gettime,nautilus/libccompat.c,"/^clock_gettime (clockid_t clk_id, struct timespec * tp)$/;""","f
+"
+close_func,lua_src/lparser.c,"/^static void close_func (LexState *ls) {$/;""",f,"file:
+"
+close_state,lua_src/lstate.c,"/^static void close_state (lua_State *L) {$/;""",f,"file:
+"
+closegoto,lua_src/lparser.c,"/^static void closegoto (LexState *ls, int g, Labeldesc *label) {$/;""",f,"file:
+"
+closelistfield,lua_src/lparser.c,"/^static void closelistfield (FuncState *fs, struct ConsControl *cc) {$/;""",f,"file:
+"
+cmpxchg32,nautilus/ticketlock.c,"/^cmpxchg32 (void * m, uint32_t old, uint32_t new)$/;""",f,"file:
+"
+coalesce_regions,nautilus/numa.c,"/^coalesce_regions (struct nk_locality_info * loc)$/;""",f,"file:
+"
+code_label,lua_src/lcode.c,"/^static int code_label (FuncState *fs, int A, int b, int jump) {$/;""",f,"file:
+"
+codearith,lua_src/lcode.c,"/^static void codearith (FuncState *fs, OpCode op,$/;""",f,"file:
+"
+codeclosure,lua_src/lparser.c,"/^static void codeclosure (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+codecomp,lua_src/lcode.c,"/^static void codecomp (FuncState *fs, OpCode op, int cond, expdesc *e1,$/;""",f,"file:
+"
+codeextraarg,lua_src/lcode.c,"/^static int codeextraarg (FuncState *fs, int a) {$/;""",f,"file:
+"
+codenot,lua_src/lcode.c,"/^static void codenot (FuncState *fs, expdesc *e) {$/;""",f,"file:
+"
+codestring,lua_src/lparser.c,"/^static void codestring (LexState *ls, expdesc *e, TString *s) {$/;""",f,"file:
+"
+collectargs,lua_src/lua.c,"/^static int collectargs (char **argv, int *args) {$/;""",f,"file:
+"
+collectvalidlines,lua_src/ldebug.c,"/^static void collectvalidlines (lua_State *L, Closure *f) {$/;""",f,"file:
+"
+computesizes,lua_src/ltable.c,"/^static int computesizes (int nums[], int *narray) {$/;""",f,"file:
+"
+cond,lua_src/lparser.c,"/^static int cond (LexState *ls) {$/;""",f,"file:
+"
+condjump,lua_src/lcode.c,"/^static int condjump (FuncState *fs, OpCode op, int A, int B, int C) {$/;""",f,"file:
+"
+constfolding,lua_src/lcode.c,"/^static int constfolding (OpCode op, expdesc *e1, expdesc *e2) {$/;""",f,"file:
+"
+construct_ident_map,nautilus/paging.c,"/^construct_ident_map (pml4e_t * pml, page_size_t ptype, ulong_t bytes)$/;""",f,"file:
+"
+constructor,lua_src/lparser.c,"/^static void constructor (LexState *ls, expdesc *t) {$/;""",f,"file:
+"
+convergeephemerons,lua_src/lgc.c,"/^static void convergeephemerons (global_State *g) {$/;""",f,"file:
+"
+copy_display_to_vc,nautilus/vc.c,"/^static inline void copy_display_to_vc(struct nk_virtual_console *vc) $/;""",f,"file:
+"
+copy_vc_to_display,nautilus/vc.c,"/^static inline void copy_vc_to_display(struct nk_virtual_console *vc) $/;""",f,"file:
+"
+cores_wait,test/benchmark.c,"/^cores_wait(void)$/;""",f,"file:
+"
+cores_wait,test/ipi.c,"/^cores_wait(void)$/;""",f,"file:
+"
+correctstack,lua_src/ldo.c,"/^static void correctstack (lua_State *L, TValue *oldstack) {$/;""",f,"file:
+"
+cos,nautilus/libccompat.c,"/^double cos(double x)$/;""","f
+"
+cosh,nautilus/libccompat.c,"/^double cosh(double x)$/;""","f
+"
+countint,lua_src/ltable.c,"/^static int countint (const TValue *key, int *nums) {$/;""",f,"file:
+"
+countlevels,lua_src/lauxlib.c,"/^static int countlevels (lua_State *L) {$/;""",f,"file:
+"
+cpuid_get_family,nautilus/cpuid.c,"/^cpuid_get_family (void)$/;""","f
+"
+cpuid_get_model,nautilus/cpuid.c,"/^cpuid_get_model (void)$/;""","f
+"
+cpuid_get_step,nautilus/cpuid.c,"/^cpuid_get_step (void)$/;""","f
+"
+cpuid_leaf_max,nautilus/cpuid.c,"/^cpuid_leaf_max (void)$/;""","f
+"
+cr3_to_gva,arch/hrt/hrt.c,"/^cr3_to_gva (uint64_t cr3)$/;""",f,"file:
+"
+create_zone,nautilus/mm/kmem.c,"/^create_zone (struct mem_region * region)$/;""",f,"file:
+"
+createmeta,lua_src/liolib.c,"/^static void createmeta (lua_State *L) {$/;""",f,"file:
+"
+createmetatable,lua_src/lstrlib.c,"/^static void createmetatable (lua_State *L) {$/;""",f,"file:
+"
+createsearcherstable,lua_src/loadlib.c,"/^static void createsearcherstable (lua_State *L) {$/;""",f,"file:
+"
+createstdfile,lua_src/liolib.c,"/^static void createstdfile (lua_State *L, FILE *f, const char *k,$/;""",f,"file:
+"
+createstrobj,lua_src/lstring.c,"/^static TString *createstrobj (lua_State *L, const char *str, size_t l,$/;""",f,"file:
+"
+currentline,lua_src/ldebug.c,"/^static int currentline (CallInfo *ci) {$/;""",f,"file:
+"
+currentpc,lua_src/ldebug.c,"/^static int currentpc (CallInfo *ci) {$/;""",f,"file:
+"
+db_debug,lua_src/ldblib.c,"/^static int db_debug (lua_State *L) {$/;""",f,"file:
+"
+db_gethook,lua_src/ldblib.c,"/^static int db_gethook (lua_State *L) {$/;""",f,"file:
+"
+db_getinfo,lua_src/ldblib.c,"/^static int db_getinfo (lua_State *L) {$/;""",f,"file:
+"
+db_getlocal,lua_src/ldblib.c,"/^static int db_getlocal (lua_State *L) {$/;""",f,"file:
+"
+db_getmetatable,lua_src/ldblib.c,"/^static int db_getmetatable (lua_State *L) {$/;""",f,"file:
+"
+db_getregistry,lua_src/ldblib.c,"/^static int db_getregistry (lua_State *L) {$/;""",f,"file:
+"
+db_getupvalue,lua_src/ldblib.c,"/^static int db_getupvalue (lua_State *L) {$/;""",f,"file:
+"
+db_getuservalue,lua_src/ldblib.c,"/^static int db_getuservalue (lua_State *L) {$/;""",f,"file:
+"
+db_sethook,lua_src/ldblib.c,"/^static int db_sethook (lua_State *L) {$/;""",f,"file:
+"
+db_setlocal,lua_src/ldblib.c,"/^static int db_setlocal (lua_State *L) {$/;""",f,"file:
+"
+db_setmetatable,lua_src/ldblib.c,"/^static int db_setmetatable (lua_State *L) {$/;""",f,"file:
+"
+db_setupvalue,lua_src/ldblib.c,"/^static int db_setupvalue (lua_State *L) {$/;""",f,"file:
+"
+db_setuservalue,lua_src/ldblib.c,"/^static int db_setuservalue (lua_State *L) {$/;""",f,"file:
+"
+db_traceback,lua_src/ldblib.c,"/^static int db_traceback (lua_State *L) {$/;""",f,"file:
+"
+db_upvalueid,lua_src/ldblib.c,"/^static int db_upvalueid (lua_State *L) {$/;""",f,"file:
+"
+db_upvaluejoin,lua_src/ldblib.c,"/^static int db_upvaluejoin (lua_State *L) {$/;""",f,"file:
+"
+default_init,arch/hrt/init.c,"/^default_init (unsigned long mbd,$/;""","f
+"
+dequeue_scancodes,dev/kbd.c,"/^static void dequeue_scancodes()$/;""",f,"file:
+"
+dequeue_thread_from_tlist,nautilus/thread.c,"/^dequeue_thread_from_tlist (nk_thread_t * t)$/;""",f,"file:
+"
+dequeue_thread_from_waitq,nautilus/thread.c,"/^dequeue_thread_from_waitq (nk_thread_t * waiter, nk_thread_queue_t * waitq)$/;""",f,"file:
+"
+detect_cpu,nautilus/cpuid.c,"/^detect_cpu (void)$/;""","f
+"
+detect_mem_map,nautilus/mm/boot_mm.c,"/^detect_mem_map (unsigned long mbd)$/;""",f,"file:
+"
+df_handler,nautilus/idt.c,"/^df_handler (excp_entry_t * excp,$/;""",f,"file:
+"
+difftime,nautilus/libccompat.c,"/^double difftime(time_t time1, time_t time2)$/;""","f
+"
+disable_8259pic,nautilus/irq.c,"/^disable_8259pic (void)$/;""","f
+"
+disable_all_events,nautilus/pmc.c,"/^disable_all_events (void)$/;""","f
+"
+disable_blink,dev/vga.c,"/^static void disable_blink()$/;""",f,"file:
+"
+disable_perf_event,nautilus/pmc.c,"/^disable_perf_event (perf_event_t * event)$/;""","f
+"
+discharge2anyreg,lua_src/lcode.c,"/^static void discharge2anyreg (FuncState *fs, expdesc *e) {$/;""",f,"file:
+"
+discharge2reg,lua_src/lcode.c,"/^static void discharge2reg (FuncState *fs, expdesc *e, int reg) {$/;""",f,"file:
+"
+dischargejpc,lua_src/lcode.c,"/^static void dischargejpc (FuncState *fs) {$/;""",f,"file:
+"
+do_hash,nautilus/hashtable.c,"/^do_hash (struct nk_hashtable * htable, addr_t key) $/;""",f,"file:
+"
+docall,lua_src/lua.c,"/^static int docall (lua_State *L, int narg, int nres) {$/;""",f,"file:
+"
+dofile,lua_src/lua.c,"/^static int dofile (lua_State *L, const char *name) {$/;""",f,"file:
+"
+dofilecont,lua_src/lbaselib.c,"/^static int dofilecont (lua_State *L) {$/;""",f,"file:
+"
+dolibrary,lua_src/lua.c,"/^static int dolibrary (lua_State *L, const char *name) {$/;""",f,"file:
+"
+dooptions,lua_src/loadlib.c,"/^static void dooptions (lua_State *L, int n) {$/;""",f,"file:
+"
+dostring,lua_src/lua.c,"/^static int dostring (lua_State *L, const char *s, const char *name) {$/;""",f,"file:
+"
+dothecall,lua_src/lgc.c,"/^static void dothecall (lua_State *L, void *ud) {$/;""",f,"file:
+"
+dotty,lua_src/lua.c,"/^static void dotty (lua_State *L) {$/;""",f,"file:
+"
+drand48,nautilus/libccompat.c,"/^drand48(void) $/;""","f
+"
+drill_page_tables,nautilus/paging.c,"/^drill_page_tables (addr_t addr, addr_t map_addr, uint64_t flags)$/;""",f,"file:
+"
+drill_pd,nautilus/paging.c,"/^drill_pd (pde_t * pd, addr_t addr, addr_t map_addr, uint64_t flags)$/;""",f,"file:
+"
+drill_pdpt,nautilus/paging.c,"/^drill_pdpt (pdpte_t * pdpt, addr_t addr, addr_t map_addr, uint64_t flags)$/;""",f,"file:
+"
+dummy,nautilus/nemo.c,"/^dummy (void)$/;""",f,"file:
+"
+dummy_int_handler,dev/apic.c,"/^dummy_int_handler (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+dump_adj_list,nautilus/numa.c,"/^dump_adj_list (struct numa_domain * d)$/;""",f,"file:
+"
+dump_mem_regions,nautilus/numa.c,"/^dump_mem_regions (struct numa_domain * d)$/;""",f,"file:
+"
+dump_mwait_info,arch/hrt/mwait.c,"/^dump_mwait_info (void)$/;""",f,"file:
+"
+dump_mwait_info,arch/x64/mwait.c,"/^dump_mwait_info (void)$/;""",f,"file:
+"
+dump_numa_domains,nautilus/numa.c,"/^dump_numa_domains (struct nk_locality_info * numa)$/;""",f,"file:
+"
+dump_numa_matrix,nautilus/numa.c,"/^dump_numa_matrix (struct nk_locality_info * numa)$/;""",f,"file:
+"
+dump_pml4,arch/hrt/hrt.c,"/^dump_pml4 (void *pt)$/;""",f,"file:
+"
+early_acpi_os_unmap_memory,acpi/osl.c,"/^void early_acpi_os_unmap_memory(void __iomem *virt, acpi_size size)$/;""","f
+"
+early_printk,nautilus/printk.c,"/^early_printk (const char *fmt, va_list args)$/;""","f
+"
+enable_all_events,nautilus/pmc.c,"/^enable_all_events (void)$/;""","f
+"
+enable_perf_event,nautilus/pmc.c,"/^enable_perf_event (perf_event_t * event)$/;""","f
+"
+enable_sse,nautilus/fpu.c,"/^enable_sse (void)$/;""",f,"file:
+"
+enable_x87,nautilus/fpu.c,"/^enable_x87 (void)$/;""",f,"file:
+"
+end_capture,lua_src/lstrlib.c,"/^static const char *end_capture (MatchState *ms, const char *s,$/;""",f,"file:
+"
+enqueue_scancode_as_keycode,nautilus/vc.c,"/^static int enqueue_scancode_as_keycode(struct nk_virtual_console *cur_vc, uint8_t scan)$/;""",f,"file:
+"
+enqueue_thread_on_tlist,nautilus/thread.c,"/^enqueue_thread_on_tlist (nk_thread_t * t)$/;""",f,"file:
+"
+enqueue_thread_on_waitq,nautilus/thread.c,"/^enqueue_thread_on_waitq (nk_thread_t * waiter, nk_thread_queue_t * waitq)$/;""",f,"file:
+"
+enterblock,lua_src/lparser.c,"/^static void enterblock (FuncState *fs, BlockCnt *bl, lu_byte isloop) {$/;""",f,"file:
+"
+enterlevel,lua_src/lparser.c,"/^static void enterlevel (LexState *ls) {$/;""",f,"file:
+"
+entersweep,lua_src/lgc.c,"/^static int entersweep (lua_State *L) {$/;""",f,"file:
+"
+errfile,lua_src/lauxlib.c,"/^static int errfile (lua_State *L, const char *what, int fnameindex) {$/;""",f,"file:
+"
+error,lua_src/lundump.c,"/^static l_noret error(LoadState* S, const char* why)$/;""",f,"file:
+"
+error_expected,lua_src/lparser.c,"/^static l_noret error_expected (LexState *ls, int token) {$/;""",f,"file:
+"
+error_int_handler,dev/apic.c,"/^error_int_handler (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+errorlimit,lua_src/lparser.c,"/^static l_noret errorlimit (FuncState *fs, int limit, const char *what) {$/;""",f,"file:
+"
+escerror,lua_src/llex.c,"/^static void escerror (LexState *ls, int *c, int n, const char *msg) {$/;""",f,"file:
+"
+event_is_valid,nautilus/nemo.c,"/^event_is_valid (nemo_event_id_t id)$/;""",f,"file:
+"
+exit,nautilus/libccompat.c,"/^exit(int status)$/;""","f
+"
+exp,nautilus/libccompat.c,"/^double exp(double x)$/;""","f
+"
+exp1,lua_src/lparser.c,"/^static int exp1 (LexState *ls) {$/;""",f,"file:
+"
+exp2reg,lua_src/lcode.c,"/^static void exp2reg (FuncState *fs, expdesc *e, int reg) {$/;""",f,"file:
+"
+explist,lua_src/lparser.c,"/^static int explist (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+expr,lua_src/lparser.c,"/^static void expr (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+exprstat,lua_src/lparser.c,"/^static void exprstat (LexState *ls) {$/;""",f,"file:
+"
+f_call,lua_src/lapi.c,"/^static void f_call (lua_State *L, void *ud) {$/;""",f,"file:
+"
+f_flush,lua_src/liolib.c,"/^static int f_flush (lua_State *L) {$/;""",f,"file:
+"
+f_gc,lua_src/liolib.c,"/^static int f_gc (lua_State *L) {$/;""",f,"file:
+"
+f_lines,lua_src/liolib.c,"/^static int f_lines (lua_State *L) {$/;""",f,"file:
+"
+f_luaopen,lua_src/lstate.c,"/^static void f_luaopen (lua_State *L, void *ud) {$/;""",f,"file:
+"
+f_parser,lua_src/ldo.c,"/^static void f_parser (lua_State *L, void *ud) {$/;""",f,"file:
+"
+f_read,lua_src/liolib.c,"/^static int f_read (lua_State *L) {$/;""",f,"file:
+"
+f_seek,lua_src/liolib.c,"/^static int f_seek (lua_State *L) {$/;""",f,"file:
+"
+f_setvbuf,lua_src/liolib.c,"/^static int f_setvbuf (lua_State *L) {$/;""",f,"file:
+"
+f_tostring,lua_src/liolib.c,"/^static int f_tostring (lua_State *L) {$/;""",f,"file:
+"
+f_write,lua_src/liolib.c,"/^static int f_write (lua_State *L) {$/;""",f,"file:
+"
+fabs,nautilus/libccompat.c,"/^double fabs(double __x){$/;""","f
+"
+fclose,nautilus/libccompat.c,"/^fclose (FILE * f)$/;""","f
+"
+fdopen,nautilus/libccompat.c,"/^fdopen (int fd, const char * mode)$/;""","f
+"
+feof,nautilus/libccompat.c,"/^int feof(FILE * x)$/;""","f
+"
+ferror,nautilus/libccompat.c,"/^ferror (FILE * f)$/;""","f
+"
+fflush,nautilus/libccompat.c,"/^int fflush (FILE * f)$/;""","f
+"
+fgets,nautilus/libccompat.c,"/^char *fgets(char *str, int n, FILE *stream)$/;""","f
+"
+field,lua_src/lparser.c,"/^static void field (LexState *ls, struct ConsControl *cc) {$/;""",f,"file:
+"
+fieldargs,lua_src/lbitlib.c,"/^static int fieldargs (lua_State *L, int farg, int *width) {$/;""",f,"file:
+"
+fieldsel,lua_src/lparser.c,"/^static void fieldsel (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+filterpc,lua_src/ldebug.c,"/^static int filterpc (int pc, int jmptarget) {$/;""",f,"file:
+"
+finalreport,lua_src/lua.c,"/^static void finalreport (lua_State *L, int status) {$/;""",f,"file:
+"
+find_avail_timer_event,dev/timer.c,"/^find_avail_timer_event (void)$/;""",f,"file:
+"
+find_buddy,nautilus/mm/buddy.c,"/^find_buddy (struct buddy_mempool *mp, struct block *block, ulong_t order)$/;""",f,"file:
+"
+find_mp_pointer,arch/x64/smp.c,"/^find_mp_pointer (void)$/;""",f,"file:
+"
+findfield,lua_src/lauxlib.c,"/^static int findfield (lua_State *L, int objidx, int level) {$/;""",f,"file:
+"
+findfile,lua_src/loadlib.c,"/^static const char *findfile (lua_State *L, const char *name,$/;""",f,"file:
+"
+findgotos,lua_src/lparser.c,"/^static void findgotos (LexState *ls, Labeldesc *lb) {$/;""",f,"file:
+"
+findindex,lua_src/ltable.c,"/^static int findindex (lua_State *L, Table *t, StkId key) {$/;""",f,"file:
+"
+findlabel,lua_src/lparser.c,"/^static int findlabel (LexState *ls, int g) {$/;""",f,"file:
+"
+findloader,lua_src/loadlib.c,"/^static void findloader (lua_State *L, const char *name) {$/;""",f,"file:
+"
+findlocal,lua_src/ldebug.c,"/^static const char *findlocal (lua_State *L, CallInfo *ci, int n,$/;""",f,"file:
+"
+findpcall,lua_src/ldo.c,"/^static CallInfo *findpcall (lua_State *L) {$/;""",f,"file:
+"
+findsetreg,lua_src/ldebug.c,"/^static int findsetreg (Proto *p, int lastpc, int reg) {$/;""",f,"file:
+"
+findvararg,lua_src/ldebug.c,"/^static const char *findvararg (CallInfo *ci, int n, StkId *pos) {$/;""",f,"file:
+"
+finishCcall,lua_src/ldo.c,"/^static void finishCcall (lua_State *L) {$/;""",f,"file:
+"
+finishpcall,lua_src/lbaselib.c,"/^static int finishpcall (lua_State *L, int status) {$/;""",f,"file:
+"
+fixjump,lua_src/lcode.c,"/^static void fixjump (FuncState *fs, int pc, int dest) {$/;""",f,"file:
+"
+floor,nautilus/libccompat.c,"/^double floor(double x)$/;""","f
+"
+flush,nautilus/printk.c,"/^flush (struct printk_state *state)$/;""",f,"file:
+"
+flush_scancodes,dev/kbd.c,"/^static void flush_scancodes()$/;""",f,"file:
+"
+flush_tlb,arch/hrt/hrt.c,"/^flush_tlb (void)$/;""",f,"file:
+"
+fmod,nautilus/libccompat.c,"/^double fmod(double y, double x){$/;""","f
+"
+fopen,nautilus/libccompat.c,"/^fopen (const char * path, FILE * f)$/;""","f
+"
+fopen64,nautilus/libccompat.c,"/^fopen64 (const char * path, FILE * f)$/;""","f
+"
+forbody,lua_src/lparser.c,"/^static void forbody (LexState *ls, int base, int line, int nvars, int isnum) {$/;""",f,"file:
+"
+forlist,lua_src/lparser.c,"/^static void forlist (LexState *ls, TString *indexname) {$/;""",f,"file:
+"
+format_decode,nautilus/printk.c,"/^static int format_decode(const char *fmt, struct printf_spec *spec)$/;""",f,"file:
+"
+format_int,nautilus/fmtout.c,"/^format_int(struct Output_Sink *q, uintmax_t val, enum flags flags,$/;""",f,"file:
+"
+fornum,lua_src/lparser.c,"/^static void fornum (LexState *ls, TString *varname, int line) {$/;""",f,"file:
+"
+forstat,lua_src/lparser.c,"/^static void forstat (LexState *ls, int line) {$/;""",f,"file:
+"
+fprintf,nautilus/libccompat.c,"/^fprintf (FILE * f, const char * s, ...)$/;""","f
+"
+fpu_init,nautilus/fpu.c,"/^fpu_init (struct naut_info * naut)$/;""","f
+"
+fpu_init_common,nautilus/fpu.c,"/^fpu_init_common (struct naut_info * naut)$/;""",f,"file:
+"
+fputc,nautilus/libccompat.c,"/^int fputc (int c, FILE * f) $/;""","f
+"
+fputs,nautilus/libccompat.c,"/^int fputs (const char *s, FILE *stream)$/;""","f
+"
+fread,nautilus/libccompat.c,"/^size_t fread (void *ptr, size_t size, size_t count, FILE *stream)$/;""","f
+"
+free,nautilus/mm/kmem.c,"/^free (void * addr)$/;""","f
+"
+free_usable_ram,nautilus/mm/boot_mm.c,"/^free_usable_ram (boot_mem_info_t * mem)$/;""",f,"file:
+"
+freeexp,lua_src/lcode.c,"/^static void freeexp (FuncState *fs, expdesc *e) {$/;""",f,"file:
+"
+freeobj,lua_src/lgc.c,"/^static void freeobj (lua_State *L, GCObject *o) {$/;""",f,"file:
+"
+freereg,lua_src/lcode.c,"/^static void freereg (FuncState *fs, int reg) {$/;""",f,"file:
+"
+freestack,lua_src/lstate.c,"/^static void freestack (lua_State *L) {$/;""",f,"file:
+"
+freopen,nautilus/libccompat.c,"/^FILE *freopen(const char *fname, const char *mode,FILE *stream)$/;""","f
+"
+frexp,nautilus/libccompat.c,"/^double frexp(double x, int *e){$/;""","f
+"
+fscanf,nautilus/libccompat.c,"/^int fscanf(FILE *restrict stream, const char *restrict format, ... )$/;""","f
+"
+fseek,nautilus/libccompat.c,"/^int fseek(FILE *stream, long offset, int whence)$/;""","f
+"
+fseeko64,nautilus/libccompat.c,"/^int fseeko64 (FILE *fp, uint64_t offset, int whence)$/;""","f
+"
+ftell,nautilus/libccompat.c,"/^long ftell(FILE *x)$/;""","f
+"
+ftello64,nautilus/libccompat.c,"/^uint64_t ftello64 (FILE *stream)$/;""","f
+"
+funcargs,lua_src/lparser.c,"/^static void funcargs (LexState *ls, expdesc *f, int line) {$/;""",f,"file:
+"
+funcinfo,lua_src/ldebug.c,"/^static void funcinfo (lua_Debug *ar, Closure *cl) {$/;""",f,"file:
+"
+funcname,lua_src/lparser.c,"/^static int funcname (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+funcstat,lua_src/lparser.c,"/^static void funcstat (LexState *ls, int line) {$/;""",f,"file:
+"
+fwrite,nautilus/libccompat.c,"/^size_t fwrite (const void *ptr, size_t size, size_t nmemb, FILE *stream)$/;""","f
+"
+g_iofile,lua_src/liolib.c,"/^static int g_iofile (lua_State *L, const char *f, const char *mode) {$/;""",f,"file:
+"
+g_read,lua_src/liolib.c,"/^static int g_read (lua_State *L, FILE *f, int first) {$/;""",f,"file:
+"
+g_write,lua_src/liolib.c,"/^static int g_write (lua_State *L, FILE *f, int arg) {$/;""",f,"file:
+"
+gctm,lua_src/loadlib.c,"/^static int gctm (lua_State *L) {$/;""",f,"file:
+"
+generationalcollection,lua_src/lgc.c,"/^static void generationalcollection (lua_State *L) {$/;""",f,"file:
+"
+generic_reader,lua_src/lbaselib.c,"/^static const char *generic_reader (lua_State *L, void *ud, size_t *size) {$/;""",f,"file:
+"
+getF,lua_src/lauxlib.c,"/^static const char *getF (lua_State *L, void *ud, size_t *size) {$/;""",f,"file:
+"
+getS,lua_src/lauxlib.c,"/^static const char *getS (lua_State *L, void *ud, size_t *size) {$/;""",f,"file:
+"
+get_equalTM,lua_src/lvm.c,"/^static const TValue *get_equalTM (lua_State *L, Table *mt1, Table *mt2,$/;""",f,"file:
+"
+get_max_id_per_pkg,nautilus/numa.c,"/^get_max_id_per_pkg (void)$/;""",f,"file:
+"
+get_my_apicid,nautilus/sfi.c,"/^get_my_apicid (void)$/;""",f,"file:
+"
+get_my_cr3,arch/hrt/hrt.c,"/^get_my_cr3 (void)$/;""",f,"file:
+"
+get_prompt,lua_src/lua.c,"/^static const char *get_prompt (lua_State *L, int firstline) {$/;""",f,"file:
+"
+get_rand_byte,nautilus/random.c,"/^get_rand_byte (void) $/;""",f,"file:
+"
+get_runnable_thread,nautilus/thread.c,"/^get_runnable_thread (uint32_t cpu)$/;""",f,"file:
+"
+get_runnable_thread_myq,nautilus/thread.c,"/^get_runnable_thread_myq (void) $/;""",f,"file:
+"
+get_s5,arch/hrt/shutdown.c,"/^get_s5 (struct shutdown_info * s)$/;""",f,"file:
+"
+get_s5,arch/x64/shutdown.c,"/^get_s5 (struct shutdown_info * s)$/;""",f,"file:
+"
+get_topo_params,nautilus/numa.c,"/^get_topo_params (struct nk_topo_params * tp)$/;""",f,"file:
+"
+get_topo_secondary,nautilus/numa.c,"/^get_topo_secondary (struct nk_topo_params * tp)$/;""",f,"file:
+"
+get_vendor_string,nautilus/cpu.c,"/^get_vendor_string (char name[13])$/;""",f,"file:
+"
+get_xsave_features,nautilus/fpu.c,"/^get_xsave_features (void)$/;""",f,"file:
+"
+getargs,lua_src/lua.c,"/^static int getargs (lua_State *L, char **argv, int n) {$/;""",f,"file:
+"
+getbinopr,lua_src/lparser.c,"/^static BinOpr getbinopr (int op) {$/;""",f,"file:
+"
+getboolfield,lua_src/loslib.c,"/^static int getboolfield (lua_State *L, const char *key) {$/;""",f,"file:
+"
+getc,nautilus/libccompat.c,"/^int getc(FILE* arg)$/;""","f
+"
+getcached,lua_src/lvm.c,"/^static Closure *getcached (Proto *p, UpVal **encup, StkId base) {$/;""",f,"file:
+"
+getenv,nautilus/libccompat.c,"/^char *getenv(const char *name)$/;""","f
+"
+getfield,lua_src/loslib.c,"/^static int getfield (lua_State *L, const char *key, int d) {$/;""",f,"file:
+"
+getfreepos,lua_src/ltable.c,"/^static Node *getfreepos (Table *t) {$/;""",f,"file:
+"
+getfuncname,lua_src/ldebug.c,"/^static const char *getfuncname (lua_State *L, CallInfo *ci, const char **name) {$/;""",f,"file:
+"
+getiofile,lua_src/liolib.c,"/^static FILE *getiofile (lua_State *L, const char *findex) {$/;""",f,"file:
+"
+getjump,lua_src/lcode.c,"/^static int getjump (FuncState *fs, int pc) {$/;""",f,"file:
+"
+getjumpcontrol,lua_src/lcode.c,"/^static Instruction *getjumpcontrol (FuncState *fs, int pc) {$/;""",f,"file:
+"
+getlocvar,lua_src/lparser.c,"/^static LocVar *getlocvar (FuncState *fs, int i) {$/;""",f,"file:
+"
+getobjname,lua_src/ldebug.c,"/^static const char *getobjname (Proto *p, int lastpc, int reg,$/;""",f,"file:
+"
+gettext,nautilus/libccompat.c,"/^char *gettext (const char * msgid)$/;""","f
+"
+getthread,lua_src/ldblib.c,"/^static lua_State *getthread (lua_State *L, int *arg) {$/;""",f,"file:
+"
+getunopr,lua_src/lparser.c,"/^static UnOpr getunopr (int op) {$/;""",f,"file:
+"
+getupvalname,lua_src/ldebug.c,"/^static const char *getupvalname (CallInfo *ci, const TValue *o,$/;""",f,"file:
+"
+getupvalref,lua_src/lapi.c,"/^static UpVal **getupvalref (lua_State *L, int fidx, int n, LClosure **pf) {$/;""",f,"file:
+"
+getwc,nautilus/libccompat.c,"/^int getwc (FILE *stream)$/;""","f
+"
+gig_pages_supported,nautilus/paging.c,"/^gig_pages_supported (void)$/;""",f,"file:
+"
+gmatch,lua_src/lstrlib.c,"/^static int gmatch (lua_State *L) {$/;""",f,"file:
+"
+gmatch_aux,lua_src/lstrlib.c,"/^static int gmatch_aux (lua_State *L) {$/;""",f,"file:
+"
+gmtime,nautilus/libccompat.c,"/^struct tm *gmtime(const time_t *timer)$/;""","f
+"
+gotostat,lua_src/lparser.c,"/^static void gotostat (LexState *ls, int pc) {$/;""",f,"file:
+"
+growstack,lua_src/lapi.c,"/^static void growstack (lua_State *L, void *ud) {$/;""",f,"file:
+"
+handle_cmd,nautilus/shell.c,"/^static int handle_cmd(char *buf, int n)$/;""",f,"file:
+"
+handle_luainit,lua_src/lua.c,"/^static int handle_luainit (lua_State *L) {$/;""",f,"file:
+"
+handle_script,lua_src/lua.c,"/^static int handle_script (lua_State *L, char **argv, int n) {$/;""",f,"file:
+"
+has_avx,nautilus/fpu.c,"/^has_avx (void)$/;""",f,"file:
+"
+has_clflush,nautilus/fpu.c,"/^has_clflush (void)$/;""",f,"file:
+"
+has_cvt16,nautilus/fpu.c,"/^has_cvt16 (void)$/;""",f,"file:
+"
+has_cx16,nautilus/fpu.c,"/^has_cx16 (void)$/;""",f,"file:
+"
+has_fma4,nautilus/fpu.c,"/^has_fma4 (void)$/;""",f,"file:
+"
+has_fxsr,nautilus/fpu.c,"/^has_fxsr (void)$/;""",f,"file:
+"
+has_htt,nautilus/numa.c,"/^has_htt (void)$/;""",f,"file:
+"
+has_leafb,nautilus/numa.c,"/^has_leafb (void)$/;""",f,"file:
+"
+has_mmx,nautilus/fpu.c,"/^has_mmx (void)$/;""",f,"file:
+"
+has_mwait,arch/hrt/mwait.c,"/^has_mwait (void) $/;""",f,"file:
+"
+has_mwait,arch/x64/mwait.c,"/^has_mwait (void) $/;""",f,"file:
+"
+has_sse,nautilus/fpu.c,"/^has_sse (void) $/;""",f,"file:
+"
+has_sse2,nautilus/fpu.c,"/^has_sse2 (void)$/;""",f,"file:
+"
+has_sse3,nautilus/fpu.c,"/^has_sse3 (void)$/;""",f,"file:
+"
+has_sse4d1,nautilus/fpu.c,"/^has_sse4d1 (void)$/;""",f,"file:
+"
+has_sse4d2,nautilus/fpu.c,"/^has_sse4d2 (void)$/;""",f,"file:
+"
+has_ssse3,nautilus/fpu.c,"/^has_ssse3 (void)$/;""",f,"file:
+"
+has_x87,nautilus/fpu.c,"/^has_x87 (void)$/;""",f,"file:
+"
+has_xsave,nautilus/fpu.c,"/^has_xsave (void)$/;""",f,"file:
+"
+hashnum,lua_src/ltable.c,"/^static Node *hashnum (const Table *t, lua_Number n) {$/;""",f,"file:
+"
+hashtable_expand,nautilus/hashtable.c,"/^hashtable_expand (struct nk_hashtable * htable) $/;""",f,"file:
+"
+hookf,lua_src/ldblib.c,"/^static void hookf (lua_State *L, lua_Debug *ar) {$/;""",f,"file:
+"
+hpet_cmp_run,dev/hpet.c,"/^hpet_cmp_run (struct hpet_comparator * cmp)$/;""",f,"file:
+"
+hpet_cmp_stop,dev/hpet.c,"/^hpet_cmp_stop (struct hpet_comparator * cmp)$/;""",f,"file:
+"
+hpet_cntr_halt,dev/hpet.c,"/^hpet_cntr_halt (struct hpet_dev * hpet)$/;""",f,"file:
+"
+hpet_cntr_run,dev/hpet.c,"/^hpet_cntr_run (struct hpet_dev * hpet)$/;""",f,"file:
+"
+hpet_get_cmp_stat,dev/hpet.c,"/^hpet_get_cmp_stat (struct hpet_comparator * cmp)$/;""",f,"file:
+"
+hpet_get_cntr_stat,dev/hpet.c,"/^hpet_get_cntr_stat (struct hpet_dev * hpet)$/;""",f,"file:
+"
+hpet_get_free_timer,dev/hpet.c,"/^hpet_get_free_timer (struct hpet_dev * hpet)$/;""",f,"file:
+"
+hpet_init_comparator,dev/hpet.c,"/^hpet_init_comparator (struct hpet_dev * hpet,$/;""",f,"file:
+"
+hpet_request_irq,dev/hpet.c,"/^hpet_request_irq (struct hpet_comparator * cmp, uint32_t mask)$/;""",f,"file:
+"
+hpet_set_oneshot,dev/hpet.c,"/^hpet_set_oneshot (uint64_t ticks)$/;""","f
+"
+hpet_write_cmp_val,dev/hpet.c,"/^hpet_write_cmp_val (struct hpet_comparator * cmp, uint64_t val)$/;""",f,"file:
+"
+hrt_ap_init,arch/hrt/init.c,"/^hrt_ap_init (unsigned long mbd, $/;""","f
+"
+hrt_bsp_init,arch/hrt/init.c,"/^hrt_bsp_init (unsigned long mbd, $/;""","f
+"
+hrt_init_cpus,arch/hrt/hrt.c,"/^hrt_init_cpus (struct sys_info * sys)$/;""","f
+"
+hrt_init_ioapics,arch/hrt/hrt.c,"/^hrt_init_ioapics (struct sys_info * sys)$/;""","f
+"
+hrt_print,arch/hrt/hrt.c,"/^hrt_print (const char * s) $/;""","f
+"
+hrt_putchar,arch/hrt/hrt.c,"/^hrt_putchar (char c)$/;""","f
+"
+hrt_puts,arch/hrt/hrt.c,"/^hrt_puts (const char *s)$/;""","f
+"
+hvm_hrt_init,arch/hrt/hrt.c,"/^hvm_hrt_init (void)$/;""","f
+"
+i8254_calib_tsc,dev/i8254.c,"/^i8254_calib_tsc (void)$/;""","f
+"
+i8254_disable,dev/i8254.c,"/^i8254_disable (void)$/;""",f,"file:
+"
+i8254_init,dev/i8254.c,"/^i8254_init (struct naut_info * naut)$/;""","f
+"
+idle,nautilus/idle.c,"/^idle (void * in, void ** out)$/;""","f
+"
+idle_delay,nautilus/idle.c,"/^idle_delay (unsigned long long n)$/;""",f,"file:
+"
+idt_assign_entry,nautilus/idt.c,"/^idt_assign_entry (ulong_t entry, ulong_t handler_addr)$/;""","f
+"
+ifstat,lua_src/lparser.c,"/^static void ifstat (LexState *ls, int line) {$/;""",f,"file:
+"
+imcr_begin_sym_io,nautilus/irq.c,"/^imcr_begin_sym_io (void)$/;""","f
+"
+inclinenumber,lua_src/llex.c,"/^static void inclinenumber (LexState *ls) {$/;""",f,"file:
+"
+incomplete,lua_src/lua.c,"/^static int incomplete (lua_State *L, int status) {$/;""",f,"file:
+"
+incstep,lua_src/lgc.c,"/^static void incstep (lua_State *L) {$/;""",f,"file:
+"
+index2addr,lua_src/lapi.c,"/^static TValue *index2addr (lua_State *L, int idx) {$/;""",f,"file:
+"
+indexFor,nautilus/hashtable.c,"/^indexFor (uint_t table_length, uint_t hash_value) $/;""",f,"file:
+"
+init,arch/k1om/init.c,"/^init (unsigned long mbd, unsigned long magic) $/;""","f
+"
+init,arch/x64/init.c,"/^init (unsigned long mbd,$/;""","f
+"
+init_ap_area,nautilus/smp.c,"/^init_ap_area (struct ap_init_area * ap_area, $/;""",f,"file:
+"
+init_exp,lua_src/lparser.c,"/^static void init_exp (expdesc *e, expkind k, int i) {$/;""",f,"file:
+"
+init_registry,lua_src/lstate.c,"/^static void init_registry (lua_State *L, global_State *g) {$/;""",f,"file:
+"
+init_xcall,nautilus/smp.c,"/^init_xcall (struct nk_xcall * x, void * arg, nk_xcall_func_t fun)$/;""",f,"file:
+"
+instr_calibrate,nautilus/instrument.c,"/^instr_calibrate (void)$/;""",f,"file:
+"
+instr_eq_fn,nautilus/instrument.c,"/^instr_eq_fn (addr_t key1, addr_t key2) {$/;""",f,"file:
+"
+instr_hash_fn,nautilus/instrument.c,"/^instr_hash_fn(addr_t key) {$/;""",f,"file:
+"
+int80_handler,test/benchmark.c,"/^int80_handler (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+intel_fpu_init,nautilus/fpu.c,"/^intel_fpu_init (struct naut_info * naut)$/;""",f,"file:
+"
+intel_get_topo_secondary,nautilus/numa.c,"/^intel_get_topo_secondary (struct nk_topo_params * tp)$/;""",f,"file:
+"
+intel_probe_with_leafb,nautilus/numa.c,"/^intel_probe_with_leafb (struct nk_topo_params *tp)$/;""",f,"file:
+"
+intel_probe_with_leaves14,nautilus/numa.c,"/^intel_probe_with_leaves14 (struct nk_topo_params * tp)$/;""",f,"file:
+"
+internshrstr,lua_src/lstring.c,"/^static TString *internshrstr (lua_State *L, const char *str, size_t l) {$/;""",f,"file:
+"
+invertjump,lua_src/lcode.c,"/^static void invertjump (FuncState *fs, expdesc *e) {$/;""",f,"file:
+"
+io_close,lua_src/liolib.c,"/^static int io_close (lua_State *L) {$/;""",f,"file:
+"
+io_fclose,lua_src/liolib.c,"/^static int io_fclose (lua_State *L) {$/;""",f,"file:
+"
+io_flush,lua_src/liolib.c,"/^static int io_flush (lua_State *L) {$/;""",f,"file:
+"
+io_input,lua_src/liolib.c,"/^static int io_input (lua_State *L) {$/;""",f,"file:
+"
+io_lines,lua_src/liolib.c,"/^static int io_lines (lua_State *L) {$/;""",f,"file:
+"
+io_noclose,lua_src/liolib.c,"/^static int io_noclose (lua_State *L) {$/;""",f,"file:
+"
+io_open,lua_src/liolib.c,"/^static int io_open (lua_State *L) {$/;""",f,"file:
+"
+io_output,lua_src/liolib.c,"/^static int io_output (lua_State *L) {$/;""",f,"file:
+"
+io_pclose,lua_src/liolib.c,"/^static int io_pclose (lua_State *L) {$/;""",f,"file:
+"
+io_popen,lua_src/liolib.c,"/^static int io_popen (lua_State *L) {$/;""",f,"file:
+"
+io_read,lua_src/liolib.c,"/^static int io_read (lua_State *L) {$/;""",f,"file:
+"
+io_readline,lua_src/liolib.c,"/^static int io_readline (lua_State *L) {$/;""",f,"file:
+"
+io_tmpfile,lua_src/liolib.c,"/^static int io_tmpfile (lua_State *L) {$/;""",f,"file:
+"
+io_type,lua_src/liolib.c,"/^static int io_type (lua_State *L) {$/;""",f,"file:
+"
+io_write,lua_src/liolib.c,"/^static int io_write (lua_State *L) {$/;""",f,"file:
+"
+ioapic_assign_irq,dev/ioapic.c,"/^ioapic_assign_irq (struct ioapic * ioapic,$/;""",f,"file:
+"
+ioapic_dump,dev/ioapic.c,"/^ioapic_dump (struct ioapic * ioapic)$/;""",f,"file:
+"
+ioapic_get_id,dev/ioapic.c,"/^ioapic_get_id (struct ioapic * ioapic)$/;""",f,"file:
+"
+ioapic_get_max_entry,dev/ioapic.c,"/^ioapic_get_max_entry (struct ioapic * ioapic)$/;""",f,"file:
+"
+ioapic_get_version,dev/ioapic.c,"/^ioapic_get_version (struct ioapic * ioapic)$/;""",f,"file:
+"
+ioapic_init,dev/ioapic.c,"/^ioapic_init (struct sys_info * sys)$/;""","f
+"
+ioapic_mask_irq,dev/ioapic.c,"/^ioapic_mask_irq (struct ioapic * ioapic, uint8_t irq)$/;""","f
+"
+ioapic_read_irq_entry,dev/ioapic.c,"/^ioapic_read_irq_entry (struct ioapic * ioapic, uint8_t irq)$/;""",f,"file:
+"
+ioapic_unmask_irq,dev/ioapic.c,"/^ioapic_unmask_irq (struct ioapic * ioapic, uint8_t irq)$/;""","f
+"
+ioapic_write_irq_entry,dev/ioapic.c,"/^ioapic_write_irq_entry (struct ioapic * ioapic, uint8_t irq, uint64_t val)$/;""",f,"file:
+"
+ioctl,nautilus/libccompat.c,"/^int ioctl (int d, unsigned long request, ...)$/;""","f
+"
+ip4_addr_string,nautilus/printk.c,"/^static char *ip4_addr_string(char *buf, char *end, const uint8_t *addr,$/;""",f,"file:
+"
+ip4_string,nautilus/printk.c,"/^static char *ip4_string(char *p, const uint8_t *addr, bool_t leading_zeros)$/;""",f,"file:
+"
+ip6_addr_string,nautilus/printk.c,"/^static char *ip6_addr_string(char *buf, char *end, const uint8_t *addr,$/;""",f,"file:
+"
+ip6_string,nautilus/printk.c,"/^static char *ip6_string(char *p, const char *addr, const char *fmt)$/;""",f,"file:
+"
+ipairsaux,lua_src/lbaselib.c,"/^static int ipairsaux (lua_State *L) {$/;""",f,"file:
+"
+ipi_bcast_test,test/ipi.c,"/^ipi_bcast_test (void)$/;""","f
+"
+ipi_begin_test,test/ipi.c,"/^ipi_begin_test (cpu_id_t cpu)$/;""","f
+"
+ipi_oneway_test,test/ipi.c,"/^ipi_oneway_test (cpu_id_t cpu)$/;""","f
+"
+ipi_test_setup,test/ipi.c,"/^ipi_test_setup (void)$/;""","f
+"
+irq_to_vec,nautilus/irq.c,"/^irq_to_vec (uint8_t irq)$/;""","f
+"
+irqmap_set_ioapic,nautilus/irq.c,"/^irqmap_set_ioapic (uint8_t irq, struct ioapic * ioapic)$/;""","f
+"
+irqs_enabled,nautilus/irq.c,"/^irqs_enabled (void)$/;""","f
+"
+is_available,nautilus/mm/buddy.c,"/^is_available (struct buddy_mempool *mp, struct block *block)$/;""",f,"file:
+"
+is_queue_empty,nautilus/vc.c,"/^static inline int is_queue_empty(struct nk_virtual_console *vc) $/;""",f,"file:
+"
+is_queue_full,nautilus/vc.c,"/^static inline int is_queue_full(struct nk_virtual_console *vc) $/;""",f,"file:
+"
+ischar,nautilus/libccompat.c,"/^int ischar(unsigned char *str)$/;""","f
+"
+iscleared,lua_src/lgc.c,"/^static int iscleared (global_State *g, const TValue *o) {$/;""",f,"file:
+"
+isinstack,lua_src/ldebug.c,"/^static int isinstack (CallInfo *ci, const TValue *o) {$/;""",f,"file:
+"
+isneg,lua_src/lobject.c,"/^static int isneg (const char **s) {$/;""",f,"file:
+"
+isnumeral,lua_src/lcode.c,"/^static int isnumeral(expdesc *e) {$/;""",f,"file:
+"
+jumponcond,lua_src/lcode.c,"/^static int jumponcond (FuncState *fs, expdesc *e, int cond) {$/;""",f,"file:
+"
+kbd_deinit,dev/kbd.c,"/^int kbd_deinit()$/;""","f
+"
+kbd_handler,dev/kbd.c,"/^kbd_handler (excp_entry_t * excp, excp_vec_t vec)$/;""",f,"file:
+"
+kbd_init,dev/kbd.c,"/^kbd_init (struct naut_info * naut)$/;""","f
+"
+kbd_reset,dev/kbd.c,"/^int kbd_reset()$/;""","f
+"
+kbd_translate,dev/kbd.c,"/^nk_keycode_t kbd_translate(nk_scancode_t scan)$/;""","f
+"
+kern_ident_map,nautilus/paging.c,"/^kern_ident_map (struct nk_mem_info * mem, ulong_t mbd)$/;""",f,"file:
+"
+kmem_add_memory,nautilus/mm/kmem.c,"/^kmem_add_memory (struct mem_region * mem, $/;""","f
+"
+kmem_get_base_zone,nautilus/mm/kmem.c,"/^kmem_get_base_zone (void)$/;""","f
+"
+kmem_get_region_by_addr,nautilus/mm/kmem.c,"/^kmem_get_region_by_addr (ulong_t addr)$/;""","f
+"
+kname,lua_src/ldebug.c,"/^static void kname (Proto *p, int pc, int c, const char **name) {$/;""",f,"file:
+"
+l_alloc,lua_src/lauxlib.c,"/^static void *l_alloc (void *ud, void *ptr, size_t osize, size_t nsize) {$/;""",f,"file:
+"
+l_message,lua_src/lua.c,"/^static void l_message (const char *pname, const char *msg) {$/;""",f,"file:
+"
+l_strcmp,lua_src/lvm.c,"/^static int l_strcmp (const TString *ls, const TString *rs) {$/;""",f,"file:
+"
+labelstat,lua_src/lparser.c,"/^static void labelstat (LexState *ls, TString *label, int line) {$/;""",f,"file:
+"
+laction,lua_src/lua.c,"/^static void laction (int i) {$/;""",f,"file:
+"
+largest_page_size,nautilus/paging.c,"/^largest_page_size (void)$/;""",f,"file:
+"
+lastlistfield,lua_src/lparser.c,"/^static void lastlistfield (FuncState *fs, struct ConsControl *cc) {$/;""",f,"file:
+"
+launch_vmm_environment,arch/x64/init.c,"/^static int launch_vmm_environment()$/;""",f,"file:
+"
+ldexp,nautilus/libccompat.c,"/^double ldexp(double x, int exp){$/;""","f
+"
+leaveblock,lua_src/lparser.c,"/^static void leaveblock (FuncState *fs) {$/;""",f,"file:
+"
+legion_test_thread_func,test/test_legion.c,"/^legion_test_thread_func (void * in, void ** out)$/;""",f,"file:
+"
+lexerror,lua_src/llex.c,"/^static l_noret lexerror (LexState *ls, const char *msg, int token) {$/;""",f,"file:
+"
+libsize,lua_src/lauxlib.c,"/^static int libsize (const luaL_Reg *l) {$/;""",f,"file:
+"
+list,nautilus/vc.c,"/^static void list(void *in, void **out)$/;""",f,"file:
+"
+listfield,lua_src/lparser.c,"/^static void listfield (LexState *ls, struct ConsControl *cc) {$/;""",f,"file:
+"
+ll_addtoclib,lua_src/loadlib.c,"/^static void ll_addtoclib (lua_State *L, const char *path, void *plib) {$/;""",f,"file:
+"
+ll_checkclib,lua_src/loadlib.c,"/^static void *ll_checkclib (lua_State *L, const char *path) {$/;""",f,"file:
+"
+ll_load,lua_src/loadlib.c,"/^static void *ll_load (lua_State *L, const char *path, int seeglb) {$/;""",f,"file:
+"
+ll_loadfunc,lua_src/loadlib.c,"/^static int ll_loadfunc (lua_State *L, const char *path, const char *sym) {$/;""",f,"file:
+"
+ll_loadlib,lua_src/loadlib.c,"/^static int ll_loadlib (lua_State *L) {$/;""",f,"file:
+"
+ll_module,lua_src/loadlib.c,"/^static int ll_module (lua_State *L) {$/;""",f,"file:
+"
+ll_require,lua_src/loadlib.c,"/^static int ll_require (lua_State *L) {$/;""",f,"file:
+"
+ll_searchpath,lua_src/loadlib.c,"/^static int ll_searchpath (lua_State *L) {$/;""",f,"file:
+"
+ll_seeall,lua_src/loadlib.c,"/^static int ll_seeall (lua_State *L) {$/;""",f,"file:
+"
+ll_sym,lua_src/loadlib.c,"/^static lua_CFunction ll_sym (lua_State *L, void *lib, const char *sym) {$/;""",f,"file:
+"
+ll_unloadlib,lua_src/loadlib.c,"/^static void ll_unloadlib (void *lib) {$/;""",f,"file:
+"
+llex,lua_src/llex.c,"/^static int llex (LexState *ls, SemInfo *seminfo) {$/;""",f,"file:
+"
+lmemfind,lua_src/lstrlib.c,"/^static const char *lmemfind (const char *s1, size_t l1,$/;""",f,"file:
+"
+load_aux,lua_src/lbaselib.c,"/^static int load_aux (lua_State *L, int status, int envidx) {$/;""",f,"file:
+"
+loadfunc,lua_src/loadlib.c,"/^static int loadfunc (lua_State *L, const char *filename, const char *modname) {$/;""",f,"file:
+"
+loadline,lua_src/lua.c,"/^static int loadline (lua_State *L) {$/;""",f,"file:
+"
+localfunc,lua_src/lparser.c,"/^static void localfunc (LexState *ls) {$/;""",f,"file:
+"
+localstat,lua_src/lparser.c,"/^static void localstat (LexState *ls) {$/;""",f,"file:
+"
+localtime,nautilus/libccompat.c,"/^struct tm *localtime(const time_t *timer)$/;""","f
+"
+log,nautilus/libccompat.c,"/^double log(double x)$/;""","f
+"
+log10,nautilus/libccompat.c,"/^double log10(double x)$/;""","f
+"
+lrand48,nautilus/libccompat.c,"/^lrand48 (void)$/;""","f
+"
+lseek64,nautilus/libccompat.c,"/^uint64_t lseek64 (int fd, uint64_t offset, int whence)$/;""","f
+"
+lstop,lua_src/lua.c,"/^static void lstop (lua_State *L, lua_Debug *ar) {$/;""",f,"file:
+"
+luaB_assert,lua_src/lbaselib.c,"/^static int luaB_assert (lua_State *L) {$/;""",f,"file:
+"
+luaB_auxwrap,lua_src/lcorolib.c,"/^static int luaB_auxwrap (lua_State *L) {$/;""",f,"file:
+"
+luaB_cocreate,lua_src/lcorolib.c,"/^static int luaB_cocreate (lua_State *L) {$/;""",f,"file:
+"
+luaB_collectgarbage,lua_src/lbaselib.c,"/^static int luaB_collectgarbage (lua_State *L) {$/;""",f,"file:
+"
+luaB_coresume,lua_src/lcorolib.c,"/^static int luaB_coresume (lua_State *L) {$/;""",f,"file:
+"
+luaB_corunning,lua_src/lcorolib.c,"/^static int luaB_corunning (lua_State *L) {$/;""",f,"file:
+"
+luaB_costatus,lua_src/lcorolib.c,"/^static int luaB_costatus (lua_State *L) {$/;""",f,"file:
+"
+luaB_cowrap,lua_src/lcorolib.c,"/^static int luaB_cowrap (lua_State *L) {$/;""",f,"file:
+"
+luaB_dofile,lua_src/lbaselib.c,"/^static int luaB_dofile (lua_State *L) {$/;""",f,"file:
+"
+luaB_error,lua_src/lbaselib.c,"/^static int luaB_error (lua_State *L) {$/;""",f,"file:
+"
+luaB_getmetatable,lua_src/lbaselib.c,"/^static int luaB_getmetatable (lua_State *L) {$/;""",f,"file:
+"
+luaB_ipairs,lua_src/lbaselib.c,"/^static int luaB_ipairs (lua_State *L) {$/;""",f,"file:
+"
+luaB_load,lua_src/lbaselib.c,"/^static int luaB_load (lua_State *L) {$/;""",f,"file:
+"
+luaB_loadfile,lua_src/lbaselib.c,"/^static int luaB_loadfile (lua_State *L) {$/;""",f,"file:
+"
+luaB_next,lua_src/lbaselib.c,"/^static int luaB_next (lua_State *L) {$/;""",f,"file:
+"
+luaB_pairs,lua_src/lbaselib.c,"/^static int luaB_pairs (lua_State *L) {$/;""",f,"file:
+"
+luaB_pcall,lua_src/lbaselib.c,"/^static int luaB_pcall (lua_State *L) {$/;""",f,"file:
+"
+luaB_print,lua_src/lbaselib.c,"/^static int luaB_print (lua_State *L) {$/;""",f,"file:
+"
+luaB_rawequal,lua_src/lbaselib.c,"/^static int luaB_rawequal (lua_State *L) {$/;""",f,"file:
+"
+luaB_rawget,lua_src/lbaselib.c,"/^static int luaB_rawget (lua_State *L) {$/;""",f,"file:
+"
+luaB_rawlen,lua_src/lbaselib.c,"/^static int luaB_rawlen (lua_State *L) {$/;""",f,"file:
+"
+luaB_rawset,lua_src/lbaselib.c,"/^static int luaB_rawset (lua_State *L) {$/;""",f,"file:
+"
+luaB_select,lua_src/lbaselib.c,"/^static int luaB_select (lua_State *L) {$/;""",f,"file:
+"
+luaB_setmetatable,lua_src/lbaselib.c,"/^static int luaB_setmetatable (lua_State *L) {$/;""",f,"file:
+"
+luaB_tonumber,lua_src/lbaselib.c,"/^static int luaB_tonumber (lua_State *L) {$/;""",f,"file:
+"
+luaB_tostring,lua_src/lbaselib.c,"/^static int luaB_tostring (lua_State *L) {$/;""",f,"file:
+"
+luaB_type,lua_src/lbaselib.c,"/^static int luaB_type (lua_State *L) {$/;""",f,"file:
+"
+luaB_xpcall,lua_src/lbaselib.c,"/^static int luaB_xpcall (lua_State *L) {$/;""",f,"file:
+"
+luaB_yield,lua_src/lcorolib.c,"/^static int luaB_yield (lua_State *L) {$/;""",f,"file:
+"
+luaC_barrier_,lua_src/lgc.c,"/^void luaC_barrier_ (lua_State *L, GCObject *o, GCObject *v) {$/;""","f
+"
+luaC_barrierback_,lua_src/lgc.c,"/^void luaC_barrierback_ (lua_State *L, GCObject *o) {$/;""","f
+"
+luaC_barrierproto_,lua_src/lgc.c,"/^LUAI_FUNC void luaC_barrierproto_ (lua_State *L, Proto *p, Closure *c) {$/;""","f
+"
+luaC_changemode,lua_src/lgc.c,"/^void luaC_changemode (lua_State *L, int mode) {$/;""","f
+"
+luaC_checkfinalizer,lua_src/lgc.c,"/^void luaC_checkfinalizer (lua_State *L, GCObject *o, Table *mt) {$/;""","f
+"
+luaC_checkupvalcolor,lua_src/lgc.c,"/^void luaC_checkupvalcolor (global_State *g, UpVal *uv) {$/;""","f
+"
+luaC_forcestep,lua_src/lgc.c,"/^void luaC_forcestep (lua_State *L) {$/;""","f
+"
+luaC_freeallobjects,lua_src/lgc.c,"/^void luaC_freeallobjects (lua_State *L) {$/;""","f
+"
+luaC_fullgc,lua_src/lgc.c,"/^void luaC_fullgc (lua_State *L, int isemergency) {$/;""","f
+"
+luaC_newobj,lua_src/lgc.c,"/^GCObject *luaC_newobj (lua_State *L, int tt, size_t sz, GCObject **list,$/;""","f
+"
+luaC_runtilstate,lua_src/lgc.c,"/^void luaC_runtilstate (lua_State *L, int statesmask) {$/;""","f
+"
+luaC_step,lua_src/lgc.c,"/^void luaC_step (lua_State *L) {$/;""","f
+"
+luaD_call,lua_src/ldo.c,"/^void luaD_call (lua_State *L, StkId func, int nResults, int allowyield) {$/;""","f
+"
+luaD_growstack,lua_src/ldo.c,"/^void luaD_growstack (lua_State *L, int n) {$/;""","f
+"
+luaD_hook,lua_src/ldo.c,"/^void luaD_hook (lua_State *L, int event, int line) {$/;""","f
+"
+luaD_pcall,lua_src/ldo.c,"/^int luaD_pcall (lua_State *L, Pfunc func, void *u,$/;""","f
+"
+luaD_poscall,lua_src/ldo.c,"/^int luaD_poscall (lua_State *L, StkId firstResult) {$/;""","f
+"
+luaD_precall,lua_src/ldo.c,"/^int luaD_precall (lua_State *L, StkId func, int nresults) {$/;""","f
+"
+luaD_protectedparser,lua_src/ldo.c,"/^int luaD_protectedparser (lua_State *L, ZIO *z, const char *name,$/;""","f
+"
+luaD_rawrunprotected,lua_src/ldo.c,"/^int luaD_rawrunprotected (lua_State *L, Pfunc f, void *ud) {$/;""","f
+"
+luaD_reallocstack,lua_src/ldo.c,"/^void luaD_reallocstack (lua_State *L, int newsize) {$/;""","f
+"
+luaD_shrinkstack,lua_src/ldo.c,"/^void luaD_shrinkstack (lua_State *L) {$/;""","f
+"
+luaD_throw,lua_src/ldo.c,"/^l_noret luaD_throw (lua_State *L, int errcode) {$/;""","f
+"
+luaE_extendCI,lua_src/lstate.c,"/^CallInfo *luaE_extendCI (lua_State *L) {$/;""","f
+"
+luaE_freeCI,lua_src/lstate.c,"/^void luaE_freeCI (lua_State *L) {$/;""","f
+"
+luaE_freethread,lua_src/lstate.c,"/^void luaE_freethread (lua_State *L, lua_State *L1) {$/;""","f
+"
+luaE_setdebt,lua_src/lstate.c,"/^void luaE_setdebt (global_State *g, l_mem debt) {$/;""","f
+"
+luaF_close,lua_src/lfunc.c,"/^void luaF_close (lua_State *L, StkId level) {$/;""","f
+"
+luaF_findupval,lua_src/lfunc.c,"/^UpVal *luaF_findupval (lua_State *L, StkId level) {$/;""","f
+"
+luaF_freeproto,lua_src/lfunc.c,"/^void luaF_freeproto (lua_State *L, Proto *f) {$/;""","f
+"
+luaF_freeupval,lua_src/lfunc.c,"/^void luaF_freeupval (lua_State *L, UpVal *uv) {$/;""","f
+"
+luaF_getlocalname,lua_src/lfunc.c,"/^const char *luaF_getlocalname (const Proto *f, int local_number, int pc) {$/;""","f
+"
+luaF_newCclosure,lua_src/lfunc.c,"/^Closure *luaF_newCclosure (lua_State *L, int n) {$/;""","f
+"
+luaF_newLclosure,lua_src/lfunc.c,"/^Closure *luaF_newLclosure (lua_State *L, int n) {$/;""","f
+"
+luaF_newproto,lua_src/lfunc.c,"/^Proto *luaF_newproto (lua_State *L) {$/;""","f
+"
+luaF_newupval,lua_src/lfunc.c,"/^UpVal *luaF_newupval (lua_State *L) {$/;""","f
+"
+luaG_aritherror,lua_src/ldebug.c,"/^l_noret luaG_aritherror (lua_State *L, const TValue *p1, const TValue *p2) {$/;""","f
+"
+luaG_concaterror,lua_src/ldebug.c,"/^l_noret luaG_concaterror (lua_State *L, StkId p1, StkId p2) {$/;""","f
+"
+luaG_errormsg,lua_src/ldebug.c,"/^l_noret luaG_errormsg (lua_State *L) {$/;""","f
+"
+luaG_ordererror,lua_src/ldebug.c,"/^l_noret luaG_ordererror (lua_State *L, const TValue *p1, const TValue *p2) {$/;""","f
+"
+luaG_runerror,lua_src/ldebug.c,"/^l_noret luaG_runerror (lua_State *L, const char *fmt, ...) {$/;""","f
+"
+luaG_typeerror,lua_src/ldebug.c,"/^l_noret luaG_typeerror (lua_State *L, const TValue *o, const char *op) {$/;""","f
+"
+luaH_free,lua_src/ltable.c,"/^void luaH_free (lua_State *L, Table *t) {$/;""","f
+"
+luaH_get,lua_src/ltable.c,"/^const TValue *luaH_get (Table *t, const TValue *key) {$/;""","f
+"
+luaH_getint,lua_src/ltable.c,"/^const TValue *luaH_getint (Table *t, int key) {$/;""","f
+"
+luaH_getn,lua_src/ltable.c,"/^int luaH_getn (Table *t) {$/;""","f
+"
+luaH_getstr,lua_src/ltable.c,"/^const TValue *luaH_getstr (Table *t, TString *key) {$/;""","f
+"
+luaH_isdummy,lua_src/ltable.c,"/^int luaH_isdummy (Node *n) { return isdummy(n); }$/;""","f
+"
+luaH_mainposition,lua_src/ltable.c,"/^Node *luaH_mainposition (const Table *t, const TValue *key) {$/;""","f
+"
+luaH_new,lua_src/ltable.c,"/^Table *luaH_new (lua_State *L) {$/;""","f
+"
+luaH_newkey,lua_src/ltable.c,"/^TValue *luaH_newkey (lua_State *L, Table *t, const TValue *key) {$/;""","f
+"
+luaH_next,lua_src/ltable.c,"/^int luaH_next (lua_State *L, Table *t, StkId key) {$/;""","f
+"
+luaH_resize,lua_src/ltable.c,"/^void luaH_resize (lua_State *L, Table *t, int nasize, int nhsize) {$/;""","f
+"
+luaH_resizearray,lua_src/ltable.c,"/^void luaH_resizearray (lua_State *L, Table *t, int nasize) {$/;""","f
+"
+luaH_set,lua_src/ltable.c,"/^TValue *luaH_set (lua_State *L, Table *t, const TValue *key) {$/;""","f
+"
+luaH_setint,lua_src/ltable.c,"/^void luaH_setint (lua_State *L, Table *t, int key, TValue *value) {$/;""","f
+"
+luaK_checkstack,lua_src/lcode.c,"/^void luaK_checkstack (FuncState *fs, int n) {$/;""","f
+"
+luaK_code,lua_src/lcode.c,"/^static int luaK_code (FuncState *fs, Instruction i) {$/;""",f,"file:
+"
+luaK_codeABC,lua_src/lcode.c,"/^int luaK_codeABC (FuncState *fs, OpCode o, int a, int b, int c) {$/;""","f
+"
+luaK_codeABx,lua_src/lcode.c,"/^int luaK_codeABx (FuncState *fs, OpCode o, int a, unsigned int bc) {$/;""","f
+"
+luaK_codek,lua_src/lcode.c,"/^int luaK_codek (FuncState *fs, int reg, int k) {$/;""","f
+"
+luaK_concat,lua_src/lcode.c,"/^void luaK_concat (FuncState *fs, int *l1, int l2) {$/;""","f
+"
+luaK_dischargevars,lua_src/lcode.c,"/^void luaK_dischargevars (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_exp2RK,lua_src/lcode.c,"/^int luaK_exp2RK (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_exp2anyreg,lua_src/lcode.c,"/^int luaK_exp2anyreg (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_exp2anyregup,lua_src/lcode.c,"/^void luaK_exp2anyregup (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_exp2nextreg,lua_src/lcode.c,"/^void luaK_exp2nextreg (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_exp2val,lua_src/lcode.c,"/^void luaK_exp2val (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_fixline,lua_src/lcode.c,"/^void luaK_fixline (FuncState *fs, int line) {$/;""","f
+"
+luaK_getlabel,lua_src/lcode.c,"/^int luaK_getlabel (FuncState *fs) {$/;""","f
+"
+luaK_goiffalse,lua_src/lcode.c,"/^void luaK_goiffalse (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_goiftrue,lua_src/lcode.c,"/^void luaK_goiftrue (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_indexed,lua_src/lcode.c,"/^void luaK_indexed (FuncState *fs, expdesc *t, expdesc *k) {$/;""","f
+"
+luaK_infix,lua_src/lcode.c,"/^void luaK_infix (FuncState *fs, BinOpr op, expdesc *v) {$/;""","f
+"
+luaK_jump,lua_src/lcode.c,"/^int luaK_jump (FuncState *fs) {$/;""","f
+"
+luaK_nil,lua_src/lcode.c,"/^void luaK_nil (FuncState *fs, int from, int n) {$/;""","f
+"
+luaK_numberK,lua_src/lcode.c,"/^int luaK_numberK (FuncState *fs, lua_Number r) {$/;""","f
+"
+luaK_patchclose,lua_src/lcode.c,"/^LUAI_FUNC void luaK_patchclose (FuncState *fs, int list, int level) {$/;""","f
+"
+luaK_patchlist,lua_src/lcode.c,"/^void luaK_patchlist (FuncState *fs, int list, int target) {$/;""","f
+"
+luaK_patchtohere,lua_src/lcode.c,"/^void luaK_patchtohere (FuncState *fs, int list) {$/;""","f
+"
+luaK_posfix,lua_src/lcode.c,"/^void luaK_posfix (FuncState *fs, BinOpr op,$/;""","f
+"
+luaK_prefix,lua_src/lcode.c,"/^void luaK_prefix (FuncState *fs, UnOpr op, expdesc *e, int line) {$/;""","f
+"
+luaK_reserveregs,lua_src/lcode.c,"/^void luaK_reserveregs (FuncState *fs, int n) {$/;""","f
+"
+luaK_ret,lua_src/lcode.c,"/^void luaK_ret (FuncState *fs, int first, int nret) {$/;""","f
+"
+luaK_self,lua_src/lcode.c,"/^void luaK_self (FuncState *fs, expdesc *e, expdesc *key) {$/;""","f
+"
+luaK_setlist,lua_src/lcode.c,"/^void luaK_setlist (FuncState *fs, int base, int nelems, int tostore) {$/;""","f
+"
+luaK_setoneret,lua_src/lcode.c,"/^void luaK_setoneret (FuncState *fs, expdesc *e) {$/;""","f
+"
+luaK_setreturns,lua_src/lcode.c,"/^void luaK_setreturns (FuncState *fs, expdesc *e, int nresults) {$/;""","f
+"
+luaK_storevar,lua_src/lcode.c,"/^void luaK_storevar (FuncState *fs, expdesc *var, expdesc *ex) {$/;""","f
+"
+luaK_stringK,lua_src/lcode.c,"/^int luaK_stringK (FuncState *fs, TString *s) {$/;""","f
+"
+luaL_addlstring,lua_src/lauxlib.c,"/^LUALIB_API void luaL_addlstring (luaL_Buffer *B, const char *s, size_t l) {$/;""","f
+"
+luaL_addstring,lua_src/lauxlib.c,"/^LUALIB_API void luaL_addstring (luaL_Buffer *B, const char *s) {$/;""","f
+"
+luaL_addvalue,lua_src/lauxlib.c,"/^LUALIB_API void luaL_addvalue (luaL_Buffer *B) {$/;""","f
+"
+luaL_argerror,lua_src/lauxlib.c,"/^LUALIB_API int luaL_argerror (lua_State *L, int narg, const char *extramsg) {$/;""","f
+"
+luaL_buffinit,lua_src/lauxlib.c,"/^LUALIB_API void luaL_buffinit (lua_State *L, luaL_Buffer *B) {$/;""","f
+"
+luaL_buffinitsize,lua_src/lauxlib.c,"/^LUALIB_API char *luaL_buffinitsize (lua_State *L, luaL_Buffer *B, size_t sz) {$/;""","f
+"
+luaL_callmeta,lua_src/lauxlib.c,"/^LUALIB_API int luaL_callmeta (lua_State *L, int obj, const char *event) {$/;""","f
+"
+luaL_checkany,lua_src/lauxlib.c,"/^LUALIB_API void luaL_checkany (lua_State *L, int narg) {$/;""","f
+"
+luaL_checkinteger,lua_src/lauxlib.c,"/^LUALIB_API lua_Integer luaL_checkinteger (lua_State *L, int narg) {$/;""","f
+"
+luaL_checklstring,lua_src/lauxlib.c,"/^LUALIB_API const char *luaL_checklstring (lua_State *L, int narg, size_t *len) {$/;""","f
+"
+luaL_checknumber,lua_src/lauxlib.c,"/^LUALIB_API lua_Number luaL_checknumber (lua_State *L, int narg) {$/;""","f
+"
+luaL_checkoption,lua_src/lauxlib.c,"/^LUALIB_API int luaL_checkoption (lua_State *L, int narg, const char *def,$/;""","f
+"
+luaL_checkstack,lua_src/lauxlib.c,"/^LUALIB_API void luaL_checkstack (lua_State *L, int space, const char *msg) {$/;""","f
+"
+luaL_checktype,lua_src/lauxlib.c,"/^LUALIB_API void luaL_checktype (lua_State *L, int narg, int t) {$/;""","f
+"
+luaL_checkudata,lua_src/lauxlib.c,"/^LUALIB_API void *luaL_checkudata (lua_State *L, int ud, const char *tname) {$/;""","f
+"
+luaL_checkunsigned,lua_src/lauxlib.c,"/^LUALIB_API lua_Unsigned luaL_checkunsigned (lua_State *L, int narg) {$/;""","f
+"
+luaL_checkversion_,lua_src/lauxlib.c,"/^LUALIB_API void luaL_checkversion_ (lua_State *L, lua_Number ver) {$/;""","f
+"
+luaL_error,lua_src/lauxlib.c,"/^LUALIB_API int luaL_error (lua_State *L, const char *fmt, ...) {$/;""","f
+"
+luaL_execresult,lua_src/lauxlib.c,"/^LUALIB_API int luaL_execresult (lua_State *L, int stat) {$/;""","f
+"
+luaL_fileresult,lua_src/lauxlib.c,"/^LUALIB_API int luaL_fileresult (lua_State *L, int stat, const char *fname) {$/;""","f
+"
+luaL_findtable,lua_src/lauxlib.c,"/^static const char *luaL_findtable (lua_State *L, int idx,$/;""",f,"file:
+"
+luaL_getmetafield,lua_src/lauxlib.c,"/^LUALIB_API int luaL_getmetafield (lua_State *L, int obj, const char *event) {$/;""","f
+"
+luaL_getsubtable,lua_src/lauxlib.c,"/^LUALIB_API int luaL_getsubtable (lua_State *L, int idx, const char *fname) {$/;""","f
+"
+luaL_gsub,lua_src/lauxlib.c,"/^LUALIB_API const char *luaL_gsub (lua_State *L, const char *s, const char *p,$/;""","f
+"
+luaL_len,lua_src/lauxlib.c,"/^LUALIB_API int luaL_len (lua_State *L, int idx) {$/;""","f
+"
+luaL_loadbufferx,lua_src/lauxlib.c,"/^LUALIB_API int luaL_loadbufferx (lua_State *L, const char *buff, size_t size,$/;""","f
+"
+luaL_loadfilex,lua_src/lauxlib.c,"/^LUALIB_API int luaL_loadfilex (lua_State *L, const char *filename,$/;""","f
+"
+luaL_loadstring,lua_src/lauxlib.c,"/^LUALIB_API int luaL_loadstring (lua_State *L, const char *s) {$/;""","f
+"
+luaL_newmetatable,lua_src/lauxlib.c,"/^LUALIB_API int luaL_newmetatable (lua_State *L, const char *tname) {$/;""","f
+"
+luaL_newstate,lua_src/lauxlib.c,"/^LUALIB_API lua_State *luaL_newstate (void) {$/;""","f
+"
+luaL_openlib,lua_src/lauxlib.c,"/^LUALIB_API void luaL_openlib (lua_State *L, const char *libname,$/;""","f
+"
+luaL_openlibs,lua_src/linit.c,"/^LUALIB_API void luaL_openlibs (lua_State *L) {$/;""","f
+"
+luaL_optinteger,lua_src/lauxlib.c,"/^LUALIB_API lua_Integer luaL_optinteger (lua_State *L, int narg,$/;""","f
+"
+luaL_optlstring,lua_src/lauxlib.c,"/^LUALIB_API const char *luaL_optlstring (lua_State *L, int narg,$/;""","f
+"
+luaL_optnumber,lua_src/lauxlib.c,"/^LUALIB_API lua_Number luaL_optnumber (lua_State *L, int narg, lua_Number def) {$/;""","f
+"
+luaL_optunsigned,lua_src/lauxlib.c,"/^LUALIB_API lua_Unsigned luaL_optunsigned (lua_State *L, int narg,$/;""","f
+"
+luaL_prepbuffsize,lua_src/lauxlib.c,"/^LUALIB_API char *luaL_prepbuffsize (luaL_Buffer *B, size_t sz) {$/;""","f
+"
+luaL_pushmodule,lua_src/lauxlib.c,"/^LUALIB_API void luaL_pushmodule (lua_State *L, const char *modname,$/;""","f
+"
+luaL_pushresult,lua_src/lauxlib.c,"/^LUALIB_API void luaL_pushresult (luaL_Buffer *B) {$/;""","f
+"
+luaL_pushresultsize,lua_src/lauxlib.c,"/^LUALIB_API void luaL_pushresultsize (luaL_Buffer *B, size_t sz) {$/;""","f
+"
+luaL_ref,lua_src/lauxlib.c,"/^LUALIB_API int luaL_ref (lua_State *L, int t) {$/;""","f
+"
+luaL_requiref,lua_src/lauxlib.c,"/^LUALIB_API void luaL_requiref (lua_State *L, const char *modname,$/;""","f
+"
+luaL_setfuncs,lua_src/lauxlib.c,"/^LUALIB_API void luaL_setfuncs (lua_State *L, const luaL_Reg *l, int nup) {$/;""","f
+"
+luaL_setmetatable,lua_src/lauxlib.c,"/^LUALIB_API void luaL_setmetatable (lua_State *L, const char *tname) {$/;""","f
+"
+luaL_testudata,lua_src/lauxlib.c,"/^LUALIB_API void *luaL_testudata (lua_State *L, int ud, const char *tname) {$/;""","f
+"
+luaL_tolstring,lua_src/lauxlib.c,"/^LUALIB_API const char *luaL_tolstring (lua_State *L, int idx, size_t *len) {$/;""","f
+"
+luaL_traceback,lua_src/lauxlib.c,"/^LUALIB_API void luaL_traceback (lua_State *L, lua_State *L1,$/;""","f
+"
+luaL_unref,lua_src/lauxlib.c,"/^LUALIB_API void luaL_unref (lua_State *L, int t, int ref) {$/;""","f
+"
+luaL_where,lua_src/lauxlib.c,"/^LUALIB_API void luaL_where (lua_State *L, int level) {$/;""","f
+"
+luaM_growaux_,lua_src/lmem.c,"/^void *luaM_growaux_ (lua_State *L, void *block, int *size, size_t size_elems,$/;""","f
+"
+luaM_realloc_,lua_src/lmem.c,"/^void *luaM_realloc_ (lua_State *L, void *block, size_t osize, size_t nsize) {$/;""","f
+"
+luaM_toobig,lua_src/lmem.c,"/^l_noret luaM_toobig (lua_State *L) {$/;""","f
+"
+luaO_arith,lua_src/lobject.c,"/^lua_Number luaO_arith (int op, lua_Number v1, lua_Number v2) {$/;""","f
+"
+luaO_ceillog2,lua_src/lobject.c,"/^int luaO_ceillog2 (unsigned int x) {$/;""","f
+"
+luaO_chunkid,lua_src/lobject.c,"/^void luaO_chunkid (char *out, const char *source, size_t bufflen) {$/;""","f
+"
+luaO_fb2int,lua_src/lobject.c,"/^int luaO_fb2int (int x) {$/;""","f
+"
+luaO_hexavalue,lua_src/lobject.c,"/^int luaO_hexavalue (int c) {$/;""","f
+"
+luaO_int2fb,lua_src/lobject.c,"/^int luaO_int2fb (unsigned int x) {$/;""","f
+"
+luaO_pushfstring,lua_src/lobject.c,"/^const char *luaO_pushfstring (lua_State *L, const char *fmt, ...) {$/;""","f
+"
+luaO_pushvfstring,lua_src/lobject.c,"/^const char *luaO_pushvfstring (lua_State *L, const char *fmt, va_list argp) {$/;""","f
+"
+luaO_str2d,lua_src/lobject.c,"/^int luaO_str2d (const char *s, size_t len, lua_Number *result) {$/;""","f
+"
+luaS_eqlngstr,lua_src/lstring.c,"/^int luaS_eqlngstr (TString *a, TString *b) {$/;""","f
+"
+luaS_eqstr,lua_src/lstring.c,"/^int luaS_eqstr (TString *a, TString *b) {$/;""","f
+"
+luaS_hash,lua_src/lstring.c,"/^unsigned int luaS_hash (const char *str, size_t l, unsigned int seed) {$/;""","f
+"
+luaS_new,lua_src/lstring.c,"/^TString *luaS_new (lua_State *L, const char *str) {$/;""","f
+"
+luaS_newlstr,lua_src/lstring.c,"/^TString *luaS_newlstr (lua_State *L, const char *str, size_t l) {$/;""","f
+"
+luaS_newudata,lua_src/lstring.c,"/^Udata *luaS_newudata (lua_State *L, size_t s, Table *e) {$/;""","f
+"
+luaS_resize,lua_src/lstring.c,"/^void luaS_resize (lua_State *L, int newsize) {$/;""","f
+"
+luaT_gettm,lua_src/ltm.c,"/^const TValue *luaT_gettm (Table *events, TMS event, TString *ename) {$/;""","f
+"
+luaT_gettmbyobj,lua_src/ltm.c,"/^const TValue *luaT_gettmbyobj (lua_State *L, const TValue *o, TMS event) {$/;""","f
+"
+luaT_init,lua_src/ltm.c,"/^void luaT_init (lua_State *L) {$/;""","f
+"
+luaU_dump,lua_src/ldump.c,"/^int luaU_dump (lua_State* L, const Proto* f, lua_Writer w, void* data, int strip)$/;""","f
+"
+luaU_header,lua_src/lundump.c,"/^void luaU_header (lu_byte* h)$/;""","f
+"
+luaU_undump,lua_src/lundump.c,"/^Closure* luaU_undump (lua_State* L, ZIO* Z, Mbuffer* buff, const char* name)$/;""","f
+"
+luaV_arith,lua_src/lvm.c,"/^void luaV_arith (lua_State *L, StkId ra, const TValue *rb,$/;""","f
+"
+luaV_concat,lua_src/lvm.c,"/^void luaV_concat (lua_State *L, int total) {$/;""","f
+"
+luaV_equalobj_,lua_src/lvm.c,"/^int luaV_equalobj_ (lua_State *L, const TValue *t1, const TValue *t2) {$/;""","f
+"
+luaV_execute,lua_src/lvm.c,"/^void luaV_execute (lua_State *L) {$/;""","f
+"
+luaV_finishOp,lua_src/lvm.c,"/^void luaV_finishOp (lua_State *L) {$/;""","f
+"
+luaV_gettable,lua_src/lvm.c,"/^void luaV_gettable (lua_State *L, const TValue *t, TValue *key, StkId val) {$/;""","f
+"
+luaV_lessequal,lua_src/lvm.c,"/^int luaV_lessequal (lua_State *L, const TValue *l, const TValue *r) {$/;""","f
+"
+luaV_lessthan,lua_src/lvm.c,"/^int luaV_lessthan (lua_State *L, const TValue *l, const TValue *r) {$/;""","f
+"
+luaV_objlen,lua_src/lvm.c,"/^void luaV_objlen (lua_State *L, StkId ra, const TValue *rb) {$/;""","f
+"
+luaV_settable,lua_src/lvm.c,"/^void luaV_settable (lua_State *L, const TValue *t, TValue *key, StkId val) {$/;""","f
+"
+luaV_tonumber,lua_src/lvm.c,"/^const TValue *luaV_tonumber (const TValue *obj, TValue *n) {$/;""","f
+"
+luaV_tostring,lua_src/lvm.c,"/^int luaV_tostring (lua_State *L, StkId obj) {$/;""","f
+"
+luaX_init,lua_src/llex.c,"/^void luaX_init (lua_State *L) {$/;""","f
+"
+luaX_lookahead,lua_src/llex.c,"/^int luaX_lookahead (LexState *ls) {$/;""","f
+"
+luaX_newstring,lua_src/llex.c,"/^TString *luaX_newstring (LexState *ls, const char *str, size_t l) {$/;""","f
+"
+luaX_next,lua_src/llex.c,"/^void luaX_next (LexState *ls) {$/;""","f
+"
+luaX_setinput,lua_src/llex.c,"/^void luaX_setinput (lua_State *L, LexState *ls, ZIO *z, TString *source,$/;""","f
+"
+luaX_syntaxerror,lua_src/llex.c,"/^l_noret luaX_syntaxerror (LexState *ls, const char *msg) {$/;""","f
+"
+luaX_token2str,lua_src/llex.c,"/^const char *luaX_token2str (LexState *ls, int token) {$/;""","f
+"
+luaY_parser,lua_src/lparser.c,"/^Closure *luaY_parser (lua_State *L, ZIO *z, Mbuffer *buff,$/;""","f
+"
+luaZ_fill,lua_src/lzio.c,"/^int luaZ_fill (ZIO *z) {$/;""","f
+"
+luaZ_init,lua_src/lzio.c,"/^void luaZ_init (lua_State *L, ZIO *z, lua_Reader reader, void *data) {$/;""","f
+"
+luaZ_openspace,lua_src/lzio.c,"/^char *luaZ_openspace (lua_State *L, Mbuffer *buff, size_t n) {$/;""","f
+"
+luaZ_read,lua_src/lzio.c,"/^size_t luaZ_read (ZIO *z, void *b, size_t n) {$/;""","f
+"
+lua_absindex,lua_src/lapi.c,"/^LUA_API int lua_absindex (lua_State *L, int idx) {$/;""","f
+"
+lua_arith,lua_src/lapi.c,"/^LUA_API void lua_arith (lua_State *L, int op) {$/;""","f
+"
+lua_atpanic,lua_src/lapi.c,"/^LUA_API lua_CFunction lua_atpanic (lua_State *L, lua_CFunction panicf) {$/;""","f
+"
+lua_callk,lua_src/lapi.c,"/^LUA_API void lua_callk (lua_State *L, int nargs, int nresults, int ctx,$/;""","f
+"
+lua_checkstack,lua_src/lapi.c,"/^LUA_API int lua_checkstack (lua_State *L, int size) {$/;""","f
+"
+lua_close,lua_src/lstate.c,"/^LUA_API void lua_close (lua_State *L) {$/;""","f
+"
+lua_compare,lua_src/lapi.c,"/^LUA_API int lua_compare (lua_State *L, int index1, int index2, int op) {$/;""","f
+"
+lua_concat,lua_src/lapi.c,"/^LUA_API void lua_concat (lua_State *L, int n) {$/;""","f
+"
+lua_copy,lua_src/lapi.c,"/^LUA_API void lua_copy (lua_State *L, int fromidx, int toidx) {$/;""","f
+"
+lua_createtable,lua_src/lapi.c,"/^LUA_API void lua_createtable (lua_State *L, int narray, int nrec) {$/;""","f
+"
+lua_dump,lua_src/lapi.c,"/^LUA_API int lua_dump (lua_State *L, lua_Writer writer, void *data) {$/;""","f
+"
+lua_error,lua_src/lapi.c,"/^LUA_API int lua_error (lua_State *L) {$/;""","f
+"
+lua_gc,lua_src/lapi.c,"/^LUA_API int lua_gc (lua_State *L, int what, int data) {$/;""","f
+"
+lua_getallocf,lua_src/lapi.c,"/^LUA_API lua_Alloc lua_getallocf (lua_State *L, void **ud) {$/;""","f
+"
+lua_getctx,lua_src/lapi.c,"/^LUA_API int lua_getctx (lua_State *L, int *ctx) {$/;""","f
+"
+lua_getfield,lua_src/lapi.c,"/^LUA_API void lua_getfield (lua_State *L, int idx, const char *k) {$/;""","f
+"
+lua_getglobal,lua_src/lapi.c,"/^LUA_API void lua_getglobal (lua_State *L, const char *var) {$/;""","f
+"
+lua_gethook,lua_src/ldebug.c,"/^LUA_API lua_Hook lua_gethook (lua_State *L) {$/;""","f
+"
+lua_gethookcount,lua_src/ldebug.c,"/^LUA_API int lua_gethookcount (lua_State *L) {$/;""","f
+"
+lua_gethookmask,lua_src/ldebug.c,"/^LUA_API int lua_gethookmask (lua_State *L) {$/;""","f
+"
+lua_getinfo,lua_src/ldebug.c,"/^LUA_API int lua_getinfo (lua_State *L, const char *what, lua_Debug *ar) {$/;""","f
+"
+lua_getlocal,lua_src/ldebug.c,"/^LUA_API const char *lua_getlocal (lua_State *L, const lua_Debug *ar, int n) {$/;""","f
+"
+lua_getmetatable,lua_src/lapi.c,"/^LUA_API int lua_getmetatable (lua_State *L, int objindex) {$/;""","f
+"
+lua_getstack,lua_src/ldebug.c,"/^LUA_API int lua_getstack (lua_State *L, int level, lua_Debug *ar) {$/;""","f
+"
+lua_gettable,lua_src/lapi.c,"/^LUA_API void lua_gettable (lua_State *L, int idx) {$/;""","f
+"
+lua_gettop,lua_src/lapi.c,"/^LUA_API int lua_gettop (lua_State *L) {$/;""","f
+"
+lua_getupvalue,lua_src/lapi.c,"/^LUA_API const char *lua_getupvalue (lua_State *L, int funcindex, int n) {$/;""","f
+"
+lua_getuservalue,lua_src/lapi.c,"/^LUA_API void lua_getuservalue (lua_State *L, int idx) {$/;""","f
+"
+lua_insert,lua_src/lapi.c,"/^LUA_API void lua_insert (lua_State *L, int idx) {$/;""","f
+"
+lua_iscfunction,lua_src/lapi.c,"/^LUA_API int lua_iscfunction (lua_State *L, int idx) {$/;""","f
+"
+lua_isnumber,lua_src/lapi.c,"/^LUA_API int lua_isnumber (lua_State *L, int idx) {$/;""","f
+"
+lua_isstring,lua_src/lapi.c,"/^LUA_API int lua_isstring (lua_State *L, int idx) {$/;""","f
+"
+lua_isuserdata,lua_src/lapi.c,"/^LUA_API int lua_isuserdata (lua_State *L, int idx) {$/;""","f
+"
+lua_len,lua_src/lapi.c,"/^LUA_API void lua_len (lua_State *L, int idx) {$/;""","f
+"
+lua_load,lua_src/lapi.c,"/^LUA_API int lua_load (lua_State *L, lua_Reader reader, void *data,$/;""","f
+"
+lua_main,lua_src/lua.c,"/^int lua_main (int argc, char **argv) {$/;""","f
+"
+lua_newstate,lua_src/lstate.c,"/^LUA_API lua_State *lua_newstate (lua_Alloc f, void *ud) {$/;""","f
+"
+lua_newstate,lua_src/lua_open.c,"/^LUA_API lua_State *lua_newstate (lua_Alloc f, void *ud) {$/;""","f
+"
+lua_newthread,lua_src/lstate.c,"/^LUA_API lua_State *lua_newthread (lua_State *L) {$/;""","f
+"
+lua_newuserdata,lua_src/lapi.c,"/^LUA_API void *lua_newuserdata (lua_State *L, size_t size) {$/;""","f
+"
+lua_next,lua_src/lapi.c,"/^LUA_API int lua_next (lua_State *L, int idx) {$/;""","f
+"
+lua_panic,lua_src/lauxlib.c,"/^static int lua_panic (lua_State *L) {$/;""",f,"file:
+"
+lua_pcallk,lua_src/lapi.c,"/^LUA_API int lua_pcallk (lua_State *L, int nargs, int nresults, int errfunc,$/;""","f
+"
+lua_pushboolean,lua_src/lapi.c,"/^LUA_API void lua_pushboolean (lua_State *L, int b) {$/;""","f
+"
+lua_pushcclosure,lua_src/lapi.c,"/^LUA_API void lua_pushcclosure (lua_State *L, lua_CFunction fn, int n) {$/;""","f
+"
+lua_pushfstring,lua_src/lapi.c,"/^LUA_API const char *lua_pushfstring (lua_State *L, const char *fmt, ...) {$/;""","f
+"
+lua_pushinteger,lua_src/lapi.c,"/^LUA_API void lua_pushinteger (lua_State *L, lua_Integer n) {$/;""","f
+"
+lua_pushlightuserdata,lua_src/lapi.c,"/^LUA_API void lua_pushlightuserdata (lua_State *L, void *p) {$/;""","f
+"
+lua_pushlstring,lua_src/lapi.c,"/^LUA_API const char *lua_pushlstring (lua_State *L, const char *s, size_t len) {$/;""","f
+"
+lua_pushnil,lua_src/lapi.c,"/^LUA_API void lua_pushnil (lua_State *L) {$/;""","f
+"
+lua_pushnumber,lua_src/lapi.c,"/^LUA_API void lua_pushnumber (lua_State *L, lua_Number n) {$/;""","f
+"
+lua_pushstring,lua_src/lapi.c,"/^LUA_API const char *lua_pushstring (lua_State *L, const char *s) {$/;""","f
+"
+lua_pushthread,lua_src/lapi.c,"/^LUA_API int lua_pushthread (lua_State *L) {$/;""","f
+"
+lua_pushunsigned,lua_src/lapi.c,"/^LUA_API void lua_pushunsigned (lua_State *L, lua_Unsigned u) {$/;""","f
+"
+lua_pushvalue,lua_src/lapi.c,"/^LUA_API void lua_pushvalue (lua_State *L, int idx) {$/;""","f
+"
+lua_pushvfstring,lua_src/lapi.c,"/^LUA_API const char *lua_pushvfstring (lua_State *L, const char *fmt,$/;""","f
+"
+lua_rawequal,lua_src/lapi.c,"/^LUA_API int lua_rawequal (lua_State *L, int index1, int index2) {$/;""","f
+"
+lua_rawget,lua_src/lapi.c,"/^LUA_API void lua_rawget (lua_State *L, int idx) {$/;""","f
+"
+lua_rawgeti,lua_src/lapi.c,"/^LUA_API void lua_rawgeti (lua_State *L, int idx, int n) {$/;""","f
+"
+lua_rawgetp,lua_src/lapi.c,"/^LUA_API void lua_rawgetp (lua_State *L, int idx, const void *p) {$/;""","f
+"
+lua_rawlen,lua_src/lapi.c,"/^LUA_API size_t lua_rawlen (lua_State *L, int idx) {$/;""","f
+"
+lua_rawset,lua_src/lapi.c,"/^LUA_API void lua_rawset (lua_State *L, int idx) {$/;""","f
+"
+lua_rawseti,lua_src/lapi.c,"/^LUA_API void lua_rawseti (lua_State *L, int idx, int n) {$/;""","f
+"
+lua_rawsetp,lua_src/lapi.c,"/^LUA_API void lua_rawsetp (lua_State *L, int idx, const void *p) {$/;""","f
+"
+lua_remove,lua_src/lapi.c,"/^LUA_API void lua_remove (lua_State *L, int idx) {$/;""","f
+"
+lua_replace,lua_src/lapi.c,"/^LUA_API void lua_replace (lua_State *L, int idx) {$/;""","f
+"
+lua_resume,lua_src/ldo.c,"/^LUA_API int lua_resume (lua_State *L, lua_State *from, int nargs) {$/;""","f
+"
+lua_setallocf,lua_src/lapi.c,"/^LUA_API void lua_setallocf (lua_State *L, lua_Alloc f, void *ud) {$/;""","f
+"
+lua_setfield,lua_src/lapi.c,"/^LUA_API void lua_setfield (lua_State *L, int idx, const char *k) {$/;""","f
+"
+lua_setglobal,lua_src/lapi.c,"/^LUA_API void lua_setglobal (lua_State *L, const char *var) {$/;""","f
+"
+lua_sethook,lua_src/ldebug.c,"/^LUA_API int lua_sethook (lua_State *L, lua_Hook func, int mask, int count) {$/;""","f
+"
+lua_setlocal,lua_src/ldebug.c,"/^LUA_API const char *lua_setlocal (lua_State *L, const lua_Debug *ar, int n) {$/;""","f
+"
+lua_setmetatable,lua_src/lapi.c,"/^LUA_API int lua_setmetatable (lua_State *L, int objindex) {$/;""","f
+"
+lua_settable,lua_src/lapi.c,"/^LUA_API void lua_settable (lua_State *L, int idx) {$/;""","f
+"
+lua_settop,lua_src/lapi.c,"/^LUA_API void lua_settop (lua_State *L, int idx) {$/;""","f
+"
+lua_setupvalue,lua_src/lapi.c,"/^LUA_API const char *lua_setupvalue (lua_State *L, int funcindex, int n) {$/;""","f
+"
+lua_setuservalue,lua_src/lapi.c,"/^LUA_API void lua_setuservalue (lua_State *L, int idx) {$/;""","f
+"
+lua_status,lua_src/lapi.c,"/^LUA_API int lua_status (lua_State *L) {$/;""","f
+"
+lua_strx2number,lua_src/lobject.c,"/^static lua_Number lua_strx2number (const char *s, char **endptr) {$/;""",f,"file:
+"
+lua_toboolean,lua_src/lapi.c,"/^LUA_API int lua_toboolean (lua_State *L, int idx) {$/;""","f
+"
+lua_tocfunction,lua_src/lapi.c,"/^LUA_API lua_CFunction lua_tocfunction (lua_State *L, int idx) {$/;""","f
+"
+lua_tointegerx,lua_src/lapi.c,"/^LUA_API lua_Integer lua_tointegerx (lua_State *L, int idx, int *isnum) {$/;""","f
+"
+lua_tolstring,lua_src/lapi.c,"/^LUA_API const char *lua_tolstring (lua_State *L, int idx, size_t *len) {$/;""","f
+"
+lua_tonumberx,lua_src/lapi.c,"/^LUA_API lua_Number lua_tonumberx (lua_State *L, int idx, int *isnum) {$/;""","f
+"
+lua_topointer,lua_src/lapi.c,"/^LUA_API const void *lua_topointer (lua_State *L, int idx) {$/;""","f
+"
+lua_tothread,lua_src/lapi.c,"/^LUA_API lua_State *lua_tothread (lua_State *L, int idx) {$/;""","f
+"
+lua_tounsignedx,lua_src/lapi.c,"/^LUA_API lua_Unsigned lua_tounsignedx (lua_State *L, int idx, int *isnum) {$/;""","f
+"
+lua_touserdata,lua_src/lapi.c,"/^LUA_API void *lua_touserdata (lua_State *L, int idx) {$/;""","f
+"
+lua_type,lua_src/lapi.c,"/^LUA_API int lua_type (lua_State *L, int idx) {$/;""","f
+"
+lua_typename,lua_src/lapi.c,"/^LUA_API const char *lua_typename (lua_State *L, int t) {$/;""","f
+"
+lua_upvalueid,lua_src/lapi.c,"/^LUA_API void *lua_upvalueid (lua_State *L, int fidx, int n) {$/;""","f
+"
+lua_upvaluejoin,lua_src/lapi.c,"/^LUA_API void lua_upvaluejoin (lua_State *L, int fidx1, int n1,$/;""","f
+"
+lua_version,lua_src/lapi.c,"/^LUA_API const lua_Number *lua_version (lua_State *L) {$/;""","f
+"
+lua_xmove,lua_src/lapi.c,"/^LUA_API void lua_xmove (lua_State *from, lua_State *to, int n) {$/;""","f
+"
+lua_yieldk,lua_src/ldo.c,"/^LUA_API int lua_yieldk (lua_State *L, int nresults, int ctx, lua_CFunction k) {$/;""","f
+"
+luaopen_base,lua_src/lbaselib.c,"/^LUAMOD_API int luaopen_base (lua_State *L) {$/;""","f
+"
+luaopen_bit32,lua_src/lbitlib.c,"/^LUAMOD_API int luaopen_bit32 (lua_State *L) {$/;""","f
+"
+luaopen_coroutine,lua_src/lcorolib.c,"/^LUAMOD_API int luaopen_coroutine (lua_State *L) {$/;""","f
+"
+luaopen_debug,lua_src/ldblib.c,"/^LUAMOD_API int luaopen_debug (lua_State *L) {$/;""","f
+"
+luaopen_io,lua_src/liolib.c,"/^LUAMOD_API int luaopen_io (lua_State *L) {$/;""","f
+"
+luaopen_math,lua_src/lmathlib.c,"/^LUAMOD_API int luaopen_math (lua_State *L) {$/;""","f
+"
+luaopen_os,lua_src/loslib.c,"/^LUAMOD_API int luaopen_os (lua_State *L) {$/;""","f
+"
+luaopen_package,lua_src/loadlib.c,"/^LUAMOD_API int luaopen_package (lua_State *L) {$/;""","f
+"
+luaopen_string,lua_src/lstrlib.c,"/^LUAMOD_API int luaopen_string (lua_State *L) {$/;""","f
+"
+luaopen_table,lua_src/ltablib.c,"/^LUAMOD_API int luaopen_table (lua_State *L) {$/;""","f
+"
+lvt_stringify,dev/apic.c,"/^lvt_stringify (uint32_t entry, char *buf)$/;""",f,"file:
+"
+mac_address_string,nautilus/printk.c,"/^static char *mac_address_string(char *buf, char *end, uint8_t *addr,$/;""",f,"file:
+"
+main,arch/hrt/main.c,"/^main (unsigned long mbd, $/;""","f
+"
+main,arch/k1om/main.c,"/^main (unsigned long mbd, unsigned long magic) $/;""","f
+"
+main,arch/x64/main.c,"/^main (unsigned long mbd, $/;""","f
+"
+main,test/benchmark.c,"/^int main () {$/;""","f
+"
+mainfunc,lua_src/lparser.c,"/^static void mainfunc (LexState *ls, FuncState *fs) {$/;""",f,"file:
+"
+mainposition,lua_src/ltable.c,"/^static Node *mainposition (const Table *t, const TValue *key) {$/;""",f,"file:
+"
+makemask,lua_src/ldblib.c,"/^static int makemask (const char *smask, int count) {$/;""",f,"file:
+"
+makeseed,lua_src/lstate.c,"/^static unsigned int makeseed (lua_State *L) {$/;""",f,"file:
+"
+malloc,nautilus/mm/kmem.c,"/^malloc (size_t size)$/;""","f
+"
+malloc_test,test/benchmark.c,"/^malloc_test (void)$/;""","f
+"
+mark_allocated,nautilus/mm/buddy.c,"/^mark_allocated (struct buddy_mempool *mp, struct block *block)$/;""",f,"file:
+"
+mark_available,nautilus/mm/buddy.c,"/^mark_available (struct buddy_mempool *mp, struct block *block)$/;""",f,"file:
+"
+mark_xcall_done,nautilus/smp.c,"/^mark_xcall_done (struct nk_xcall * x) $/;""",f,"file:
+"
+markbeingfnz,lua_src/lgc.c,"/^static void markbeingfnz (global_State *g) {$/;""",f,"file:
+"
+markmt,lua_src/lgc.c,"/^static void markmt (global_State *g) {$/;""",f,"file:
+"
+markupval,lua_src/lparser.c,"/^static void markupval (FuncState *fs, int level) {$/;""",f,"file:
+"
+match,lua_src/lstrlib.c,"/^static const char *match (MatchState *ms, const char *s, const char *p) {$/;""",f,"file:
+"
+match_capture,lua_src/lstrlib.c,"/^static const char *match_capture (MatchState *ms, const char *s, int l) {$/;""",f,"file:
+"
+match_class,lua_src/lstrlib.c,"/^static int match_class (int c, int cl) {$/;""",f,"file:
+"
+matchbalance,lua_src/lstrlib.c,"/^static const char *matchbalance (MatchState *ms, const char *s,$/;""",f,"file:
+"
+matchbracketclass,lua_src/lstrlib.c,"/^static int matchbracketclass (int c, const char *p, const char *ec) {$/;""",f,"file:
+"
+math_abs,lua_src/lmathlib.c,"/^static int math_abs (lua_State *L) {$/;""",f,"file:
+"
+math_acos,lua_src/lmathlib.c,"/^static int math_acos (lua_State *L) {$/;""",f,"file:
+"
+math_asin,lua_src/lmathlib.c,"/^static int math_asin (lua_State *L) {$/;""",f,"file:
+"
+math_atan,lua_src/lmathlib.c,"/^static int math_atan (lua_State *L) {$/;""",f,"file:
+"
+math_atan2,lua_src/lmathlib.c,"/^static int math_atan2 (lua_State *L) {$/;""",f,"file:
+"
+math_ceil,lua_src/lmathlib.c,"/^static int math_ceil (lua_State *L) {$/;""",f,"file:
+"
+math_cos,lua_src/lmathlib.c,"/^static int math_cos (lua_State *L) {$/;""",f,"file:
+"
+math_cosh,lua_src/lmathlib.c,"/^static int math_cosh (lua_State *L) {$/;""",f,"file:
+"
+math_deg,lua_src/lmathlib.c,"/^static int math_deg (lua_State *L) {$/;""",f,"file:
+"
+math_exp,lua_src/lmathlib.c,"/^static int math_exp (lua_State *L) {$/;""",f,"file:
+"
+math_floor,lua_src/lmathlib.c,"/^static int math_floor (lua_State *L) {$/;""",f,"file:
+"
+math_fmod,lua_src/lmathlib.c,"/^static int math_fmod (lua_State *L) {$/;""",f,"file:
+"
+math_frexp,lua_src/lmathlib.c,"/^static int math_frexp (lua_State *L) {$/;""",f,"file:
+"
+math_ldexp,lua_src/lmathlib.c,"/^static int math_ldexp (lua_State *L) {$/;""",f,"file:
+"
+math_log,lua_src/lmathlib.c,"/^static int math_log (lua_State *L) {$/;""",f,"file:
+"
+math_log10,lua_src/lmathlib.c,"/^static int math_log10 (lua_State *L) {$/;""",f,"file:
+"
+math_max,lua_src/lmathlib.c,"/^static int math_max (lua_State *L) {$/;""",f,"file:
+"
+math_min,lua_src/lmathlib.c,"/^static int math_min (lua_State *L) {$/;""",f,"file:
+"
+math_modf,lua_src/lmathlib.c,"/^static int math_modf (lua_State *L) {$/;""",f,"file:
+"
+math_pow,lua_src/lmathlib.c,"/^static int math_pow (lua_State *L) {$/;""",f,"file:
+"
+math_rad,lua_src/lmathlib.c,"/^static int math_rad (lua_State *L) {$/;""",f,"file:
+"
+math_random,lua_src/lmathlib.c,"/^static int math_random (lua_State *L) {$/;""",f,"file:
+"
+math_randomseed,lua_src/lmathlib.c,"/^static int math_randomseed (lua_State *L) {$/;""",f,"file:
+"
+math_sin,lua_src/lmathlib.c,"/^static int math_sin (lua_State *L) {$/;""",f,"file:
+"
+math_sinh,lua_src/lmathlib.c,"/^static int math_sinh (lua_State *L) {$/;""",f,"file:
+"
+math_sqrt,lua_src/lmathlib.c,"/^static int math_sqrt (lua_State *L) {$/;""",f,"file:
+"
+math_tan,lua_src/lmathlib.c,"/^static int math_tan (lua_State *L) {$/;""",f,"file:
+"
+math_tanh,lua_src/lmathlib.c,"/^static int math_tanh (lua_State *L) {$/;""",f,"file:
+"
+max_expand,lua_src/lstrlib.c,"/^static const char *max_expand (MatchState *ms, const char *s,$/;""",f,"file:
+"
+maxn,lua_src/ltablib.c,"/^static int maxn (lua_State *L) {$/;""",f,"file:
+"
+mb_get_first_hrt_addr,nautilus/mb_utils.c,"/^mb_get_first_hrt_addr (ulong_t mbd)$/;""","f
+"
+mb_is_hrt_environ,nautilus/mb_utils.c,"/^mb_is_hrt_environ (ulong_t mbd)$/;""","f
+"
+memchr,nautilus/libccompat.c,"/^void *memchr(const void *str, int c, size_t n)$/;""","f
+"
+memcmp,nautilus/naut_string.c,"/^memcmp (const void * s1_, const void * s2_, size_t n) $/;""","f
+"
+memcpy,nautilus/naut_string.c,"/^memcpy (void * dst, const void * src, size_t n)$/;""","f
+"
+memmove,nautilus/naut_string.c,"/^memmove (void * dst, const void * src, size_t n)$/;""","f
+"
+memset,nautilus/naut_string.c,"/^memset (void * dst, char c, size_t n)$/;""","f
+"
+memtype_efi2mb,arch/k1om/early_mem.c,"/^memtype_efi2mb (efi_mem_type_t efi_type)$/;""",f,"file:
+"
+merge_with_ros_cr3,arch/hrt/hrt.c,"/^merge_with_ros_cr3 (uint64_t ros_cr3)$/;""",f,"file:
+"
+mf_handler,nautilus/fpu.c,"/^mf_handler (excp_entry_t * excp, excp_vec_t vec)$/;""","f
+"
+min_expand,lua_src/lstrlib.c,"/^static const char *min_expand (MatchState *ms, const char *s,$/;""",f,"file:
+"
+mktime,nautilus/libccompat.c,"/^time_t mktime(struct tm *timeptr)$/;""","f
+"
+mm_boot_alloc,nautilus/mm/boot_mm.c,"/^mm_boot_alloc (ulong_t size)$/;""","f
+"
+mm_boot_alloc_aligned,nautilus/mm/boot_mm.c,"/^mm_boot_alloc_aligned (ulong_t size, ulong_t align)$/;""","f
+"
+mm_boot_free,nautilus/mm/boot_mm.c,"/^mm_boot_free (void *addr, ulong_t size)$/;""","f
+"
+mm_boot_free_mem,nautilus/mm/boot_mm.c,"/^mm_boot_free_mem (addr_t start, ulong_t size)$/;""","f
+"
+mm_boot_free_vmem,nautilus/mm/boot_mm.c,"/^mm_boot_free_vmem (addr_t start, ulong_t size)$/;""","f
+"
+mm_boot_get_region,nautilus/mm/boot_mm.c,"/^mm_boot_get_region (unsigned i) $/;""","f
+"
+mm_boot_init,nautilus/mm/boot_mm.c,"/^mm_boot_init (ulong_t mbd)$/;""","f
+"
+mm_boot_kmem_cleanup,nautilus/mm/boot_mm.c,"/^mm_boot_kmem_cleanup (void)$/;""","f
+"
+mm_boot_kmem_init,nautilus/mm/boot_mm.c,"/^mm_boot_kmem_init (void)$/;""","f
+"
+mm_boot_last_pfn,nautilus/mm/boot_mm.c,"/^mm_boot_last_pfn (void)$/;""","f
+"
+mm_boot_num_regions,nautilus/mm/boot_mm.c,"/^mm_boot_num_regions (void) $/;""","f
+"
+mm_boot_reserve_mem,nautilus/mm/boot_mm.c,"/^mm_boot_reserve_mem (addr_t start, ulong_t size)$/;""","f
+"
+mm_boot_reserve_vmem,nautilus/mm/boot_mm.c,"/^mm_boot_reserve_vmem (addr_t start, ulong_t size)$/;""","f
+"
+mm_dump_page_map,nautilus/mm/boot_mm.c,"/^mm_dump_page_map (void) $/;""","f
+"
+mm_get_all_mem,nautilus/mm/boot_mm.c,"/^mm_get_all_mem (void)$/;""","f
+"
+mm_get_usable_ram,nautilus/mm/boot_mm.c,"/^mm_get_usable_ram (void)$/;""","f
+"
+modf,nautilus/libccompat.c,"/^double modf(double y, double *x){$/;""","f
+"
+modinit,lua_src/loadlib.c,"/^static void modinit (lua_State *L, const char *modname) {$/;""",f,"file:
+"
+movegotosout,lua_src/lparser.c,"/^static void movegotosout (FuncState *fs, BlockCnt *bl) {$/;""",f,"file:
+"
+moveto,lua_src/lapi.c,"/^static void moveto (lua_State *L, TValue *fr, int idx) {$/;""",f,"file:
+"
+msr_read,nautilus/msr.c,"/^msr_read (uint32_t msr) $/;""","f
+"
+msr_write,nautilus/msr.c,"/^msr_write (uint32_t msr, uint64_t data)$/;""","f
+"
+multiboot_get_phys_mem,nautilus/mb_utils.c,"/^multiboot_get_phys_mem (ulong_t mbd)$/;""","f
+"
+multiboot_get_size,nautilus/mb_utils.c,"/^multiboot_get_size (ulong_t mbd)$/;""","f
+"
+multiboot_get_sys_ram,nautilus/mb_utils.c,"/^multiboot_get_sys_ram (ulong_t mbd)$/;""","f
+"
+multiboot_parse,nautilus/mb_utils.c,"/^multiboot_parse (ulong_t mbd, ulong_t magic)$/;""","f
+"
+nautilus_hrt_upcall_handler,arch/hrt/hrt.c,"/^nautilus_hrt_upcall_handler (excp_entry_t * excp, excp_vec_t vec)$/;""","f
+"
+ndpc_rt_test,arch/hrt/init.c,"/^void ndpc_rt_test()$/;""","f
+"
+ndpc_rt_test,arch/k1om/init.c,"/^void ndpc_rt_test()$/;""","f
+"
+ndpc_rt_test,arch/x64/init.c,"/^void ndpc_rt_test()$/;""","f
+"
+need_value,lua_src/lcode.c,"/^static int need_value (FuncState *fs, int list) {$/;""",f,"file:
+"
+nemo_bcast_wakeup,test/benchmark.c,"/^nemo_bcast_wakeup (void)$/;""",f,"file:
+"
+nemo_event_await,nautilus/nemo.c,"/^nemo_event_await (void)$/;""","f
+"
+nemo_event_broadcast,nautilus/nemo.c,"/^nemo_event_broadcast (nemo_event_id_t eid)$/;""","f
+"
+nemo_event_notify,nautilus/nemo.c,"/^nemo_event_notify (nemo_event_id_t eid, int cpu)$/;""","f
+"
+nemo_init,nautilus/nemo.c,"/^nemo_init (void)$/;""","f
+"
+nemo_ipi_event_recv,nautilus/nemo.c,"/^nemo_ipi_event_recv (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+nemo_register_event_action,nautilus/nemo.c,"/^nemo_register_event_action (void (*func)(void), void * priv_data)$/;""","f
+"
+nemo_unregister_event_action,nautilus/nemo.c,"/^nemo_unregister_event_action (nemo_event_id_t id)$/;""","f
+"
+nemo_wakeup,test/benchmark.c,"/^nemo_wakeup (void)$/;""",f,"file:
+"
+new_localvar,lua_src/lparser.c,"/^static void new_localvar (LexState *ls, TString *name) {$/;""",f,"file:
+"
+new_localvarliteral_,lua_src/lparser.c,"/^static void new_localvarliteral_ (LexState *ls, const char *name, size_t sz) {$/;""",f,"file:
+"
+newfile,lua_src/liolib.c,"/^static LStream *newfile (lua_State *L) {$/;""",f,"file:
+"
+newlabelentry,lua_src/lparser.c,"/^static int newlabelentry (LexState *ls, Labellist *l, TString *name,$/;""",f,"file:
+"
+newprefile,lua_src/liolib.c,"/^static LStream *newprefile (lua_State *L) {$/;""",f,"file:
+"
+newshrstr,lua_src/lstring.c,"/^static TString *newshrstr (lua_State *L, const char *str, size_t l,$/;""",f,"file:
+"
+newupvalue,lua_src/lparser.c,"/^static int newupvalue (FuncState *fs, TString *name, expdesc *v) {$/;""",f,"file:
+"
+next_index_on_queue,nautilus/vc.c,"/^static inline int next_index_on_queue(enum nk_vc_type type, int index) $/;""",f,"file:
+"
+next_pow2,nautilus/numa.c,"/^next_pow2 (uint32_t v)$/;""",f,"file:
+"
+next_prime,nautilus/mm/kmem.c,"/^static uint64_t next_prime(uint64_t n)$/;""",f,"file:
+"
+nilK,lua_src/lcode.c,"/^static int nilK (FuncState *fs) {$/;""",f,"file:
+"
+nk_acpi_init,nautilus/acpi.c,"/^nk_acpi_init (void)$/;""","f
+"
+nk_add_bus_entry,nautilus/irq.c,"/^nk_add_bus_entry (const uint8_t bus_id, const char * bus_type)$/;""","f
+"
+nk_add_int_entry,nautilus/irq.c,"/^nk_add_int_entry (int_trig_t trig_mode,$/;""","f
+"
+nk_barrier_destroy,nautilus/barrier.c,"/^nk_barrier_destroy (nk_barrier_t * barrier)$/;""","f
+"
+nk_barrier_init,nautilus/barrier.c,"/^nk_barrier_init (nk_barrier_t * barrier, uint32_t count) $/;""","f
+"
+nk_barrier_test,nautilus/barrier.c,"/^void nk_barrier_test(void)$/;""","f
+"
+nk_barrier_wait,nautilus/barrier.c,"/^nk_barrier_wait (nk_barrier_t * barrier) $/;""","f
+"
+nk_bind_vc,nautilus/vc.c,"/^int nk_bind_vc(nk_thread_t *thread, struct nk_virtual_console * cons)$/;""","f
+"
+nk_condvar_bcast,nautilus/condvar.c,"/^nk_condvar_bcast (nk_condvar_t * c)$/;""","f
+"
+nk_condvar_destroy,nautilus/condvar.c,"/^nk_condvar_destroy (nk_condvar_t * c)$/;""","f
+"
+nk_condvar_init,nautilus/condvar.c,"/^nk_condvar_init (nk_condvar_t * c)$/;""","f
+"
+nk_condvar_signal,nautilus/condvar.c,"/^nk_condvar_signal (nk_condvar_t * c)$/;""","f
+"
+nk_condvar_test,nautilus/condvar.c,"/^nk_condvar_test (void)$/;""","f
+"
+nk_condvar_wait,nautilus/condvar.c,"/^nk_condvar_wait (nk_condvar_t * c, NK_LOCK_T * l)$/;""","f
+"
+nk_core_barrier_arrive,nautilus/barrier.c,"/^nk_core_barrier_arrive (void)$/;""","f
+"
+nk_core_barrier_lower,nautilus/barrier.c,"/^nk_core_barrier_lower (void)$/;""","f
+"
+nk_core_barrier_raise,nautilus/barrier.c,"/^nk_core_barrier_raise (void) $/;""","f
+"
+nk_core_barrier_wait,nautilus/barrier.c,"/^nk_core_barrier_wait (void)$/;""","f
+"
+nk_cpu_topo_discover,nautilus/numa.c,"/^nk_cpu_topo_discover (struct cpu * me)$/;""","f
+"
+nk_create_htable,nautilus/hashtable.c,"/^nk_create_htable (uint_t min_size,$/;""","f
+"
+nk_create_htable_iter,nautilus/hashtable.c,"/^nk_create_htable_iter (struct nk_hashtable * htable) $/;""","f
+"
+nk_create_vc,nautilus/vc.c,"/^struct nk_virtual_console *nk_create_vc(char *name, enum nk_vc_type new_vc_type, uint8_t attr, void (*callback)(nk_scancode_t, void *priv), void *priv_data) $/;""","f
+"
+nk_cxx_init,cxx/cxxinit.c,"/^nk_cxx_init (void)$/;""","f
+"
+nk_dequeue_entry,nautilus/queue.c,"/^nk_dequeue_entry (nk_queue_entry_t * entry)$/;""","f
+"
+nk_dequeue_entry_atomic,nautilus/queue.c,"/^nk_dequeue_entry_atomic (nk_queue_t * q, nk_queue_entry_t * entry)$/;""","f
+"
+nk_dequeue_first,nautilus/queue.c,"/^nk_dequeue_first (nk_queue_t * q)$/;""","f
+"
+nk_dequeue_first_atomic,nautilus/queue.c,"/^nk_dequeue_first_atomic (nk_queue_t * q)$/;""","f
+"
+nk_dequeue_keycode,nautilus/vc.c,"/^nk_keycode_t nk_dequeue_keycode(struct nk_virtual_console *vc) $/;""","f
+"
+nk_dequeue_scancode,nautilus/vc.c,"/^nk_scancode_t nk_dequeue_scancode(struct nk_virtual_console *vc) $/;""","f
+"
+nk_dequeue_thread_from_runq,nautilus/thread.c,"/^nk_dequeue_thread_from_runq (nk_thread_t * t)$/;""","f
+"
+nk_destroy_htable_iter,nautilus/hashtable.c,"/^nk_destroy_htable_iter (struct nk_hashtable_iter * iter) $/;""","f
+"
+nk_destroy_vc,nautilus/vc.c,"/^int nk_destroy_vc(struct nk_virtual_console *vc) $/;""","f
+"
+nk_detect_cpu_freq,nautilus/cpu.c,"/^nk_detect_cpu_freq (uint32_t cpu) $/;""","f
+"
+nk_dump_mem,nautilus/backtrace.c,"/^nk_dump_mem (const void * addr, ulong_t n)$/;""","f
+"
+nk_dump_numa_info,nautilus/numa.c,"/^nk_dump_numa_info (void)$/;""","f
+"
+nk_enqueue_keycode,nautilus/vc.c,"/^int nk_enqueue_keycode(struct nk_virtual_console *vc, nk_keycode_t key) $/;""","f
+"
+nk_enqueue_scancode,nautilus/vc.c,"/^int nk_enqueue_scancode(struct nk_virtual_console *vc, nk_scancode_t scan) $/;""","f
+"
+nk_enqueue_thread_on_runq,nautilus/thread.c,"/^nk_enqueue_thread_on_runq (nk_thread_t * t, int cpu)$/;""","f
+"
+nk_free_htable,nautilus/hashtable.c,"/^nk_free_htable (struct nk_hashtable * htable, int free_values, int free_keys) $/;""","f
+"
+nk_get_base_region_by_cpu,nautilus/numa.c,"/^nk_get_base_region_by_cpu (cpu_id_t cpu)$/;""","f
+"
+nk_get_base_region_by_num,nautilus/numa.c,"/^nk_get_base_region_by_num (unsigned num)$/;""","f
+"
+nk_get_num_cpus,nautilus/smp.c,"/^nk_get_num_cpus (void)$/;""","f
+"
+nk_get_num_domains,nautilus/numa.c,"/^nk_get_num_domains (void)$/;""","f
+"
+nk_get_parent_tid,nautilus/thread.c,"/^nk_get_parent_tid (void) $/;""","f
+"
+nk_get_rand_bytes,nautilus/random.c,"/^nk_get_rand_bytes (uint8_t * buf, unsigned len)$/;""","f
+"
+nk_get_tid,nautilus/thread.c,"/^nk_get_tid (void) $/;""","f
+"
+nk_hash_buffer,nautilus/hashtable.c,"/^nk_hash_buffer (uchar_t * msg, uint_t length) $/;""","f
+"
+nk_hash_long,nautilus/hashtable.c,"/^nk_hash_long (ulong_t val, uint_t bits) $/;""","f
+"
+nk_hpet_get_cntr,dev/hpet.c,"/^nk_hpet_get_cntr (void)$/;""","f
+"
+nk_hpet_get_freq,dev/hpet.c,"/^nk_hpet_get_freq (void)$/;""","f
+"
+nk_hpet_init,dev/hpet.c,"/^nk_hpet_init (void)$/;""","f
+"
+nk_htable_change,nautilus/hashtable.c,"/^nk_htable_change (struct nk_hashtable * htable, $/;""","f
+"
+nk_htable_count,nautilus/hashtable.c,"/^nk_htable_count (struct nk_hashtable * htable) $/;""","f
+"
+nk_htable_dec,nautilus/hashtable.c,"/^nk_htable_dec (struct nk_hashtable * htable, addr_t key, addr_t value) $/;""","f
+"
+nk_htable_get_iter_key,nautilus/hashtable.c,"/^nk_htable_get_iter_key (struct nk_hashtable_iter * iter) $/;""","f
+"
+nk_htable_get_iter_value,nautilus/hashtable.c,"/^nk_htable_get_iter_value (struct nk_hashtable_iter * iter) $/;""","f
+"
+nk_htable_inc,nautilus/hashtable.c,"/^nk_htable_inc (struct nk_hashtable * htable, $/;""","f
+"
+nk_htable_insert,nautilus/hashtable.c,"/^nk_htable_insert (struct nk_hashtable * htable, $/;""","f
+"
+nk_htable_iter_advance,nautilus/hashtable.c,"/^nk_htable_iter_advance (struct nk_hashtable_iter * iter) $/;""","f
+"
+nk_htable_iter_remove,nautilus/hashtable.c,"/^nk_htable_iter_remove (struct nk_hashtable_iter * iter, int free_key) $/;""","f
+"
+nk_htable_iter_search,nautilus/hashtable.c,"/^nk_htable_iter_search (struct nk_hashtable_iter * iter,$/;""","f
+"
+nk_htable_remove,nautilus/hashtable.c,"/^nk_htable_remove(struct nk_hashtable * htable, addr_t key, int free_key) $/;""","f
+"
+nk_htable_search,nautilus/hashtable.c,"/^nk_htable_search (struct nk_hashtable * htable, addr_t key) $/;""","f
+"
+nk_instrument_calibrate,nautilus/instrument.c,"/^nk_instrument_calibrate (unsigned loops)$/;""","f
+"
+nk_instrument_end,nautilus/instrument.c,"/^nk_instrument_end (void) $/;""","f
+"
+nk_instrument_init,nautilus/instrument.c,"/^nk_instrument_init (void) $/;""","f
+"
+nk_instrument_query,nautilus/instrument.c,"/^nk_instrument_query (void)$/;""","f
+"
+nk_instrument_start,nautilus/instrument.c,"/^nk_instrument_start (void)$/;""","f
+"
+nk_int_init,nautilus/irq.c,"/^nk_int_init (struct sys_info * sys)$/;""","f
+"
+nk_int_matches_bus,nautilus/irq.c,"/^nk_int_matches_bus (struct nk_int_entry * entry, const char * bus_type, const uint8_t len)$/;""","f
+"
+nk_irq_is_assigned,nautilus/irq.c,"/^nk_irq_is_assigned (uint8_t irq)$/;""","f
+"
+nk_irq_prof_enter,nautilus/instrument.c,"/^nk_irq_prof_enter (void)$/;""","f
+"
+nk_irq_prof_exit,nautilus/instrument.c,"/^nk_irq_prof_exit (void)$/;""","f
+"
+nk_is_amd,nautilus/cpu.c,"/^nk_is_amd (void) $/;""","f
+"
+nk_is_intel,nautilus/cpu.c,"/^nk_is_intel (void)$/;""","f
+"
+nk_join,nautilus/thread.c,"/^nk_join (nk_thread_id_t t, void ** retval)$/;""","f
+"
+nk_join_all_children,nautilus/thread.c,"/^nk_join_all_children (int (*func)(void * res)) $/;""","f
+"
+nk_kmem_init,nautilus/mm/kmem.c,"/^nk_kmem_init (void)$/;""","f
+"
+nk_launch_shell,nautilus/shell.c,"/^nk_thread_id_t nk_launch_shell(char *name, int cpu)$/;""","f
+"
+nk_malloc_enter,nautilus/instrument.c,"/^nk_malloc_enter (void)$/;""","f
+"
+nk_malloc_exit,nautilus/instrument.c,"/^nk_malloc_exit (void)$/;""","f
+"
+nk_map_page,nautilus/paging.c,"/^nk_map_page (addr_t vaddr, addr_t paddr, uint64_t flags, page_size_t ps)$/;""","f
+"
+nk_map_page_nocache,nautilus/paging.c,"/^nk_map_page_nocache (addr_t paddr, uint64_t flags, page_size_t ps)$/;""","f
+"
+nk_mask_irq,nautilus/irq.c,"/^nk_mask_irq (uint8_t irq)$/;""","f
+"
+nk_mwait_init,arch/hrt/mwait.c,"/^nk_mwait_init (void)$/;""","f
+"
+nk_mwait_init,arch/x64/mwait.c,"/^nk_mwait_init (void)$/;""","f
+"
+nk_my_numa_node,nautilus/numa.c,"/^nk_my_numa_node (void)$/;""","f
+"
+nk_need_resched,nautilus/thread.c,"/^nk_need_resched (void) $/;""","f
+"
+nk_numa_init,nautilus/numa.c,"/^nk_numa_init (void)$/;""","f
+"
+nk_paging_init,nautilus/paging.c,"/^nk_paging_init (struct nk_mem_info * mem, ulong_t mbd)$/;""","f
+"
+nk_pf_handler,nautilus/paging.c,"/^nk_pf_handler (excp_entry_t * excp,$/;""","f
+"
+nk_print_regs,nautilus/backtrace.c,"/^nk_print_regs (struct nk_regs * r)$/;""","f
+"
+nk_profile_func_enter,nautilus/instrument.c,"/^nk_profile_func_enter (const char  *func)$/;""","f
+"
+nk_profile_func_exit,nautilus/instrument.c,"/^nk_profile_func_exit (const char *func)$/;""","f
+"
+nk_queue_create,nautilus/queue.c,"/^nk_queue_create (void)$/;""","f
+"
+nk_queue_destroy,nautilus/queue.c,"/^nk_queue_destroy (nk_queue_t * q, uint8_t free_entries)$/;""","f
+"
+nk_queue_empty_atomic,nautilus/queue.c,"/^nk_queue_empty_atomic (nk_queue_t * q)$/;""","f
+"
+nk_rand_init,nautilus/random.c,"/^nk_rand_init (struct cpu * cpu) $/;""","f
+"
+nk_rand_seed,nautilus/random.c,"/^nk_rand_seed (uint64_t seed) {$/;""","f
+"
+nk_rand_set_xi,nautilus/random.c,"/^nk_rand_set_xi (uint64_t xi) $/;""","f
+"
+nk_rb_erase,nautilus/rbtree.c,"/^void nk_rb_erase(struct rb_node *node, struct rb_root *root)$/;""","f
+"
+nk_rb_first,nautilus/rbtree.c,"/^struct rb_node *nk_rb_first(struct rb_root *root)$/;""","f
+"
+nk_rb_insert_color,nautilus/rbtree.c,"/^void nk_rb_insert_color(struct rb_node *node, struct rb_root *root)$/;""","f
+"
+nk_rb_last,nautilus/rbtree.c,"/^struct rb_node *nk_rb_last(struct rb_root *root)$/;""","f
+"
+nk_rb_next,nautilus/rbtree.c,"/^struct rb_node *nk_rb_next(struct rb_node *node)$/;""","f
+"
+nk_rb_prev,nautilus/rbtree.c,"/^struct rb_node *nk_rb_prev(struct rb_node *node)$/;""","f
+"
+nk_rb_replace_node,nautilus/rbtree.c,"/^void nk_rb_replace_node(struct rb_node *victim, struct rb_node *new,$/;""","f
+"
+nk_release_vc,nautilus/vc.c,"/^int nk_release_vc(nk_thread_t *thread) $/;""","f
+"
+nk_rwlock_init,nautilus/rwlock.c,"/^nk_rwlock_init (nk_rwlock_t * l)$/;""","f
+"
+nk_rwlock_rd_lock,nautilus/rwlock.c,"/^nk_rwlock_rd_lock (nk_rwlock_t * l)$/;""","f
+"
+nk_rwlock_rd_unlock,nautilus/rwlock.c,"/^nk_rwlock_rd_unlock (nk_rwlock_t * l) $/;""","f
+"
+nk_rwlock_test,nautilus/rwlock.c,"/^nk_rwlock_test (void) $/;""","f
+"
+nk_rwlock_wr_lock,nautilus/rwlock.c,"/^nk_rwlock_wr_lock (nk_rwlock_t * l)$/;""","f
+"
+nk_rwlock_wr_lock_irq_save,nautilus/rwlock.c,"/^nk_rwlock_wr_lock_irq_save (nk_rwlock_t * l)$/;""","f
+"
+nk_rwlock_wr_unlock,nautilus/rwlock.c,"/^nk_rwlock_wr_unlock (nk_rwlock_t * l)$/;""","f
+"
+nk_rwlock_wr_unlock_irq_restore,nautilus/rwlock.c,"/^nk_rwlock_wr_unlock_irq_restore (nk_rwlock_t * l, uint8_t flags)$/;""","f
+"
+nk_sched_init,nautilus/thread.c,"/^nk_sched_init (void) $/;""","f
+"
+nk_sched_init_ap,nautilus/thread.c,"/^nk_sched_init_ap (void)$/;""","f
+"
+nk_schedule,nautilus/thread.c,"/^nk_schedule (void) $/;""","f
+"
+nk_set_thread_fork_output,nautilus/thread.c,"/^nk_set_thread_fork_output (void * result)$/;""","f
+"
+nk_sleep,dev/timer.c,"/^nk_sleep (uint_t msec) $/;""","f
+"
+nk_stack_dump,nautilus/backtrace.c,"/^nk_stack_dump (ulong_t n)$/;""","f
+"
+nk_switch_to_next_vc,nautilus/vc.c,"/^int nk_switch_to_next_vc()$/;""","f
+"
+nk_switch_to_prev_vc,nautilus/vc.c,"/^int nk_switch_to_prev_vc()$/;""","f
+"
+nk_switch_to_vc,nautilus/vc.c,"/^int nk_switch_to_vc(struct nk_virtual_console *vc) $/;""","f
+"
+nk_switch_to_vc_list,nautilus/vc.c,"/^int nk_switch_to_vc_list()$/;""","f
+"
+nk_thr_switch_prof_enter,nautilus/instrument.c,"/^nk_thr_switch_prof_enter (void)$/;""","f
+"
+nk_thr_switch_prof_exit,nautilus/instrument.c,"/^nk_thr_switch_prof_exit (void)$/;""","f
+"
+nk_thread_create,nautilus/thread.c,"/^nk_thread_create (nk_thread_fun_t fun, $/;""","f
+"
+nk_thread_destroy,nautilus/thread.c,"/^nk_thread_destroy (nk_thread_id_t t)$/;""","f
+"
+nk_thread_exit,nautilus/thread.c,"/^nk_thread_exit (void * retval) $/;""","f
+"
+nk_thread_queue_create,nautilus/thread.c,"/^nk_thread_queue_create (void) $/;""","f
+"
+nk_thread_queue_destroy,nautilus/thread.c,"/^nk_thread_queue_destroy (nk_thread_queue_t * q)$/;""","f
+"
+nk_thread_queue_sleep,nautilus/thread.c,"/^nk_thread_queue_sleep (nk_thread_queue_t * q)$/;""","f
+"
+nk_thread_queue_wake_all,nautilus/thread.c,"/^nk_thread_queue_wake_all (nk_thread_queue_t * q)$/;""","f
+"
+nk_thread_queue_wake_one,nautilus/thread.c,"/^nk_thread_queue_wake_one (nk_thread_queue_t * q)$/;""","f
+"
+nk_thread_run,nautilus/thread.c,"/^int nk_thread_run(nk_thread_id_t t)$/;""","f
+"
+nk_thread_start,nautilus/thread.c,"/^nk_thread_start (nk_thread_fun_t fun, $/;""","f
+"
+nk_ticket_lock,nautilus/ticketlock.c,"/^nk_ticket_lock (nk_ticket_lock_t * l) $/;""","f
+"
+nk_ticket_lock_deinit,nautilus/ticketlock.c,"/^nk_ticket_lock_deinit (nk_ticket_lock_t * l)$/;""","f
+"
+nk_ticket_lock_init,nautilus/ticketlock.c,"/^nk_ticket_lock_init (nk_ticket_lock_t * l)$/;""","f
+"
+nk_ticket_trylock,nautilus/ticketlock.c,"/^nk_ticket_trylock (nk_ticket_lock_t * l)$/;""","f
+"
+nk_ticket_unlock,nautilus/ticketlock.c,"/^nk_ticket_unlock (nk_ticket_lock_t * l)$/;""","f
+"
+nk_timer_handler,dev/timer.c,"/^nk_timer_handler (excp_entry_t * excp, excp_vec_t vec)$/;""","f
+"
+nk_timer_init,dev/timer.c,"/^nk_timer_init (struct naut_info * naut)$/;""","f
+"
+nk_tls_get,nautilus/thread.c,"/^nk_tls_get (nk_tls_key_t key) $/;""","f
+"
+nk_tls_key_create,nautilus/thread.c,"/^nk_tls_key_create (nk_tls_key_t * key, void (*destructor)(void*))$/;""","f
+"
+nk_tls_key_delete,nautilus/thread.c,"/^nk_tls_key_delete (nk_tls_key_t key)$/;""","f
+"
+nk_tls_set,nautilus/thread.c,"/^nk_tls_set (nk_tls_key_t key, const void * val)$/;""","f
+"
+nk_tls_test,nautilus/thread.c,"/^nk_tls_test (void)$/;""","f
+"
+nk_unmask_irq,nautilus/irq.c,"/^nk_unmask_irq (uint8_t irq)$/;""","f
+"
+nk_vc_clear,nautilus/vc.c,"/^int nk_vc_clear(uint8_t attr)$/;""","f
+"
+nk_vc_clear_specific,nautilus/vc.c,"/^int nk_vc_clear_specific(struct nk_virtual_console *vc, uint8_t attr)$/;""","f
+"
+nk_vc_deinit,nautilus/vc.c,"/^int nk_vc_deinit()$/;""","f
+"
+nk_vc_display_char,nautilus/vc.c,"/^int nk_vc_display_char(uint8_t c, uint8_t attr, uint8_t x, uint8_t y) $/;""","f
+"
+nk_vc_display_char_specific,nautilus/vc.c,"/^int nk_vc_display_char_specific(struct nk_virtual_console *vc,$/;""","f
+"
+nk_vc_get_keycode,nautilus/vc.c,"/^nk_keycode_t nk_vc_get_keycode(int wait) $/;""","f
+"
+nk_vc_get_scancode,nautilus/vc.c,"/^nk_scancode_t nk_vc_get_scancode(int wait)$/;""","f
+"
+nk_vc_getchar,nautilus/vc.c,"/^int nk_vc_getchar()$/;""","f
+"
+nk_vc_getchar_extended,nautilus/vc.c,"/^int nk_vc_getchar_extended(int wait)$/;""","f
+"
+nk_vc_gets,nautilus/vc.c,"/^int nk_vc_gets(char *buf, int n, int display)$/;""","f
+"
+nk_vc_handle_input,nautilus/vc.c,"/^int nk_vc_handle_input(nk_scancode_t scan) $/;""","f
+"
+nk_vc_init,nautilus/vc.c,"/^int nk_vc_init() $/;""","f
+"
+nk_vc_is_active,nautilus/vc.c,"/^inline int nk_vc_is_active()$/;""","f
+"
+nk_vc_log,nautilus/vc.c,"/^int nk_vc_log(char *fmt, ...)$/;""","f
+"
+nk_vc_print,nautilus/vc.c,"/^int nk_vc_print(char *s)$/;""","f
+"
+nk_vc_printf,nautilus/vc.c,"/^int nk_vc_printf(char *fmt, ...)$/;""","f
+"
+nk_vc_putchar,nautilus/vc.c,"/^int nk_vc_putchar(uint8_t c) $/;""","f
+"
+nk_vc_puts,nautilus/vc.c,"/^int nk_vc_puts(char *s)$/;""","f
+"
+nk_vc_scrollup,nautilus/vc.c,"/^int nk_vc_scrollup()$/;""","f
+"
+nk_vc_scrollup_specific,nautilus/vc.c,"/^int nk_vc_scrollup_specific(struct nk_virtual_console *vc) $/;""","f
+"
+nk_vc_setattr,nautilus/vc.c,"/^int nk_vc_setattr(uint8_t attr)$/;""","f
+"
+nk_vc_setattr_specific,nautilus/vc.c,"/^int nk_vc_setattr_specific(struct nk_virtual_console *vc, uint8_t attr)$/;""","f
+"
+nk_vc_setpos,nautilus/vc.c,"/^int nk_vc_setpos(uint8_t x, uint8_t y) $/;""","f
+"
+nk_vc_setpos_specific,nautilus/vc.c,"/^int nk_vc_setpos_specific(struct nk_virtual_console *vc, uint8_t x, uint8_t y) $/;""","f
+"
+nk_vc_wait,nautilus/vc.c,"/^void nk_vc_wait()$/;""","f
+"
+nk_vmm_continue_vm,nautilus/vmm.c,"/^int nk_vmm_continue_vm(void *vm)$/;""","f
+"
+nk_vmm_deinit,nautilus/vmm.c,"/^int nk_vmm_deinit()$/;""","f
+"
+nk_vmm_free_vm,nautilus/vmm.c,"/^int nk_vmm_free_vm(void *vm)$/;""","f
+"
+nk_vmm_init,nautilus/vmm.c,"/^int nk_vmm_init()$/;""","f
+"
+nk_vmm_move_vm_core,nautilus/vmm.c,"/^int nk_vmm_move_vm_core(void *vm, int vcore, int pcore)$/;""","f
+"
+nk_vmm_move_vm_mem,nautilus/vmm.c,"/^int nk_vmm_move_vm_mem(void *vm, void *gpa, int pcore)$/;""","f
+"
+nk_vmm_pause_vm,nautilus/vmm.c,"/^int nk_vmm_pause_vm(void *vm)$/;""","f
+"
+nk_vmm_reset_vm,nautilus/vmm.c,"/^int nk_vmm_reset_vm(void *vm)$/;""","f
+"
+nk_vmm_start_vm,nautilus/vmm.c,"/^void *nk_vmm_start_vm(char *name, void *image, unsigned int cpu_mask) $/;""","f
+"
+nk_vmm_stop_vm,nautilus/vmm.c,"/^int nk_vmm_stop_vm(void *vm)$/;""","f
+"
+nk_wait,nautilus/thread.c,"/^nk_wait (nk_thread_id_t t)$/;""","f
+"
+nk_wake_waiters,nautilus/thread.c,"/^nk_wake_waiters (void)$/;""","f
+"
+nk_yield,nautilus/thread.c,"/^nk_yield (void)$/;""","f
+"
+noenv,lua_src/loadlib.c,"/^static int noenv (lua_State *L) {$/;""",f,"file:
+"
+nospecials,lua_src/lstrlib.c,"/^static int nospecials (const char *p, size_t l) {$/;""",f,"file:
+"
+null_excp_handler,nautilus/idt.c,"/^null_excp_handler (excp_entry_t * excp,$/;""","f
+"
+null_irq_handler,nautilus/idt.c,"/^null_irq_handler (excp_entry_t * excp,$/;""","f
+"
+null_kick,dev/apic.c,"/^null_kick (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+number,nautilus/printk.c,"/^static char *number(char *buf, char *end, unsigned long long num,$/;""",f,"file:
+"
+numusearray,lua_src/ltable.c,"/^static int numusearray (const Table *t, int *nums) {$/;""",f,"file:
+"
+numusehash,lua_src/ltable.c,"/^static int numusehash (const Table *t, int *nums, int *pnasize) {$/;""",f,"file:
+"
+open_func,lua_src/lparser.c,"/^static void open_func (LexState *ls, FuncState *fs, BlockCnt *bl) {$/;""",f,"file:
+"
+opencheck,lua_src/liolib.c,"/^static void opencheck (lua_State *L, const char *fname, const char *mode) {$/;""",f,"file:
+"
+os_clock,lua_src/loslib.c,"/^static int os_clock (lua_State *L) {$/;""",f,"file:
+"
+os_date,lua_src/loslib.c,"/^static int os_date (lua_State *L) {$/;""",f,"file:
+"
+os_difftime,lua_src/loslib.c,"/^static int os_difftime (lua_State *L) {$/;""",f,"file:
+"
+os_execute,lua_src/loslib.c,"/^static int os_execute (lua_State *L) {$/;""",f,"file:
+"
+os_exit,lua_src/loslib.c,"/^static int os_exit (lua_State *L) {$/;""",f,"file:
+"
+os_getenv,lua_src/loslib.c,"/^static int os_getenv (lua_State *L) {$/;""",f,"file:
+"
+os_remove,lua_src/loslib.c,"/^static int os_remove (lua_State *L) {$/;""",f,"file:
+"
+os_rename,lua_src/loslib.c,"/^static int os_rename (lua_State *L) {$/;""",f,"file:
+"
+os_setlocale,lua_src/loslib.c,"/^static int os_setlocale (lua_State *L) {$/;""",f,"file:
+"
+os_time,lua_src/loslib.c,"/^static int os_time (lua_State *L) {$/;""",f,"file:
+"
+os_tmpname,lua_src/loslib.c,"/^static int os_tmpname (lua_State *L) {$/;""",f,"file:
+"
+pack,lua_src/ltablib.c,"/^static int pack (lua_State *L) {$/;""",f,"file:
+"
+pack_hex_byte,nautilus/printk.c,"/^static inline char *pack_hex_byte(char *buf, uint8_t byte)$/;""",f,"file:
+"
+pairsmeta,lua_src/lbaselib.c,"/^static int pairsmeta (lua_State *L, const char *method, int iszero,$/;""",f,"file:
+"
+panic,nautilus/printk.c,"/^panic (const char * fmt, ...)$/;""","f
+"
+parlist,lua_src/lparser.c,"/^static void parlist (LexState *ls) {$/;""",f,"file:
+"
+parse_entry,nautilus/sfi.c,"/^parse_entry (struct sfi_common_hdr * entry, struct sys_info * sys)$/;""",f,"file:
+"
+parse_hpet_tbl,dev/hpet.c,"/^parse_hpet_tbl (struct acpi_table_header * hdr, void * arg)$/;""",f,"file:
+"
+parse_mp_table,arch/x64/smp.c,"/^parse_mp_table (struct sys_info * sys, struct mp_table * mp)$/;""",f,"file:
+"
+parse_mptable_bus,arch/x64/smp.c,"/^parse_mptable_bus (struct sys_info * sys, struct mp_table_entry_bus * bus)$/;""",f,"file:
+"
+parse_mptable_cpu,arch/x64/smp.c,"/^parse_mptable_cpu (struct sys_info * sys, struct mp_table_entry_cpu * cpu)$/;""",f,"file:
+"
+parse_mptable_ioapic,arch/x64/smp.c,"/^parse_mptable_ioapic (struct sys_info * sys, struct mp_table_entry_ioapic * ioapic)$/;""",f,"file:
+"
+parse_mptable_ioint,arch/x64/smp.c,"/^parse_mptable_ioint (struct sys_info * sys, struct mp_table_entry_ioint * ioint)$/;""",f,"file:
+"
+parse_mptable_lint,arch/x64/smp.c,"/^parse_mptable_lint (struct sys_info * sys, struct mp_table_entry_lint * lint)$/;""",f,"file:
+"
+parse_sfi_cpu,nautilus/sfi.c,"/^parse_sfi_cpu (struct sfi_cpu_tbl * tbl, struct sys_info * sys)$/;""",f,"file:
+"
+parse_sfi_ioapic,nautilus/sfi.c,"/^parse_sfi_ioapic (struct sfi_ioapic_tbl * tbl, struct sys_info * sys)$/;""",f,"file:
+"
+parse_sfi_mmap,nautilus/sfi.c,"/^parse_sfi_mmap (struct sfi_mmap_tbl * tbl, struct nk_mem_info * sysmem)$/;""",f,"file:
+"
+patchlistaux,lua_src/lcode.c,"/^static void patchlistaux (FuncState *fs, int list, int vtarget, int reg,$/;""",f,"file:
+"
+patchtestreg,lua_src/lcode.c,"/^static int patchtestreg (FuncState *fs, int node, int reg) {$/;""",f,"file:
+"
+pc_int_handler,dev/apic.c,"/^pc_int_handler (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+pcallcont,lua_src/lbaselib.c,"/^static int pcallcont (lua_State *L) {$/;""",f,"file:
+"
+pci_add_bus,dev/pci.c,"/^pci_add_bus (struct pci_bus * bus, struct pci_info * pci)$/;""",f,"file:
+"
+pci_add_dev_to_bus,dev/pci.c,"/^pci_add_dev_to_bus (struct pci_dev * dev, $/;""",f,"file:
+"
+pci_bus_create,dev/pci.c,"/^pci_bus_create (uint32_t num, struct pci_info * pci)$/;""",f,"file:
+"
+pci_bus_probe,dev/pci.c,"/^pci_bus_probe (struct pci_info * pci, uint8_t bus)$/;""",f,"file:
+"
+pci_bus_scan,dev/pci.c,"/^pci_bus_scan (struct pci_info * pci)$/;""",f,"file:
+"
+pci_cfg_readl,dev/pci.c,"/^pci_cfg_readl (uint8_t bus, $/;""","f
+"
+pci_cfg_readw,dev/pci.c,"/^pci_cfg_readw (uint8_t bus, $/;""","f
+"
+pci_cfg_writel,dev/pci.c,"/^pci_cfg_writel (uint8_t bus, $/;""","f
+"
+pci_cfg_writew,dev/pci.c,"/^pci_cfg_writew (uint8_t bus, $/;""","f
+"
+pci_copy_cfg_space,dev/pci.c,"/^pci_copy_cfg_space(struct pci_dev *dev, struct pci_bus *bus)$/;""",f,"file:
+"
+pci_dev_create,dev/pci.c,"/^pci_dev_create (uint32_t num, struct pci_bus * bus)$/;""",f,"file:
+"
+pci_dev_probe,dev/pci.c,"/^pci_dev_probe (struct pci_bus * bus, uint8_t dev)$/;""",f,"file:
+"
+pci_dev_valid,dev/pci.c,"/^pci_dev_valid (uint8_t bus, uint8_t slot)$/;""",f,"file:
+"
+pci_fun_probe,dev/pci.c,"/^pci_fun_probe (struct pci_info * pci, uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_get_base_class,dev/pci.c,"/^pci_get_base_class (uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_get_dev_id,dev/pci.c,"/^pci_get_dev_id (uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_get_hdr_type,dev/pci.c,"/^pci_get_hdr_type (uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_get_rev_id,dev/pci.c,"/^pci_get_rev_id (uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_get_sec_bus,dev/pci.c,"/^pci_get_sec_bus (uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_get_sub_class,dev/pci.c,"/^pci_get_sub_class (uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_get_vendor_id,dev/pci.c,"/^pci_get_vendor_id (uint8_t bus, uint8_t dev, uint8_t fun)$/;""",f,"file:
+"
+pci_init,dev/pci.c,"/^pci_init (struct naut_info * naut)$/;""","f
+"
+perf_report,nautilus/pmc.c,"/^perf_report (void)$/;""","f
+"
+phi_card_is_up,arch/k1om/xeon_phi.c,"/^phi_card_is_up (void)$/;""","f
+"
+phi_cons_clear_screen,arch/k1om/xeon_phi.c,"/^phi_cons_clear_screen (void)$/;""","f
+"
+phi_cons_get_cursor,arch/k1om/xeon_phi.c,"/^phi_cons_get_cursor (uint8_t * x, uint8_t * y)$/;""","f
+"
+phi_cons_init,arch/k1om/xeon_phi.c,"/^phi_cons_init (void)$/;""","f
+"
+phi_cons_notify_char_write,arch/k1om/xeon_phi.c,"/^phi_cons_notify_char_write (uint16_t x, uint16_t y)$/;""",f,"file:
+"
+phi_cons_notify_line_draw,arch/k1om/xeon_phi.c,"/^phi_cons_notify_line_draw (unsigned row)$/;""","f
+"
+phi_cons_notify_redraw,arch/k1om/xeon_phi.c,"/^phi_cons_notify_redraw (void)$/;""","f
+"
+phi_cons_notify_scrollup,arch/k1om/xeon_phi.c,"/^phi_cons_notify_scrollup (void)$/;""","f
+"
+phi_cons_print,arch/k1om/xeon_phi.c,"/^phi_cons_print (char *buf)$/;""","f
+"
+phi_cons_putchar,arch/k1om/xeon_phi.c,"/^phi_cons_putchar (char c)$/;""","f
+"
+phi_cons_read_reg,arch/k1om/xeon_phi.c,"/^phi_cons_read_reg(uint32_t off)$/;""",f,"file:
+"
+phi_cons_scrollup,arch/k1om/xeon_phi.c,"/^phi_cons_scrollup (void)$/;""",f,"file:
+"
+phi_cons_set_cursor,arch/k1om/xeon_phi.c,"/^phi_cons_set_cursor (uint8_t x, uint8_t y)$/;""","f
+"
+phi_cons_wait_for_out_cmpl,arch/k1om/xeon_phi.c,"/^phi_cons_wait_for_out_cmpl (void)$/;""",f,"file:
+"
+phi_cons_write_fb_and_notify,arch/k1om/xeon_phi.c,"/^phi_cons_write_fb_and_notify (uint16_t x, uint16_t y, char c, uint8_t color)$/;""",f,"file:
+"
+phi_cons_write_reg,arch/k1om/xeon_phi.c,"/^phi_cons_write_reg (uint32_t off, uint32_t val)$/;""",f,"file:
+"
+pic_spur_int_handler,nautilus/idt.c,"/^pic_spur_int_handler (excp_entry_t * excp,$/;""",f,"file:
+"
+ping,test/ipi.c,"/^ping (excp_entry_t * excp, excp_vec_t vec)$/;""","f
+"
+pit_irq_handler,dev/i8254.c,"/^pit_irq_handler (excp_entry_t * excp, excp_vec_t vec)$/;""",f,"file:
+"
+pmain,lua_src/lua.c,"/^static int pmain (lua_State *L) {$/;""",f,"file:
+"
+pmc_init,nautilus/pmc.c,"/^pmc_init (void)$/;""","f
+"
+pointer,nautilus/printk.c,"/^static char *pointer(const char *fmt, char *buf, char *end, void *ptr,$/;""",f,"file:
+"
+poll,nautilus/libccompat.c,"/^int poll (struct pollfd *fds, nfds_t nfds, int timeout)$/;""","f
+"
+pong,test/ipi.c,"/^pong (excp_entry_t * excp, excp_vec_t vec)$/;""",f,"file:
+"
+pong_bcast,test/ipi.c,"/^pong_bcast (excp_entry_t * excp, excp_vec_t vec)$/;""",f,"file:
+"
+posrelat,lua_src/lstrlib.c,"/^static size_t posrelat (ptrdiff_t pos, size_t len) {$/;""",f,"file:
+"
+pow,nautilus/libccompat.c,"/^double pow(double x, double y)$/;""","f
+"
+preinit_state,lua_src/lstate.c,"/^static void preinit_state (lua_State *L, global_State *g) {$/;""",f,"file:
+"
+primaryexp,lua_src/lparser.c,"/^static void primaryexp (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+print_usage,lua_src/lua.c,"/^static void print_usage (const char *badoption) {$/;""",f,"file:
+"
+print_version,lua_src/lua.c,"/^static void print_version (void) {$/;""",f,"file:
+"
+printf,nautilus/libccompat.c,"/^int printf (const char * s, ...)$/;""","f
+"
+printk,nautilus/printk.c,"/^printk (const char *fmt, ...)$/;""","f
+"
+printk_char,nautilus/printk.c,"/^printk_char (char * arg, int c)$/;""",f,"file:
+"
+printnum,nautilus/doprnt.c,"/^printnum(register unsigned long u, $/;""",f,"file:
+"
+printnum_16,nautilus/doprnt.c,"/^printnum_16 (register unsigned long u, $/;""",f,"file:
+"
+propagateall,lua_src/lgc.c,"/^static void propagateall (global_State *g) {$/;""",f,"file:
+"
+propagatelist,lua_src/lgc.c,"/^static void propagatelist (global_State *g, GCObject *l) {$/;""",f,"file:
+"
+propagatemark,lua_src/lgc.c,"/^static void propagatemark (global_State *g) {$/;""",f,"file:
+"
+push_captures,lua_src/lstrlib.c,"/^static int push_captures (MatchState *ms, const char *s, const char *e) {$/;""",f,"file:
+"
+push_onecapture,lua_src/lstrlib.c,"/^static void push_onecapture (MatchState *ms, int i, const char *s,$/;""",f,"file:
+"
+pushclosure,lua_src/lvm.c,"/^static void pushclosure (lua_State *L, Proto *p, UpVal **encup, StkId base,$/;""",f,"file:
+"
+pusherror,lua_src/loadlib.c,"/^static void pusherror (lua_State *L) {$/;""",f,"file:
+"
+pushfuncname,lua_src/lauxlib.c,"/^static void pushfuncname (lua_State *L, lua_Debug *ar) {$/;""",f,"file:
+"
+pushglobalfuncname,lua_src/lauxlib.c,"/^static int pushglobalfuncname (lua_State *L, lua_Debug *ar) {$/;""",f,"file:
+"
+pushline,lua_src/lua.c,"/^static int pushline (lua_State *L, int firstline) {$/;""",f,"file:
+"
+pushnexttemplate,lua_src/loadlib.c,"/^static const char *pushnexttemplate (lua_State *L, const char *path) {$/;""",f,"file:
+"
+pushstr,lua_src/lobject.c,"/^static void pushstr (lua_State *L, const char *str, size_t l) {$/;""",f,"file:
+"
+put_dec,nautilus/printk.c,"/^static __noinline char* put_dec(char *buf, unsigned long long num)$/;""",f,"file:
+"
+put_dec_full,nautilus/printk.c,"/^static char* put_dec_full(char *buf, unsigned q)$/;""",f,"file:
+"
+put_dec_trunc,nautilus/printk.c,"/^static char* put_dec_trunc(char *buf, unsigned q)$/;""",f,"file:
+"
+queue_scancode,dev/kbd.c,"/^static void queue_scancode(nk_scancode_t scan)$/;""",f,"file:
+"
+rand,nautilus/libccompat.c,"/^rand (void) {$/;""","f
+"
+read_all,lua_src/liolib.c,"/^static void read_all (lua_State *L, FILE *f) {$/;""",f,"file:
+"
+read_chars,lua_src/liolib.c,"/^static int read_chars (lua_State *L, FILE *f, size_t n) {$/;""",f,"file:
+"
+read_event_count,nautilus/pmc.c,"/^read_event_count (perf_event_t * event)$/;""","f
+"
+read_line,lua_src/liolib.c,"/^static int read_line (lua_State *L, FILE *f, int chop) {$/;""",f,"file:
+"
+read_long_string,lua_src/llex.c,"/^static void read_long_string (LexState *ls, SemInfo *seminfo, int sep) {$/;""",f,"file:
+"
+read_number,lua_src/liolib.c,"/^static int read_number (lua_State *L, FILE *f) {$/;""",f,"file:
+"
+read_numeral,lua_src/llex.c,"/^static void read_numeral (LexState *ls, SemInfo *seminfo) {$/;""",f,"file:
+"
+read_pmc_ctl,nautilus/pmc.c,"/^read_pmc_ctl (uint8_t idx)$/;""",f,"file:
+"
+read_pmc_ctr,nautilus/pmc.c,"/^read_pmc_ctr (uint8_t idx)$/;""",f,"file:
+"
+read_string,lua_src/llex.c,"/^static void read_string (LexState *ls, int del, SemInfo *seminfo) {$/;""",f,"file:
+"
+readable,lua_src/loadlib.c,"/^static int readable (const char *filename) {$/;""",f,"file:
+"
+readdecesc,lua_src/llex.c,"/^static int readdecesc (LexState *ls) {$/;""",f,"file:
+"
+reader1,nautilus/rwlock.c,"/^reader1 (void * in, void ** out) $/;""",f,"file:
+"
+reader2,nautilus/rwlock.c,"/^reader2 (void * in, void ** out)$/;""",f,"file:
+"
+readhexa,lua_src/lobject.c,"/^static lua_Number readhexa (const char **s, lua_Number r, int *count) {$/;""",f,"file:
+"
+readhexaesc,lua_src/llex.c,"/^static int readhexaesc (LexState *ls) {$/;""",f,"file:
+"
+realloc,nautilus/mm/kmem.c,"/^void *realloc(void *ptr, size_t size)$/;""","f
+"
+reallymarkobject,lua_src/lgc.c,"/^static void reallymarkobject (global_State *g, GCObject *o) {$/;""",f,"file:
+"
+reboot,arch/hrt/shutdown.c,"/^reboot (void) $/;""","f
+"
+reboot,arch/x64/shutdown.c,"/^reboot (void) $/;""","f
+"
+recfield,lua_src/lparser.c,"/^static void recfield (LexState *ls, struct ConsControl *cc) {$/;""",f,"file:
+"
+recover,lua_src/ldo.c,"/^static int recover (lua_State *L, int status) {$/;""",f,"file:
+"
+register_int_handler,nautilus/irq.c,"/^register_int_handler (uint16_t int_vec, $/;""","f
+"
+register_irq_handler,nautilus/irq.c,"/^register_irq_handler (uint16_t irq, $/;""","f
+"
+registerlocalvar,lua_src/lparser.c,"/^static int registerlocalvar (LexState *ls, TString *varname) {$/;""",f,"file:
+"
+rehash,lua_src/ltable.c,"/^static void rehash (lua_State *L, Table *t, const TValue *ek) {$/;""",f,"file:
+"
+release_perf_event,nautilus/pmc.c,"/^release_perf_event (perf_event_t * event)$/;""","f
+"
+remarkupvals,lua_src/lgc.c,"/^static void remarkupvals (global_State *g) {$/;""",f,"file:
+"
+remove,nautilus/libccompat.c,"/^int remove(const char *path)$/;""","f
+"
+removeentry,lua_src/lgc.c,"/^static void removeentry (Node *n) {$/;""",f,"file:
+"
+removevalues,lua_src/lcode.c,"/^static void removevalues (FuncState *fs, int list) {$/;""",f,"file:
+"
+removevars,lua_src/lparser.c,"/^static void removevars (FuncState *fs, int tolevel) {$/;""",f,"file:
+"
+rename,nautilus/libccompat.c,"/^int rename(const char *old, const char *new)$/;""","f
+"
+repeatstat,lua_src/lparser.c,"/^static void repeatstat (LexState *ls, int line) {$/;""",f,"file:
+"
+report,lua_src/lua.c,"/^static int report (lua_State *L, int status) {$/;""",f,"file:
+"
+reset_all_counters,nautilus/pmc.c,"/^reset_all_counters (void)$/;""","f
+"
+restartcollection,lua_src/lgc.c,"/^static void restartcollection (global_State *g) {$/;""",f,"file:
+"
+resume,lua_src/ldo.c,"/^static void resume (lua_State *L, void *ud) {$/;""",f,"file:
+"
+resume_error,lua_src/ldo.c,"/^static l_noret resume_error (lua_State *L, const char *msg, StkId firstArg) {$/;""",f,"file:
+"
+retraversegrays,lua_src/lgc.c,"/^static void retraversegrays (global_State *g) {$/;""",f,"file:
+"
+retstat,lua_src/lparser.c,"/^static void retstat (LexState *ls) {$/;""",f,"file:
+"
+run_benchmarks,test/benchmark.c,"/^run_benchmarks(void)$/;""","f
+"
+run_legion_tests,test/test_legion.c,"/^run_legion_tests (void) $/;""","f
+"
+runargs,lua_src/lua.c,"/^static int runargs (lua_State *L, char **argv, int n) {$/;""",f,"file:
+"
+runtime_init,arch/hrt/init.c,"/^runtime_init (void)$/;""",f,"file:
+"
+runtime_init,arch/x64/init.c,"/^runtime_init (void)$/;""",f,"file:
+"
+save,lua_src/llex.c,"/^static void save (LexState *ls, int c) {$/;""",f,"file:
+"
+scanformat,lua_src/lstrlib.c,"/^static const char *scanformat (lua_State *L, const char *strfrmt, char *form) {$/;""",f,"file:
+"
+scnprintf,nautilus/printk.c,"/^int scnprintf(char * buf, size_t size, const char *fmt, ...)$/;""","f
+"
+searcher_C,lua_src/loadlib.c,"/^static int searcher_C (lua_State *L) {$/;""",f,"file:
+"
+searcher_Croot,lua_src/loadlib.c,"/^static int searcher_Croot (lua_State *L) {$/;""",f,"file:
+"
+searcher_Lua,lua_src/loadlib.c,"/^static int searcher_Lua (lua_State *L) {$/;""",f,"file:
+"
+searcher_preload,lua_src/loadlib.c,"/^static int searcher_preload (lua_State *L) {$/;""",f,"file:
+"
+searchpath,lua_src/loadlib.c,"/^static const char *searchpath (lua_State *L, const char *name,$/;""",f,"file:
+"
+searchupvalue,lua_src/lparser.c,"/^static int searchupvalue (FuncState *fs, TString *name) {$/;""",f,"file:
+"
+searchvar,lua_src/lparser.c,"/^static int searchvar (FuncState *fs, TString *n) {$/;""",f,"file:
+"
+semerror,lua_src/lparser.c,"/^static l_noret semerror (LexState *ls, const char *msg) {$/;""",f,"file:
+"
+separatetobefnz,lua_src/lgc.c,"/^static void separatetobefnz (lua_State *L, int all) {$/;""",f,"file:
+"
+serial_get_irq,dev/serial.c,"/^serial_get_irq (void)$/;""","f
+"
+serial_init,dev/serial.c,"/^serial_init (void) $/;""","f
+"
+serial_init_addr,dev/serial.c,"/^serial_init_addr (uint16_t io_addr) $/;""","f
+"
+serial_irq_handler,dev/serial.c,"/^serial_irq_handler (excp_entry_t * excp,$/;""",f,"file:
+"
+serial_mem_dump,dev/serial.c,"/^serial_mem_dump (uint8_t * start, int n)$/;""","f
+"
+serial_print,dev/serial.c,"/^serial_print (const char * format, ...)$/;""","f
+"
+serial_print_hex,dev/serial.c,"/^serial_print_hex (uchar_t x)$/;""","f
+"
+serial_print_list,dev/serial.c,"/^serial_print_list (const char * format, va_list ap) $/;""","f
+"
+serial_printlevel,dev/serial.c,"/^serial_printlevel (int level, const char * format, ...) $/;""","f
+"
+serial_putchar,dev/serial.c,"/^serial_putchar (uchar_t c)$/;""","f
+"
+serial_putlnn,dev/serial.c,"/^serial_putlnn (const char * line, int len) $/;""","f
+"
+serial_puts,dev/serial.c,"/^serial_puts( const char *buf)$/;""","f
+"
+serial_write,dev/serial.c,"/^serial_write (const char *buf) $/;""","f
+"
+set2,lua_src/ltablib.c,"/^static void set2 (lua_State *L, int i, int j) {$/;""",f,"file:
+"
+set_env,lua_src/loadlib.c,"/^static void set_env (lua_State *L) {$/;""",f,"file:
+"
+set_irq_vector,nautilus/irq.c,"/^set_irq_vector (uint8_t irq, uint8_t vector)$/;""",f,"file:
+"
+set_osxsave,nautilus/fpu.c,"/^set_osxsave (void)$/;""",f,"file:
+"
+setarrayvector,lua_src/ltable.c,"/^static void setarrayvector (lua_State *L, Table *t, int size) {$/;""",f,"file:
+"
+setb,nautilus/mm/buddy.c,"/^static inline void setb(ulong_t nr, volatile char *addr)$/;""",f,"file:
+"
+setboolfield,lua_src/loslib.c,"/^static void setboolfield (lua_State *L, const char *key, int value) {$/;""",f,"file:
+"
+seterrorobj,lua_src/ldo.c,"/^static void seterrorobj (lua_State *L, int errcode, StkId oldtop) {$/;""",f,"file:
+"
+setfield,lua_src/loslib.c,"/^static void setfield (lua_State *L, const char *key, int value) {$/;""",f,"file:
+"
+setlocale,nautilus/libccompat.c,"/^char *setlocale (int category, const char *locale)$/;""","f
+"
+setnodevector,lua_src/ltable.c,"/^static void setnodevector (lua_State *L, Table *t, int size) {$/;""",f,"file:
+"
+setpath,lua_src/loadlib.c,"/^static void setpath (lua_State *L, const char *fieldname, const char *envname1,$/;""",f,"file:
+"
+setpause,lua_src/lgc.c,"/^static void setpause (global_State *g, l_mem estimate) {$/;""",f,"file:
+"
+setprogdir,lua_src/loadlib.c,"/^static void setprogdir (lua_State *L) {$/;""",f,"file:
+"
+settabsb,lua_src/ldblib.c,"/^static void settabsb (lua_State *L, const char *i, int v) {$/;""",f,"file:
+"
+settabsi,lua_src/ldblib.c,"/^static void settabsi (lua_State *L, const char *i, int v) {$/;""",f,"file:
+"
+settabss,lua_src/ldblib.c,"/^static void settabss (lua_State *L, const char *i, const char *v) {$/;""",f,"file:
+"
+setup_idt,nautilus/idt.c,"/^setup_idt (void)$/;""","f
+"
+setvbuf,nautilus/libccompat.c,"/^int setvbuf(FILE *restrict stream, char *restrict buf, int type,$/;""","f
+"
+sfi_fill_attrs,nautilus/sfi.c,"/^sfi_fill_attrs (char * str, uint64_t attr)$/;""",f,"file:
+"
+sfi_find_syst,nautilus/sfi.c,"/^sfi_find_syst (void)$/;""","f
+"
+sfi_get_mmap,nautilus/sfi.c,"/^sfi_get_mmap (void) $/;""","f
+"
+sfi_get_mmap_nentries,nautilus/sfi.c,"/^sfi_get_mmap_nentries (struct sfi_mmap_tbl * tbl)$/;""","f
+"
+sfi_parse_phys_mem,nautilus/sfi.c,"/^sfi_parse_phys_mem (struct nk_mem_info * mem)$/;""","f
+"
+sfi_parse_syst,nautilus/sfi.c,"/^sfi_parse_syst (struct sys_info * sys, struct sfi_sys_tbl * sfi)$/;""","f
+"
+shell,nautilus/shell.c,"/^static void shell(void *in, void **out)$/;""",f,"file:
+"
+signal,nautilus/libccompat.c,"/^void (*signal(int sig, void (*func)(int)))(int ){$/;""","f
+"
+simple_guess_base,nautilus/printk.c,"/^static unsigned int simple_guess_base(const char *cp)$/;""",f,"file:
+"
+simple_strtol,nautilus/printk.c,"/^long simple_strtol(const char *cp, char **endp, unsigned int base)$/;""","f
+"
+simple_strtoll,nautilus/printk.c,"/^long long simple_strtoll(const char *cp, char **endp, unsigned int base)$/;""","f
+"
+simple_strtoul,nautilus/printk.c,"/^unsigned long simple_strtoul(const char *cp, char **endp, unsigned int base)$/;""","f
+"
+simple_strtoull,nautilus/printk.c,"/^unsigned long long simple_strtoull(const char *cp, char **endp, unsigned int base)$/;""","f
+"
+simpleexp,lua_src/lparser.c,"/^static void simpleexp (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+sin,nautilus/libccompat.c,"/^double sin(double x)$/;""","f
+"
+singlematch,lua_src/lstrlib.c,"/^static int singlematch (MatchState *ms, const char *s, const char *p,$/;""",f,"file:
+"
+singlestep,lua_src/lgc.c,"/^static lu_mem singlestep (lua_State *L) {$/;""",f,"file:
+"
+singlevar,lua_src/lparser.c,"/^static void singlevar (LexState *ls, expdesc *var) {$/;""",f,"file:
+"
+singlevaraux,lua_src/lparser.c,"/^static int singlevaraux (FuncState *fs, TString *n, expdesc *var, int base) {$/;""",f,"file:
+"
+sinh,nautilus/libccompat.c,"/^double sinh(double x)$/;""","f
+"
+skipBOM,lua_src/lauxlib.c,"/^static int skipBOM (LoadF *lf) {$/;""",f,"file:
+"
+skip_atoi,nautilus/printk.c,"/^static int skip_atoi(const char **s)$/;""",f,"file:
+"
+skip_sep,lua_src/llex.c,"/^static int skip_sep (LexState *ls) {$/;""",f,"file:
+"
+skipcomment,lua_src/lauxlib.c,"/^static int skipcomment (LoadF *lf, int *cp) {$/;""",f,"file:
+"
+skipnoopstat,lua_src/lparser.c,"/^static void skipnoopstat (LexState *ls) {$/;""",f,"file:
+"
+smp_ap_entry,nautilus/smp.c,"/^smp_ap_entry (struct cpu * core) $/;""","f
+"
+smp_ap_finish,nautilus/smp.c,"/^smp_ap_finish (struct cpu * core)$/;""",f,"file:
+"
+smp_ap_setup,nautilus/smp.c,"/^smp_ap_setup (struct cpu * core)$/;""",f,"file:
+"
+smp_bringup_aps,nautilus/smp.c,"/^smp_bringup_aps (struct naut_info * naut)$/;""","f
+"
+smp_early_init,nautilus/smp.c,"/^smp_early_init (struct naut_info * naut)$/;""","f
+"
+smp_setup_xcall_bsp,nautilus/smp.c,"/^smp_setup_xcall_bsp (struct cpu * core)$/;""","f
+"
+smp_wait_for_ap,nautilus/smp.c,"/^smp_wait_for_ap (struct naut_info * naut, unsigned int core_num)$/;""",f,"file:
+"
+smp_xcall,nautilus/smp.c,"/^smp_xcall (cpu_id_t cpu_id, $/;""","f
+"
+smp_xcall_init_queue,nautilus/smp.c,"/^smp_xcall_init_queue (struct cpu * core)$/;""",f,"file:
+"
+snprintf,nautilus/printk.c,"/^int snprintf(char * buf, size_t size, const char *fmt, ...)$/;""","f
+"
+sort,lua_src/ltablib.c,"/^static int sort (lua_State *L) {$/;""",f,"file:
+"
+sort_comp,lua_src/ltablib.c,"/^static int sort_comp (lua_State *L, int a, int b) {$/;""",f,"file:
+"
+spin_lock_irq_save_nopause,nautilus/spinlock.c,"/^spin_lock_irq_save_nopause (volatile spinlock_t * lock)$/;""","f
+"
+spin_lock_nopause,nautilus/spinlock.c,"/^spin_lock_nopause (volatile spinlock_t * lock)$/;""","f
+"
+spinlock_deinit,nautilus/spinlock.c,"/^spinlock_deinit (volatile spinlock_t * lock) $/;""","f
+"
+spinlock_init,nautilus/spinlock.c,"/^spinlock_init (volatile spinlock_t * lock) $/;""","f
+"
+sprintf,nautilus/printk.c,"/^int sprintf(char * buf, const char *fmt, ...)$/;""","f
+"
+spur_int_handler,dev/apic.c,"/^spur_int_handler (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+sqrt,nautilus/libccompat.c,"/^double sqrt(double x)$/;""","f
+"
+srand,nautilus/libccompat.c,"/^srand (unsigned int seed)$/;""","f
+"
+srand48,nautilus/libccompat.c,"/^srand48 (long int seedval)$/;""","f
+"
+sscanf,nautilus/printk.c,"/^int sscanf(const char * buf, const char * fmt, ...)$/;""","f
+"
+stack_init,lua_src/lstate.c,"/^static void stack_init (lua_State *L1, lua_State *L) {$/;""",f,"file:
+"
+stackinuse,lua_src/ldo.c,"/^static int stackinuse (lua_State *L) {$/;""",f,"file:
+"
+start_capture,lua_src/lstrlib.c,"/^static const char *start_capture (MatchState *ms, const char *s,$/;""",f,"file:
+"
+start_list,nautilus/vc.c,"/^static int start_list()$/;""",f,"file:
+"
+statement,lua_src/lparser.c,"/^static void statement (LexState *ls) {$/;""",f,"file:
+"
+statlist,lua_src/lparser.c,"/^static void statlist (LexState *ls) {$/;""",f,"file:
+"
+str_byte,lua_src/lstrlib.c,"/^static int str_byte (lua_State *L) {$/;""",f,"file:
+"
+str_char,lua_src/lstrlib.c,"/^static int str_char (lua_State *L) {$/;""",f,"file:
+"
+str_checkname,lua_src/lparser.c,"/^static TString *str_checkname (LexState *ls) {$/;""",f,"file:
+"
+str_dump,lua_src/lstrlib.c,"/^static int str_dump (lua_State *L) {$/;""",f,"file:
+"
+str_find,lua_src/lstrlib.c,"/^static int str_find (lua_State *L) {$/;""",f,"file:
+"
+str_find_aux,lua_src/lstrlib.c,"/^static int str_find_aux (lua_State *L, int find) {$/;""",f,"file:
+"
+str_format,lua_src/lstrlib.c,"/^static int str_format (lua_State *L) {$/;""",f,"file:
+"
+str_gsub,lua_src/lstrlib.c,"/^static int str_gsub (lua_State *L) {$/;""",f,"file:
+"
+str_len,lua_src/lstrlib.c,"/^static int str_len (lua_State *L) {$/;""",f,"file:
+"
+str_lower,lua_src/lstrlib.c,"/^static int str_lower (lua_State *L) {$/;""",f,"file:
+"
+str_match,lua_src/lstrlib.c,"/^static int str_match (lua_State *L) {$/;""",f,"file:
+"
+str_rep,lua_src/lstrlib.c,"/^static int str_rep (lua_State *L) {$/;""",f,"file:
+"
+str_reverse,lua_src/lstrlib.c,"/^static int str_reverse (lua_State *L) {$/;""",f,"file:
+"
+str_sub,lua_src/lstrlib.c,"/^static int str_sub (lua_State *L) {$/;""",f,"file:
+"
+str_tolower,nautilus/naut_string.c,"/^str_tolower (char * s) $/;""","f
+"
+str_toupper,nautilus/naut_string.c,"/^str_toupper (char * s) $/;""","f
+"
+str_upper,lua_src/lstrlib.c,"/^static int str_upper (lua_State *L) {$/;""",f,"file:
+"
+strcasecmp,nautilus/naut_string.c,"/^strcasecmp (const char * s1, const char * s2) $/;""","f
+"
+strcat,nautilus/naut_string.c,"/^strcat (char * s1, const char * s2) $/;""","f
+"
+strchr,nautilus/naut_string.c,"/^strchr (const char * s, int c) $/;""","f
+"
+strcmp,nautilus/naut_string.c,"/^strcmp (const char * s1, const char * s2) $/;""","f
+"
+strcoll,nautilus/libccompat.c,"/^int strcoll(const char *str1, const char *str2)$/;""","f
+"
+strcpy,nautilus/naut_string.c,"/^strcpy (char * dest, const char * src)$/;""","f
+"
+strcspn,nautilus/naut_string.c,"/^strcspn (const char * s, const char * reject) $/;""","f
+"
+strdup,nautilus/naut_string.c,"/^strdup (const char * s)$/;""","f
+"
+strerror,nautilus/libccompat.c,"/^strerror (int errnum)$/;""","f
+"
+strftime,nautilus/libccompat.c,"/^size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr)$/;""","f
+"
+strict_strtol,nautilus/printk.c,"/^int strict_strtol(const char *cp, unsigned int base, long *res)$/;""","f
+"
+strict_strtoll,nautilus/printk.c,"/^int strict_strtoll(const char *cp, unsigned int base, long long *res)$/;""","f
+"
+strict_strtoul,nautilus/printk.c,"/^int strict_strtoul(const char *cp, unsigned int base, unsigned long *res)$/;""","f
+"
+strict_strtoull,nautilus/printk.c,"/^int strict_strtoull(const char *cp, unsigned int base, unsigned long long *res)$/;""","f
+"
+string,nautilus/printk.c,"/^static char *string(char *buf, char *end, char *s, struct printf_spec spec)$/;""",f,"file:
+"
+strlen,nautilus/naut_string.c,"/^strlen (const char * str)$/;""","f
+"
+strncasecmp,nautilus/naut_string.c,"/^strncasecmp (const char * s1, const char * s2, size_t limit) $/;""","f
+"
+strncat,nautilus/naut_string.c,"/^strncat (char * s1, const char * s2, size_t limit) $/;""","f
+"
+strncmp,nautilus/naut_string.c,"/^strncmp (const char * s1, const char * s2, size_t limit) $/;""","f
+"
+strncpy,nautilus/naut_string.c,"/^strncpy (char * dest, const char * src, size_t limit) $/;""","f
+"
+strnlen,nautilus/naut_string.c,"/^strnlen (const char * str, size_t max)$/;""","f
+"
+strpbrk,nautilus/naut_string.c,"/^strpbrk (const char * cs, const char * ct)$/;""","f
+"
+strrchr,nautilus/naut_string.c,"/^strrchr (const char * s, int c) $/;""","f
+"
+strsep,nautilus/naut_string.c,"/^strsep (char ** s, const char * ct)$/;""","f
+"
+strspn,nautilus/naut_string.c,"/^strspn (const char * s, const char * accept) $/;""","f
+"
+strstr,nautilus/naut_string.c,"/^strstr (const char * s1, const char * s2)$/;""","f
+"
+strtod,nautilus/libccompat.c,"/^double strtod(const char *string, char **endPtr)$/;""","f
+"
+strtoi,nautilus/naut_string.c,"/^strtoi (const char * nptr, char ** endptr) $/;""","f
+"
+strtol,nautilus/naut_string.c,"/^strtol (const char * str, char ** endptr, int base)$/;""","f
+"
+strtox,nautilus/naut_string.c,"/^strtox (const char * nptr, char ** endptr) $/;""","f
+"
+subexpr,lua_src/lparser.c,"/^static BinOpr subexpr (LexState *ls, expdesc *v, int limit) {$/;""",f,"file:
+"
+suffixedexp,lua_src/lparser.c,"/^static void suffixedexp (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
+swapextra,lua_src/ldebug.c,"/^static void swapextra (lua_State *L) {$/;""",f,"file:
+"
+sweeplist,lua_src/lgc.c,"/^static GCObject **sweeplist (lua_State *L, GCObject **p, lu_mem count) {$/;""",f,"file:
+"
+sweepthread,lua_src/lgc.c,"/^static void sweepthread (lua_State *L, lua_State *L1) {$/;""",f,"file:
+"
+sweeptolive,lua_src/lgc.c,"/^static GCObject **sweeptolive (lua_State *L, GCObject **p, int *n) {$/;""",f,"file:
+"
+switcher,dev/kbd.c,"/^static int switcher(nk_scancode_t scan) $/;""",f,"file:
+"
+symbol_string,nautilus/printk.c,"/^static char *symbol_string(char *buf, char *end, void *ptr,$/;""",f,"file:
+"
+syscall,nautilus/libccompat.c,"/^int syscall (int number, ...)$/;""","f
+"
+syscall_setup,test/benchmark.c,"/^syscall_setup (void)$/;""",f,"file:
+"
+sysinfo_init,arch/hrt/init.c,"/^sysinfo_init (struct sys_info * sys)$/;""",f,"file:
+"
+sysinfo_init,arch/k1om/init.c,"/^sysinfo_init (struct sys_info * sys)$/;""",f,"file:
+"
+sysinfo_init,arch/x64/init.c,"/^sysinfo_init (struct sys_info * sys)$/;""",f,"file:
+"
+system,nautilus/libccompat.c,"/^int system(const char *command)$/;""","f
+"
+tag_error,lua_src/lauxlib.c,"/^static void tag_error (lua_State *L, int narg, int tag) {$/;""",f,"file:
+"
+tan,nautilus/libccompat.c,"/^double tan(double x)$/;""","f
+"
+tanh,nautilus/libccompat.c,"/^double tanh(double x)$/;""","f
+"
+tconcat,lua_src/ltablib.c,"/^static int tconcat (lua_State *L) {$/;""",f,"file:
+"
+test1,nautilus/condvar.c,"/^test1 (void * in, void ** out) $/;""",f,"file:
+"
+test2,nautilus/condvar.c,"/^test2 (void * in, void ** out) $/;""",f,"file:
+"
+test3,nautilus/condvar.c,"/^test3 (void * in, void ** out)$/;""",f,"file:
+"
+test_eof,lua_src/liolib.c,"/^static int test_eof (lua_State *L, FILE *f) {$/;""",f,"file:
+"
+test_nemo,nautilus/nemo.c,"/^test_nemo (void)$/;""","f
+"
+test_setlong,nautilus/setjmp.c,"/^test_setlong (void)$/;""","f
+"
+test_then_block,lua_src/lparser.c,"/^static void test_then_block (LexState *ls, int *escapelist) {$/;""",f,"file:
+"
+testit,nautilus/setjmp.c,"/^testit (jmp_buf  env,$/;""",f,"file:
+"
+testnext,lua_src/lparser.c,"/^static int testnext (LexState *ls, int c) {$/;""",f,"file:
+"
+textdomain,nautilus/libccompat.c,"/^char *textdomain (const char * domainname)$/;""","f
+"
+thermal_int_handler,dev/apic.c,"/^thermal_int_handler (excp_entry_t * excp, excp_vec_t v)$/;""",f,"file:
+"
+thread_cleanup,nautilus/thread.c,"/^thread_cleanup (void)$/;""",f,"file:
+"
+thread_detach,nautilus/thread.c,"/^thread_detach (nk_thread_t * t)$/;""",f,"file:
+"
+thread_init,nautilus/thread.c,"/^thread_init (nk_thread_t * t, $/;""",f,"file:
+"
+thread_push,nautilus/thread.c,"/^thread_push (nk_thread_t * t, uint64_t x)$/;""",f,"file:
+"
+thread_setup_init_stack,nautilus/thread.c,"/^thread_setup_init_stack (nk_thread_t * t, nk_thread_fun_t fun, void * arg)$/;""",f,"file:
+"
+time,nautilus/libccompat.c,"/^time_t time (time_t * timer)$/;""","f
+"
+time_condvar,test/benchmark.c,"/^void time_condvar (void) {$/;""","f
+"
+time_ctx_switch,test/benchmark.c,"/^time_ctx_switch (void)$/;""","f
+"
+time_cvar_bcast,test/benchmark.c,"/^void time_cvar_bcast (void)$/;""","f
+"
+time_end,test/ipi.c,"/^time_end (void)$/;""",f,"file:
+"
+time_int80,test/benchmark.c,"/^time_int80 (void)$/;""","f
+"
+time_ipi_send,test/benchmark.c,"/^time_ipi_send(void)$/;""","f
+"
+time_nemo_bcast,test/benchmark.c,"/^time_nemo_bcast (void)$/;""","f
+"
+time_nemo_event,test/benchmark.c,"/^time_nemo_event (void)$/;""","f
+"
+time_spinlock,test/benchmark.c,"/^void time_spinlock (void)$/;""","f
+"
+time_start,test/ipi.c,"/^time_start (void)$/;""",f,"file:
+"
+time_sync_event,test/benchmark.c,"/^time_sync_event (void)$/;""","f
+"
+time_syscall,test/benchmark.c,"/^time_syscall (void)$/;""","f
+"
+time_thread_both,test/benchmark.c,"/^time_thread_both (void)$/;""","f
+"
+time_thread_create,test/benchmark.c,"/^time_thread_create (void)$/;""","f
+"
+time_thread_run,test/benchmark.c,"/^time_thread_run (void)$/;""","f
+"
+time_threads_long,test/benchmark.c,"/^void time_threads_long(void)$/;""","f
+"
+timer_clear_event,dev/timer.c,"/^timer_clear_event (struct nk_timer_event * t)$/;""",f,"file:
+"
+timer_init_event,dev/timer.c,"/^timer_init_event (struct nk_timer_event * t, uint_t delay)$/;""",f,"file:
+"
+timer_notify_event,dev/timer.c,"/^timer_notify_event (struct nk_timer_event * te) $/;""",f,"file:
+"
+timer_wait_event,dev/timer.c,"/^timer_wait_event (struct nk_timer_event * te)$/;""",f,"file:
+"
+tinsert,lua_src/ltablib.c,"/^static int tinsert (lua_State *L) {$/;""",f,"file:
+"
+tls_dummy,nautilus/thread.c,"/^tls_dummy (void * in, void ** out)$/;""",f,"file:
+"
+tls_exit,nautilus/thread.c,"/^tls_exit (void) $/;""",f,"file:
+"
+tmp_realloc,nautilus/hashtable.c,"/^tmp_realloc (void * old_ptr, uint_t old_size, uint_t new_size) $/;""",f,"file:
+"
+tmpfile,nautilus/libccompat.c,"/^FILE *tmpfile(void)$/;""","f
+"
+tmpnam,nautilus/libccompat.c,"/^char *tmpnam(char *s)$/;""","f
+"
+tofile,lua_src/liolib.c,"/^static FILE *tofile (lua_State *L) {$/;""",f,"file:
+"
+traceback,lua_src/lua.c,"/^static int traceback (lua_State *L) {$/;""",f,"file:
+"
+traceexec,lua_src/lvm.c,"/^static void traceexec (lua_State *L) {$/;""",f,"file:
+"
+traverseCclosure,lua_src/lgc.c,"/^static lu_mem traverseCclosure (global_State *g, CClosure *cl) {$/;""",f,"file:
+"
+traverseLclosure,lua_src/lgc.c,"/^static lu_mem traverseLclosure (global_State *g, LClosure *cl) {$/;""",f,"file:
+"
+traverseephemeron,lua_src/lgc.c,"/^static int traverseephemeron (global_State *g, Table *h) {$/;""",f,"file:
+"
+traverseproto,lua_src/lgc.c,"/^static int traverseproto (global_State *g, Proto *f) {$/;""",f,"file:
+"
+traversestack,lua_src/lgc.c,"/^static lu_mem traversestack (global_State *g, lua_State *th) {$/;""",f,"file:
+"
+traversestrongtable,lua_src/lgc.c,"/^static void traversestrongtable (global_State *g, Table *h) {$/;""",f,"file:
+"
+traversetable,lua_src/lgc.c,"/^static lu_mem traversetable (global_State *g, Table *h) {$/;""",f,"file:
+"
+traverseweakvalue,lua_src/lgc.c,"/^static void traverseweakvalue (global_State *g, Table *h) {$/;""",f,"file:
+"
+treatstackoption,lua_src/ldblib.c,"/^static void treatstackoption (lua_State *L, lua_State *L1, const char *fname) {$/;""",f,"file:
+"
+tremove,lua_src/ltablib.c,"/^static int tremove (lua_State *L) {$/;""",f,"file:
+"
+try_acpi_shutdown,arch/hrt/shutdown.c,"/^try_acpi_shutdown (struct acpi_table_header * hdr, void * arg)$/;""",f,"file:
+"
+try_acpi_shutdown,arch/x64/shutdown.c,"/^try_acpi_shutdown (struct acpi_table_header * hdr, void * arg)$/;""",f,"file:
+"
+trydecpoint,lua_src/llex.c,"/^static void trydecpoint (LexState *ls, SemInfo *seminfo) {$/;""",f,"file:
+"
+tryfuncTM,lua_src/ldo.c,"/^static StkId tryfuncTM (lua_State *L, StkId func) {$/;""",f,"file:
+"
+txtToken,lua_src/llex.c,"/^static const char *txtToken (LexState *ls, int token) {$/;""",f,"file:
+"
+typeerror,lua_src/lauxlib.c,"/^static int typeerror (lua_State *L, int narg, const char *tname) {$/;""",f,"file:
+"
+udata2finalize,lua_src/lgc.c,"/^static GCObject *udata2finalize (global_State *g) {$/;""",f,"file:
+"
+unbound_search,lua_src/ltable.c,"/^static int unbound_search (Table *t, unsigned int j) {$/;""",f,"file:
+"
+undefgoto,lua_src/lparser.c,"/^static l_noret undefgoto (LexState *ls, Labeldesc *gt) {$/;""",f,"file:
+"
+ungetc,nautilus/libccompat.c,"/^int ungetc (int character, FILE * stream)$/;""","f
+"
+unlinkupval,lua_src/lfunc.c,"/^static void unlinkupval (UpVal *uv) {$/;""",f,"file:
+"
+unmakemask,lua_src/ldblib.c,"/^static char *unmakemask (int mask, char *smask) {$/;""",f,"file:
+"
+unmerge_from_ros,arch/hrt/hrt.c,"/^unmerge_from_ros (void)$/;""",f,"file:
+"
+unpack,lua_src/ltablib.c,"/^static int unpack (lua_State *L) {$/;""",f,"file:
+"
+unroll,lua_src/ldo.c,"/^static void unroll (lua_State *L, void *ud) {$/;""",f,"file:
+"
+upvalname,lua_src/ldebug.c,"/^static const char *upvalname (Proto *p, int uv) {$/;""",f,"file:
+"
+vfprintf,nautilus/libccompat.c,"/^vfprintf (FILE * stream, const char * format, va_list arg)$/;""","f
+"
+vga_get_cursor,dev/vga.c,"/^inline void vga_get_cursor(uint8_t *x, uint8_t *y)$/;""","f
+"
+vga_init,dev/vga.c,"/^void vga_init()$/;""","f
+"
+vga_init_screen,dev/vga.c,"/^void vga_init_screen()$/;""","f
+"
+vga_make_color,dev/vga.c,"/^vga_make_color (enum vga_color fg, enum vga_color bg) $/;""","f
+"
+vga_make_entry,dev/vga.c,"/^vga_make_entry (char c, uint8_t color)$/;""","f
+"
+vga_print,dev/vga.c,"/^void vga_print(char *buf)$/;""","f
+"
+vga_putchar,dev/vga.c,"/^void vga_putchar(char c)$/;""","f
+"
+vga_puts,dev/vga.c,"/^void vga_puts(char *buf)$/;""","f
+"
+vga_scrollup,dev/vga.c,"/^void vga_scrollup (void) $/;""","f
+"
+vga_set_cursor,dev/vga.c,"/^inline void vga_set_cursor(uint8_t x, uint8_t y)$/;""","f
+"
+virtio_pci_deinit,dev/virtio_pci.c,"/^int virtio_pci_deinit()$/;""","f
+"
+virtio_pci_init,dev/virtio_pci.c,"/^int virtio_pci_init(struct naut_info * naut)$/;""","f
+"
+vprintk,nautilus/printk.c,"/^vprintk (const char * fmt, va_list args)$/;""","f
+"
+vscnprintf,nautilus/printk.c,"/^int vscnprintf(char *buf, size_t size, const char *fmt, va_list args)$/;""","f
+"
+vsnprintf,nautilus/printk.c,"/^int vsnprintf(char *buf, size_t size, const char *fmt, va_list args)$/;""","f
+"
+vsprintf,nautilus/printk.c,"/^int vsprintf(char *buf, const char *fmt, va_list args)$/;""","f
+"
+vsscanf,nautilus/printk.c,"/^int vsscanf(const char * buf, const char * fmt, va_list args)$/;""","f
+"
+wait_xcall,nautilus/smp.c,"/^wait_xcall (struct nk_xcall * x)$/;""",f,"file:
+"
+warn_slowpath,nautilus/printk.c,"/^warn_slowpath (const char * file, int line, const char * fmt, ...)$/;""","f
+"
+whilestat,lua_src/lparser.c,"/^static void whilestat (LexState *ls, int line) {$/;""",f,"file:
+"
+write_pmc_ctl,nautilus/pmc.c,"/^write_pmc_ctl (uint8_t idx, uint64_t val)$/;""",f,"file:
+"
+write_pmc_ctr,nautilus/pmc.c,"/^write_pmc_ctr (uint8_t idx, uint64_t val)$/;""",f,"file:
+"
+writer,lua_src/lstrlib.c,"/^static int writer (lua_State *L, const void* b, size_t size, void* B) {$/;""",f,"file:
+"
+writer,nautilus/rwlock.c,"/^writer (void * in, void ** out)$/;""",f,"file:
+"
+xcall_handler,nautilus/smp.c,"/^xcall_handler (excp_entry_t * e, excp_vec_t v) $/;""",f,"file:
+"
+xm_handler,nautilus/fpu.c,"/^xm_handler (excp_entry_t * excp, excp_vec_t vec)$/;""","f
+"
+yindex,lua_src/lparser.c,"/^static void yindex (LexState *ls, expdesc *v) {$/;""",f,"file:
+"
