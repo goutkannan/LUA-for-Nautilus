@@ -4,11 +4,13 @@
 *
  * */
 
-#include <nautilus/naut_types.h>
+/*#include <nautilus/naut_types.h>
 #include <nautilus/libccompat.h>
 #include <nautilus/math.h>
 
 #define lmathlib_c
+*/
+
 #define LUA_LIB
 #include "lua/lua.h"
 
@@ -16,24 +18,30 @@
 #include "lua/lualib.h"
 #include "lua/luaconf.h"
 extern void naut_wru();
-extern void nemo_init (void);
+extern int  nk_vc_print(char *);
 extern void nemo_unregister_event_action(int); 
 
-/*static void naut_wru(lua_State *L)
+static int naut_nk_p(lua_State *L)
 {
 
-	        printk("New naut function");
-}*/
+	char *s = luaL_checklstring(L,1,NULL);
+	int ret = nk_vc_print(s);
+	printk("\n>>%d",ret);
+	lua_pushnumber(L,ret);
+
+ 
+}
 
 
 static const luaL_Reg nautlib[] = {
 	{"wru",naut_wru},
-	{"nemo_init",nemo_init},
+	{"nk_p",naut_nk_p},
 	{"nemo_args",nemo_unregister_event_action}
 };
 
 LUAMOD_API int luaopen_naut (lua_State *L) {
 	  luaL_newlib(L, nautlib);
+
 	  return 1;
 }
 

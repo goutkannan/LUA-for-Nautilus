@@ -22,7 +22,6 @@ obj-y += lmem.o\
 	 lopcodes.o \
 	 liolib.o \
 	 lmathlib.o \
-	 lnautlib.o \
          loadlib.o \
 	 lobject.o \
 	 lvm.o \
@@ -33,6 +32,7 @@ obj-y += lmem.o\
 	 lua.o \
 	 lzio.o \
 	 lundump.o \
-	 wru.o
+	 wru.o \
+	 lnautlib.o
 
 
