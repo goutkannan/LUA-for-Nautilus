@@ -32,7 +32,8 @@ obj-y += lmem.o\
 	 lua.o \
 	 lzio.o \
 	 lundump.o \
-	 wru.o \
-	 lnautlib.o
+	 lnautlib.o 
+
+
 
 

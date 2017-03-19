@@ -218,7 +218,7 @@ nk_keycode_t kbd_translate(nk_scancode_t scan)
   }    
   
   cur = table[scan];
-  printk("\n cur %d",cur);
+  //printk("\n cur %d",cur);
   flag = 0;
   switch (cur) { 
   case KEY_LSHIFT:

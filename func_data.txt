@@ -1,0 +1,577 @@
+2b0c2 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'strtof', 'param': []}
+454fa : {'extern': 1, 'ret_type': '<0x44dc8>', 'name': 'vga_scrollup', 'param': []}
+274fa : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fclose', 'param': [['f', '<0x26e9f>']]}
+e0bd : {'extern': 1, 'ret_type': '<0xe04b>', 'name': 'msr_read', 'param': [['msr', '<0xe056>']]}
+28105 : {'extern': 1, 'ret_type': '<0x25e2b>', 'name': '__ctype_get_mb_cur_max', 'param': []}
+665c : {'extern': 1, 'ret_type': '<0x33c6>', 'name': 'nk_vc_get_scancode', 'param': [['wait', '<0x3344>']]}
+2eb8a : {'extern': 1, 'ret_type': '<0x2dff1>', 'name': 'mm_boot_num_regions', 'param': []}
+478e : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_scrollup_specific', 'param': [['vc', '<0x3d60>']]}
+7b1d : {'extern': 1, 'ret_type': '<0x6d4e>', 'name': 'null_excp_handler', 'param': [['excp', '<0x7d07>']]}
+2b27d : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__ctype_tolower_loc', 'param': []}
+4738 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_switch_to_next_vc', 'param': []}
+2dc95 : {'extern': 1, 'ret_type': '<0x2cb3e>', 'name': 'read_event_count', 'param': [['event', '<0x2d301>']]}
+1a36e : {'extern': 1, 'ret_type': 'void', 'name': 'idle', 'param': [['in', '<0x199d3>']]}
+28b7b : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'gettext', 'param': [['msgid', '<0x26de5>']]}
+1561e : {'extern': 1, 'ret_type': '<0x14561>', 'name': 'nk_htable_search', 'param': [['htable', '<0x145cd>']]}
+d77f : {'static': 1}
+29e70 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wctob', 'param': []}
+4664a : {'static': 1, 'name': 'Serial_Emit', 'param': [['o', '<0x460e2>']]}
+21993 : {'extern': 1, 'ret_type': 'void', 'name': '__do_backtrace', 'param': [['fp', '<0x218be>']]}
+2ebfe : {'extern': 1, 'ret_type': '<0x2e03d>', 'name': 'mm_dump_page_map', 'param': []}
+2544 : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'scnprintf', 'param': [['buf', '<0xa2e>']]}
+1faf9 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_tls_test', 'param': []}
+456de : {'static': 1}
+4511e : {'extern': 1, 'ret_type': 'void', 'name': 'vga_get_cursor', 'param': [['x', '<0x45152>']]}
+24b9 : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'snprintf', 'param': [['buf', '<0xa2e>']]}
+27301 : {'extern': 1, 'ret_type': '<0x26e9f>', 'name': 'tmpfile', 'param': []}
+d210 : {'extern': 1, 'ret_type': '<0xd07c>', 'name': 'strnlen', 'param': [['str', '<0xd12b>']]}
+1e828 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_join', 'param': [['t', '<0x1ae14>']]}
+17319 : {'extern': 1, 'ret_type': '<0x16657>', 'name': 'nk_rand_init', 'param': [['cpu', '<0x16c42>']]}
+5aed : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_clear_specific', 'param': [['vc', '<0x3d60>']]}
+2eba7 : {'extern': 1, 'ret_type': '<0x2e03d>', 'name': 'mm_boot_last_pfn', 'param': []}
+2da78 : {'extern': 1, 'ret_type': '<0x2cb10>', 'name': 'reset_all_counters', 'param': []}
+27e6d : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fputc', 'param': [['c', '<0x25df9>']]}
+14f53 : {'extern': 1, 'ret_type': '<0x14507>', 'name': 'nk_htable_count', 'param': [['htable', '<0x145cd>']]}
+2bfb4 : {'ret_type': '<0x2b92e>', 'static': 1, 'name': 'dummy', 'param': []}
+1b8a : {'extern': 1, 'ret_type': 'void', 'name': 'warn_slowpath', 'param': [['file', '<0x960>']]}
+3dbfb : {'extern': 1, 'ret_type': 'void', 'name': 'apic_init', 'param': [['core', '<0x3bf5a>']]}
+29cd5 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'putc', 'param': []}
+42226 : {'extern': 1, 'ret_type': '<0x4163e>', 'name': 'kbd_reset', 'param': []}
+6b6f : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_deinit', 'param': []}
+13ba6 : {'extern': 1, 'ret_type': '<0x130b2>', 'name': 'nk_condvar_init', 'param': [['c', '<0x13b81>']]}
+d91f : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strcpy', 'param': [['dest', '<0xd173>']]}
+45703 : {'extern': 1, 'ret_type': 'void', 'name': 'vga_puts', 'param': [['buf', '<0x44fd0>']]}
+13e58 : {'static': 1, 'name': 'test2', 'param': [['in', '<0x13094>']]}
+22976 : {'extern': 1, 'ret_type': '<0x21ff3>', 'name': 'nk_is_intel', 'param': []}
+270b8 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'drand48', 'param': []}
+2c94b : {'extern': 1, 'ret_type': '<0x2be35>', 'name': 'test_nemo', 'param': []}
+12a3b : {'static': 1}
+45015 : {'extern': 1, 'ret_type': '<0x44e08>', 'name': 'vga_make_color', 'param': [['fg', '<0x44e1a>']]}
+41517 : {'extern': 1, 'ret_type': '<0x4092d>', 'name': 'nk_timer_init', 'param': [['naut', '<0x415bd>']]}
+963a : {'static': 1}
+15714 : {'extern': 1, 'ret_type': '<0x14561>', 'name': 'nk_htable_remove', 'param': [['htable', '<0x145cd>']]}
+973c : {'extern': 1, 'ret_type': '<0x8c52>', 'name': 'nk_irq_is_assigned', 'param': [['irq', '<0x8c52>']]}
+2f4b8 : {'extern': 1, 'ret_type': '<0x2dff8>', 'name': 'mm_boot_alloc_aligned', 'param': [['size', '<0x2e03d>']]}
+29080 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'ldexp', 'param': [['x', '<0x25d63>']]}
+14143 : {'static': 1, 'name': 'test3', 'param': [['in', '<0x13094>']]}
+2a4dc : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wcscmp', 'param': []}
+2b418 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__kernel_standard', 'param': []}
+27fa3 : {'extern': 1, 'ret_type': '<0x25e2b>', 'name': 'fread', 'param': [['ptr', '<0x25dd0>']]}
+88a1 : {'extern': 1, 'ret_type': '<0x8738>', 'name': 'nk_dequeue_first', 'param': [['q', '<0x84b0>']]}
+3f176 : {'static': 1}
+4056e : {'extern': 1, 'ret_type': '<0x3fc26>', 'name': 'i8254_calib_tsc', 'param': []}
+28ac2 : {'extern': 1, 'ret_type': '<0x26abd>', 'name': '__nl_langinfo_l', 'param': [['item', '<0x267bb>']]}
+1d2f7 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_thread_queue_wake_all', 'param': [['q', '<0x1ae99>']]}
+28dba : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'fgets', 'param': [['str', '<0x26abd>']]}
+df0d : {'extern': 1, 'ret_type': 'void', 'name': 'str_tolower', 'param': [['s', '<0xd173>']]}
+d864 : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strcat', 'param': [['s1', '<0xd173>']]}
+15c70 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_destroy_htable_iter', 'param': [['iter', '<0x159d6>']]}
+29581 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'pow', 'param': [['x', '<0x25d63>']]}
+4251 : {'ret_type': '<0x3344>', 'static': 1, 'name': '_switch_to_vc', 'param': [['vc', '<0x3d60>']]}
+4138d : {'extern': 1, 'ret_type': 'void', 'name': 'nk_sleep', 'param': [['msec', '<0x40934>']]}
+3c67a : {'ret_type': '<0x3b496>', 'static': 1, 'name': 'pc_int_handler', 'param': [['excp', '<0x3c580>']]}
+12eb4 : {'static': 1}
+29ef9 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'mbsrtowcs', 'param': []}
+4c9c : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_setpos', 'param': [['x', '<0x339e>']]}
+da92 : {'extern': 1, 'ret_type': '<0xd052>', 'name': 'atoi', 'param': [['buf', '<0xd12b>']]}
+3789e : {'ret_type': '<0x369f1>', 'static': 1, 'name': 'acpi_parse_processor_affinity', 'param': [['header', '<0x37678>']]}
+31ed2 : {'ret_type': '<0x31513>', 'static': 1, 'name': 'pa_to_va', 'param': [['paddr', '<0x31513>']]}
+12ee : {'extern': 1, 'ret_type': '<0x745>', 'name': 'simple_strtoul', 'param': [['cp', '<0x960>']]}
+15965 : {'extern': 1, 'ret_type': '<0x159d6>', 'name': 'nk_create_htable_iter', 'param': [['htable', '<0x145cd>']]}
+3b0e7 : {'extern': 1, 'ret_type': 'void', 'name': 'reboot', 'param': []}
+296d2 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'ungetwc', 'param': []}
+28913 : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'bindtextdomain', 'param': [['domainname', '<0x26de5>']]}
+28e71 : {'extern': 1, 'ret_type': '<0x25dd0>', 'name': 'memchr', 'param': [['str', '<0x26939>']]}
+2a700 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'strtold_l', 'param': []}
+2d493 : {'extern': 1, 'ret_type': '<0x2d301>', 'name': 'assign_perf_event', 'param': [['event_id', '<0x2cb54>']]}
+eac3 : {'extern': 1, 'ret_type': '<0xe8de>', 'name': 'detect_cpu', 'param': []}
+2ec5e : {'extern': 1, 'ret_type': 'void', 'name': 'mm_boot_reserve_mem', 'param': [['start', '<0x2e070>']]}
+1f5f0 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_sched_init', 'param': []}
+27f22 : {'extern': 1, 'ret_type': '<0x25e2b>', 'name': 'fwrite', 'param': [['ptr', '<0x26939>']]}
+3d035 : {'extern': 1, 'ret_type': 'void', 'name': 'apic_send_iipi', 'param': [['apic', '<0x3bdb7>']]}
+ff3 : {'static': 1}
+219eb : {'extern': 1, 'ret_type': 'void', 'name': 'nk_dump_mem', 'param': [['addr', '<0x2192d>']]}
+12a71 : {'extern': 1, 'ret_type': '<0x11fac>', 'name': 'nk_rwlock_rd_lock', 'param': [['l', '<0x1299f>']]}
+3a0fa : {'extern': 1, 'ret_type': 'void', 'name': 'arch_detect_mem_map', 'param': [['mm_info', '<0x3a213>']]}
+3200d : {'extern': 1, 'ret_type': 'void', 'name': 'kmem_add_memory', 'param': [['mem', '<0x31b6e>']]}
+27a92 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'system', 'param': [['command', '<0x26de5>']]}
+342a0 : {'extern': 1, 'ret_type': '<0x34179>', 'name': 'nk_launch_shell', 'param': [['name', '<0x34173>']]}
+14de : {'extern': 1, 'ret_type': '<0x7ed>', 'name': 'simple_strtoll', 'param': [['cp', '<0x960>']]}
+4671b : {'extern': 1, 'ret_type': 'void', 'name': 'serial_puts', 'param': [['buf', '<0x46263>']]}
+d46b : {'extern': 1, 'ret_type': '<0xd052>', 'name': 'strcmp', 'param': [['s1', '<0xd12b>']]}
+129bf : {'ret_type': '<0x12006>', 'static': 1, 'name': 'spin_lock_irq_save', 'param': [['lock', '<0x1293f>']]}
+26ec0 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'rand', 'param': []}
+27268 : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'strerror', 'param': [['errnum', '<0x25df9>']]}
+30d7e : {'extern': 1, 'ret_type': 'void', 'name': 'buddy_free', 'param': [['mp', '<0x30418>']]}
+1bcbe : {'static': 1}
+4234a : {'ret_type': '<0x4163e>', 'static': 1, 'name': 'kbd_handler', 'param': [['excp', '<0x425b3>']]}
+2b14b : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__ctype_b_loc', 'param': []}
+7e3b : {'ret_type': '<0x6d4e>', 'static': 1, 'name': 'df_handler', 'param': [['excp', '<0x7d07>']]}
+1654c : {'extern': 1, 'ret_type': 'void', 'name': 'nk_rb_replace_node', 'param': [['victim', '<0x15ddb>']]}
+16487 : {'extern': 1, 'ret_type': '<0x15ddb>', 'name': 'nk_rb_last', 'param': [['root', '<0x15f0e>']]}
+3cd72 : {'static': 1}
+2c413 : {'extern': 1, 'ret_type': 'void', 'name': 'nemo_event_broadcast', 'param': [['eid', '<0x2be35>']]}
+2eb28 : {'ret_type': '<0x2e070>', 'static': 1, 'name': 'pa_to_va', 'param': [['paddr', '<0x2e070>']]}
+28ffa : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'modf', 'param': [['y', '<0x25d63>']]}
+2a22f : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__wcsftime_l', 'param': []}
+44fd6 : {'static': 1}
+45170 : {'extern': 1, 'ret_type': 'void', 'name': 'vga_init_screen', 'param': []}
+449a2 : {'extern': 1, 'ret_type': 'void', 'name': 'pci_cfg_writel', 'param': [['bus', '<0x427ba>']]}
+46786 : {'static': 1}
+2c776 : {'extern': 1, 'ret_type': 'void', 'name': 'nemo_unregister_event_action', 'param': [['id', '<0x2be35>']]}
+95da : {'extern': 1, 'ret_type': '<0x8c52>', 'name': 'irqs_enabled', 'param': []}
+dc90 : {'extern': 1, 'ret_type': '<0xd07c>', 'name': 'strspn', 'param': [['s', '<0xd12b>']]}
+60f4 : {'extern': 1, 'ret_type': '<0x3d60>', 'name': 'nk_vc_wait', 'param': []}
+a952 : {'extern': 1, 'ret_type': '<0xa1db>', 'name': 'multiboot_get_size', 'param': [['mbd', '<0xa1f4>']]}
+26c0d : {'extern': 1, 'ret_type': 'void', 'name': 'exit', 'param': [['status', '<0x25df9>']]}
+26f03 : {'extern': 1, 'ret_type': 'void', 'name': 'srand', 'param': [['seed', '<0x25dc9>']]}
+32bd0 : {'extern': 1, 'ret_type': 'void', 'name': 'free', 'param': [['addr', '<0x31494>']]}
+46976 : {'extern': 1, 'ret_type': 'void', 'name': 'serial_print_hex', 'param': [['x', '<0x4586b>']]}
+2f04b : {'extern': 1, 'ret_type': 'void', 'name': 'mm_boot_free_vmem', 'param': [['start', '<0x2e070>']]}
+3b068 : {'ret_type': '<0x3a2c1>', 'static': 1, 'name': 'try_acpi_shutdown', 'param': [['hdr', '<0x3af6a>']]}
+44717 : {'static': 1}
+3f625 : {'extern': 1, 'ret_type': '<0x3e7a0>', 'name': 'ioapic_init', 'param': [['sys', '<0x3ec89>']]}
+42152 : {'ret_type': '<0x4163e>', 'static': 1, 'name': 'dequeue_scancodes', 'param': []}
+5de0 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_enqueue_keycode', 'param': [['vc', '<0x3d60>']]}
+24dee : {'extern': 1, 'ret_type': '<0x23ded>', 'name': 'nk_get_base_region_by_cpu', 'param': [['cpu', '<0x239a7>']]}
+3c76e : {'ret_type': '<0x3b496>', 'static': 1, 'name': 'spur_int_handler', 'param': [['excp', '<0x3c580>']]}
+2987d : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wcrtomb', 'param': []}
+3794c : {'ret_type': '<0x369f1>', 'static': 1, 'name': 'acpi_parse_memory_affinity', 'param': [['header', '<0x37678>']]}
+67b5 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_handle_input', 'param': [['scan', '<0x33c6>']]}
+443b : {'static': 1}
+14e80 : {'extern': 1, 'ret_type': '<0x145cd>', 'name': 'nk_create_htable', 'param': [['min_size', '<0x14507>']]}
+2afb0 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wctype', 'param': []}
+d2a4 : {'extern': 1, 'ret_type': '<0xd0db>', 'name': 'memset', 'param': [['dst', '<0xd0db>']]}
+4631f : {'static': 1, 'name': 'Serial_Finish', 'param': [['o', '<0x460e2>']]}
+14273 : {'extern': 1, 'ret_type': '<0x130b2>', 'name': 'nk_condvar_bcast', 'param': [['c', '<0x13b81>']]}
+292b8 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'cos', 'param': [['x', '<0x25d63>']]}
+283b8 : {'extern': 1, 'ret_type': '<0x25e32>', 'name': 'lseek64', 'param': [['fd', '<0x25df9>']]}
+d972 : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strncpy', 'param': [['dest', '<0xd173>']]}
+14e13 : {'extern': 1, 'ret_type': '<0x14527>', 'name': 'nk_hash_buffer', 'param': [['msg', '<0x14e7a>']]}
+295bc : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'log', 'param': [['x', '<0x25d63>']]}
+10ae : {'static': 1}
+40775 : {'extern': 1, 'ret_type': '<0x3fbff>', 'name': 'i8254_init', 'param': [['naut', '<0x408ac>']]}
+208b1 : {'static': 1, 'name': 'barrier_func1', 'param': [['in', '<0x1fc04>']]}
+46cac : {'extern': 1, 'ret_type': 'void', 'name': 'serial_print_list', 'param': [['format', '<0x46263>']]}
+3c586 : {'ret_type': '<0x3b496>', 'static': 1, 'name': 'thermal_int_handler', 'param': [['excp', '<0x3c580>']]}
+3d3e7 : {'extern': 1, 'ret_type': 'void', 'name': 'apic_bcast_iipi', 'param': [['apic', '<0x3bdb7>']]}
+8621 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_queue_destroy', 'param': [['q', '<0x84b0>']]}
+15518 : {'extern': 1, 'ret_type': '<0x14500>', 'name': 'nk_htable_dec', 'param': [['htable', '<0x145cd>']]}
+2a789 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wmemcmp', 'param': []}
+46e5 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_switch_to_prev_vc', 'param': []}
+5101 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_print', 'param': [['s', '<0x3c01>']]}
+138e : {'static': 1}
+292e7 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'cosh', 'param': [['x', '<0x25d63>']]}
+e068 : {'extern': 1, 'ret_type': 'void', 'name': 'msr_write', 'param': [['msr', '<0xe056>']]}
+46b1a : {'ret_type': '<0x4588b>', 'static': 1, 'name': 'serial_irq_handler', 'param': [['excp', '<0x46ca6>']]}
+2998f : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__iswctype_l', 'param': []}
+9988 : {'extern': 1, 'ret_type': 'void', 'name': 'disable_8259pic', 'param': []}
+29c4c : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__fxstat64', 'param': []}
+19107 : {'static': 1}
+2a1a6 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__freelocale', 'param': []}
+18af1 : {'extern': 1, 'ret_type': '<0x1743b>', 'name': 'smp_early_init', 'param': [['naut', '<0x18216>']]}
+7fb0 : {'extern': 1, 'ret_type': '<0x6d4e>', 'name': 'setup_idt', 'param': []}
+37c6d : {'static': 1}
+617e : {'extern': 1, 'ret_type': '<0x33bb>', 'name': 'nk_vc_get_keycode', 'param': [['wait', '<0x3344>']]}
+29f82 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'read', 'param': []}
+29a28 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wcslen', 'param': []}
+2a565 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wcsnrtombs', 'param': []}
+2ed2d : {'extern': 1, 'ret_type': 'void', 'name': 'mm_boot_reserve_vmem', 'param': [['start', '<0x2e070>']]}
+15fe6 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_rb_insert_color', 'param': [['node', '<0x15ddb>']]}
+f29 : {'static': 1}
+2b38f : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wcsxfrm', 'param': []}
+9d51 : {'extern': 1, 'ret_type': '<0x8bf8>', 'name': 'nk_int_init', 'param': [['sys', '<0x9155>']]}
+2739a : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'ferror', 'param': [['f', '<0x26e9f>']]}
+1bb1d : {'static': 1}
+31f01 : {'ret_type': '<0x31501>', 'static': 1, 'name': 'spin_lock_irq_save', 'param': [['lock', '<0x31eab>']]}
+1ca12 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_thread_destroy', 'param': [['t', '<0x1ae14>']]}
+28f20 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'atan2', 'param': [['y', '<0x25d63>']]}
+294e4 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'floor', 'param': [['x', '<0x25d63>']]}
+293f9 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'tan', 'param': [['x', '<0x25d63>']]}
+9a0d : {'extern': 1, 'ret_type': 'void', 'name': 'imcr_begin_sym_io', 'param': []}
+d40b : {'static': 1}
+54a5 : {'extern': 1, 'ret_type': '<0x3d60>', 'name': 'nk_create_vc', 'param': [['name', '<0x3c01>']]}
+1ecc1 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_thread_exit', 'param': [['retval', '<0x1a490>']]}
+2b039 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'strtold', 'param': []}
+3ca62 : {'ret_type': '<0x3b496>', 'static': 1, 'name': 'error_int_handler', 'param': [['excp', '<0x3c580>']]}
+2080f : {'static': 1, 'name': 'barrier_func2', 'param': [['in', '<0x1fc04>']]}
+5f0f : {'extern': 1, 'ret_type': '<0x33c6>', 'name': 'nk_dequeue_scancode', 'param': [['vc', '<0x3d60>']]}
+297c : {'extern': 1, 'ret_type': 'void', 'name': '_doprnt', 'param': [['fmt', '<0x321c>']]}
+26ce9 : {'extern': 1, 'ret_type': '<0x2679e>', 'name': 'time', 'param': [['timer', '<0x26d46>']]}
+2eb57 : {'extern': 1, 'ret_type': '<0x2eb84>', 'name': 'mm_boot_get_region', 'param': [['i', '<0x2dff1>']]}
+dde1 : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strstr', 'param': [['s1', '<0xd12b>']]}
+2a812 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__strtod_l', 'param': []}
+463e : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_switch_to_vc', 'param': [['vc', '<0x3d60>']]}
+2ebc4 : {'extern': 1, 'ret_type': '<0x2e048>', 'name': 'mm_get_usable_ram', 'param': []}
+29d5e : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__wcscoll_l', 'param': []}
+aa15 : {'extern': 1, 'ret_type': '<0xa1f4>', 'name': 'multiboot_get_sys_ram', 'param': [['mbd', '<0xa1f4>']]}
+28eb : {'static': 1, 'name': 'printnum_16', 'param': [['u', '<0x285b>']]}
+4835 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_scrollup', 'param': []}
+27b65 : {'extern': 1, 'ret_type': '<0x27ba4>', 'name': 'signal', 'param': [['sig', '<0x25df9>']]}
+279e9 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'rename', 'param': [['old', '<0x26de5>']]}
+2934d : {'extern': 1, 'ret_type': '<0x29347>', 'name': 'localtime', 'param': [['timer', '<0x2937e>']]}
+1871e : {'static': 1}
+27c12 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'setvbuf', 'param': [['stream', '<0x26e9f>']]}
+ab07 : {'extern': 1, 'ret_type': '<0xa232>', 'name': 'mb_get_first_hrt_addr', 'param': [['mbd', '<0xa1f4>']]}
+3375d : {'extern': 1, 'ret_type': '<0x32f94>', 'name': 'test_setlong', 'param': []}
+2c1e9 : {'extern': 1, 'ret_type': 'void', 'name': 'nemo_event_notify', 'param': [['eid', '<0x2be35>']]}
+dad5 : {'extern': 1, 'ret_type': '<0xd052>', 'name': 'strtoi', 'param': [['nptr', '<0xd12b>']]}
+3ce82 : {'extern': 1, 'ret_type': '<0x3b496>', 'name': 'apic_get_maxlvt', 'param': [['apic', '<0x3bdb7>']]}
+32d22 : {'extern': 1, 'ret_type': '<0x31494>', 'name': 'realloc', 'param': [['ptr', '<0x31494>']]}
+56be : {'static': 1}
+16eb : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'strict_strtoull', 'param': [['cp', '<0x960>']]}
+11dd5 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_ticket_lock_deinit', 'param': [['l', '<0x11dcf>']]}
+44352 : {'static': 1, 'name': 'pci_fun_probe', 'param': [['pci', '<0x42eab>']]}
+28509 : {'extern': 1, 'ret_type': '<0x25e19>', 'name': 'ftell', 'param': [['x', '<0x26e9f>']]}
+13f65 : {'static': 1, 'name': 'test1', 'param': [['in', '<0x13094>']]}
+29ab1 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__strtof_l', 'param': []}
+205ea : {'extern': 1, 'ret_type': '<0x1fc22>', 'name': 'nk_barrier_init', 'param': [['barrier', '<0x20455>']]}
+29bc3 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fileno', 'param': []}
+3c45d : {'ret_type': '<0x3b502>', 'static': 1, 'name': 'pa_to_va', 'param': [['paddr', '<0x3b502>']]}
+d2fa : {'extern': 1, 'ret_type': '<0xd0db>', 'name': 'memmove', 'param': [['dst', '<0xd0db>']]}
+37855 : {'ret_type': '<0x369f1>', 'static': 1, 'name': 'acpi_parse_x2apic_affinity', 'param': [['header', '<0x37678>']]}
+2a094 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__strxfrm_l', 'param': []}
+1eb25 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_join_all_children', 'param': [['func', '<0x1ec7b>']]}
+29906 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'mbrtowc', 'param': []}
+29513 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'difftime', 'param': [['time1', '<0x2679e>']]}
+290f4 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'strtod', 'param': [['string', '<0x26de5>']]}
+1bb96 : {'ret_type': '<0x1a4ae>', 'static': 1, 'name': 'thread_init', 'param': [['t', '<0x1aff5>']]}
+2aa36 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__strftime_l', 'param': []}
+2eaf9 : {'ret_type': '<0x2e070>', 'static': 1, 'name': 'va_to_pa', 'param': [['vaddr', '<0x2e070>']]}
+164c6 : {'extern': 1, 'ret_type': '<0x15ddb>', 'name': 'nk_rb_next', 'param': [['node', '<0x15ddb>']]}
+3568c : {'extern': 1, 'ret_type': 'void', 'name': 'init', 'param': [['mbd', '<0x3483c>']]}
+15026 : {'extern': 1, 'ret_type': '<0x14500>', 'name': 'nk_htable_insert', 'param': [['htable', '<0x145cd>']]}
+2d9f8 : {'extern': 1, 'ret_type': '<0x2cb10>', 'name': 'enable_all_events', 'param': []}
+690f : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_init', 'param': []}
+2af27 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wcsftime', 'param': []}
+2b306 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'strxfrm', 'param': []}
+101a4 : {'extern': 1, 'ret_type': '<0xec4f>', 'name': 'xm_handler', 'param': [['excp', '<0x1019e>']]}
+28d23 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'feof', 'param': [['x', '<0x26e9f>']]}
+447e2 : {'static': 1}
+44ab9 : {'extern': 1, 'ret_type': '<0x42760>', 'name': 'pci_init', 'param': [['naut', '<0x44d57>']]}
+27797 : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'getenv', 'param': [['name', '<0x26de5>']]}
+27cdb : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fscanf', 'param': [['stream', '<0x26e9f>']]}
+20d4e : {'extern': 1, 'ret_type': '<0x20455>', 'name': 'nk_barrier_test', 'param': []}
+d56f : {'extern': 1, 'ret_type': '<0xd052>', 'name': 'strncmp', 'param': [['s1', '<0xd12b>']]}
+c6e7 : {'extern': 1, 'ret_type': '<0xaeb0>', 'name': 'nk_pf_handler', 'param': [['excp', '<0xc826>']]}
+aa9d : {'extern': 1, 'ret_type': '<0xa1d4>', 'name': 'mb_is_hrt_environ', 'param': [['mbd', '<0xa1f4>']]}
+2ab48 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'pthread_mutex_init', 'param': []}
+d4ca : {'extern': 1, 'ret_type': '<0xd052>', 'name': 'strcasecmp', 'param': [['s1', '<0xd12b>']]}
+12de3 : {'static': 1, 'name': 'writer', 'param': [['in', '<0x11f8e>']]}
+187dc : {'extern': 1, 'ret_type': 'void', 'name': 'smp_ap_entry', 'param': [['core', '<0x17c95>']]}
+2d692 : {'extern': 1, 'ret_type': 'void', 'name': 'enable_perf_event', 'param': [['event', '<0x2d301>']]}
+17ac : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'strict_strtoll', 'param': [['cp', '<0x960>']]}
+32189 : {'extern': 1, 'ret_type': '<0x314b2>', 'name': 'nk_kmem_init', 'param': []}
+2ac6a : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'pthread_mutex_unlock', 'param': []}
+3d16b : {'extern': 1, 'ret_type': 'void', 'name': 'apic_deinit_iipi', 'param': [['apic', '<0x3bdb7>']]}
+2a5ee : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__strcoll_l', 'param': []}
+285a0 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'poll', 'param': [['fds', '<0x28654>']]}
+9b0a : {'extern': 1, 'ret_type': 'void', 'name': 'nk_add_bus_entry', 'param': [['bus_id', '<0x9aff>']]}
+2ad03 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wcscoll', 'param': []}
+2ee60 : {'extern': 1, 'ret_type': '<0x2e016>', 'name': 'mm_boot_init', 'param': [['mbd', '<0x2e03d>']]}
+1150c : {'extern': 1, 'ret_type': '<0x10c6f>', 'name': 'spin_lock_irq_save_nopause', 'param': [['lock', '<0x114ab>']]}
+1d07c : {'extern': 1, 'ret_type': 'void', 'name': 'nk_set_thread_fork_output', 'param': [['result', '<0x1a490>']]}
+ab80 : {'extern': 1, 'ret_type': '<0xa932>', 'name': 'multiboot_parse', 'param': [['mbd', '<0xa1f4>']]}
+152ef : {'extern': 1, 'ret_type': '<0x14500>', 'name': 'nk_htable_change', 'param': [['htable', '<0x145cd>']]}
+114e1 : {'extern': 1, 'ret_type': 'void', 'name': 'spin_lock_nopause', 'param': [['lock', '<0x114ab>']]}
+6341 : {'static': 1, 'name': 'list', 'param': [['in', '<0x331b>']]}
+4518 : {'static': 1}
+26f9a : {'extern': 1, 'ret_type': '<0x25e19>', 'name': 'lrand48', 'param': []}
+4928 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_display_char_specific', 'param': [['vc', '<0x3d60>']]}
+11c9 : {'extern': 1, 'ret_type': 'void', 'name': 'panic', 'param': [['fmt', '<0x960>']]}
+4217d : {'extern': 1, 'ret_type': '<0x416b5>', 'name': 'kbd_translate', 'param': [['scan', '<0x416c0>']]}
+11e8b : {'extern': 1, 'ret_type': '<0x11606>', 'name': 'nk_ticket_trylock', 'param': [['l', '<0x11dcf>']]}
+1d752 : {'static': 1, 'name': 'tls_dummy', 'param': [['in', '<0x1a490>']]}
+46853 : {'extern': 1, 'ret_type': 'void', 'name': 'serial_print', 'param': [['format', '<0x46263>']]}
+31fcf : {'extern': 1, 'ret_type': '<0x31b6e>', 'name': 'kmem_get_region_by_addr', 'param': [['addr', '<0x314d9>']]}
+26d4c : {'extern': 1, 'ret_type': 'void', 'name': '__assert_fail', 'param': [['assertion', '<0x26de5>']]}
+46dbf : {'extern': 1, 'ret_type': 'void', 'name': 'serial_printlevel', 'param': [['level', '<0x4588b>']]}
+1f186 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_sched_init_ap', 'param': []}
+2a89b : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__wctype_l', 'param': []}
+3d2a1 : {'extern': 1, 'ret_type': 'void', 'name': 'apic_send_sipi', 'param': [['apic', '<0x3bdb7>']]}
+13c51 : {'extern': 1, 'ret_type': '<0x130b2>', 'name': 'nk_condvar_destroy', 'param': [['c', '<0x13b81>']]}
+412b1 : {'extern': 1, 'ret_type': '<0x4092d>', 'name': 'nk_timer_handler', 'param': [['excp', '<0x41387>']]}
+62a1 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_getchar_extended', 'param': [['wait', '<0x3344>']]}
+20918 : {'extern': 1, 'ret_type': '<0x1fc22>', 'name': 'nk_core_barrier_lower', 'param': []}
+1435a : {'extern': 1, 'ret_type': '<0x13b81>', 'name': 'nk_condvar_test', 'param': []}
+9778 : {'extern': 1, 'ret_type': '<0x8bf8>', 'name': 'register_int_handler', 'param': [['int_vec', '<0x8c47>']]}
+a981 : {'extern': 1, 'ret_type': '<0xa227>', 'name': 'multiboot_get_phys_mem', 'param': [['mbd', '<0xa1f4>']]}
+1dc38 : {'extern': 1, 'ret_type': '<0x1ae14>', 'name': 'nk_get_tid', 'param': []}
+14072 : {'static': 1}
+1585a : {'extern': 1, 'ret_type': 'void', 'name': 'nk_free_htable', 'param': [['htable', '<0x145cd>']]}
+159dc : {'extern': 1, 'ret_type': '<0x14561>', 'name': 'nk_htable_get_iter_key', 'param': [['iter', '<0x159d6>']]}
+3d4d7 : {'extern': 1, 'ret_type': 'void', 'name': 'apic_bcast_deinit_iipi', 'param': [['apic', '<0x3bdb7>']]}
+2975b : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__errno_location', 'param': []}
+45c4 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_bind_vc', 'param': [['thread', '<0x3f18>']]}
+12b7d : {'static': 1, 'name': 'reader2', 'param': [['in', '<0x11f8e>']]}
+38fe7 : {'extern': 1, 'ret_type': '<0x3800a>', 'name': 'arch_early_init', 'param': [['naut', '<0x38f08>']]}
+37910 : {'ret_type': '<0x369f1>', 'static': 1, 'name': 'acpi_parse_srat', 'param': [['hdr', '<0x37456>']]}
+27830 : {'extern': 1, 'ret_type': '<0x267b0>', 'name': 'clock', 'param': []}
+5260 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_puts', 'param': [['s', '<0x3c01>']]}
+29457 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'asin', 'param': [['x', '<0x25d63>']]}
+29289 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'sinh', 'param': [['x', '<0x25d63>']]}
+1b362 : {'static': 1, 'name': 'thread_setup_init_stack', 'param': [['t', '<0x1aff5>']]}
+435d : {'ret_type': '<0x3344>', 'static': 1, 'name': '_vc_clear_specific', 'param': [['vc', '<0x3d60>']]}
+466f6 : {'static': 1}
+26df0 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'vfprintf', 'param': [['stream', '<0x26e9f>']]}
+16f8b : {'extern': 1, 'ret_type': 'void', 'name': 'nk_rand_seed', 'param': [['seed', '<0x16690>']]}
+448a6 : {'extern': 1, 'ret_type': 'void', 'name': 'pci_cfg_writew', 'param': [['bus', '<0x427ba>']]}
+87ae : {'extern': 1, 'ret_type': '<0x8738>', 'name': 'nk_dequeue_entry_atomic', 'param': [['q', '<0x84b0>']]}
+2b4b1 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__get_cpu_features', 'param': []}
+21b2f : {'extern': 1, 'ret_type': 'void', 'name': 'nk_print_regs', 'param': [['r', '<0x21f23>']]}
+46f1c : {'extern': 1, 'ret_type': 'void', 'name': 'serial_init', 'param': []}
+659d : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_gets', 'param': [['buf', '<0x3c01>']]}
+28717 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'syscall', 'param': [['number', '<0x25df9>']]}
+22a1e : {'extern': 1, 'ret_type': '<0x21fcb>', 'name': 'nk_detect_cpu_freq', 'param': [['cpu', '<0x21fe8>']]}
+4f8a : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_putchar', 'param': [['c', '<0x339e>']]}
+d5dc : {'extern': 1, 'ret_type': '<0xd052>', 'name': 'strncasecmp', 'param': [['s1', '<0xd12b>']]}
+873e : {'extern': 1, 'ret_type': '<0x8738>', 'name': 'nk_dequeue_entry', 'param': [['entry', '<0x8738>']]}
+2903d : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'frexp', 'param': [['x', '<0x25d63>']]}
+1eefb : {'static': 1, 'name': 'thread_cleanup', 'param': []}
+2886a : {'extern': 1, 'ret_type': '<0x26801>', 'name': '__duplocale', 'param': [['locobj', '<0x26801>']]}
+d87 : {'ret_type': '<0xa2e>', 'static': 1, 'name': 'put_dec_trunc', 'param': [['buf', '<0xa2e>']]}
+9a73 : {'extern': 1, 'ret_type': '<0x8c52>', 'name': 'nk_int_matches_bus', 'param': [['entry', '<0x8d0d>']]}
+96a4 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_mask_irq', 'param': [['irq', '<0x8c52>']]}
+2ad8c : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'towupper', 'param': []}
+4108 : {'ret_type': '<0x339e>', 'static': 1, 'name': 'spin_lock_irq_save', 'param': [['lock', '<0x3ff4>']]}
+3c952 : {'static': 1}
+2eda3 : {'extern': 1, 'ret_type': 'void', 'name': 'mm_boot_free_mem', 'param': [['start', '<0x2e070>']]}
+24456 : {'extern': 1, 'ret_type': '<0x23725>', 'name': 'nk_cpu_topo_discover', 'param': [['me', '<0x23ca4>']]}
+e91a : {'extern': 1, 'ret_type': '<0xe1ad>', 'name': 'cpuid_get_family', 'param': []}
+46efe : {'extern': 1, 'ret_type': '<0x458e5>', 'name': 'serial_get_irq', 'param': []}
+e98f : {'extern': 1, 'ret_type': '<0xe1ad>', 'name': 'cpuid_get_model', 'param': []}
+1ccc7 : {'extern': 1, 'ret_type': '<0x1aff5>', 'name': 'nk_yield', 'param': []}
+2f522 : {'extern': 1, 'ret_type': 'void', 'name': 'mm_boot_free', 'param': [['addr', '<0x2dff8>']]}
+2866f : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'ioctl', 'param': [['d', '<0x25df9>']]}
+3cedf : {'extern': 1, 'ret_type': '<0x3b496>', 'name': 'apic_read_timer', 'param': [['apic', '<0x3bdb7>']]}
+1dbaf : {'static': 1}
+11dfe : {'extern': 1, 'ret_type': 'void', 'name': 'nk_ticket_lock', 'param': [['l', '<0x11dcf>']]}
+11da6 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_ticket_lock_init', 'param': [['l', '<0x11dcf>']]}
+234f0 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_acpi_init', 'param': []}
+12cb1 : {'extern': 1, 'ret_type': '<0x11fac>', 'name': 'nk_rwlock_wr_lock', 'param': [['l', '<0x1299f>']]}
+24d29 : {'extern': 1, 'ret_type': '<0x23ded>', 'name': 'nk_get_base_region_by_num', 'param': [['num', '<0x236f9>']]}
+2dadb : {'extern': 1, 'ret_type': 'void', 'name': 'release_perf_event', 'param': [['event', '<0x2d301>']]}
+1d68a : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_tls_key_create', 'param': [['key', '<0x1d6f8>']]}
+294b5 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'ceil', 'param': [['x', '<0x25d63>']]}
+5924 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_setattr_specific', 'param': [['vc', '<0x3d60>']]}
+46348 : {'static': 1}
+2ebe1 : {'extern': 1, 'ret_type': '<0x2e048>', 'name': 'mm_get_all_mem', 'param': []}
+2d845 : {'extern': 1, 'ret_type': 'void', 'name': 'disable_perf_event', 'param': [['event', '<0x2d301>']]}
+287b1 : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'setlocale', 'param': [['category', '<0x25df9>']]}
+1619b : {'extern': 1, 'ret_type': 'void', 'name': 'nk_rb_erase', 'param': [['node', '<0x15ddb>']]}
+114b6 : {'extern': 1, 'ret_type': 'void', 'name': 'spinlock_deinit', 'param': [['lock', '<0x114ab>']]}
+16448 : {'extern': 1, 'ret_type': '<0x15ddb>', 'name': 'nk_rb_first', 'param': [['root', '<0x15f0e>']]}
+2abe1 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'pthread_mutex_lock', 'param': []}
+2f45f : {'extern': 1, 'ret_type': '<0x2dff8>', 'name': 'mm_boot_alloc', 'param': [['size', '<0x2e03d>']]}
+24f30 : {'extern': 1, 'ret_type': '<0x2424a>', 'name': 'nk_dump_numa_info', 'param': []}
+d25d : {'static': 1}
+3cd21 : {'ret_type': '<0x3b496>', 'static': 1, 'name': 'null_kick', 'param': [['excp', '<0x3c580>']]}
+28f5d : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'fmod', 'param': [['y', '<0x25d63>']]}
+157a : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'strict_strtoul', 'param': [['cp', '<0x960>']]}
+295eb : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'log10', 'param': [['x', '<0x25d63>']]}
+171ae : {'extern': 1, 'ret_type': 'void', 'name': 'nk_get_rand_bytes', 'param': [['buf', '<0x16d44>']]}
+27950 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'remove', 'param': [['path', '<0x26de5>']]}
+1db38 : {'static': 1}
+15f14 : {'static': 1, 'name': '__rb_rotate_right', 'param': [['node', '<0x15ddb>']]}
+68cc : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_switch_to_vc_list', 'param': []}
+453c2 : {'extern': 1, 'ret_type': 'void', 'name': 'vga_init', 'param': []}
+ea13 : {'extern': 1, 'ret_type': '<0xe1ad>', 'name': 'cpuid_get_step', 'param': []}
+29de7 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__towlower_l', 'param': []}
+28c24 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'getc', 'param': [['arg', '<0x26e9f>']]}
+26b7d : {'extern': 1, 'ret_type': 'void', 'name': 'abort', 'param': []}
+3cf33 : {'extern': 1, 'ret_type': 'void', 'name': 'apic_self_ipi', 'param': [['apic', '<0x3bdb7>']]}
+21abf : {'extern': 1, 'ret_type': 'void', 'name': 'nk_stack_dump', 'param': [['n', '<0x20f39>']]}
+15a0d : {'extern': 1, 'ret_type': '<0x14561>', 'name': 'nk_htable_get_iter_value', 'param': [['iter', '<0x159d6>']]}
+3f35c : {'static': 1, 'name': 'ioapic_write_irq_entry', 'param': [['ioapic', '<0x3eeba>']]}
+2da38 : {'extern': 1, 'ret_type': '<0x2cb10>', 'name': 'disable_all_events', 'param': []}
+5381 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_log', 'param': [['fmt', '<0x3c01>']]}
+898b : {'extern': 1, 'ret_type': '<0x8738>', 'name': 'nk_dequeue_first_atomic', 'param': [['q', '<0x84b0>']]}
+289cc : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'textdomain', 'param': [['domainname', '<0x26de5>']]}
+12d68 : {'extern': 1, 'ret_type': '<0x12006>', 'name': 'nk_rwlock_wr_lock_irq_save', 'param': [['l', '<0x1299f>']]}
+2a341 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'putwc', 'param': []}
+265c : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'sprintf', 'param': [['buf', '<0xa2e>']]}
+28eed : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'atan', 'param': [['__x', '<0x25d63>']]}
+84e4 : {'ret_type': '<0x8362>', 'static': 1, 'name': 'spin_lock_irq_save', 'param': [['lock', '<0x84d9>']]}
+d1e4 : {'static': 1}
+3b140 : {'extern': 1, 'ret_type': 'void', 'name': 'acpi_reboot', 'param': []}
+4553a : {'extern': 1, 'ret_type': 'void', 'name': 'vga_putchar', 'param': [['c', '<0x44e13>']]}
+1beea : {'static': 1}
+c2ac : {'extern': 1, 'ret_type': '<0xaeb0>', 'name': 'nk_map_page', 'param': [['vaddr', '<0xaf11>']]}
+254bd : {'extern': 1, 'ret_type': '<0x23725>', 'name': 'nk_numa_init', 'param': []}
+3c48c : {'ret_type': '<0x3b496>', 'static': 1, 'name': 'dummy_int_handler', 'param': [['excp', '<0x3c580>']]}
+1b5a3 : {'static': 1, 'name': 'nk_enqueue_entry_atomic', 'param': [['q', '<0x1aad7>']]}
+2defe : {'extern': 1, 'ret_type': '<0x2cafe>', 'name': 'pmc_init', 'param': []}
+29b3a : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wmemset', 'param': []}
+425b9 : {'extern': 1, 'ret_type': '<0x4163e>', 'name': 'kbd_deinit', 'param': []}
+469f9 : {'extern': 1, 'ret_type': 'void', 'name': 'serial_mem_dump', 'param': [['start', '<0x45fb7>']]}
+15b4e : {'extern': 1, 'ret_type': '<0x14500>', 'name': 'nk_htable_iter_search', 'param': [['iter', '<0x159d6>']]}
+143e : {'extern': 1, 'ret_type': '<0x7f4>', 'name': 'simple_strtoull', 'param': [['cp', '<0x960>']]}
+1023c : {'extern': 1, 'ret_type': 'void', 'name': 'fpu_init', 'param': [['naut', '<0xfe73>']]}
+4e84 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_setpos_specific', 'param': [['vc', '<0x3d60>']]}
+2a00b : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wmemmove', 'param': []}
+2a677 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'btowc', 'param': []}
+37d33 : {'extern': 1, 'ret_type': '<0x369f1>', 'name': 'arch_numa_init', 'param': [['sys', '<0x36fa6>']]}
+12c17 : {'static': 1, 'name': 'reader1', 'param': [['in', '<0x11f8e>']]}
+1dcb0 : {'extern': 1, 'ret_type': '<0x1ae14>', 'name': 'nk_get_parent_tid', 'param': []}
+35c1b : {'extern': 1, 'ret_type': 'void', 'name': 'main', 'param': [['mbd', '<0x35c6f>']]}
+307bd : {'static': 1}
+1dd2c : {'extern': 1, 'ret_type': '<0x1ae14>', 'name': '__thread_fork', 'param': []}
+29389 : {'extern': 1, 'ret_type': '<0x29347>', 'name': 'gmtime', 'param': [['timer', '<0x2937e>']]}
+589a : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_release_vc', 'param': [['thread', '<0x3f18>']]}
+343a7 : {'static': 1, 'name': 'shell', 'param': [['in', '<0x338ae>']]}
+1221 : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'early_printk', 'param': [['fmt', '<0x960>']]}
+4184 : {'ret_type': '<0x3344>', 'static': 1, 'name': '_vc_display_char_specific', 'param': [['vc', '<0x3d60>']]}
+27648 : {'extern': 1, 'ret_type': '<0x26e9f>', 'name': 'fopen64', 'param': [['path', '<0x26de5>']]}
+15412 : {'extern': 1, 'ret_type': '<0x14500>', 'name': 'nk_htable_inc', 'param': [['htable', '<0x145cd>']]}
+3a0cf : {'extern': 1, 'ret_type': 'void', 'name': 'arch_reserve_boot_regions', 'param': [['mbd', '<0x3972c>']]}
+28257 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fseeko64', 'param': [['fp', '<0x26e9f>']]}
+328c5 : {'extern': 1, 'ret_type': '<0x31494>', 'name': 'malloc', 'param': [['size', '<0x314e4>']]}
+e58 : {'ret_type': '<0xa2e>', 'static': 1, 'name': 'put_dec', 'param': [['buf', '<0xa2e>']]}
+228be : {'extern': 1, 'ret_type': '<0x21ff3>', 'name': 'nk_is_amd', 'param': []}
+4a79 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_display_char', 'param': [['c', '<0x339e>']]}
+463b5 : {'static': 1}
+27baa : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fprintf', 'param': [['f', '<0x26e9f>']]}
+4051f : {'ret_type': '<0x3fbff>', 'static': 1, 'name': 'pit_irq_handler', 'param': [['excp', '<0x40568>']]}
+987a : {'extern': 1, 'ret_type': '<0x8bf8>', 'name': 'register_irq_handler', 'param': [['irq', '<0x8c47>']]}
+2a453 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__wcsxfrm_l', 'param': []}
+1283 : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'printk', 'param': [['fmt', '<0x960>']]}
+df5c : {'extern': 1, 'ret_type': 'void', 'name': 'str_toupper', 'param': [['s', '<0xd173>']]}
+15e3c : {'static': 1, 'name': '__rb_rotate_left', 'param': [['node', '<0x15ddb>']]}
+16509 : {'extern': 1, 'ret_type': '<0x15ddb>', 'name': 'nk_rb_prev', 'param': [['node', '<0x15ddb>']]}
+9c16 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_add_int_entry', 'param': [['trig_mode', '<0x9493>']]}
+52c9 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_printf', 'param': [['fmt', '<0x3c01>']]}
+11480 : {'extern': 1, 'ret_type': 'void', 'name': 'spinlock_init', 'param': [['lock', '<0x114ab>']]}
+31f7d : {'extern': 1, 'ret_type': '<0x31b6e>', 'name': 'kmem_get_base_zone', 'param': []}
+293ba : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'strcoll', 'param': [['str1', '<0x26de5>']]}
+57f3 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_destroy_vc', 'param': [['vc', '<0x3d60>']]}
+1bcf9 : {'static': 1}
+1903e : {'extern': 1, 'ret_type': '<0x1743b>', 'name': 'smp_setup_xcall_bsp', 'param': [['core', '<0x17c95>']]}
+1d603 : {'static': 1}
+27d85 : {'extern': 1, 'ret_type': 'void', 'name': 'clearerr', 'param': [['stream', '<0x26e9f>']]}
+12f00 : {'extern': 1, 'ret_type': '<0x1299f>', 'name': 'nk_rwlock_test', 'param': []}
+1c4b9 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_thread_start', 'param': [['fun', '<0x1ae1f>']]}
+1e084 : {'extern': 1, 'ret_type': '<0x1aff5>', 'name': 'nk_need_resched', 'param': []}
+2ae15 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'towlower', 'param': []}
+20a04 : {'extern': 1, 'ret_type': '<0x1fc22>', 'name': 'nk_core_barrier_arrive', 'param': []}
+276ef : {'extern': 1, 'ret_type': '<0x26e9f>', 'name': 'fdopen', 'param': [['fd', '<0x25df9>']]}
+42276 : {'extern': 1, 'ret_type': '<0x4163e>', 'name': 'kbd_init', 'param': [['naut', '<0x4230e>']]}
+ea6a : {'extern': 1, 'ret_type': '<0xe1ad>', 'name': 'cpuid_leaf_max', 'param': []}
+27b2b : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fflush', 'param': [['f', '<0x26e9f>']]}
+59d9 : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_setattr', 'param': [['attr', '<0x339e>']]}
+26f46 : {'extern': 1, 'ret_type': 'void', 'name': 'srand48', 'param': [['seedval', '<0x25e19>']]}
+7d13 : {'extern': 1, 'ret_type': '<0x6d4e>', 'name': 'null_irq_handler', 'param': [['excp', '<0x7d07>']]}
+27441 : {'extern': 1, 'ret_type': '<0x26e9f>', 'name': 'freopen', 'param': [['fname', '<0x26de5>']]}
+600c : {'extern': 1, 'ret_type': '<0x33bb>', 'name': 'nk_dequeue_keycode', 'param': [['vc', '<0x3d60>']]}
+1b687 : {'ret_type': '<0x1aff5>', 'static': 1, 'name': 'get_runnable_thread', 'param': [['cpu', '<0x1a4f2>']]}
+2419 : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'vscnprintf', 'param': [['buf', '<0xa2e>']]}
+8ad6 : {'extern': 1, 'ret_type': '<0x8362>', 'name': 'nk_queue_empty_atomic', 'param': [['q', '<0x84b0>']]}
+c61e : {'extern': 1, 'ret_type': '<0xaeb0>', 'name': 'nk_map_page_nocache', 'param': [['paddr', '<0xaf11>']]}
+297f4 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'write', 'param': []}
+163b : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'strict_strtol', 'param': [['cp', '<0x960>']]}
+20695 : {'extern': 1, 'ret_type': '<0x1fc22>', 'name': 'nk_barrier_destroy', 'param': [['barrier', '<0x20455>']]}
+2ddbb : {'extern': 1, 'ret_type': '<0x2cb10>', 'name': 'perf_report', 'param': []}
+965f : {'extern': 1, 'ret_type': 'void', 'name': 'irqmap_set_ioapic', 'param': [['irq', '<0x8c52>']]}
+12d1c : {'extern': 1, 'ret_type': '<0x11fac>', 'name': 'nk_rwlock_wr_unlock', 'param': [['l', '<0x1299f>']]}
+4504f : {'static': 1}
+dba8 : {'extern': 1, 'ret_type': '<0xd087>', 'name': 'atox', 'param': [['buf', '<0xd12b>']]}
+5cae : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_enqueue_scancode', 'param': [['vc', '<0x3d60>']]}
+2098d : {'extern': 1, 'ret_type': '<0x1fc22>', 'name': 'nk_core_barrier_wait', 'param': []}
+45ad : {'static': 1}
+15a3e : {'extern': 1, 'ret_type': '<0x14500>', 'name': 'nk_htable_iter_advance', 'param': [['iter', '<0x159d6>']]}
+3cdb6 : {'extern': 1, 'ret_type': '<0x3b4da>', 'name': 'apic_wait_for_send', 'param': [['apic', '<0x3bdb7>']]}
+1c032 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_thread_create', 'param': [['fun', '<0x1ae1f>']]}
+25d7 : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'vsprintf', 'param': [['buf', '<0xa2e>']]}
+7eb4 : {'ret_type': '<0x6d4e>', 'static': 1, 'name': 'pic_spur_int_handler', 'param': [['excp', '<0x7d07>']]}
+2b1e4 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__ctype_toupper_loc', 'param': []}
+3d6c9 : {'extern': 1, 'ret_type': 'void', 'name': 'apic_timer_setup', 'param': [['apic', '<0x3bdb7>']]}
+20aad : {'extern': 1, 'ret_type': '<0x1fc22>', 'name': 'nk_core_barrier_raise', 'param': []}
+313df : {'extern': 1, 'ret_type': 'void', 'name': 'buddy_dump_mempool', 'param': [['mp', '<0x30418>']]}
+2806c : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'getwc', 'param': [['stream', '<0x26e9f>']]}
+2830f : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'ungetc', 'param': [['character', '<0x25df9>']]}
+29428 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'tanh', 'param': [['x', '<0x25d63>']]}
+be7b : {'static': 1}
+466a1 : {'extern': 1, 'ret_type': 'void', 'name': 'serial_putlnn', 'param': [['line', '<0x46263>']]}
+2c5b1 : {'extern': 1, 'ret_type': '<0x2be35>', 'name': 'nemo_register_event_action', 'param': [['func', '<0x2be2e>']]}
+27ec3 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fputs', 'param': [['s', '<0x26de5>']]}
+191d8 : {'extern': 1, 'ret_type': '<0x1743b>', 'name': 'smp_xcall', 'param': [['cpu_id', '<0x177b2>']]}
+15aad : {'extern': 1, 'ret_type': '<0x14500>', 'name': 'nk_htable_iter_remove', 'param': [['iter', '<0x159d6>']]}
+1107 : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'vprintk', 'param': [['fmt', '<0x960>']]}
+29649 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'writev', 'param': []}
+dc0d : {'extern': 1, 'ret_type': '<0xd087>', 'name': 'strtox', 'param': [['nptr', '<0xd12b>']]}
+db36 : {'extern': 1, 'ret_type': '<0xd06e>', 'name': 'strtol', 'param': [['str', '<0xd12b>']]}
+7f42 : {'static': 1}
+30a4f : {'extern': 1, 'ret_type': '<0x2fd7b>', 'name': 'buddy_alloc', 'param': [['mp', '<0x30418>']]}
+8560 : {'extern': 1, 'ret_type': '<0x84b0>', 'name': 'nk_queue_create', 'param': []}
+3d5c7 : {'extern': 1, 'ret_type': 'void', 'name': 'apic_bcast_sipi', 'param': [['apic', '<0x3bdb7>']]}
+2a3ca : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__stack_chk_fail', 'param': []}
+dd37 : {'extern': 1, 'ret_type': '<0xd07c>', 'name': 'strcspn', 'param': [['s', '<0xd12b>']]}
+20d0e : {'static': 1, 'name': 'barrier_xcall_handler', 'param': [['arg', '<0x1fc04>']]}
+2f0c1 : {'extern': 1, 'ret_type': '<0x2dff8>', 'name': '__mm_boot_alloc', 'param': [['size', '<0x2e03d>']]}
+14db9 : {'extern': 1, 'ret_type': '<0x14527>', 'name': 'nk_hash_long', 'param': [['val', '<0x14527>']]}
+24e37 : {'extern': 1, 'ret_type': '<0x236f9>', 'name': 'nk_my_numa_node', 'param': []}
+1e543 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_wait', 'param': [['t', '<0x1ae14>']]}
+96f0 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_unmask_irq', 'param': [['irq', '<0x8c52>']]}
+28cbd : {'extern': 1, 'ret_type': '<0x25e2b>', 'name': 'strftime', 'param': [['str', '<0x26abd>']]}
+253e6 : {'extern': 1, 'ret_type': '<0x236f9>', 'name': 'nk_get_num_domains', 'param': []}
+d68f : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strdup', 'param': [['s', '<0xd12b>']]}
+1b0f : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'sscanf', 'param': [['buf', '<0x960>']]}
+27e1a : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'printf', 'param': [['s', '<0x26de5>']]}
+28a75 : {'extern': 1, 'ret_type': '<0x26801>', 'name': '__newlocale', 'param': [['category_mask', '<0x25df9>']]}
+d9d5 : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strchr', 'param': [['s', '<0xd12b>']]}
+1d0fe : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_thread_queue_wake_one', 'param': [['q', '<0x1ae99>']]}
+1d6fe : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_tls_key_delete', 'param': [['key', '<0x1ae51>']]}
+11e27 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_ticket_unlock', 'param': [['l', '<0x11dcf>']]}
+2ae9e : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'iswctype', 'param': []}
+26c72 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'clock_gettime', 'param': [['clk_id', '<0x26793>']]}
+bfdf : {'static': 1}
+1d4a : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'vsnprintf', 'param': [['buf', '<0xa2e>']]}
+2961a : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'exp', 'param': [['x', '<0x25d63>']]}
+28eba : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'fabs', 'param': [['__x', '<0x25d63>']]}
+2a924 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__towupper_l', 'param': []}
+1c78e : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_thread_run', 'param': [['t', '<0x1ae14>']]}
+2922b : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'abs', 'param': [['x', '<0x25d63>']]}
+1ef33 : {'extern': 1, 'ret_type': '<0x1a4ae>', 'name': 'nk_thread_queue_sleep', 'param': [['q', '<0x1ae99>']]}
+13d0d : {'extern': 1, 'ret_type': '<0x1310c>', 'name': 'nk_condvar_wait', 'param': [['c', '<0x13b81>']]}
+36752 : {'extern': 1, 'ret_type': '<0x35cd0>', 'name': 'nk_mwait_init', 'param': []}
+2c1 : {'extern': 1, 'ret_type': '<0x88>', 'name': 'Format_Output', 'param': [['q', '<0xf5>']]}
+3f23a : {'static': 1}
+10134 : {'extern': 1, 'ret_type': '<0xec4f>', 'name': 'mf_handler', 'param': [['excp', '<0x1019e>']]}
+1e38f : {'static': 1}
+3b1aa : {'extern': 1, 'ret_type': '<0x3af70>', 'name': 'acpi_shutdown', 'param': []}
+2075f : {'extern': 1, 'ret_type': '<0x1fc22>', 'name': 'nk_barrier_wait', 'param': [['barrier', '<0x20455>']]}
+cab0 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_paging_init', 'param': [['mem', '<0xbe11>']]}
+630c : {'static': 1}
+185c : {'extern': 1, 'ret_type': '<0x74c>', 'name': 'vsscanf', 'param': [['buf', '<0x960>']]}
+27591 : {'extern': 1, 'ret_type': '<0x26e9f>', 'name': 'fopen', 'param': [['path', '<0x26de5>']]}
+2a11d : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wmemchr', 'param': []}
+2fb2c : {'extern': 1, 'ret_type': '<0x2e03d>', 'name': 'mm_boot_kmem_cleanup', 'param': []}
+1832b : {'ret_type': '<0x1743b>', 'static': 1, 'name': 'xcall_handler', 'param': [['e', '<0x18712>']]}
+29316 : {'extern': 1, 'ret_type': '<0x2679e>', 'name': 'mktime', 'param': [['timeptr', '<0x29347>']]}
+464ec : {'static': 1}
+2f7fd : {'extern': 1, 'ret_type': '<0x2dff1>', 'name': 'mm_boot_kmem_init', 'param': []}
+5b9f : {'extern': 1, 'ret_type': '<0x3344>', 'name': 'nk_vc_clear', 'param': [['attr', '<0x339e>']]}
+1b527 : {'ret_type': '<0x1a508>', 'static': 1, 'name': 'spin_lock_irq_save', 'param': [['lock', '<0x1b05e>']]}
+2c02f : {'ret_type': '<0x2b60c>', 'static': 1, 'name': 'nemo_ipi_event_recv', 'param': [['excp', '<0x2c1c8>']]}
+29486 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'acos', 'param': [['x', '<0x25d63>']]}
+18b33 : {'extern': 1, 'ret_type': '<0x1743b>', 'name': 'smp_bringup_aps', 'param': [['naut', '<0x18216>']]}
+28470 : {'extern': 1, 'ret_type': '<0x25e32>', 'name': 'ftello64', 'param': [['stream', '<0x26e9f>']]}
+3f42b : {'extern': 1, 'ret_type': 'void', 'name': 'ioapic_unmask_irq', 'param': [['ioapic', '<0x3eeba>']]}
+29552 : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'sqrt', 'param': [['x', '<0x25d63>']]}
+2c87d : {'extern': 1, 'ret_type': 'void', 'name': 'nemo_event_await', 'param': []}
+12af7 : {'extern': 1, 'ret_type': '<0x11fac>', 'name': 'nk_rwlock_rd_unlock', 'param': [['l', '<0x1299f>']]}
+2c8b2 : {'extern': 1, 'ret_type': '<0x2b60c>', 'name': 'nemo_init', 'param': []}
+2925a : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'sin', 'param': [['x', '<0x25d63>']]}
+d7bb : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strsep', 'param': [['s', '<0xd85e>']]}
+437ed : {'static': 1}
+28fbf : {'extern': 1, 'ret_type': '<0x25d63>', 'name': 'fmodnew', 'param': [['y', '<0x25df9>']]}
+278b9 : {'extern': 1, 'ret_type': '<0x26abd>', 'name': 'tmpnam', 'param': [['s', '<0x26abd>']]}
+d8b4 : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strncat', 'param': [['s1', '<0xd173>']]}
+3088c : {'extern': 1, 'ret_type': '<0x30418>', 'name': 'buddy_init', 'param': [['base_addr', '<0x2fdc0>']]}
+2819e : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'fseek', 'param': [['stream', '<0x26e9f>']]}
+2a9ad : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__uselocale', 'param': []}
+2a2b8 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'wmemcpy', 'param': []}
+290bd : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'ischar', 'param': [['str', '<0x290ee>']]}
+26bc5 : {'extern': 1, 'ret_type': '<0x25df9>', 'name': '__popcountdi2', 'param': [['a', '<0x25e0b>']]}
+170a8 : {'extern': 1, 'ret_type': 'void', 'name': 'nk_rand_set_xi', 'param': [['xi', '<0x16690>']]}
+2aabf : {'extern': 1, 'ret_type': '<0x25df9>', 'name': 'mbsnrtowcs', 'param': []}
+da12 : {'extern': 1, 'ret_type': '<0xd173>', 'name': 'strrchr', 'param': [['s', '<0xd12b>']]}

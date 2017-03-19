@@ -55,12 +55,11 @@ deps_src/lua_src/lnautlib.o := \
     $(wildcard include/config/hpet.h) \
     $(wildcard include/config/hz.h) \
     $(wildcard include/config/virtio/pci.h) \
-  include/lua/lua.h \
+  include/nautilus/naut_types.h \
   include/nautilus/libccompat.h \
   include/nautilus/nautilus.h \
   include/nautilus/printk.h \
   /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
-  include/nautilus/naut_types.h \
   include/dev/serial.h \
   /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
   include/nautilus/instrument.h \
@@ -88,6 +87,10 @@ deps_src/lua_src/lnautlib.o := \
   include/nautilus/barrier.h \
   include/nautilus/numa.h \
   include/arch/x64/main.h \
+  include/nautilus/math.h \
+  include/lib/bitops.h \
+  include/asm/bitops.h \
+  include/lua/lua.h \
   include/lua/luaconf.h \
   include/lua/lauxlib.h \
   include/lua/libdump.h \
