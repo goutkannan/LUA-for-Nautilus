@@ -1,0 +1,1546 @@
+  CC      src/lua_src/lnautlib.o
+src/lua_src/lnautlib.c:11:12: error: conflicting types for ‘strncasecmp’
+ extern int strncasecmp(const char *);
+            ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:91:5: note: previous declaration of ‘strncasecmp’ was here
+ int strncasecmp (const char * s1, const char * s2, size_t limit);
+     ^
+src/lua_src/lnautlib.c:15:15: error: conflicting types for ‘fmodnew’
+ extern double fmodnew(int);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:252:8: note: previous declaration of ‘fmodnew’ was here
+ double fmodnew(int y, int x); //dupe for test
+        ^
+src/lua_src/lnautlib.c:17:15: error: conflicting types for ‘freopen’
+ extern void * freopen(const char *);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:186:7: note: previous declaration of ‘freopen’ was here
+ FILE *freopen(const char *fname, const char *mode,FILE *stream);
+       ^
+src/lua_src/lnautlib.c:18:36: error: conflicting types for ‘nk_create_vc’
+ extern struct nk_virtual_console * nk_create_vc(char *);
+                                    ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:38:28: note: previous declaration of ‘nk_create_vc’ was here
+ struct nk_virtual_console *nk_create_vc(char *name,
+                            ^
+src/lua_src/lnautlib.c:20:44: warning: ‘struct rb_root’ declared inside parameter list [enabled by default]
+ extern struct rb_node * nk_rb_first(struct rb_root *);
+                                            ^
+src/lua_src/lnautlib.c:20:44: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+src/lua_src/lnautlib.c:22:22: error: conflicting types for ‘simple_strtoll’
+ extern long long int simple_strtoll(const char *);
+                      ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:43:11: note: previous declaration of ‘simple_strtoll’ was here
+ long long simple_strtoll(const char*, char**, unsigned int);
+           ^
+src/lua_src/lnautlib.c:23:26: error: conflicting types for ‘simple_strtoul’
+ extern long unsigned int simple_strtoul(const char *);
+                          ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:40:15: note: previous declaration of ‘simple_strtoul’ was here
+ unsigned long simple_strtoul(const char*, char**, unsigned int);
+               ^
+src/lua_src/lnautlib.c:25:32: error: conflicting types for ‘nk_dequeue_entry_atomic’
+ extern struct nk_queue_entry * nk_dequeue_entry_atomic(struct nk_queue *);
+                                ^
+In file included from include/nautilus/smp.h:45:0,
+                 from include/nautilus/nautilus.h:52,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/queue.h:49:19: note: previous declaration of ‘nk_dequeue_entry_atomic’ was here
+ nk_queue_entry_t* nk_dequeue_entry_atomic(nk_queue_t * q, nk_queue_entry_t * entry);
+                   ^
+src/lua_src/lnautlib.c:26:26: error: conflicting types for ‘lseek64’
+ extern long unsigned int lseek64(int);
+                          ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:166:10: note: previous declaration of ‘lseek64’ was here
+ uint64_t lseek64(int fd, uint64_t offset, int whence);
+          ^
+src/lua_src/lnautlib.c:27:17: error: conflicting types for ‘strtol’
+ extern long int strtol(const char *);
+                 ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:170:6: note: previous declaration of ‘strtol’ was here
+ long strtol(const char * str, char ** endptr, int base);
+      ^
+src/lua_src/lnautlib.c:28:12: error: conflicting types for ‘fputc’
+ extern int fputc(int);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:158:5: note: previous declaration of ‘fputc’ was here
+ int fputc(int, FILE*);
+     ^
+src/lua_src/lnautlib.c:30:12: error: conflicting types for ‘strtoi’
+ extern int strtoi(const char *);
+            ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:169:5: note: previous declaration of ‘strtoi’ was here
+ int strtoi (const char * nptr, char ** endptr);
+     ^
+src/lua_src/lnautlib.c:31:15: error: conflicting types for ‘strtod’
+ extern double strtod(const char *);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:258:8: note: previous declaration of ‘strtod’ was here
+ double strtod(const char *str, char **endptr);
+        ^
+src/lua_src/lnautlib.c:32:38: warning: ‘struct nk_condvar’ declared inside parameter list [enabled by default]
+ extern int nk_condvar_destroy(struct nk_condvar *);
+                                      ^
+src/lua_src/lnautlib.c:33:12: error: conflicting types for ‘nk_vc_setattr_specific’
+ extern int nk_vc_setattr_specific(struct nk_virtual_console *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:62:5: note: previous declaration of ‘nk_vc_setattr_specific’ was here
+ int nk_vc_setattr_specific(struct nk_virtual_console *vc, uint8_t attr);
+     ^
+src/lua_src/lnautlib.c:34:15: error: conflicting types for ‘frexp’
+ extern double frexp(double);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:256:8: note: previous declaration of ‘frexp’ was here
+ double frexp(double x, int *e);
+        ^
+src/lua_src/lnautlib.c:35:12: error: conflicting types for ‘fputs’
+ extern int fputs(const char *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:159:5: note: previous declaration of ‘fputs’ was here
+ int fputs(const char*, FILE*);
+     ^
+src/lua_src/lnautlib.c:37:26: error: conflicting types for ‘strtox’
+ extern long unsigned int strtox(const char *);
+                          ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:172:10: note: previous declaration of ‘strtox’ was here
+ uint64_t strtox (const char * nptr, char ** endptr);
+          ^
+src/lua_src/lnautlib.c:38:15: error: conflicting types for ‘realloc’
+ extern void * realloc(void *);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:181:7: note: previous declaration of ‘realloc’ was here
+ void *realloc(void *ptr, size_t size);
+       ^
+src/lua_src/lnautlib.c:39:12: error: conflicting types for ‘strict_strtoul’
+ extern int strict_strtoul(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:44:5: note: previous declaration of ‘strict_strtoul’ was here
+ int strict_strtoul(const char *cp, unsigned int base, unsigned long *res);
+     ^
+src/lua_src/lnautlib.c:41:12: error: conflicting types for ‘smp_xcall’
+ extern int smp_xcall(unsigned int);
+            ^
+In file included from include/nautilus/nautilus.h:52:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/smp.h:135:5: note: previous declaration of ‘smp_xcall’ was here
+ int smp_xcall(cpu_id_t cpu_id, nk_xcall_func_t fun, void * arg, uint8_t wait);
+     ^
+src/lua_src/lnautlib.c:44:12: error: conflicting types for ‘nk_vc_display_char_specific’
+ extern int nk_vc_display_char_specific(struct nk_virtual_console *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:70:5: note: previous declaration of ‘nk_vc_display_char_specific’ was here
+ int nk_vc_display_char_specific(struct nk_virtual_console *vc,
+     ^
+src/lua_src/lnautlib.c:47:22: error: expected declaration specifiers or ‘...’ before ‘*’ token
+ extern char * strsep(* char *);
+                      ^
+src/lua_src/lnautlib.c:51:12: error: conflicting types for ‘strcoll’
+ extern int strcoll(const char *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:236:5: note: previous declaration of ‘strcoll’ was here
+ int strcoll(const char *str1, const char *str2);
+     ^
+src/lua_src/lnautlib.c:52:12: error: conflicting types for ‘nk_vc_gets’
+ extern int nk_vc_gets(char *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:83:5: note: previous declaration of ‘nk_vc_gets’ was here
+ int nk_vc_gets(char *buf, int n, int display);
+     ^
+src/lua_src/lnautlib.c:54:26: error: conflicting types for ‘strnlen’
+ extern long unsigned int strnlen(const char *);
+                          ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:87:8: note: previous declaration of ‘strnlen’ was here
+ size_t strnlen (const char * str, size_t max);
+        ^
+src/lua_src/lnautlib.c:56:15: error: conflicting types for ‘strstr’
+ extern char * strstr(const char *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:103:8: note: previous declaration of ‘strstr’ was here
+ char * strstr (const char * haystack, const char * needle);
+        ^
+src/lua_src/lnautlib.c:57:12: error: conflicting types for ‘strict_strtoll’
+ extern int strict_strtoll(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:47:5: note: previous declaration of ‘strict_strtoll’ was here
+ int strict_strtoll(const char *cp, unsigned int base, long long *res);
+     ^
+src/lua_src/lnautlib.c:59:15: error: conflicting types for ‘memmove’
+ extern void * memmove(void *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:84:8: note: previous declaration of ‘memmove’ was here
+ void * memmove (void * dst, const void * src, size_t n);
+        ^
+src/lua_src/lnautlib.c:63:15: error: conflicting types for ‘modf’
+ extern double modf(double);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:253:8: note: previous declaration of ‘modf’ was here
+ double modf(double y, double *x);
+        ^
+src/lua_src/lnautlib.c:66:12: error: conflicting types for ‘strcmp’
+ extern int strcmp(const char *);
+            ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:88:5: note: previous declaration of ‘strcmp’ was here
+ int strcmp (const char * s1, const char * s2);
+     ^
+src/lua_src/lnautlib.c:67:12: error: conflicting types for ‘nk_vc_clear_specific’
+ extern int nk_vc_clear_specific(struct nk_virtual_console *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:64:5: note: previous declaration of ‘nk_vc_clear_specific’ was here
+ int nk_vc_clear_specific(struct nk_virtual_console *vc, uint8_t attr);
+     ^
+src/lua_src/lnautlib.c:68:12: error: conflicting types for ‘strncmp’
+ extern int strncmp(const char *);
+            ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:90:5: note: previous declaration of ‘strncmp’ was here
+ int strncmp (const char * s1, const char * s2, size_t limit);
+     ^
+src/lua_src/lnautlib.c:69:12: error: conflicting types for ‘clock_gettime’
+ extern int clock_gettime(int);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:137:5: note: previous declaration of ‘clock_gettime’ was here
+ int clock_gettime(clockid_t, struct timespec*);
+     ^
+src/lua_src/lnautlib.c:70:12: error: conflicting types for ‘vsscanf’
+ extern int vsscanf(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:54:5: note: previous declaration of ‘vsscanf’ was here
+ int vsscanf(const char * buf, const char * fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:72:12: error: conflicting types for ‘snprintf’
+ extern int snprintf(char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:50:5: note: previous declaration of ‘snprintf’ was here
+ int snprintf(char * buf, size_t size, const char *fmt, ...);
+     ^
+src/lua_src/lnautlib.c:73:12: error: conflicting types for ‘nk_map_page’
+ extern int nk_map_page(long unsigned int);
+            ^
+In file included from include/nautilus/nautilus.h:53:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/paging.h:100:5: note: previous declaration of ‘nk_map_page’ was here
+ int nk_map_page (addr_t vaddr, addr_t paddr, uint64_t flags, page_size_t ps);
+     ^
+src/lua_src/lnautlib.c:74:35: warning: ‘struct nk_condvar’ declared inside parameter list [enabled by default]
+ extern int nk_condvar_init(struct nk_condvar *);
+                                   ^
+src/lua_src/lnautlib.c:75:15: error: conflicting types for ‘strcat’
+ extern char * strcat(char *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:95:8: note: previous declaration of ‘strcat’ was here
+ char * strcat (char * s1, const char * s2);
+        ^
+src/lua_src/lnautlib.c:81:15: error: conflicting types for ‘fgets’
+ extern char * fgets(char *);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:185:7: note: previous declaration of ‘fgets’ was here
+ char *fgets(char *restrict s, int n, FILE *restrict stream); 
+       ^
+src/lua_src/lnautlib.c:84:41: warning: ‘struct nk_hashtable_iter’ declared inside parameter list [enabled by default]
+ extern int nk_htable_iter_remove(struct nk_hashtable_iter *);
+                                         ^
+src/lua_src/lnautlib.c:85:15: error: conflicting types for ‘strchr’
+ extern char * strchr(const char *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:99:8: note: previous declaration of ‘strchr’ was here
+ char * strchr (const char * s, int c);
+        ^
+src/lua_src/lnautlib.c:87:15: error: conflicting types for ‘fopen’
+ extern void * fopen(const char *);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:149:8: note: previous declaration of ‘fopen’ was here
+ FILE * fopen(const char*, FILE*); // Default signature is fopen(cont*,cont*)
+        ^
+src/lua_src/lnautlib.c:91:15: error: conflicting types for ‘__mm_boot_alloc’
+ extern void * __mm_boot_alloc(long unsigned int);
+               ^
+In file included from include/nautilus/smp.h:44:0,
+                 from include/nautilus/nautilus.h:52,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/mm.h:69:8: note: previous declaration of ‘__mm_boot_alloc’ was here
+ void * __mm_boot_alloc(ulong_t size, ulong_t align, ulong_t goal);
+        ^
+src/lua_src/lnautlib.c:95:12: error: conflicting types for ‘sprintf’
+ extern int sprintf(char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:53:5: note: previous declaration of ‘sprintf’ was here
+ int sprintf(char * buf, const char *fmt, ...);
+     ^
+src/lua_src/lnautlib.c:96:12: error: conflicting types for ‘null_excp_handler’
+ extern int null_excp_handler(struct excp_entry_state *);
+            ^
+In file included from include/dev/timer.h:39:0,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/idt.h:125:5: note: previous declaration of ‘null_excp_handler’ was here
+ int null_excp_handler(excp_entry_t * excp, excp_vec_t vec, addr_t fault_addr);
+     ^
+src/lua_src/lnautlib.c:97:15: error: conflicting types for ‘strrchr’
+ extern char * strrchr(const char *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:100:8: note: previous declaration of ‘strrchr’ was here
+ char * strrchr (const char * s, int c);
+        ^
+src/lua_src/lnautlib.c:98:12: error: conflicting types for ‘nk_pf_handler’
+ extern int nk_pf_handler(struct excp_entry_state *);
+            ^
+In file included from include/nautilus/nautilus.h:53:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/paging.h:103:5: note: previous declaration of ‘nk_pf_handler’ was here
+ int nk_pf_handler(excp_entry_t * excp, excp_vec_t vector, addr_t fault_addr);
+     ^
+src/lua_src/lnautlib.c:99:50: warning: ‘struct pmc_event’ declared inside parameter list [enabled by default]
+ extern long unsigned int read_event_count(struct pmc_event *);
+                                                  ^
+src/lua_src/lnautlib.c:100:15: error: conflicting types for ‘fmod’
+ extern double fmod(double);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:254:8: note: previous declaration of ‘fmod’ was here
+ double fmod(double y, double x);
+        ^
+src/lua_src/lnautlib.c:101:26: error: conflicting types for ‘strcspn’
+ extern long unsigned int strcspn(const char *);
+                          ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:102:8: note: previous declaration of ‘strcspn’ was here
+ size_t strcspn (const char * s, const char * reject);
+        ^
+src/lua_src/lnautlib.c:102:12: error: conflicting types for ‘vscnprintf’
+ extern int vscnprintf(char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:49:5: note: previous declaration of ‘vscnprintf’ was here
+ int vscnprintf(char *buf, size_t size, const char *fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:108:36: warning: ‘struct nk_condvar’ declared inside parameter list [enabled by default]
+ extern int nk_condvar_bcast(struct nk_condvar *);
+                                    ^
+src/lua_src/lnautlib.c:111:12: error: conflicting types for ‘null_irq_handler’
+ extern int null_irq_handler(struct excp_entry_state *);
+            ^
+In file included from include/dev/timer.h:39:0,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/idt.h:126:5: note: previous declaration of ‘null_irq_handler’ was here
+ int null_irq_handler(excp_entry_t * excp, excp_vec_t vector);
+     ^
+src/lua_src/lnautlib.c:115:12: error: conflicting types for ‘vsnprintf’
+ extern int vsnprintf(char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:48:5: note: previous declaration of ‘vsnprintf’ was here
+ int vsnprintf(char *buf, size_t size, const char *fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:116:12: error: conflicting types for ‘nk_bind_vc’
+ extern int nk_bind_vc(struct nk_thread *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:45:5: note: previous declaration of ‘nk_bind_vc’ was here
+ int nk_bind_vc(struct nk_thread *thread, struct nk_virtual_console * cons);
+     ^
+src/lua_src/lnautlib.c:117:41: warning: ‘struct nk_hashtable_iter’ declared inside parameter list [enabled by default]
+ extern int nk_htable_iter_search(struct nk_hashtable_iter *);
+                                         ^
+src/lua_src/lnautlib.c:118:12: error: conflicting types for ‘nk_vc_printf’
+ extern int nk_vc_printf(char *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:57:5: note: previous declaration of ‘nk_vc_printf’ was here
+ int nk_vc_printf(char *fmt, ...);
+     ^
+src/lua_src/lnautlib.c:119:12: error: conflicting types for ‘strict_strtol’
+ extern int strict_strtol(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:45:5: note: previous declaration of ‘strict_strtol’ was here
+ int strict_strtol(const char *cp, unsigned int base, long *res);
+     ^
+src/lua_src/lnautlib.c:120:15: error: conflicting types for ‘strcpy’
+ extern char * strcpy(char *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:97:8: note: previous declaration of ‘strcpy’ was here
+ char * strcpy (char * dest, const char * src);
+        ^
+src/lua_src/lnautlib.c:123:26: error: conflicting types for ‘strftime’
+ extern long unsigned int strftime(char *);
+                          ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:237:8: note: previous declaration of ‘strftime’ was here
+ size_t strftime(char *str, size_t maxsize, const char *format, const struct tm *timeptr);
+        ^
+src/lua_src/lnautlib.c:128:15: error: conflicting types for ‘setlocale’
+ extern char * setlocale(int);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:171:7: note: previous declaration of ‘setlocale’ was here
+ char *setlocale(int category, const char *locale);
+       ^
+src/lua_src/lnautlib.c:129:15: error: conflicting types for ‘pow’
+ extern double pow(double);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:271:8: note: previous declaration of ‘pow’ was here
+ double pow(double x, double y);
+        ^
+src/lua_src/lnautlib.c:130:12: error: conflicting types for ‘nk_timer_handler’
+ extern int nk_timer_handler(struct excp_entry_state *);
+            ^
+In file included from include/nautilus/nautilus.h:51:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/dev/timer.h:40:5: note: previous declaration of ‘nk_timer_handler’ was here
+ int nk_timer_handler(excp_entry_t *, excp_vec_t);
+     ^
+src/lua_src/lnautlib.c:132:15: error: conflicting types for ‘ldexp’
+ extern double ldexp(double);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:257:8: note: previous declaration of ‘ldexp’ was here
+ double ldexp(double x, int exp);
+        ^
+src/lua_src/lnautlib.c:135:12: error: conflicting types for ‘printf’
+ extern int printf(const char *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:179:5: note: previous declaration of ‘printf’ was here
+ int printf(const char *, ...);
+     ^
+src/lua_src/lnautlib.c:136:12: error: conflicting types for ‘scnprintf’
+ extern int scnprintf(char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:51:5: note: previous declaration of ‘scnprintf’ was here
+ int scnprintf(char * buf, size_t size, const char *fmt, ...);
+     ^
+src/lua_src/lnautlib.c:137:12: error: conflicting types for ‘early_printk’
+ extern int early_printk(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:39:5: note: previous declaration of ‘early_printk’ was here
+ int early_printk (const char * fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:138:12: error: conflicting types for ‘printk’
+ extern int printk(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:37:5: note: previous declaration of ‘printk’ was here
+ int printk (const char * fmt, ...);
+     ^
+src/lua_src/lnautlib.c:139:12: error: conflicting types for ‘poll’
+ extern int poll(struct pollfd *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:168:5: note: previous declaration of ‘poll’ was here
+ int poll (struct pollfd *fds, nfds_t nfds, int timeout);
+     ^
+src/lua_src/lnautlib.c:140:15: error: conflicting types for ‘strncpy’
+ extern char * strncpy(char *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:98:8: note: previous declaration of ‘strncpy’ was here
+ char * strncpy (char * dest, const char * src, size_t limit);
+        ^
+src/lua_src/lnautlib.c:141:12: error: conflicting types for ‘nk_map_page_nocache’
+ extern int nk_map_page_nocache(long unsigned int);
+            ^
+In file included from include/nautilus/nautilus.h:53:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/paging.h:101:5: note: previous declaration of ‘nk_map_page_nocache’ was here
+ int nk_map_page_nocache (addr_t paddr, uint64_t flags, page_size_t ps);
+     ^
+src/lua_src/lnautlib.c:146:15: error: conflicting types for ‘fdopen’
+ extern void * fdopen(int);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:155:7: note: previous declaration of ‘fdopen’ was here
+ FILE *fdopen(int fd, const char *mode);
+       ^
+src/lua_src/lnautlib.c:152:12: error: conflicting types for ‘strict_strtoull’
+ extern int strict_strtoull(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:46:5: note: previous declaration of ‘strict_strtoull’ was here
+ int strict_strtoull(const char *cp, unsigned int base, unsigned long long *res);
+     ^
+src/lua_src/lnautlib.c:155:15: error: conflicting types for ‘__nl_langinfo_l’
+ extern char * __nl_langinfo_l(int);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:176:7: note: previous declaration of ‘__nl_langinfo_l’ was here
+ char *__nl_langinfo_l(nl_item item, locale_t locale);
+       ^
+src/lua_src/lnautlib.c:157:15: error: conflicting types for ‘memset’
+ extern void * memset(void *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:83:8: note: previous declaration of ‘memset’ was here
+ void * memset (void * dst, char c, size_t n);
+        ^
+src/lua_src/lnautlib.c:159:12: error: conflicting types for ‘nk_barrier_init’
+ extern int nk_barrier_init(struct nk_barrier *);
+            ^
+In file included from include/nautilus/nautilus.h:56:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/barrier.h:50:5: note: previous declaration of ‘nk_barrier_init’ was here
+ int nk_barrier_init (nk_barrier_t * barrier, uint32_t count);
+     ^
+src/lua_src/lnautlib.c:160:12: error: conflicting types for ‘vprintk’
+ extern int vprintk(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:38:5: note: previous declaration of ‘vprintk’ was here
+ int vprintk(const char * fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:164:12: error: conflicting types for ‘vfprintf’
+ extern int vfprintf(void *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:139:5: note: previous declaration of ‘vfprintf’ was here
+ int vfprintf(FILE*, const char*, va_list);
+     ^
+src/lua_src/lnautlib.c:166:37: warning: ‘struct nk_rwlock’ declared inside parameter list [enabled by default]
+ extern int nk_rwlock_rd_lock(struct nk_rwlock *);
+                                     ^
+src/lua_src/lnautlib.c:171:37: warning: ‘struct nk_rwlock’ declared inside parameter list [enabled by default]
+ extern int nk_rwlock_wr_lock(struct nk_rwlock *);
+                                     ^
+src/lua_src/lnautlib.c:172:12: error: conflicting types for ‘fseeko64’
+ extern int fseeko64(void *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:164:5: note: previous declaration of ‘fseeko64’ was here
+ int fseeko64(FILE *fp, uint64_t offset, int whence);
+     ^
+src/lua_src/lnautlib.c:173:12: error: conflicting types for ‘fscanf’
+ extern int fscanf(void *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:190:5: note: previous declaration of ‘fscanf’ was here
+ int fscanf(FILE *restrict stream, const char *restrict format, ... );
+     ^
+src/lua_src/lnautlib.c:177:26: error: conflicting types for ‘strspn’
+ extern long unsigned int strspn(const char *);
+                          ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:101:8: note: previous declaration of ‘strspn’ was here
+ size_t strspn (const char * s, const char * accept);
+        ^
+src/lua_src/lnautlib.c:179:12: error: conflicting types for ‘ungetc’
+ extern int ungetc(int);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:165:5: note: previous declaration of ‘ungetc’ was here
+ int ungetc(int character, FILE * stream);
+     ^
+src/lua_src/lnautlib.c:182:12: error: conflicting types for ‘vsprintf’
+ extern int vsprintf(char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:52:5: note: previous declaration of ‘vsprintf’ was here
+ int vsprintf(char *buf, const char *fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:183:12: error: conflicting types for ‘nk_vc_log’
+ extern int nk_vc_log(char *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:58:5: note: previous declaration of ‘nk_vc_log’ was here
+ int nk_vc_log(char *fmt, ...);
+     ^
+src/lua_src/lnautlib.c:184:12: error: conflicting types for ‘rename’
+ extern int rename(const char *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:202:5: note: previous declaration of ‘rename’ was here
+ int rename(const char *old, const char *new);
+     ^
+src/lua_src/lnautlib.c:185:43: warning: ‘struct rb_root’ declared inside parameter list [enabled by default]
+ extern struct rb_node * nk_rb_last(struct rb_root *);
+                                           ^
+src/lua_src/lnautlib.c:187:12: error: conflicting types for ‘sscanf’
+ extern int sscanf(const char *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:55:5: note: previous declaration of ‘sscanf’ was here
+ int sscanf(const char * buf, const char * fmt, ...);
+     ^
+src/lua_src/lnautlib.c:189:12: error: conflicting types for ‘syscall’
+ extern int syscall(int);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:170:5: note: previous declaration of ‘syscall’ was here
+ int syscall(int number, ...);
+     ^
+src/lua_src/lnautlib.c:190:26: error: conflicting types for ‘fread’
+ extern long unsigned int fread(void *);
+                          ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:161:8: note: previous declaration of ‘fread’ was here
+ size_t fread(void * ptr, size_t size, size_t count, FILE * stream);
+        ^
+src/lua_src/lnautlib.c:191:33: warning: ‘struct Output_Sink’ declared inside parameter list [enabled by default]
+ extern int Format_Output(struct Output_Sink *);
+                                 ^
+src/lua_src/lnautlib.c:194:12: error: conflicting types for ‘fprintf’
+ extern int fprintf(void *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:157:5: note: previous declaration of ‘fprintf’ was here
+ int fprintf(FILE*, const char*, ...);
+     ^
+src/lua_src/lnautlib.c:195:15: error: conflicting types for ‘__newlocale’
+ extern void * __newlocale(int);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:175:10: note: previous declaration of ‘__newlocale’ was here
+ locale_t __newlocale(int category_mask, const char *locale,locale_t base);
+          ^
+src/lua_src/lnautlib.c:197:15: error: conflicting types for ‘bindtextdomain’
+ extern char * bindtextdomain(const char *);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:173:8: note: previous declaration of ‘bindtextdomain’ was here
+ char * bindtextdomain (const char * domainname, const char * dirname);
+        ^
+src/lua_src/lnautlib.c:201:15: error: conflicting types for ‘mm_boot_alloc_aligned’
+ extern void * mm_boot_alloc_aligned(long unsigned int);
+               ^
+In file included from include/nautilus/smp.h:44:0,
+                 from include/nautilus/nautilus.h:52,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/mm.h:71:8: note: previous declaration of ‘mm_boot_alloc_aligned’ was here
+ void * mm_boot_alloc_aligned (ulong_t size, ulong_t align);
+        ^
+src/lua_src/lnautlib.c:202:15: error: conflicting types for ‘strncat’
+ extern char * strncat(char *);
+               ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:96:8: note: previous declaration of ‘strncat’ was here
+ char * strncat (char * s1, const char * s2, size_t limit);
+        ^
+src/lua_src/lnautlib.c:204:12: error: conflicting types for ‘fseek’
+ extern int fseek(void *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:193:5: note: previous declaration of ‘fseek’ was here
+ int fseek(FILE *stream, long offset, int whence); 
+     ^
+src/lua_src/lnautlib.c:205:12: error: conflicting types for ‘nk_vc_setpos_specific’
+ extern int nk_vc_setpos_specific(struct nk_virtual_console *);
+            ^
+In file included from include/nautilus/nautilus.h:29:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/vc.h:68:5: note: previous declaration of ‘nk_vc_setpos_specific’ was here
+ int nk_vc_setpos_specific(struct nk_virtual_console *vc, uint8_t x, uint8_t y);
+     ^
+src/lua_src/lnautlib.c:220:39: warning: ‘struct nk_rwlock’ declared inside parameter list [enabled by default]
+ extern int nk_rwlock_wr_unlock(struct nk_rwlock *);
+                                       ^
+src/lua_src/lnautlib.c:223:31: error: conflicting types for ‘simple_strtoull’
+ extern long long unsigned int simple_strtoull(const char *);
+                               ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:42:20: note: previous declaration of ‘simple_strtoull’ was here
+ unsigned long long simple_strtoull(const char*, char**, unsigned int);
+                    ^
+src/lua_src/lnautlib.c:224:15: error: conflicting types for ‘fopen64’
+ extern void * fopen64(const char *);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:154:8: note: previous declaration of ‘fopen64’ was here
+ FILE * fopen64(const char*, FILE*);
+        ^
+src/lua_src/lnautlib.c:226:12: error: conflicting types for ‘ioctl’
+ extern int ioctl(int);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:169:5: note: previous declaration of ‘ioctl’ was here
+ int ioctl(int d, unsigned long request, ...);
+     ^
+src/lua_src/lnautlib.c:229:12: error: conflicting types for ‘strcasecmp’
+ extern int strcasecmp(const char *);
+            ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:89:5: note: previous declaration of ‘strcasecmp’ was here
+ int strcasecmp (const char * s1, const char * s2);
+     ^
+src/lua_src/lnautlib.c:231:39: warning: ‘struct nk_rwlock’ declared inside parameter list [enabled by default]
+ extern int nk_rwlock_rd_unlock(struct nk_rwlock *);
+                                       ^
+src/lua_src/lnautlib.c:235:15: error: conflicting types for ‘difftime’
+ extern double difftime(long int);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:247:8: note: previous declaration of ‘difftime’ was here
+ double difftime(time_t time1, time_t time2);
+        ^
+src/lua_src/lnautlib.c:237:15: error: conflicting types for ‘atan2’
+ extern double atan2(double);
+               ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:251:8: note: previous declaration of ‘atan2’ was here
+ double atan2(double y, double x);
+        ^
+src/lua_src/lnautlib.c:242:12: error: conflicting types for ‘setvbuf’
+ extern int setvbuf(void *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:195:5: note: previous declaration of ‘setvbuf’ was here
+ int setvbuf(FILE *restrict stream, char *restrict buf, int type,
+     ^
+src/lua_src/lnautlib.c: In function ‘naut_getc’:
+src/lua_src/lnautlib.c:250:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * arg = luaL_checkunsigned(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_next’:
+src/lua_src/lnautlib.c:260:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * node = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_fclose’:
+src/lua_src/lnautlib.c:270:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_create_vc’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:280:16: note: in expansion of macro ‘luaL_checkstring’
+  char * name = luaL_checkstring(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_first’:
+src/lua_src/lnautlib.c:290:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_root * root = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c:291:9: warning: passing argument 1 of ‘nk_rb_first’ from incompatible pointer type [enabled by default]
+  struct rb_node * temp_return =nk_rb_first(root);
+         ^
+src/lua_src/lnautlib.c:20:25: note: expected ‘struct rb_root *’ but argument is of type ‘struct rb_root *’
+ extern struct rb_node * nk_rb_first(struct rb_root *);
+                         ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_queue_sleep’:
+src/lua_src/lnautlib.c:310:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_entry_atomic’:
+src/lua_src/lnautlib.c:315:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_first_atomic’:
+src/lua_src/lnautlib.c:335:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_condvar_destroy’:
+src/lua_src/lnautlib.c:350:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_condvar * c = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c:351:2: warning: passing argument 1 of ‘nk_condvar_destroy’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_condvar_destroy(c);
+  ^
+src/lua_src/lnautlib.c:32:12: note: expected ‘struct nk_condvar *’ but argument is of type ‘struct nk_condvar *’
+ extern int nk_condvar_destroy(struct nk_condvar *);
+            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_setattr_specific’:
+src/lua_src/lnautlib.c:355:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_count’:
+src/lua_src/lnautlib.c:370:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_realloc’:
+src/lua_src/lnautlib.c:380:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * ptr = luaL_checkunsigned(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_enqueue_keycode’:
+src/lua_src/lnautlib.c:390:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_kbd_init’:
+src/lua_src/lnautlib.c:400:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_ischar’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:405:24: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * str = luaL_checkstring(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_display_char_specific’:
+src/lua_src/lnautlib.c:410:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_strsep’:
+src/lua_src/lnautlib.c:425:4: error: expected expression before ‘char’
+  * char * s = luaL_checkstring(L,1);
+    ^
+src/lua_src/lnautlib.c:426:29: error: ‘s’ undeclared (first use in this function)
+  char * temp_return =strsep(s);
+                             ^
+src/lua_src/lnautlib.c:426:29: note: each undeclared identifier is reported only once for each function it appears in
+src/lua_src/lnautlib.c:426:2: error: too few arguments to function ‘strsep’
+  char * temp_return =strsep(s);
+  ^
+In file included from include/nautilus/idt.h:66:0,
+                 from include/dev/timer.h:39,
+                 from include/nautilus/nautilus.h:51,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/naut_string.h:94:8: note: declared here
+ char * strsep (char ** s, const char * ct);
+        ^
+src/lua_src/lnautlib.c: In function ‘naut_arch_numa_init’:
+src/lua_src/lnautlib.c:430:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct sys_info * sys = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_tls_key_create’:
+src/lua_src/lnautlib.c:440:23: warning: initialization makes pointer from integer without a cast [enabled by default]
+  unsigned int * key = luaL_checkunsigned(L,1);
+                       ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_gets’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:450:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_scrollup_specific’:
+src/lua_src/lnautlib.c:455:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_print’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:480:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_memmove’:
+src/lua_src/lnautlib.c:485:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * dst = luaL_checkunsigned(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_scancode’:
+src/lua_src/lnautlib.c:495:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_release_vc’:
+src/lua_src/lnautlib.c:510:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_thread * thread = luaL_checkunsigned(L,1);
+                              ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_clear_specific’:
+src/lua_src/lnautlib.c:525:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_first’:
+src/lua_src/lnautlib.c:545:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_snprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:550:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_condvar_init’:
+src/lua_src/lnautlib.c:560:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_condvar * c = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c:561:2: warning: passing argument 1 of ‘nk_condvar_init’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_condvar_init(c);
+  ^
+src/lua_src/lnautlib.c:74:12: note: expected ‘struct nk_condvar *’ but argument is of type ‘struct nk_condvar *’
+ extern int nk_condvar_init(struct nk_condvar *);
+            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strcat’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:565:14: note: in expansion of macro ‘luaL_checkstring’
+  char * s1 = luaL_checkstring(L,1);
+              ^
+src/lua_src/lnautlib.c: In function ‘naut_xm_handler’:
+src/lua_src/lnautlib.c:570:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_pci_init’:
+src/lua_src/lnautlib.c:580:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_queue_wake_one’:
+src/lua_src/lnautlib.c:590:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_fgets’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:595:15: note: in expansion of macro ‘luaL_checkstring’
+  char * str = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_i8254_init’:
+src/lua_src/lnautlib.c:600:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_fflush’:
+src/lua_src/lnautlib.c:605:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_iter_remove’:
+src/lua_src/lnautlib.c:610:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c:611:2: warning: passing argument 1 of ‘nk_htable_iter_remove’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_htable_iter_remove(iter);
+  ^
+src/lua_src/lnautlib.c:84:12: note: expected ‘struct nk_hashtable_iter *’ but argument is of type ‘struct nk_hashtable_iter *’
+ extern int nk_htable_iter_remove(struct nk_hashtable_iter *);
+            ^
+src/lua_src/lnautlib.c: In function ‘naut_getwc’:
+src/lua_src/lnautlib.c:630:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_enqueue_scancode’:
+src/lua_src/lnautlib.c:635:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_remove’:
+src/lua_src/lnautlib.c:650:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_ftell’:
+src/lua_src/lnautlib.c:655:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * x = luaL_checkunsigned(L,1);
+             ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_sprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:665:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_null_excp_handler’:
+src/lua_src/lnautlib.c:670:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_pf_handler’:
+src/lua_src/lnautlib.c:680:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_read_event_count’:
+src/lua_src/lnautlib.c:685:29: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct pmc_event * event = luaL_checkunsigned(L,1);
+                             ^
+src/lua_src/lnautlib.c:686:2: warning: passing argument 1 of ‘read_event_count’ from incompatible pointer type [enabled by default]
+  long unsigned int temp_return =read_event_count(event);
+  ^
+src/lua_src/lnautlib.c:99:26: note: expected ‘struct pmc_event *’ but argument is of type ‘struct pmc_event *’
+ extern long unsigned int read_event_count(struct pmc_event *);
+                          ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_vscnprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:700:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_ferror’:
+src/lua_src/lnautlib.c:705:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_queue_wake_all’:
+src/lua_src/lnautlib.c:710:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_dec’:
+src/lua_src/lnautlib.c:715:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_arch_early_init’:
+src/lua_src/lnautlib.c:720:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_gmtime’:
+include/lua/lauxlib.h:117:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+ #define luaL_checkint(L,n) ((int)luaL_checkinteger(L, (n)))
+                            ^
+src/lua_src/lnautlib.c:725:27: note: in expansion of macro ‘luaL_checkint’
+  const long int * timer = luaL_checkint(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_condvar_bcast’:
+src/lua_src/lnautlib.c:730:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_condvar * c = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c:731:2: warning: passing argument 1 of ‘nk_condvar_bcast’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_condvar_bcast(c);
+  ^
+src/lua_src/lnautlib.c:108:12: note: expected ‘struct nk_condvar *’ but argument is of type ‘struct nk_condvar *’
+ extern int nk_condvar_bcast(struct nk_condvar *);
+            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_puts’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:740:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_null_irq_handler’:
+src/lua_src/lnautlib.c:745:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_timer_init’:
+src/lua_src/lnautlib.c:755:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_vsnprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:765:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_bind_vc’:
+src/lua_src/lnautlib.c:770:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_thread * thread = luaL_checkunsigned(L,1);
+                              ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_iter_search’:
+src/lua_src/lnautlib.c:775:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c:776:2: warning: passing argument 1 of ‘nk_htable_iter_search’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_htable_iter_search(iter);
+  ^
+src/lua_src/lnautlib.c:117:12: note: expected ‘struct nk_hashtable_iter *’ but argument is of type ‘struct nk_hashtable_iter *’
+ extern int nk_htable_iter_search(struct nk_hashtable_iter *);
+            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_printf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:780:15: note: in expansion of macro ‘luaL_checkstring’
+  char * fmt = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_strcpy’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:790:16: note: in expansion of macro ‘luaL_checkstring’
+  char * dest = luaL_checkstring(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_strftime’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:805:15: note: in expansion of macro ‘luaL_checkstring’
+  char * str = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_int_init’:
+src/lua_src/lnautlib.c:810:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct sys_info * sys = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_mf_handler’:
+src/lua_src/lnautlib.c:820:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_barrier_destroy’:
+src/lua_src/lnautlib.c:825:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_barrier * barrier = luaL_checkunsigned(L,1);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_timer_handler’:
+src/lua_src/lnautlib.c:840:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_run’:
+src/lua_src/lnautlib.c:845:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * t = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_smp_setup_xcall_bsp’:
+src/lua_src/lnautlib.c:860:22: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * core = luaL_checkunsigned(L,1);
+                      ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_scnprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:870:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_poll’:
+src/lua_src/lnautlib.c:885:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct pollfd * fds = luaL_checkunsigned(L,1);
+                        ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strncpy’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:890:16: note: in expansion of macro ‘luaL_checkstring’
+  char * dest = luaL_checkstring(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_wait_for_send’:
+src/lua_src/lnautlib.c:900:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_get_maxlvt’:
+src/lua_src/lnautlib.c:905:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_mktime’:
+src/lua_src/lnautlib.c:915:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct tm * timeptr = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_change’:
+src/lua_src/lnautlib.c:935:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_create_htable_iter’:
+src/lua_src/lnautlib.c:940:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_smp_early_init’:
+src/lua_src/lnautlib.c:945:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_memset’:
+src/lua_src/lnautlib.c:975:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * dst = luaL_checkunsigned(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_ftello64’:
+src/lua_src/lnautlib.c:980:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_barrier_init’:
+src/lua_src/lnautlib.c:985:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_barrier * barrier = luaL_checkunsigned(L,1);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_join’:
+src/lua_src/lnautlib.c:995:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * t = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_vfprintf’:
+src/lua_src/lnautlib.c:1010:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_entry’:
+src/lua_src/lnautlib.c:1015:34: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue_entry * entry = luaL_checkunsigned(L,1);
+                                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_rd_lock’:
+src/lua_src/lnautlib.c:1020:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+src/lua_src/lnautlib.c:1021:2: warning: passing argument 1 of ‘nk_rwlock_rd_lock’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_rwlock_rd_lock(l);
+  ^
+src/lua_src/lnautlib.c:166:12: note: expected ‘struct nk_rwlock *’ but argument is of type ‘struct nk_rwlock *’
+ extern int nk_rwlock_rd_lock(struct nk_rwlock *);
+            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_inc’:
+src/lua_src/lnautlib.c:1035:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_prev’:
+src/lua_src/lnautlib.c:1040:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * node = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_wr_lock’:
+src/lua_src/lnautlib.c:1045:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+src/lua_src/lnautlib.c:1046:2: warning: passing argument 1 of ‘nk_rwlock_wr_lock’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_rwlock_wr_lock(l);
+  ^
+src/lua_src/lnautlib.c:171:12: note: expected ‘struct nk_rwlock *’ but argument is of type ‘struct nk_rwlock *’
+ extern int nk_rwlock_wr_lock(struct nk_rwlock *);
+            ^
+src/lua_src/lnautlib.c: In function ‘naut_fseeko64’:
+src/lua_src/lnautlib.c:1050:14: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * fp = luaL_checkunsigned(L,1);
+              ^
+src/lua_src/lnautlib.c: In function ‘naut_fscanf’:
+src/lua_src/lnautlib.c:1055:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_buddy_alloc’:
+src/lua_src/lnautlib.c:1070:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct buddy_mempool * mp = luaL_checkunsigned(L,1);
+                              ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_localtime’:
+include/lua/lauxlib.h:117:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+ #define luaL_checkint(L,n) ((int)luaL_checkinteger(L, (n)))
+                            ^
+src/lua_src/lnautlib.c:1095:27: note: in expansion of macro ‘luaL_checkint’
+  const long int * timer = luaL_checkint(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_vsprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1100:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_log’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1105:15: note: in expansion of macro ‘luaL_checkstring’
+  char * fmt = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_last’:
+src/lua_src/lnautlib.c:1115:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_root * root = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c:1116:9: warning: passing argument 1 of ‘nk_rb_last’ from incompatible pointer type [enabled by default]
+  struct rb_node * temp_return =nk_rb_last(root);
+         ^
+src/lua_src/lnautlib.c:185:25: note: expected ‘struct rb_root *’ but argument is of type ‘struct rb_root *’
+ extern struct rb_node * nk_rb_last(struct rb_root *);
+                         ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_switch_to_vc’:
+src/lua_src/lnautlib.c:1130:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_fread’:
+src/lua_src/lnautlib.c:1140:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * ptr = luaL_checkunsigned(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_Format_Output’:
+src/lua_src/lnautlib.c:1145:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct Output_Sink * q = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c:1146:2: warning: passing argument 1 of ‘Format_Output’ from incompatible pointer type [enabled by default]
+  int temp_return =Format_Output(q);
+  ^
+src/lua_src/lnautlib.c:191:12: note: expected ‘struct Output_Sink *’ but argument is of type ‘struct Output_Sink *’
+ extern int Format_Output(struct Output_Sink *);
+            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_get_iter_key’:
+src/lua_src/lnautlib.c:1150:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_hash_buffer’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1155:24: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * msg = luaL_checkstring(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_fprintf’:
+src/lua_src/lnautlib.c:1160:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_feof’:
+src/lua_src/lnautlib.c:1180:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * x = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rand_init’:
+src/lua_src/lnautlib.c:1190:21: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * cpu = luaL_checkunsigned(L,1);
+                     ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strncat’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1200:14: note: in expansion of macro ‘luaL_checkstring’
+  char * s1 = luaL_checkstring(L,1);
+              ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_cpu_topo_discover’:
+src/lua_src/lnautlib.c:1205:20: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * me = luaL_checkunsigned(L,1);
+                    ^
+src/lua_src/lnautlib.c: In function ‘naut_fseek’:
+src/lua_src/lnautlib.c:1210:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_setpos_specific’:
+src/lua_src/lnautlib.c:1215:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_tmpnam’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1230:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_smp_bringup_aps’:
+src/lua_src/lnautlib.c:1250:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_read_timer’:
+src/lua_src/lnautlib.c:1255:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_destroy_vc’:
+src/lua_src/lnautlib.c:1260:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_ioapic_init’:
+src/lua_src/lnautlib.c:1265:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct sys_info * sys = luaL_checkunsigned(L,1);
+                          ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_launch_shell’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1270:16: note: in expansion of macro ‘luaL_checkstring’
+  char * name = luaL_checkstring(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_barrier_wait’:
+src/lua_src/lnautlib.c:1280:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_barrier * barrier = luaL_checkunsigned(L,1);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_wr_unlock’:
+src/lua_src/lnautlib.c:1290:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+src/lua_src/lnautlib.c:1291:2: warning: passing argument 1 of ‘nk_rwlock_wr_unlock’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_rwlock_wr_unlock(l);
+  ^
+src/lua_src/lnautlib.c:220:12: note: expected ‘struct nk_rwlock *’ but argument is of type ‘struct nk_rwlock *’
+ extern int nk_rwlock_wr_unlock(struct nk_rwlock *);
+            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_get_iter_value’:
+src/lua_src/lnautlib.c:1315:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_search’:
+src/lua_src/lnautlib.c:1325:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_rd_unlock’:
+src/lua_src/lnautlib.c:1345:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+src/lua_src/lnautlib.c:1346:2: warning: passing argument 1 of ‘nk_rwlock_rd_unlock’ from incompatible pointer type [enabled by default]
+  int temp_return =nk_rwlock_rd_unlock(l);
+  ^
+src/lua_src/lnautlib.c:231:12: note: expected ‘struct nk_rwlock *’ but argument is of type ‘struct nk_rwlock *’
+ extern int nk_rwlock_rd_unlock(struct nk_rwlock *);
+            ^
+src/lua_src/lnautlib.c: In function ‘naut___duplocale’:
+src/lua_src/lnautlib.c:1350:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * locobj = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_insert’:
+src/lua_src/lnautlib.c:1360:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_keycode’:
+src/lua_src/lnautlib.c:1370:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_time’:
+include/lua/lauxlib.h:117:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+ #define luaL_checkint(L,n) ((int)luaL_checkinteger(L, (n)))
+                            ^
+src/lua_src/lnautlib.c:1390:21: note: in expansion of macro ‘luaL_checkint’
+  long int * timer = luaL_checkint(L,1);
+                     ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_iter_advance’:
+src/lua_src/lnautlib.c:1395:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c: In function ‘naut_setvbuf’:
+src/lua_src/lnautlib.c:1400:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+make[2]: *** [src/lua_src/lnautlib.o] Error 1
+make[1]: *** [src/lua_src] Error 2
+make: *** [src] Error 2

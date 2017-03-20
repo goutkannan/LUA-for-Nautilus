@@ -113,5 +113,7 @@ def get_function_sign(filepath = "full_log.txt"):
 
 
 function_values = get_function_sign()
+for k,v in function_values.items():
+	print(k,"....",v)
 
 
