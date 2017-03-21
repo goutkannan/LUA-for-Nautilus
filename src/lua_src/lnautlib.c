@@ -261,6 +261,8 @@ static int naut_nk_get_base_region_by_num(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct rb_node ;
+
 static int naut_nk_rb_next(lua_State *L){
 	struct rb_node * node = luaL_checkunsigned(L,1);
 	struct rb_node * temp_return =nk_rb_next(node);
@@ -298,6 +300,8 @@ static int naut_mb_get_first_hrt_addr(lua_State *L){
 	void * temp_return =mb_get_first_hrt_addr(mbd);
 	return 1; 
 }
+struct rb_root ;
+
 static int naut_nk_rb_first(lua_State *L){
 	struct rb_root * root = luaL_checkunsigned(L,1);
 	struct rb_node * temp_return =nk_rb_first(root);
@@ -326,12 +330,18 @@ static int naut_simple_strtoul(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_queue ;
+
 static int naut_nk_thread_queue_sleep(lua_State *L){
 	struct nk_queue * q = luaL_checkunsigned(L,1);
 	int temp_return =nk_thread_queue_sleep(q);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_queue ;
+
+struct nk_queue_entry ;
+
 static int naut_nk_dequeue_entry_atomic(lua_State *L){
 	struct nk_queue * q = luaL_checkunsigned(L,1);
 	struct nk_queue_entry * entry = luaL_checkunsigned(L,2);
@@ -362,6 +372,8 @@ static int naut_fputc(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_queue ;
+
 static int naut_nk_dequeue_first_atomic(lua_State *L){
 	struct nk_queue * q = luaL_checkunsigned(L,1);
 	struct nk_queue_entry * temp_return =nk_dequeue_first_atomic(q);
@@ -382,12 +394,16 @@ static int naut_strtod(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_condvar ;
+
 static int naut_nk_condvar_destroy(lua_State *L){
 	struct nk_condvar * c = luaL_checkunsigned(L,1);
 	int temp_return =nk_condvar_destroy(c);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_vc_setattr_specific(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	unsigned char attr = luaL_checkunsigned(L,2);
@@ -409,6 +425,8 @@ static int naut_fputs(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_htable_count(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	unsigned int temp_return =nk_htable_count(htable);
@@ -436,6 +454,8 @@ static int naut_strict_strtoul(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_enqueue_keycode(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	short unsigned int key = luaL_checkunsigned(L,2);
@@ -449,6 +469,8 @@ static int naut_smp_xcall(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct naut_info ;
+
 static int naut_kbd_init(lua_State *L){
 	struct naut_info * naut = luaL_checkunsigned(L,1);
 	int temp_return =kbd_init(naut);
@@ -461,6 +483,8 @@ static int naut_ischar(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_vc_display_char_specific(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	unsigned char c = luaL_checkunsigned(L,2);
@@ -491,6 +515,8 @@ static int naut_strsep(lua_State *L){
 	lua_pushstring(L,temp_return);
 	return 1; 
 }
+struct sys_info ;
+
 static int naut_arch_numa_init(lua_State *L){
 	struct sys_info * sys = luaL_checkunsigned(L,1);
 	int temp_return =arch_numa_init(sys);
@@ -524,6 +550,8 @@ static int naut_nk_vc_gets(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_vc_scrollup_specific(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	int temp_return =nk_vc_scrollup_specific(vc);
@@ -577,6 +605,8 @@ static int naut_tanh(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_dequeue_scancode(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	short unsigned int temp_return =nk_dequeue_scancode(vc);
@@ -596,6 +626,8 @@ static int naut_modf(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_thread ;
+
 static int naut_nk_release_vc(lua_State *L){
 	struct nk_thread * thread = luaL_checkunsigned(L,1);
 	int temp_return =nk_release_vc(thread);
@@ -615,6 +647,8 @@ static int naut_strcmp(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_vc_clear_specific(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	unsigned char attr = luaL_checkunsigned(L,2);
@@ -630,6 +664,8 @@ static int naut_strncmp(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct timespec ;
+
 static int naut_clock_gettime(lua_State *L){
 	int clk_id = luaL_checkint(L,1);
 	struct timespec * tp = luaL_checkunsigned(L,2);
@@ -637,6 +673,8 @@ static int naut_clock_gettime(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct __va_list_tag ;
+
 static int naut_vsscanf(lua_State *L){
 	const char * buf = luaL_checkstring(L,1);
 	const char * fmt = luaL_checkstring(L,2);
@@ -645,6 +683,8 @@ static int naut_vsscanf(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_queue ;
+
 static int naut_nk_dequeue_first(lua_State *L){
 	struct nk_queue * q = luaL_checkunsigned(L,1);
 	struct nk_queue_entry * temp_return =nk_dequeue_first(q);
@@ -667,6 +707,8 @@ static int naut_nk_map_page(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_condvar ;
+
 static int naut_nk_condvar_init(lua_State *L){
 	struct nk_condvar * c = luaL_checkunsigned(L,1);
 	int temp_return =nk_condvar_init(c);
@@ -680,6 +722,8 @@ static int naut_strcat(lua_State *L){
 	lua_pushstring(L,temp_return);
 	return 1; 
 }
+struct excp_entry_state ;
+
 static int naut_xm_handler(lua_State *L){
 	struct excp_entry_state * excp = luaL_checkunsigned(L,1);
 	long unsigned int vec = luaL_checkunsigned(L,2);
@@ -693,6 +737,8 @@ static int naut_cosh(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct naut_info ;
+
 static int naut_pci_init(lua_State *L){
 	struct naut_info * naut = luaL_checkunsigned(L,1);
 	int temp_return =pci_init(naut);
@@ -705,6 +751,8 @@ static int naut_remove(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_queue ;
+
 static int naut_nk_thread_queue_wake_one(lua_State *L){
 	struct nk_queue * q = luaL_checkunsigned(L,1);
 	int temp_return =nk_thread_queue_wake_one(q);
@@ -719,6 +767,8 @@ static int naut_fgets(lua_State *L){
 	lua_pushstring(L,temp_return);
 	return 1; 
 }
+struct naut_info ;
+
 static int naut_i8254_init(lua_State *L){
 	struct naut_info * naut = luaL_checkunsigned(L,1);
 	int temp_return =i8254_init(naut);
@@ -731,6 +781,8 @@ static int naut_fflush(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable_iter ;
+
 static int naut_nk_htable_iter_remove(lua_State *L){
 	struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
 	int free_key = luaL_checkint(L,2);
@@ -763,6 +815,8 @@ static int naut_getwc(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_enqueue_scancode(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	short unsigned int scan = luaL_checkunsigned(L,2);
@@ -783,6 +837,8 @@ static int naut___mm_boot_alloc(lua_State *L){
 	void * temp_return =__mm_boot_alloc(size ,align ,goal);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_htable_remove(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	long unsigned int key = luaL_checkunsigned(L,2);
@@ -810,6 +866,8 @@ static int naut_sprintf(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct excp_entry_state ;
+
 static int naut_null_excp_handler(lua_State *L){
 	struct excp_entry_state * excp = luaL_checkunsigned(L,1);
 	long unsigned int vector = luaL_checkunsigned(L,2);
@@ -825,6 +883,8 @@ static int naut_strrchr(lua_State *L){
 	lua_pushstring(L,temp_return);
 	return 1; 
 }
+struct excp_entry_state ;
+
 static int naut_nk_pf_handler(lua_State *L){
 	struct excp_entry_state * excp = luaL_checkunsigned(L,1);
 	long unsigned int vector = luaL_checkunsigned(L,2);
@@ -833,6 +893,8 @@ static int naut_nk_pf_handler(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct pmc_event ;
+
 static int naut_read_event_count(lua_State *L){
 	struct pmc_event * event = luaL_checkunsigned(L,1);
 	long unsigned int temp_return =read_event_count(event);
@@ -853,6 +915,8 @@ static int naut_strcspn(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct __va_list_tag ;
+
 static int naut_vscnprintf(lua_State *L){
 	char * buf = luaL_checkstring(L,1);
 	long unsigned int size = luaL_checkunsigned(L,2);
@@ -868,12 +932,16 @@ static int naut_ferror(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_queue ;
+
 static int naut_nk_thread_queue_wake_all(lua_State *L){
 	struct nk_queue * q = luaL_checkunsigned(L,1);
 	int temp_return =nk_thread_queue_wake_all(q);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_htable_dec(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	long unsigned int key = luaL_checkunsigned(L,2);
@@ -882,6 +950,8 @@ static int naut_nk_htable_dec(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct naut_info ;
+
 static int naut_arch_early_init(lua_State *L){
 	struct naut_info * naut = luaL_checkunsigned(L,1);
 	int temp_return =arch_early_init(naut);
@@ -894,6 +964,8 @@ static int naut_gmtime(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_condvar ;
+
 static int naut_nk_condvar_bcast(lua_State *L){
 	struct nk_condvar * c = luaL_checkunsigned(L,1);
 	int temp_return =nk_condvar_bcast(c);
@@ -912,6 +984,8 @@ static int naut_nk_vc_puts(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct excp_entry_state ;
+
 static int naut_null_irq_handler(lua_State *L){
 	struct excp_entry_state * excp = luaL_checkunsigned(L,1);
 	long unsigned int vector = luaL_checkunsigned(L,2);
@@ -925,6 +999,8 @@ static int naut_register_irq_handler(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct naut_info ;
+
 static int naut_nk_timer_init(lua_State *L){
 	struct naut_info * naut = luaL_checkunsigned(L,1);
 	int temp_return =nk_timer_init(naut);
@@ -937,6 +1013,8 @@ static int naut_cos(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct __va_list_tag ;
+
 static int naut_vsnprintf(lua_State *L){
 	char * buf = luaL_checkstring(L,1);
 	long unsigned int size = luaL_checkunsigned(L,2);
@@ -946,6 +1024,10 @@ static int naut_vsnprintf(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_thread ;
+
+struct nk_virtual_console ;
+
 static int naut_nk_bind_vc(lua_State *L){
 	struct nk_thread * thread = luaL_checkunsigned(L,1);
 	struct nk_virtual_console * cons = luaL_checkunsigned(L,2);
@@ -953,6 +1035,10 @@ static int naut_nk_bind_vc(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable_iter ;
+
+struct nk_hashtable ;
+
 static int naut_nk_htable_iter_search(lua_State *L){
 	struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
 	struct nk_hashtable * htable = luaL_checkunsigned(L,2);
@@ -994,6 +1080,8 @@ static int naut_acos(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+const struct tm ;
+
 static int naut_strftime(lua_State *L){
 	char * str = luaL_checkstring(L,1);
 	long unsigned int maxsize = luaL_checkunsigned(L,2);
@@ -1002,6 +1090,8 @@ static int naut_strftime(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct sys_info ;
+
 static int naut_nk_int_init(lua_State *L){
 	struct sys_info * sys = luaL_checkunsigned(L,1);
 	int temp_return =nk_int_init(sys);
@@ -1014,6 +1104,8 @@ static int naut_mb_is_hrt_environ(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct excp_entry_state ;
+
 static int naut_mf_handler(lua_State *L){
 	struct excp_entry_state * excp = luaL_checkunsigned(L,1);
 	long unsigned int vec = luaL_checkunsigned(L,2);
@@ -1021,6 +1113,8 @@ static int naut_mf_handler(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_barrier ;
+
 static int naut_nk_barrier_destroy(lua_State *L){
 	struct nk_barrier * barrier = luaL_checkunsigned(L,1);
 	int temp_return =nk_barrier_destroy(barrier);
@@ -1041,6 +1135,8 @@ static int naut_pow(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct excp_entry_state ;
+
 static int naut_nk_timer_handler(lua_State *L){
 	struct excp_entry_state * excp = luaL_checkunsigned(L,1);
 	long unsigned int vec = luaL_checkunsigned(L,2);
@@ -1067,6 +1163,8 @@ static int naut_nk_vc_handle_input(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct cpu ;
+
 static int naut_smp_setup_xcall_bsp(lua_State *L){
 	struct cpu * core = luaL_checkunsigned(L,1);
 	int temp_return =smp_setup_xcall_bsp(core);
@@ -1087,6 +1185,8 @@ static int naut_scnprintf(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct __va_list_tag ;
+
 static int naut_early_printk(lua_State *L){
 	const char * fmt = luaL_checkstring(L,1);
 	struct __va_list_tag * args = luaL_checkunsigned(L,2);
@@ -1100,6 +1200,8 @@ static int naut_printk(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct pollfd ;
+
 static int naut_poll(lua_State *L){
 	struct pollfd * fds = luaL_checkunsigned(L,1);
 	long unsigned int nfds = luaL_checkunsigned(L,2);
@@ -1123,12 +1225,16 @@ static int naut_nk_map_page_nocache(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct apic_dev ;
+
 static int naut_apic_wait_for_send(lua_State *L){
 	struct apic_dev * apic = luaL_checkunsigned(L,1);
 	unsigned int temp_return =apic_wait_for_send(apic);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct apic_dev ;
+
 static int naut_apic_get_maxlvt(lua_State *L){
 	struct apic_dev * apic = luaL_checkunsigned(L,1);
 	int temp_return =apic_get_maxlvt(apic);
@@ -1141,6 +1247,8 @@ static int naut_log(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct tm ;
+
 static int naut_mktime(lua_State *L){
 	struct tm * timeptr = luaL_checkunsigned(L,1);
 	long int temp_return =mktime(timeptr);
@@ -1164,6 +1272,8 @@ static int naut_system(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_htable_change(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	long unsigned int key = luaL_checkunsigned(L,2);
@@ -1173,12 +1283,16 @@ static int naut_nk_htable_change(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_create_htable_iter(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	struct nk_hashtable_iter * temp_return =nk_create_htable_iter(htable);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct naut_info ;
+
 static int naut_smp_early_init(lua_State *L){
 	struct naut_info * naut = luaL_checkunsigned(L,1);
 	int temp_return =smp_early_init(naut);
@@ -1231,6 +1345,8 @@ static int naut_ftello64(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_barrier ;
+
 static int naut_nk_barrier_init(lua_State *L){
 	struct nk_barrier * barrier = luaL_checkunsigned(L,1);
 	unsigned int count = luaL_checkunsigned(L,2);
@@ -1238,6 +1354,8 @@ static int naut_nk_barrier_init(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct __va_list_tag ;
+
 static int naut_vprintk(lua_State *L){
 	const char * fmt = luaL_checkstring(L,1);
 	struct __va_list_tag * args = luaL_checkunsigned(L,2);
@@ -1264,6 +1382,8 @@ static int naut_atoi(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct __va_list_tag ;
+
 static int naut_vfprintf(lua_State *L){
 	void * stream = luaL_checkunsigned(L,1);
 	const char * format = luaL_checkstring(L,2);
@@ -1272,12 +1392,16 @@ static int naut_vfprintf(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_queue_entry ;
+
 static int naut_nk_dequeue_entry(lua_State *L){
 	struct nk_queue_entry * entry = luaL_checkunsigned(L,1);
 	struct nk_queue_entry * temp_return =nk_dequeue_entry(entry);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_rwlock ;
+
 static int naut_nk_rwlock_rd_lock(lua_State *L){
 	struct nk_rwlock * l = luaL_checkunsigned(L,1);
 	int temp_return =nk_rwlock_rd_lock(l);
@@ -1297,6 +1421,8 @@ static int naut_strdup(lua_State *L){
 	lua_pushstring(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_htable_inc(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	long unsigned int key = luaL_checkunsigned(L,2);
@@ -1305,12 +1431,16 @@ static int naut_nk_htable_inc(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct rb_node ;
+
 static int naut_nk_rb_prev(lua_State *L){
 	struct rb_node * node = luaL_checkunsigned(L,1);
 	struct rb_node * temp_return =nk_rb_prev(node);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_rwlock ;
+
 static int naut_nk_rwlock_wr_lock(lua_State *L){
 	struct nk_rwlock * l = luaL_checkunsigned(L,1);
 	int temp_return =nk_rwlock_wr_lock(l);
@@ -1344,6 +1474,8 @@ static int naut___popcountdi2(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct buddy_mempool ;
+
 static int naut_buddy_alloc(lua_State *L){
 	struct buddy_mempool * mp = luaL_checkunsigned(L,1);
 	long unsigned int order = luaL_checkunsigned(L,2);
@@ -1382,6 +1514,8 @@ static int naut_localtime(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct __va_list_tag ;
+
 static int naut_vsprintf(lua_State *L){
 	char * buf = luaL_checkstring(L,1);
 	const char * fmt = luaL_checkstring(L,2);
@@ -1403,6 +1537,8 @@ static int naut_rename(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct rb_root ;
+
 static int naut_nk_rb_last(lua_State *L){
 	struct rb_root * root = luaL_checkunsigned(L,1);
 	struct rb_node * temp_return =nk_rb_last(root);
@@ -1421,6 +1557,8 @@ static int naut_sscanf(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_switch_to_vc(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	int temp_return =nk_switch_to_vc(vc);
@@ -1442,6 +1580,10 @@ static int naut_fread(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct Output_Sink ;
+
+struct __va_list_tag ;
+
 static int naut_Format_Output(lua_State *L){
 	struct Output_Sink * q = luaL_checkunsigned(L,1);
 	const char * format = luaL_checkstring(L,2);
@@ -1450,6 +1592,8 @@ static int naut_Format_Output(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable_iter ;
+
 static int naut_nk_htable_get_iter_key(lua_State *L){
 	struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
 	long unsigned int temp_return =nk_htable_get_iter_key(iter);
@@ -1502,6 +1646,8 @@ static int naut_tan(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct cpu ;
+
 static int naut_nk_rand_init(lua_State *L){
 	struct cpu * cpu = luaL_checkunsigned(L,1);
 	int temp_return =nk_rand_init(cpu);
@@ -1522,6 +1668,8 @@ static int naut_strncat(lua_State *L){
 	lua_pushstring(L,temp_return);
 	return 1; 
 }
+struct cpu ;
+
 static int naut_nk_cpu_topo_discover(lua_State *L){
 	struct cpu * me = luaL_checkunsigned(L,1);
 	int temp_return =nk_cpu_topo_discover(me);
@@ -1536,6 +1684,8 @@ static int naut_fseek(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_vc_setpos_specific(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	unsigned char x = luaL_checkunsigned(L,2);
@@ -1580,24 +1730,32 @@ static int naut_multiboot_get_phys_mem(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct naut_info ;
+
 static int naut_smp_bringup_aps(lua_State *L){
 	struct naut_info * naut = luaL_checkunsigned(L,1);
 	int temp_return =smp_bringup_aps(naut);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct apic_dev ;
+
 static int naut_apic_read_timer(lua_State *L){
 	struct apic_dev * apic = luaL_checkunsigned(L,1);
 	int temp_return =apic_read_timer(apic);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_destroy_vc(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	int temp_return =nk_destroy_vc(vc);
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct sys_info ;
+
 static int naut_ioapic_init(lua_State *L){
 	struct sys_info * sys = luaL_checkunsigned(L,1);
 	int temp_return =ioapic_init(sys);
@@ -1616,6 +1774,8 @@ static int naut_nk_get_base_region_by_cpu(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_barrier ;
+
 static int naut_nk_barrier_wait(lua_State *L){
 	struct nk_barrier * barrier = luaL_checkunsigned(L,1);
 	int temp_return =nk_barrier_wait(barrier);
@@ -1628,6 +1788,8 @@ static int naut_sin(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_rwlock ;
+
 static int naut_nk_rwlock_wr_unlock(lua_State *L){
 	struct nk_rwlock * l = luaL_checkunsigned(L,1);
 	int temp_return =nk_rwlock_wr_unlock(l);
@@ -1660,6 +1822,8 @@ static int naut_fopen64(lua_State *L){
 	void * temp_return =fopen64(path ,f);
 	return 1; 
 }
+struct nk_hashtable_iter ;
+
 static int naut_nk_htable_get_iter_value(lua_State *L){
 	struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
 	long unsigned int temp_return =nk_htable_get_iter_value(iter);
@@ -1673,6 +1837,8 @@ static int naut_ioctl(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_htable_search(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	long unsigned int key = luaL_checkunsigned(L,2);
@@ -1699,6 +1865,8 @@ static int naut_nk_tls_key_delete(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_rwlock ;
+
 static int naut_nk_rwlock_rd_unlock(lua_State *L){
 	struct nk_rwlock * l = luaL_checkunsigned(L,1);
 	int temp_return =nk_rwlock_rd_unlock(l);
@@ -1716,6 +1884,8 @@ static int naut_fabs(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable ;
+
 static int naut_nk_htable_insert(lua_State *L){
 	struct nk_hashtable * htable = luaL_checkunsigned(L,1);
 	long unsigned int key = luaL_checkunsigned(L,2);
@@ -1731,6 +1901,8 @@ static int naut_difftime(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_virtual_console ;
+
 static int naut_nk_dequeue_keycode(lua_State *L){
 	struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
 	short unsigned int temp_return =nk_dequeue_keycode(vc);
@@ -1762,6 +1934,8 @@ static int naut_time(lua_State *L){
 	lua_pushnumber(L,temp_return);
 	return 1; 
 }
+struct nk_hashtable_iter ;
+
 static int naut_nk_htable_iter_advance(lua_State *L){
 	struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
 	int temp_return =nk_htable_iter_advance(iter);

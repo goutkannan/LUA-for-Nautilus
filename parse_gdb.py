@@ -405,7 +405,14 @@ Decorate the wrapper as static function which returns an int
 
 line=[]
 for funation_name,parameters in new_dict.items():
-    line.append("static int naut_"+ funation_name+"(lua_State *L){"+ function_body(funation_name,parameters['ret_type'],parameters['param'])  +"\n\treturn 1; \n}")
+    for param in parameters['param']:
+        if "struct" in param[1] or "union" in param[1]:
+            line.append(param[1].replace("*","")+";\n")
+
+
+    line.append("static int naut_"+ funation_name+"(lua_State *L){"+\
+        function_body(funation_name,parameters['ret_type'],parameters['param'])  +\
+        "\n\treturn 1; \n}")
 
 wrapper_funcs = "\n".join(line) 
 wrapper_funcs += "\n\n"
