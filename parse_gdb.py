@@ -50,10 +50,14 @@ def resolve(label_address):
         logError.append(["In "+str(key)+" \t- (KeyError) Key not found"+" ,".join(string)])
         return "Error"
 
-        
-    if("*" in string[0] ):
-        string.pop(0)
-        string.append("*") 
+    for i in range(len(string)):
+        if "*" in string[0]:
+            string.pop(0)
+            string.append('*')
+        else:
+            break
+
+  
 
     return " ".join(string)
 
@@ -188,15 +192,38 @@ def load_data_from_log(filename="full_log.txt"):
                         continue
             line = elflog.readline() 
 
-lua_mapping = {"int":"checkint", \
-               "long":"checklong",\
-               "double":"checknumber",\
-               "float":"checknumebr",\
-              "char *":"checkstring", \
-              "unsigned int":"checkunsigned",\
-              "struct ": "checkunsigned",\
-              "void *":"checkunsigned" ,\
-              "int *":"checkunsigned"} 
+def resolve_lua_type(data_type):
+    print("in as",data_type)
+
+    if "struct" not in data_type:
+        if re.match(".*double",data_type):
+            return "checknumber"
+        elif re.match(".*float",data_type):
+            return "checknumber"
+        elif re.match(".*char\s*\*",data_type):
+            return "checkstring"
+        elif re.match("signed\s*char",data_type):
+            return "checkint"
+        elif re.match(".*(long\s+)+int",data_type):
+            return "checkint"
+        elif re.match("int",data_type.strip()):
+            return "checkint"
+        elif re.match(".*unsigned.*|char",data_type):
+            return "checkunsigned"
+        elif re.match(".*void\s+\*",data_type):
+            return "checkunsigned"
+
+    elif re.match("struct.*",data_type):
+        return "checkunsigned"
+
+def resolve_lua_ret_type(data_type):
+    if re.match(".*char\s*\*",data_type):
+        return "lua_pushstring"
+    elif re.match("void",data_type):
+        return None
+    else:
+        return "lua_pushnumber"
+
 
 def function_body(func_name,ret_type="void",params="void"):
     idx=1
@@ -204,17 +231,23 @@ def function_body(func_name,ret_type="void",params="void"):
     pass_variable=[]
     for param_type in params:
         #print(param_type)
-        lua_resolved =[lua_check for ds,lua_check in lua_mapping.items() if ds in param_type[1]]
+        lua_resolved = resolve_lua_type(param_type[1])
         print(">>",lua_resolved)
         pass_variable.append(param_type[0])
-        print("> ",param_type)
-        if lua_resolved is not []:
-            code+="\t"+ param_type[1]+" "+param_type[0]+" = luaL_"+  lua_resolved[0] +"(L,"+str(idx)+");\n"
+        
+        if lua_resolved is not None:
+            code+="\t"+ param_type[1]+" "+param_type[0]+" = luaL_"+  lua_resolved +"(L,"+str(idx)+");\n"
         
         idx+=1
 
     if ret_type is not "void":
         code+=  "\t"+ret_type + " temp_return =" + func_name + "(" + " ,".join(pass_variable) +");"
+        fn_ret_type = resolve_lua_ret_type(ret_type)
+        if fn_ret_type:
+            code+= "\n\t"+fn_ret_type+"(L,temp_return);"
+
+
+
 
     """print(".....")		  
     print(code)
@@ -264,11 +297,11 @@ for key,value in tmpfunction_dataDict.items():
             
             if retFlag != -1:
                 tempvar = resolve(parameters[1].replace("<0x","").replace(">","") )
-                plist.append([parameters[0],tempvar])
-                if plist[-1] is "Error":
+                if tempvar is "Error":
                     logError.append("For Param : "+parameters[1]+"in "+value['name'])
-                    continue
+                    break
                 else:
+                    plist.append([parameters[0],tempvar])
                     for f in ffilter:
                         if f in tempvar:
                             pFlag=0
@@ -396,3 +429,4 @@ with open("src/lua_src/lnautlib.c","w") as fp:
 
 
 
+print(logError)

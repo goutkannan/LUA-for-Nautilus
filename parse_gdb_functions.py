@@ -84,7 +84,7 @@ def get_function_sign(filepath = "full_log.txt"):
 						my_dict[func_addr]["ret_type"]=ret
 						#print func_name
 						continue
-				if func_start==1 and in_param==0 and param_name==0 and before_param==1:
+				if func_start==1 and in_param==0 and param_name==0:
 					if "<2>" in line and "DW_TAG_formal_parameter" in line:
 						in_param=1
 						before_param=0
@@ -111,9 +111,14 @@ def get_function_sign(filepath = "full_log.txt"):
 			#final.append(copy.deepcopy(my_dict))
 		return my_dict
 
-
+"""
 function_values = get_function_sign()
-for k,v in function_values.items():
-	print(k,"....",v)
 
+
+
+#print "length of final list = "+str(len(function_values.keys()))
+for k,v in function_values.items():
+	print k+" : "+str(v)
+
+"""
 
