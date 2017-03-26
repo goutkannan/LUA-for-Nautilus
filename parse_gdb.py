@@ -8,6 +8,7 @@ test_vals = { 'nk_vc_print': {'ret_type': '<0x3344>', 'param': [['s', '<0x3c01>'
 #'apic_get_maxlvt' : {'ret_type': '<0x3b496>', 'param': [['apic', '<0x3bdb7>']]}
 }
 logError= []
+typedef_names={}
 
 
 
@@ -156,6 +157,11 @@ def load_data_from_log(filename="full_log.txt"):
                         next_line = elflog.readline()
                         if "DW_AT_type" in next_line:
                             break
+                        if "DW_AT_name" in next_line:
+                            typename = next_line.split(":")[-1].strip()
+                            
+                            typedef_names[m[0][0]] = typename
+
                         if "Abbrev Number" in next_line:
                             flag=1
                             
@@ -193,7 +199,7 @@ def load_data_from_log(filename="full_log.txt"):
             line = elflog.readline() 
 
 def resolve_lua_type(data_type):
-    print("in as",data_type)
+    #print("in as",data_type)
 
     if "struct" not in data_type:
         if re.match(".*double",data_type):
@@ -230,10 +236,13 @@ def function_body(func_name,ret_type="void",params="void"):
     code="\n"
     pass_variable=[]
     for param_type in params:
-        #print(param_type)
-        lua_resolved = resolve_lua_type(param_type[1])
-        print(">>",lua_resolved)
-        pass_variable.append(param_type[0])
+        
+        if param_type[0]=="...":
+            lua_resolved = None
+        else:
+            lua_resolved = resolve_lua_type(param_type[1])
+            #print(">>",lua_resolved)
+            pass_variable.append(param_type[0])
         
         if lua_resolved is not None:
             code+="\t"+ param_type[1]+" "+param_type[0]+" = luaL_"+  lua_resolved +"(L,"+str(idx)+");\n"
@@ -241,11 +250,22 @@ def function_body(func_name,ret_type="void",params="void"):
         idx+=1
 
     if ret_type is not "void":
-        code+=  "\t"+ret_type + " temp_return =" + func_name + "(" + " ,".join(pass_variable) +");"
+        
         fn_ret_type = resolve_lua_ret_type(ret_type)
-        if fn_ret_type:
-            code+= "\n\t"+fn_ret_type+"(L,temp_return);"
+        if fn_ret_type=="lua_pushstring":
+            code+=  "\t"+ret_type + " temp_return =" + func_name + "(" + " ,".join(pass_variable) +");"
+            code+= "\n\t"+ fn_ret_type +"(L, temp_return);"
+        elif fn_ret_type=="lua_pushnumber":
+            if "*" in ret_type:
+                code+=  "\tlua_Number temp_return =*(lua_Number *)" + func_name + "(" + " ,".join(pass_variable) +");"
+            else:
+                
+                code+=  "\tlua_Number temp_return =" + func_name + "(" + " ,".join(pass_variable) +");"
+            code+= "\n\t"+ fn_ret_type +"(L, temp_return);"
 
+    else:
+        code+=  "\t" + func_name + "(" + " ,".join(pass_variable) +");"
+        
 
 
 
@@ -276,102 +296,60 @@ for key,value in tmpfunction_dataDict.items():
 
     if "static" not in value.keys() :
         if(value['ret_type'] != "void"):
-            ret_type = resolve(value['ret_type'].replace("<0x","").replace(">",""))
+            ret_type = resolve(value['ret_type'].replace("<0x","").replace(">","")) # resolving the return types 
             if ret_type is "Error":
                 logError.append(value['name']+'....'+value['ret_type'])
                 continue
             else:
-                for f in ffilter:
+                for f in ffilter:      #custom filter to let only
                     if f in ret_type:
                         retFlag+=1
 
 
         else:
-            pass
+            ret_type="void"
+            retFlag=1
            # print("fixed return..",value)
-        pFlag=-1
+        pFlag=0
         plist=[] 
-
+        typelist={}
         for parameters in value['param']:
             
-            
+            pFlag=-1
             if retFlag != -1:
-                tempvar = resolve(parameters[1].replace("<0x","").replace(">","") )
-                if tempvar is "Error":
-                    logError.append("For Param : "+parameters[1]+"in "+value['name'])
-                    break
+                if parameters[1]=="...":
+		          plist.append(parameters)
+		          pFlag=0
                 else:
-                    plist.append([parameters[0],tempvar])
-                    for f in ffilter:
-                        if f in tempvar:
-                            pFlag=0
-                    if pFlag !=0:
+                    addr = parameters[1].replace("<0x","").replace(">","")
+                    
+                    if addr in typedef_names.keys():
+                        
+                        typelist[parameters[0]]=typedef_names[str(addr)]
+
+                    tempvar = resolve(addr)
+                    if tempvar is "Error":
+                        logError.append("For Param : "+parameters[1]+"in "+value['name'])
                         break
+                    else:
+                        plist.append([parameters[0],tempvar])
+                        for f in ffilter:
+                            if f in tempvar:
+                                pFlag=0
+                if pFlag !=0:
+                    break
 
         if pFlag==0 and retFlag!=-1:
-            function_dataDict[value['name']] = {'ret_type':ret_type,'param':plist}
+            function_dataDict[value['name']] = {'ret_type':ret_type,'param':plist,'typedef':typelist} ## add the typedefs here
 
-#print(function_dataDict)
-
-
-
-
-
-
-
-
-"""print("....................")
-print(logError)
-"""
-
-"""
-#load_data_from_log()
-
-with open("func_data.txt") as func_fp:
-    line = func_fp.readline()
-    data_dict={}
-    while line!='':
-        key = re.split("(\w+\s+):?",line)[1:]
-        print(key[0])
-        temp_line = ast.literal_eval(key[1].strip())
-        print(temp_line)
-        
-        line = func_fp.readline() """
-
-
-    
- 
-
-
-
-
-#print(resolve("d0e4"))
-
-
-#print(resolve("267a9"))
-
-
-
+for k, v in function_dataDict.items():
+    print k + ": " + str(v)
 
 
 type_addr_list=[]
 new_dict = function_dataDict
-"""
-for k,v in test_vals.items():
 
-    ret = resolve(v["ret_type"].replace("<0x","").replace(">","")) 
-    
-    new_dict[k]["ret_t:qype"] = ret 
 
-    param = v["param"]
-    
-    for i in range(len(param)):
-        
-        new_dict[k]["param"][i][1] = resolve(param[i][1].replace("<0x","").replace(">","") )
-
-"""
-
-    #resolve("f5")
 head = '#include <nautilus/naut_types.h> \n\
 #include <nautilus/libccompat.h>\n\
 #include <nautilus/math.h>\n\
@@ -402,18 +380,20 @@ Code for popluating the static functions with the wrapper for LUA
 Decorate the wrapper as static function which returns an int 
 """
 
-
+struct_declare=[]
 line=[]
 for funation_name,parameters in new_dict.items():
     for param in parameters['param']:
         if "struct" in param[1] or "union" in param[1]:
-            line.append(param[1].replace("*","")+";\n")
+            struct_declare.append(param[1].replace("*","")+";")
 
 
     line.append("static int naut_"+ funation_name+"(lua_State *L){"+\
         function_body(funation_name,parameters['ret_type'],parameters['param'])  +\
         "\n\treturn 1; \n}")
 
+struct_dec = "\n".join(struct_declare)
+struct_dec += "\n\n"
 wrapper_funcs = "\n".join(line) 
 wrapper_funcs += "\n\n"
 
@@ -422,10 +402,19 @@ wrapper_funcs += "\n\n"
 with open("src/lua_src/lnautlib.c","w") as fp:
     fp.write(head)
     fp.write("\n")
-    
+    fp.write(struct_dec)
+
     for k,v in new_dict.items():
-        ptype = [y for x,y in v['param']]  
-        line = "extern" + " " + v['ret_type'] + " "+ k + '('+ ", ".join(ptype)   +');\n' 
+        ptype_list=[]
+        for name,ptype in v['param']:
+            print(type(v['typedef']))
+            if name not in v['typedef'].keys():
+                ptype_list.append(ptype)
+            else:
+                for n,t in v['typedef'].items():
+                    if n==name:
+                        ptype_list.append(t+" "+n)
+        line = "extern" + " " + v['ret_type'] + " "+ k + '('+ ", ".join(ptype_list)   +');\n' 
         fp.write(line)
 
     fp.write("\n") 
@@ -436,4 +425,4 @@ with open("src/lua_src/lnautlib.c","w") as fp:
 
 
 
-print(logError)
+#print(logError)

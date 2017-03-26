@@ -72,6 +72,7 @@ def get_function_sign(filepath = "full_log.txt"):
 						if extern==1:
 							if ret_flag==0:
 								my_dict[func_addr]["ret_type"]= "void"
+								ret_flag=1
 						else:
 							my_dict[func_addr]["static"]=1
 							
@@ -88,10 +89,19 @@ def get_function_sign(filepath = "full_log.txt"):
 					if "<2>" in line and "DW_TAG_formal_parameter" in line:
 						in_param=1
 						before_param=0
-						ret_flag=1
+						if ret_flag==0:
+							my_dict[func_addr]["ret_type"]= "void"
+							ret_flag=1
 						extern_flag=0
 						#print line
 						continue
+					if "<2>" in line and "DW_TAG_unspecified_parameters" in line:
+						my_dict[func_addr]["param"].append(["...","..."])
+						if ret_flag==0:
+							my_dict[func_addr]["ret_type"]= "void"
+							ret_flag=1
+						extern_flag=0
+						before_param=0
 				if fname_flag==1 and func_start==1 and in_param==1 and param_name==0:
 					if "DW_AT_name" in line:
 						param.append(line.split(":")[-1].strip())
@@ -111,14 +121,13 @@ def get_function_sign(filepath = "full_log.txt"):
 			#final.append(copy.deepcopy(my_dict))
 		return my_dict
 
-"""
+
 function_values = get_function_sign()
 
 
-
+"""
 #print "length of final list = "+str(len(function_values.keys()))
 for k,v in function_values.items():
 	print k+" : "+str(v)
 
 """
-
