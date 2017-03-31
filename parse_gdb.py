@@ -1,20 +1,85 @@
 import re
 import ast
+import os
 from parse_gdb_functions import *
 
 
-test_vals = { 'nk_vc_print': {'ret_type': '<0x3344>', 'param': [['s', '<0x3c01>']]}
-#'nk_launch_shell' : {'ret_type': '<0x34179>', 'param': [['name', '<0x34173>'], ['cpu', '<0x338cc>']]},
-#'apic_get_maxlvt' : {'ret_type': '<0x3b496>', 'param': [['apic', '<0x3bdb7>']]}
-}
+
 logError= []
 typedef_names={}
-
-
-
 data_type={'0':["",None],'1':["void","0"]} 
 
+""" Executing the readelf command and storing the details in a file """
+fileName ="full_log.txt"
+os.system("readelf -wi nautilus.bin > "+fileName)
+
+
+
+
+LUA_SRC_PATH ="src/lua_src/"
+LIBNAME="lnautlib.c"
+
+with open("./src/lua_src/linit.c","r") as cfile:
+    alllines=[]
+    for line in cfile.readlines():
+        print(">",line)
+        if "{LUA_NAUTLIBNAME, luaopen_naut}" in line:
+            line=""
+
+        if "{LUA_MATHLIBNAME, luaopen_math}" in line:
+
+            line += '  '+"{LUA_NAUTLIBNAME, luaopen_naut},\n"
+         
+
+        alllines.append(line)
+
+with open("./src/lua_src/linit.c","w") as cwf:
+    cwf.writelines(alllines)
+
+
+with open("./include/lua/lualib.h","r") as cfile:
+    alllines=[]
+    for line in cfile.readlines():
+        print(">",line)
+        if "#define  LUA_NAUTLIBNAME  \"naut\"" in line:
+            line=""
+        if "LUAMOD_API int (luaopen_naut) (lua_State *L);" in line:
+            line=""
+
+        if "LUAMOD_API int (luaopen_package) (lua_State *L)" in line:
+
+            line += "\n#define  LUA_NAUTLIBNAME  \"naut\"\n"+"LUAMOD_API int (luaopen_naut) (lua_State *L);\n"
+            
+
+        alllines.append(line)
+
+with open("./include/lua/lualib.h","w") as cwf:
+    cwf.writelines(alllines)
+
+flag=0
+make_all_lines=[]
+with open("./src/lua_src/Makefile","r") as makefile:
+    make_all_lines=[line for line in makefile.readlines() if line.strip()] 
+    last_line = make_all_lines[-1]
+
+    if "lnautlib.o" not in last_line:
+        make_all_lines[-1] = make_all_lines[-1].replace("\n","\\\n")
+
+        make_all_lines.append("\t lnautlib.o")
+        flag=1
+
+if flag==1:
+    with open("./src/lua_src/Makefile","w") as write_makefile:
+        write_makefile.writelines(make_all_lines)
+
+
+
 def get_tags(full_line,dtype="base"):
+    """
+    Args: text line containing the resolved tags/address 
+    Return: Match tag is success else None
+
+     """
     if dtype is "base":
         m = re.search(".*\)*:(.*)",full_line)
     elif dtype is "derived":
@@ -63,7 +128,7 @@ def resolve(label_address):
     return " ".join(string)
 
 
-def load_data_from_log(filename="full_log.txt"):
+def load_data_from_log(filename=fileName):
     count =0
     lookBack = 0
     pattern_DW_line ="\s+<\w+><(.+)>:*\s+([\w\s]*:)(.*)"
@@ -160,7 +225,7 @@ def load_data_from_log(filename="full_log.txt"):
                         if "DW_AT_name" in next_line:
                             typename = next_line.split(":")[-1].strip()
                             
-                            typedef_names[m[0][0]] = typename
+                            typedef_names[m[0][0]] = [typename]
 
                         if "Abbrev Number" in next_line:
                             flag=1
@@ -202,6 +267,10 @@ def resolve_lua_type(data_type):
     #print("in as",data_type)
 
     if "struct" not in data_type:
+        if "*" in data_type and "char" not in data_type:
+            return "checkunsigned"
+
+
         if re.match(".*double",data_type):
             return "checknumber"
         elif re.match(".*float",data_type):
@@ -219,7 +288,7 @@ def resolve_lua_type(data_type):
         elif re.match(".*void\s+\*",data_type):
             return "checkunsigned"
 
-    elif re.match("struct.*",data_type):
+    elif re.match(".*struct.*\*",data_type): 
         return "checkunsigned"
 
 def resolve_lua_ret_type(data_type):
@@ -328,10 +397,14 @@ for key,value in tmpfunction_dataDict.items():
                         typelist[parameters[0]]=typedef_names[str(addr)]
 
                     tempvar = resolve(addr)
+
                     if tempvar is "Error":
                         logError.append("For Param : "+parameters[1]+"in "+value['name'])
                         break
                     else:
+                        if parameters[0] in typelist.keys():
+                            typelist[parameters[0]].append(tempvar)
+                    
                         plist.append([parameters[0],tempvar])
                         for f in ffilter:
                             if f in tempvar:
@@ -406,15 +479,22 @@ with open("src/lua_src/lnautlib.c","w") as fp:
 
     for k,v in new_dict.items():
         ptype_list=[]
+        typedefdeclare =[]
         for name,ptype in v['param']:
-            print(type(v['typedef']))
+            #print(type(v['typedef']))
             if name not in v['typedef'].keys():
                 ptype_list.append(ptype)
             else:
                 for n,t in v['typedef'].items():
+                    print(t)
                     if n==name:
-                        ptype_list.append(t+" "+n)
+                        ptype_list.append(t[0])
+                        typedefdeclare.append("typedef "+t[1]+" "+t[0]+";\n")
+
         line = "extern" + " " + v['ret_type'] + " "+ k + '('+ ", ".join(ptype_list)   +');\n' 
+        declareline = "".join(typedefdeclare)
+
+        fp.write(declareline)
         fp.write(line)
 
     fp.write("\n") 

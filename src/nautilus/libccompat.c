@@ -875,7 +875,10 @@ done:
 double abs(double x)
 {
 //should return absolute value of x
-return x;
+if (x<0)
+	return -1*x;
+else
+	return x;
 }
 double sin(double x)
 {

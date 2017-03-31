@@ -685,7 +685,7 @@ isoimage: nautilus
 	$(GRUBMKRESCUE) -o $(ISO_NAME) iso
 
 lua: nautilus 
-	@python parse_db.py 
+	@python parse_gdb.py 
 	$(call if_changed_rule,nautilus__)
 
 nautilus.asm: $(BIN_NAME)

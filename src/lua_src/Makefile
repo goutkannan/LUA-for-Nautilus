@@ -1,4 +1,3 @@
-
 obj-y += lmem.o\
 	 lstate.o \
 	 ldebug.o \
@@ -30,10 +29,6 @@ obj-y += lmem.o\
 	 lstrlib.o \
  	 ltablib.o \
 	 lua.o \
-	 lzio.o \
+	 lzio.o  \
 	 lundump.o \
-	 lnautlib.o 
-
-
-
-
+	 lnautlib.o

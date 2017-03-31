@@ -1,0 +1,1015 @@
+  CC      src/lua_src/lnautlib.o
+src/lua_src/lnautlib.c:91:14: warning: empty declaration with type qualifier does not redeclare tag [enabled by default]
+ const struct tm ;
+              ^
+In file included from include/nautilus/libccompat.h:30:0,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/nautilus.h:41:43: error: expected declaration specifiers or ‘...’ before string constant
+ #define panic(fmt, args...)         panic("PANIC at %s(%d): " fmt, __FILE__, __LINE__, ##args)
+                                           ^
+src/lua_src/lnautlib.c:258:13: note: in expansion of macro ‘panic’
+ extern void panic(const char *, ...);
+             ^
+src/lua_src/lnautlib.c:258:1: error: expected declaration specifiers or ‘...’ before string constant
+ extern void panic(const char *, ...);
+ ^
+src/lua_src/lnautlib.c:258:1: error: expected declaration specifiers or ‘...’ before numeric constant
+src/lua_src/lnautlib.c:287:12: error: conflicting types for ‘vscnprintf’
+ extern int vscnprintf(char *, long unsigned int, const char *, struct __va_list_tag *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:49:5: note: previous declaration of ‘vscnprintf’ was here
+ int vscnprintf(char *buf, size_t size, const char *fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:306:12: error: conflicting types for ‘vsscanf’
+ extern int vsscanf(const char *, const char *, struct __va_list_tag *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:54:5: note: previous declaration of ‘vsscanf’ was here
+ int vsscanf(const char * buf, const char * fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:321:13: error: conflicting types for ‘serial_print_list’
+ extern void serial_print_list(const char *, struct __va_list_tag *);
+             ^
+In file included from include/nautilus/nautilus.h:26:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/dev/serial.h:47:6: note: previous declaration of ‘serial_print_list’ was here
+ void serial_print_list(const char * format, va_list ap);
+      ^
+src/lua_src/lnautlib.c:371:12: error: conflicting types for ‘vsnprintf’
+ extern int vsnprintf(char *, long unsigned int, const char *, struct __va_list_tag *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:48:5: note: previous declaration of ‘vsnprintf’ was here
+ int vsnprintf(char *buf, size_t size, const char *fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:489:12: error: conflicting types for ‘vsprintf’
+ extern int vsprintf(char *, const char *, struct __va_list_tag *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:52:5: note: previous declaration of ‘vsprintf’ was here
+ int vsprintf(char *buf, const char *fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:533:12: error: conflicting types for ‘early_printk’
+ extern int early_printk(const char *, struct __va_list_tag *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:39:5: note: previous declaration of ‘early_printk’ was here
+ int early_printk (const char * fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:579:12: error: conflicting types for ‘vprintk’
+ extern int vprintk(const char *, struct __va_list_tag *);
+            ^
+In file included from include/nautilus/nautilus.h:25:0,
+                 from include/nautilus/libccompat.h:30,
+                 from src/lua_src/lnautlib.c:2:
+include/nautilus/printk.h:38:5: note: previous declaration of ‘vprintk’ was here
+ int vprintk(const char * fmt, va_list args);
+     ^
+src/lua_src/lnautlib.c:584:12: error: conflicting types for ‘vfprintf’
+ extern int vfprintf(void *, const char *, struct __va_list_tag *);
+            ^
+In file included from src/lua_src/lnautlib.c:2:0:
+include/nautilus/libccompat.h:139:5: note: previous declaration of ‘vfprintf’ was here
+ int vfprintf(FILE*, const char*, va_list);
+     ^
+src/lua_src/lnautlib.c: In function ‘naut_fclose’:
+src/lua_src/lnautlib.c:638:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_simple_strtoul’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:654:18: note: in expansion of macro ‘luaL_checkstring’
+  char * * endp = luaL_checkstring(L,2);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_queue_sleep’:
+src/lua_src/lnautlib.c:661:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_entry_atomic’:
+src/lua_src/lnautlib.c:667:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c:668:34: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue_entry * entry = luaL_checkunsigned(L,2);
+                                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_first_atomic’:
+src/lua_src/lnautlib.c:674:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_condvar_destroy’:
+src/lua_src/lnautlib.c:686:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_condvar * c = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_timer_setup’:
+src/lua_src/lnautlib.c:692:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_mktime’:
+src/lua_src/lnautlib.c:698:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct tm * timeptr = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_count’:
+src/lua_src/lnautlib.c:710:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_strict_strtoul’:
+src/lua_src/lnautlib.c:727:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  long unsigned int * res = luaL_checkunsigned(L,3);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_enqueue_keycode’:
+src/lua_src/lnautlib.c:733:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_scrollup_specific’:
+src/lua_src/lnautlib.c:763:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_erase’:
+src/lua_src/lnautlib.c:784:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * node = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c:785:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_root * root = luaL_checkunsigned(L,2);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_scancode’:
+src/lua_src/lnautlib.c:790:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_snprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:821:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_str_tolower’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:833:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_i8254_init’:
+src/lua_src/lnautlib.c:854:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_init’:
+src/lua_src/lnautlib.c:888:22: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * core = luaL_checkunsigned(L,1);
+                      ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_iter_remove’:
+src/lua_src/lnautlib.c:893:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c: In function ‘naut_buddy_free’:
+src/lua_src/lnautlib.c:905:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct buddy_mempool * mp = luaL_checkunsigned(L,1);
+                              ^
+src/lua_src/lnautlib.c:906:16: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * addr = luaL_checkunsigned(L,2);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_dec’:
+src/lua_src/lnautlib.c:912:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_puts’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:926:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_null_irq_handler’:
+src/lua_src/lnautlib.c:932:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_insert_color’:
+src/lua_src/lnautlib.c:939:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * node = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c:940:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_root * root = luaL_checkunsigned(L,2);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_bind_vc’:
+src/lua_src/lnautlib.c:945:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_thread * thread = luaL_checkunsigned(L,1);
+                              ^
+src/lua_src/lnautlib.c:946:37: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * cons = luaL_checkunsigned(L,2);
+                                     ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_serial_mem_dump’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:957:26: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * start = luaL_checkstring(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_mf_handler’:
+src/lua_src/lnautlib.c:968:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_realloc’:
+src/lua_src/lnautlib.c:975:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * ptr = luaL_checkunsigned(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_run’:
+src/lua_src/lnautlib.c:981:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * t = luaL_checkunsigned(L,1);
+             ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_scnprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:998:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_arch_detect_mem_map’:
+src/lua_src/lnautlib.c:1031:31: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct mmap_info * mm_info = luaL_checkunsigned(L,1);
+                               ^
+src/lua_src/lnautlib.c:1032:38: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct mem_map_entry * memory_map = luaL_checkunsigned(L,2);
+                                      ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_change’:
+src/lua_src/lnautlib.c:1038:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_buddy_alloc’:
+src/lua_src/lnautlib.c:1053:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct buddy_mempool * mp = luaL_checkunsigned(L,1);
+                              ^
+src/lua_src/lnautlib.c: In function ‘naut_ftello64’:
+src/lua_src/lnautlib.c:1059:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_join’:
+src/lua_src/lnautlib.c:1065:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * t = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c:1066:20: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * * retval = luaL_checkunsigned(L,2);
+                    ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_prev’:
+src/lua_src/lnautlib.c:1083:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * node = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_localtime’:
+src/lua_src/lnautlib.c:1111:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  const long int * timer = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_mm_boot_free’:
+src/lua_src/lnautlib.c:1122:16: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * addr = luaL_checkunsigned(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_Format_Output’:
+src/lua_src/lnautlib.c:1128:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct Output_Sink * q = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c:1130:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * ap = luaL_checkunsigned(L,3);
+                              ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_get_iter_key’:
+src/lua_src/lnautlib.c:1136:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c: In function ‘naut_fprintf’:
+src/lua_src/lnautlib.c:1151:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut___newlocale’:
+src/lua_src/lnautlib.c:1160:16: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * base = luaL_checkunsigned(L,3);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_feof’:
+src/lua_src/lnautlib.c:1171:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * x = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_cpu_topo_discover’:
+src/lua_src/lnautlib.c:1191:20: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * me = luaL_checkunsigned(L,1);
+                    ^
+src/lua_src/lnautlib.c: In function ‘naut_clearerr’:
+src/lua_src/lnautlib.c:1197:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_keycode’:
+src/lua_src/lnautlib.c:1202:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_smp_bringup_aps’:
+src/lua_src/lnautlib.c:1218:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_kbd_init’:
+src/lua_src/lnautlib.c:1224:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+In file included from include/nautilus/libccompat.h:30:0,
+                 from src/lua_src/lnautlib.c:2:
+src/lua_src/lnautlib.c: In function ‘naut_panic’:
+src/lua_src/lnautlib.c:1236:8: error: expected ‘)’ before ‘fmt’
+  panic(fmt);
+        ^
+include/nautilus/nautilus.h:41:63: note: in definition of macro ‘panic’
+ #define panic(fmt, args...)         panic("PANIC at %s(%d): " fmt, __FILE__, __LINE__, ##args)
+                                                               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_destroy_htable_iter’:
+src/lua_src/lnautlib.c:1252:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_simple_strtoull’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1268:18: note: in expansion of macro ‘luaL_checkstring’
+  char * * endp = luaL_checkstring(L,2);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_rd_unlock’:
+src/lua_src/lnautlib.c:1299:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+src/lua_src/lnautlib.c: In function ‘naut___duplocale’:
+src/lua_src/lnautlib.c:1305:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * locobj = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_insert’:
+src/lua_src/lnautlib.c:1315:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_vscnprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1366:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c:1369:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * args = luaL_checkunsigned(L,4);
+                                ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_ischar’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1381:24: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * str = luaL_checkstring(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_gets’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1431:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_barrier_wait’:
+src/lua_src/lnautlib.c:1439:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_barrier * barrier = luaL_checkunsigned(L,1);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_modf’:
+src/lua_src/lnautlib.c:1446:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  double * x = luaL_checkunsigned(L,2);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_clock_gettime’:
+src/lua_src/lnautlib.c:1458:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct timespec * tp = luaL_checkunsigned(L,2);
+                         ^
+src/lua_src/lnautlib.c: In function ‘naut_vsscanf’:
+src/lua_src/lnautlib.c:1466:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * args = luaL_checkunsigned(L,3);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_print_regs’:
+src/lua_src/lnautlib.c:1472:23: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_regs * r = luaL_checkunsigned(L,1);
+                       ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_condvar_init’:
+src/lua_src/lnautlib.c:1477:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_condvar * c = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_pci_init’:
+src/lua_src/lnautlib.c:1483:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_queue_wake_one’:
+src/lua_src/lnautlib.c:1494:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_print’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1500:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_strncpy’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1506:16: note: in expansion of macro ‘luaL_checkstring’
+  char * dest = luaL_checkstring(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_release_vc’:
+src/lua_src/lnautlib.c:1528:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_thread * thread = luaL_checkunsigned(L,1);
+                              ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_sprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1534:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_serial_print_list’:
+src/lua_src/lnautlib.c:1542:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * ap = luaL_checkunsigned(L,2);
+                              ^
+src/lua_src/lnautlib.c: In function ‘naut___do_backtrace’:
+src/lua_src/lnautlib.c:1563:16: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * * fp = luaL_checkunsigned(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_ferror’:
+src/lua_src/lnautlib.c:1576:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_free’:
+src/lua_src/lnautlib.c:1582:16: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * addr = luaL_checkunsigned(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_condvar_bcast’:
+src/lua_src/lnautlib.c:1587:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_condvar * c = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_timer_init’:
+src/lua_src/lnautlib.c:1599:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strncat’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1605:14: note: in expansion of macro ‘luaL_checkstring’
+  char * s1 = luaL_checkstring(L,1);
+              ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_replace_node’:
+src/lua_src/lnautlib.c:1613:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * victim = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c:1614:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * new = luaL_checkunsigned(L,2);
+                         ^
+src/lua_src/lnautlib.c:1615:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_root * root = luaL_checkunsigned(L,3);
+                          ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_printf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1620:15: note: in expansion of macro ‘luaL_checkstring’
+  char * fmt = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_read_timer’:
+src/lua_src/lnautlib.c:1626:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_timer_handler’:
+src/lua_src/lnautlib.c:1643:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_wait_for_send’:
+src/lua_src/lnautlib.c:1672:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_get_maxlvt’:
+src/lua_src/lnautlib.c:1678:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_kmem_add_memory’:
+src/lua_src/lnautlib.c:1689:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct mem_region * mem = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_strict_strtoull’:
+src/lua_src/lnautlib.c:1715:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  long long unsigned int * res = luaL_checkunsigned(L,3);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_exit’:
+src/lua_src/lnautlib.c:1726:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * retval = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_entry’:
+src/lua_src/lnautlib.c:1736:34: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue_entry * entry = luaL_checkunsigned(L,1);
+                                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_rd_lock’:
+src/lua_src/lnautlib.c:1742:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+src/lua_src/lnautlib.c: In function ‘naut_fpu_init’:
+src/lua_src/lnautlib.c:1759:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_fscanf’:
+src/lua_src/lnautlib.c:1764:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_idle’:
+src/lua_src/lnautlib.c:1771:14: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * in = luaL_checkunsigned(L,1);
+              ^
+src/lua_src/lnautlib.c:1772:17: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * * out = luaL_checkunsigned(L,2);
+                 ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_vsnprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1777:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c:1780:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * args = luaL_checkunsigned(L,4);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_smp_ap_entry’:
+src/lua_src/lnautlib.c:1799:22: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * core = luaL_checkunsigned(L,1);
+                      ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rand_init’:
+src/lua_src/lnautlib.c:1816:21: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * cpu = luaL_checkunsigned(L,1);
+                     ^
+src/lua_src/lnautlib.c: In function ‘naut_fseek’:
+src/lua_src/lnautlib.c:1833:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_destroy_vc’:
+src/lua_src/lnautlib.c:1841:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_launch_shell’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1847:16: note: in expansion of macro ‘luaL_checkstring’
+  char * name = luaL_checkstring(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_wr_unlock’:
+src/lua_src/lnautlib.c:1858:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_enqueue_scancode’:
+src/lua_src/lnautlib.c:1864:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_get_iter_value’:
+src/lua_src/lnautlib.c:1871:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_search’:
+src/lua_src/lnautlib.c:1882:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_fseeko64’:
+src/lua_src/lnautlib.c:1911:14: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * fp = luaL_checkunsigned(L,1);
+              ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_iter_advance’:
+src/lua_src/lnautlib.c:1919:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c: In function ‘naut_setvbuf’:
+src/lua_src/lnautlib.c:1925:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+In file included from src/lua_src/lnautlib.c:7:0:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1926:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,2);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_simple_strtoll’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1943:18: note: in expansion of macro ‘luaL_checkstring’
+  char * * endp = luaL_checkstring(L,2);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_remove’:
+src/lua_src/lnautlib.c:1950:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strtol’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1967:20: note: in expansion of macro ‘luaL_checkstring’
+  char * * endptr = luaL_checkstring(L,2);
+                    ^
+src/lua_src/lnautlib.c: In function ‘naut_fputc’:
+src/lua_src/lnautlib.c:1975:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,2);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_bcast_iipi’:
+src/lua_src/lnautlib.c:1981:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strtoi’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:1987:20: note: in expansion of macro ‘luaL_checkstring’
+  char * * endptr = luaL_checkstring(L,2);
+                    ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_deinit_iipi’:
+src/lua_src/lnautlib.c:1993:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strtod’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2000:20: note: in expansion of macro ‘luaL_checkstring’
+  char * * endPtr = luaL_checkstring(L,2);
+                    ^
+src/lua_src/lnautlib.c: In function ‘naut_frexp’:
+src/lua_src/lnautlib.c:2017:12: warning: initialization makes pointer from integer without a cast [enabled by default]
+  int * e = luaL_checkunsigned(L,2);
+            ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strtox’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2029:20: note: in expansion of macro ‘luaL_checkstring’
+  char * * endptr = luaL_checkstring(L,2);
+                    ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_set_thread_fork_output’:
+src/lua_src/lnautlib.c:2035:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * result = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_next’:
+src/lua_src/lnautlib.c:2040:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_node * node = luaL_checkunsigned(L,1);
+                          ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strsep’:
+include/lua/lauxlib.h:115:31: warning: initialization from incompatible pointer type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2067:15: note: in expansion of macro ‘luaL_checkstring’
+  char * * s = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_strict_strtoll’:
+src/lua_src/lnautlib.c:2081:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  long long int * res = luaL_checkunsigned(L,3);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_send_iipi’:
+src/lua_src/lnautlib.c:2093:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_self_ipi’:
+src/lua_src/lnautlib.c:2099:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strcat’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2113:14: note: in expansion of macro ‘luaL_checkstring’
+  char * s1 = luaL_checkstring(L,1);
+              ^
+src/lua_src/lnautlib.c: In function ‘naut_xm_handler’:
+src/lua_src/lnautlib.c:2120:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_buddy_dump_mempool’:
+src/lua_src/lnautlib.c:2127:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct buddy_mempool * mp = luaL_checkunsigned(L,1);
+                              ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_get_rand_bytes’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2132:24: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * buf = luaL_checkstring(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_vga_get_cursor’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2143:22: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * x = luaL_checkstring(L,1);
+                      ^
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2144:22: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * y = luaL_checkstring(L,2);
+                      ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_barrier_init’:
+src/lua_src/lnautlib.c:2185:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_barrier * barrier = luaL_checkunsigned(L,1);
+                                ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strftime’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2211:15: note: in expansion of macro ‘luaL_checkstring’
+  char * str = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c:2214:30: warning: initialization makes pointer from integer without a cast [enabled by default]
+  const struct tm * timeptr = luaL_checkunsigned(L,4);
+                              ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_int_init’:
+src/lua_src/lnautlib.c:2220:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct sys_info * sys = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_poll’:
+src/lua_src/lnautlib.c:2242:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct pollfd * fds = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_paging_init’:
+src/lua_src/lnautlib.c:2250:29: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_mem_info * mem = luaL_checkunsigned(L,1);
+                             ^
+src/lua_src/lnautlib.c: In function ‘naut_arch_early_init’:
+src/lua_src/lnautlib.c:2256:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_create_htable_iter’:
+src/lua_src/lnautlib.c:2272:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut___nl_langinfo_l’:
+src/lua_src/lnautlib.c:2284:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * locale = luaL_checkunsigned(L,2);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_fread’:
+src/lua_src/lnautlib.c:2290:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * ptr = luaL_checkunsigned(L,1);
+               ^
+src/lua_src/lnautlib.c:2293:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,4);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_destroy’:
+src/lua_src/lnautlib.c:2303:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * t = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_inc’:
+src/lua_src/lnautlib.c:2330:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rwlock_wr_lock’:
+src/lua_src/lnautlib.c:2343:25: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_rwlock * l = luaL_checkunsigned(L,1);
+                         ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_vsprintf’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2355:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c:2357:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * args = luaL_checkunsigned(L,3);
+                                ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_hash_buffer’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2388:24: note: in expansion of macro ‘luaL_checkstring’
+  unsigned char * msg = luaL_checkstring(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_getwc’:
+src/lua_src/lnautlib.c:2395:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_strict_strtol’:
+src/lua_src/lnautlib.c:2409:19: warning: initialization makes pointer from integer without a cast [enabled by default]
+  long int * res = luaL_checkunsigned(L,3);
+                   ^
+src/lua_src/lnautlib.c: In function ‘naut_getc’:
+src/lua_src/lnautlib.c:2421:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * arg = luaL_checkunsigned(L,1);
+               ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_str_toupper’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2452:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_fopen64’:
+src/lua_src/lnautlib.c:2470:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,2);
+             ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_vga_puts’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2485:15: note: in expansion of macro ‘luaL_checkstring’
+  char * buf = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_fflush’:
+src/lua_src/lnautlib.c:2490:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,1);
+             ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_tmpnam’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2501:13: note: in expansion of macro ‘luaL_checkstring’
+  char * s = luaL_checkstring(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_fputs’:
+src/lua_src/lnautlib.c:2554:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,2);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_early_printk’:
+src/lua_src/lnautlib.c:2566:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * args = luaL_checkunsigned(L,2);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_freopen’:
+src/lua_src/lnautlib.c:2574:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,3);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_dequeue_first’:
+src/lua_src/lnautlib.c:2596:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_fgets’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2602:15: note: in expansion of macro ‘luaL_checkstring’
+  char * str = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c:2604:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,3);
+                  ^
+src/lua_src/lnautlib.c: In function ‘naut_ftell’:
+src/lua_src/lnautlib.c:2610:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * x = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_null_excp_handler’:
+src/lua_src/lnautlib.c:2621:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_pf_handler’:
+src/lua_src/lnautlib.c:2629:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct excp_entry_state * excp = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_read_event_count’:
+src/lua_src/lnautlib.c:2641:29: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct pmc_event * event = luaL_checkunsigned(L,1);
+                             ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_thread_queue_wake_all’:
+src/lua_src/lnautlib.c:2664:24: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_queue * q = luaL_checkunsigned(L,1);
+                        ^
+src/lua_src/lnautlib.c: In function ‘naut_gmtime’:
+src/lua_src/lnautlib.c:2670:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  const long int * timer = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_htable_iter_search’:
+src/lua_src/lnautlib.c:2681:36: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable_iter * iter = luaL_checkunsigned(L,1);
+                                    ^
+src/lua_src/lnautlib.c:2682:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,2);
+                                 ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_strcpy’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2689:16: note: in expansion of macro ‘luaL_checkstring’
+  char * dest = luaL_checkstring(L,1);
+                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_barrier_destroy’:
+src/lua_src/lnautlib.c:2719:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_barrier * barrier = luaL_checkunsigned(L,1);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_smp_setup_xcall_bsp’:
+src/lua_src/lnautlib.c:2737:22: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct cpu * core = luaL_checkunsigned(L,1);
+                      ^
+src/lua_src/lnautlib.c: In function ‘naut_fopen’:
+src/lua_src/lnautlib.c:2749:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * f = luaL_checkunsigned(L,2);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_apic_bcast_deinit_iipi’:
+src/lua_src/lnautlib.c:2754:27: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct apic_dev * apic = luaL_checkunsigned(L,1);
+                           ^
+src/lua_src/lnautlib.c: In function ‘naut_enable_perf_event’:
+src/lua_src/lnautlib.c:2759:29: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct pmc_event * event = luaL_checkunsigned(L,1);
+                             ^
+src/lua_src/lnautlib.c: In function ‘naut_smp_early_init’:
+src/lua_src/lnautlib.c:2775:28: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct naut_info * naut = luaL_checkunsigned(L,1);
+                            ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_switch_to_vc’:
+src/lua_src/lnautlib.c:2793:35: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_virtual_console * vc = luaL_checkunsigned(L,1);
+                                   ^
+src/lua_src/lnautlib.c: In function ‘naut_vprintk’:
+src/lua_src/lnautlib.c:2806:32: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * args = luaL_checkunsigned(L,2);
+                                ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_free_htable’:
+src/lua_src/lnautlib.c:2816:33: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct nk_hashtable * htable = luaL_checkunsigned(L,1);
+                                 ^
+src/lua_src/lnautlib.c: In function ‘naut_vfprintf’:
+src/lua_src/lnautlib.c:2835:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,1);
+                  ^
+src/lua_src/lnautlib.c:2837:31: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct __va_list_tag * arg = luaL_checkunsigned(L,3);
+                               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_first’:
+src/lua_src/lnautlib.c:2848:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_root * root = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_ungetc’:
+src/lua_src/lnautlib.c:2873:18: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * stream = luaL_checkunsigned(L,2);
+                  ^
+In file included from src/lua_src/lnautlib.c:7:0:
+src/lua_src/lnautlib.c: In function ‘naut_nk_vc_log’:
+include/lua/lauxlib.h:115:31: warning: initialization discards ‘const’ qualifier from pointer target type [enabled by default]
+ #define luaL_checkstring(L,n) (luaL_checklstring(L, (n), NULL))
+                               ^
+src/lua_src/lnautlib.c:2885:15: note: in expansion of macro ‘luaL_checkstring’
+  char * fmt = luaL_checkstring(L,1);
+               ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_wait’:
+src/lua_src/lnautlib.c:2891:13: warning: initialization makes pointer from integer without a cast [enabled by default]
+  void * t = luaL_checkunsigned(L,1);
+             ^
+src/lua_src/lnautlib.c: In function ‘naut_nk_rb_last’:
+src/lua_src/lnautlib.c:2896:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct rb_root * root = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_release_perf_event’:
+src/lua_src/lnautlib.c:2909:29: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct pmc_event * event = luaL_checkunsigned(L,1);
+                             ^
+src/lua_src/lnautlib.c: In function ‘naut_ioapic_init’:
+src/lua_src/lnautlib.c:2975:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct sys_info * sys = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_arch_numa_init’:
+src/lua_src/lnautlib.c:2981:26: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct sys_info * sys = luaL_checkunsigned(L,1);
+                          ^
+src/lua_src/lnautlib.c: In function ‘naut_disable_perf_event’:
+src/lua_src/lnautlib.c:2998:29: warning: initialization makes pointer from integer without a cast [enabled by default]
+  struct pmc_event * event = luaL_checkunsigned(L,1);
+                             ^
+src/lua_src/lnautlib.c: In function ‘naut_time’:
+src/lua_src/lnautlib.c:3010:21: warning: initialization makes pointer from integer without a cast [enabled by default]
+  long int * timer = luaL_checkunsigned(L,1);
+                     ^
+make[2]: *** [src/lua_src/lnautlib.o] Error 1
+make[1]: *** [src/lua_src] Error 2
+make: *** [src] Error 2

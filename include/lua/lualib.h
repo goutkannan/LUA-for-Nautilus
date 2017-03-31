@@ -40,10 +40,40 @@ LUAMOD_API int (luaopen_debug) (lua_State *L);
 
 #define LUA_LOADLIBNAME	"package"
 LUAMOD_API int (luaopen_package) (lua_State *L);
+
+#define  LUA_NAUTLIBNAME  "naut"
+ LUAMOD_API int (luaopen_naut) (lua_State *L);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //test code
 
-#define  LUA_NAUTLIBNAME "naut"
-LUAMOD_API int (luaopen_naut) (lua_State *L);
+
+
 
 
 /* open all previous libraries */
