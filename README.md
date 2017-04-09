@@ -25,7 +25,7 @@ implementation an interpreted language viz. Lua has been ported to work on nauti
 - grub version >= 2.02
 - xorriso (for CD burning)
 - QEMU 
-- Python 3.6 or higher
+- Python >= 3.6
 
 
 ## Hardware Support
@@ -45,14 +45,10 @@ The main repo for Mautilus is at <https://bitbucket.org/kchale/nautilus>. Fetch 
 `$> git clone https://goutkannan@bitbucket.org/kchale/nautilus.git`
 
 
-
-
-Select any options you require, then 
-run `make` to build the HRT binary image. To make a bootable CD-ROM, 
-run `make isoimage`. If you see weird errors, chances are there
-is something wrong with your GRUB2 toolchain (namely, `grub-mkrescue`). Make sure `grub-mkrescue`
-knows where its libraries are, especially if you've installed the
-latest GRUB from source. Use `grub-mkrescue -d`. We've run into issues with naming of
+Select any options you require, then run `make` to build the HRT binary image. To make a bootable CD-ROM, 
+run `make isoimage`. If you see weird errors, chances are there is something wrong with your GRUB2 toolchain 
+(namely, `grub-mkrescue`). Make sure `grub-mkrescue` knows where its libraries are, especially if you've 
+installed the latest GRUB from source. Use `grub-mkrescue -d`. We've run into issues with naming of
 the GRUB2 binaries, in which case a workaround with symlinks was sufficient.
 
 
@@ -66,6 +62,15 @@ Nautilus has multicore support, so this will also work just fine:
 
 `$> qemu-system-x86_64 -cdrom nautilus.iso -m 2048 -smp 4`
 
+## Interaction with the shell 
+
+The shell will load with Lua interpreter waiting for input. 
+(https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init.JPG)
+
+In the below sample, we show how to call a math function viz. abs() 
+(https://github.com/goutkannan/LUA-for-Nautilus/blob/master/sample_math.JPG)
+
+
 
 
 
@@ -73,6 +78,13 @@ Nautilus has multicore support, so this will also work just fine:
 
 You can find publications related to Nautilus and HRTs/HVMs at 
 http://halek.co
+
+You can refer to the Lua programming guide to know more about the lua commands and syntax
+<https://www.lua.org/pil/contents.html>
+
+For more detailed developer documentation, refer to Reference Manual 
+<https://www.lua.org/manual/5.3/> 
+
 
 Our lab:
 www.presciencelab.org
