@@ -9,7 +9,7 @@
 
 ```
 
-# The Nautilus AeroKernel
+#Lua interpreter for Nautilus AeroKernel  
 
 Nautilus is an example of an AeroKernel, a very thin kernel-layer exposed 
 (much like a library OS, or libOS) directly to the runtime and application. 
