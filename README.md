@@ -65,10 +65,12 @@ Nautilus has multicore support, so this will also work just fine:
 ## Interaction with the shell 
 
 The shell will load with Lua interpreter waiting for input. 
-(https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init.JPG)
+
+[https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init.JPG]
 
 In the below sample, we show how to call a math function viz. abs() 
-(https://github.com/goutkannan/LUA-for-Nautilus/blob/master/sample_math.JPG)
+
+[https://github.com/goutkannan/LUA-for-Nautilus/blob/master/sample_math.JPG]
 
 
 
@@ -80,6 +82,7 @@ You can find publications related to Nautilus and HRTs/HVMs at
 http://halek.co
 
 You can refer to the Lua programming guide to know more about the lua commands and syntax
+
 <https://www.lua.org/pil/contents.html>
 
 For more detailed developer documentation, refer to Reference Manual 
