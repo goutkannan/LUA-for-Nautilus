@@ -8,8 +8,8 @@
 
 
 ```
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
-![Lua Version](https://img.shields.io/badge/Lua-5.2.4-blue.svg)
+[![Nautilus](https://img.shields.io/travis/rust-lang/rust.svg)]()
+[![Lua Version](https://img.shields.io/badge/Lua-5.2.4-blue.svg)](https://www.lua.org/source/5.2/)
 [![py ver](https://img.shields.io/badge/Python-3.6-yellow.svg)](https://www.python.org/downloads/)
 
 # Lua interpreter for Nautilus AeroKernel  
