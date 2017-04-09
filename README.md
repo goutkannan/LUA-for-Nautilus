@@ -9,7 +9,7 @@
 
 ```
 
-[![Lua Version](https://img.shields.io/badge/Lua-5.2.4-blue.svg)][Lua]
+![Lua Version](https://img.shields.io/badge/Lua-5.2.4-blue.svg)[Lua]
 
 # Lua interpreter for Nautilus AeroKernel  
 
