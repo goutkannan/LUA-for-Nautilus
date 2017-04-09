@@ -4,7 +4,7 @@
    / | / /____ _ __  __ / /_ (_)/ /__  __ _____    
   /  |/ // __ `// / / // __// // // / / // ___/ 
  / /|  // /_/ // /_/ // /_ / // // /_/ /(__  )     
-/_/ |_/ \__,_/ \__,_/ \__//_//_/ \__,_//____/
+/_/ |_/ \__,_/ \__,_/ \__//_//_/ \__,_//____/ **with Lua**
 
 
 ```
@@ -40,13 +40,13 @@ First,get the source of Nautilus that has LUA already ported by running
 
 `$> git clone https://github.com/goutkannan/LUA-for-Nautilus.git <destination folder>`
 
-The main repo for Mautilus is at <https://bitbucket.org/kchale/nautilus>. Fetch the code by running
+The main repo for Nautilus is at <https://bitbucket.org/kchale/nautilus>. Fetch the code by running
 
 `$> git clone https://goutkannan@bitbucket.org/kchale/nautilus.git`
 
 
 Select any options you require, then run `make` to build the HRT binary image. To make a bootable CD-ROM, 
-run `make isoimage`. If you see weird errors, chances are there is something wrong with your GRUB2 toolchain 
+run `make lua`. If you see weird errors, chances are there is something wrong with your GRUB2 toolchain 
 (namely, `grub-mkrescue`). Make sure `grub-mkrescue` knows where its libraries are, especially if you've 
 installed the latest GRUB from source. Use `grub-mkrescue -d`. We've run into issues with naming of
 the GRUB2 binaries, in which case a workaround with symlinks was sufficient.
@@ -72,6 +72,9 @@ In the below sample, we show how to call a math function viz. abs()
 
 ![sample math](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/sample_math.JPG)
 
+From the command `math.abs(param)` we can understand that `abs` is a function in the library `math`. 
+We have implemented the nautilus test framework in the similar manner. So a typical nautilus call will 
+look like `naut.function_to_test(**args)` 
 
 
 
