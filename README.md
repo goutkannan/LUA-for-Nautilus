@@ -9,49 +9,32 @@
 
 ```
 
-#Lua interpreter for Nautilus AeroKernel  
+# Lua interpreter for Nautilus AeroKernel  
 
 Nautilus is an example of an AeroKernel, a very thin kernel-layer exposed 
 (much like a library OS, or libOS) directly to the runtime and application. 
-AeroKernels are suited particularly well for parallel runtimes that need fine-grained,
-explicit control of the machine to squeeze every bit of performance out of it. Note that
-an AeroKernel does not, by default, have a user-mode! There are several reasons for this, 
-simplicity and performance among the most important. Furthermore, there are no heavy-weight
-processes---only threads, all of which share an address space. Therefore, Nautilus is an 
-example of a single address-space OS (SASOS). The runtime can implement user-mode features
-or address space isolation if this is required for its execution model.
+In order to provide the user-space like facility to perform tests on nautilus' 
+implementation an interpreted language viz. Lua has been ported to work on nautilus. 
 
-# Hybrid Runtimes (HRTs) and Hybrid Virtual Machines (HVM)
+# Getting Started
 
-We call the combination of an AeroKernel and the runtime/application using it
-a Hybrid Runtime, in that it is both a runtime *and* a kernel, esp. regarding its
-ability to use the full machine and determine the proper abstractions to the raw hardware
-(if the runtime developer sees a mismatch with his/her needs and the AeroKernel mechanisms, 
-they can be overridden). 
+## Prerequisites
 
-If stronger isolation or more complete POSIX/Linux compatibility is required, it is useful
-to run the HRT in the context of a Hybrid Virtual Machine. An HVM allows a virtual machine
-to split the hardware resources among a regular OS (ROS) and an HRT. The HRT portion of the 
-HVM can then be seen as a kind of software accelerator. Note that because of the simplicity 
-of the hardware abstractions in a typical HRT, virtualization overheads are much, much less
-significant than in, e.g. a Linux guest. 
-
-# Prerequisites
-
+- git 
 - gcc cross compiler (more on this to come)
 - grub version >= 2.02
 - xorriso (for CD burning)
-- QEMU recommended if you don't want to run on raw hardware
+- QEMU 
+- Python 3.6 or higher
 
-# Hardware Support
+
+## Hardware Support
 
 Nautilus works with the following hardware:
 
 - x86_64 machines (AMD and Intel)
-- Intel Xeon Phi (see http://philix.halek.co for instructions)
-- as a Hybrid Virtual Machine (HVM) in the Palacios VMM (see http://v3vee.org/palacios)
 
-# Building
+## Installation and Building
 
 First, configure Nautilus by running 
 
