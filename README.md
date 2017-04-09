@@ -73,8 +73,9 @@ In the below sample, we show how to call a math function viz. abs()
 ![sample math](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/sample_math.JPG)
 
 From the command `math.abs(param)` we can understand that `abs` is a function in the library `math`. 
-We have implemented the nautilus test framework in the similar manner. So a typical nautilus call will 
-look like `naut.function_to_test(**args)` 
+We have implemented the nautilus test framework in the similar manner.
+
+So a typical call to nautilus function_to_test will look like `naut.function_to_test(**args)` 
 
 
 
