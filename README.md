@@ -44,6 +44,9 @@ The main repo for Nautilus is at <https://bitbucket.org/kchale/nautilus>. Fetch 
 
 `$> git clone https://goutkannan@bitbucket.org/kchale/nautilus.git`
 
+First, configure Nautilus by running
+
+`make menuconfig`
 
 Select any options you require, then run `make` to build the HRT binary image. To make a bootable CD-ROM, 
 run `make lua`. If you see weird errors, chances are there is something wrong with your GRUB2 toolchain 
@@ -75,7 +78,9 @@ In the below sample, we show how to call a math function viz. abs()
 From the command `math.abs(param)` we can understand that `abs` is a function in the library `math`. 
 We have implemented the nautilus test framework in the similar manner.
 
-So a typical call to nautilus function_to_test will look like `naut.function_to_test(**args)` 
+So a typical call to nautilus' function_to_test will look like `naut.function_to_test(**args)` 
+In order to get the return value back append the command with an '=' sign. 
+
 
 
 
@@ -93,21 +98,10 @@ For more detailed developer documentation, refer to Reference Manual
 <https://www.lua.org/manual/5.3/> 
 
 
-Our lab:
-www.presciencelab.org
-
 
 # Acknowledgements
-
-Nautilus was made possible by support from the United States National Science
-Foundation (NSF) via grant CNS-0709168, the Department of Energy (DOE) via
-grant DE-SC0005343, and Sandia National Laboratories through the Hobbes
-Project, which is funded by the 2013 Exascale Operating and Runtime Systems
-Program under the Office of Advanced Scientific Computing Research in the DOE
-Office of Science. Sandia National Laboratories is a multi-program laboratory
-managed and operated by Sandia Corporation, a wholly owned subsidiary of
-Lockheed Martin Corporation, for the U.S. Department of Energy’s National
-Nuclear Security Administration under contract DE-AC04-94AL85000.
+This project was done under the guidance and supervision of Prof. Kyle C. Hale.
 
 Kyle C. Hale (c) 2015
-Northwestern University
+Illinois Institute of Technology 
+
