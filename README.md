@@ -34,11 +34,18 @@ Nautilus works with the following hardware:
 
 - x86_64 machines (AMD and Intel)
 
-## Installation and Building
+## Dowloading the source and Building
 
-First, configure Nautilus by running 
+First,get the source of Nautilus that has LUA already ported by running 
 
-`make menuconfig`
+`$> git clone https://github.com/goutkannan/LUA-for-Nautilus.git <destination folder>`
+
+The main repo for Mautilus is at <https://bitbucket.org/kchale/nautilus>. Fetch the code by running
+
+`$> git clone https://goutkannan@bitbucket.org/kchale/nautilus.git`
+
+
+
 
 Select any options you require, then 
 run `make` to build the HRT binary image. To make a bootable CD-ROM, 
@@ -59,44 +66,8 @@ Nautilus has multicore support, so this will also work just fine:
 
 `$> qemu-system-x86_64 -cdrom nautilus.iso -m 2048 -smp 4`
 
-You should see Nautilus boot up on all 4 cores.
 
-Nautilus is a NUMA-aware AeroKernel. To see this in action, try (with a sufficiently new
-version of QEMU):
 
-```
-$> qemu-system-x86_64 -cdrom nautilus.iso \
-                      -m 8G \
-                      -numa node,nodeid=0,cpus=0-1 \
-                      -numa node,nodeid=1,cpus=2-3 \
-                      -smp 4,sockets=2,cores=2,threads=1
-```
-
-Nautilus supports debugging over the serial port. This is useful if you want to
-debug a physical machine remotely. All prints after the serial port has been
-initialized will be redirected to COM1. To use this, find the SERIAL_REDIRECT
-entry and enable it in `make menuconfig`. You can now run like this:
-
-`$> qemu-system-x86_64 -cdrom nautilus.iso -m 2G -serial stdio`
-
-# Running and Debugging under BOCHS
-
-While we recommend using QEMU, sometimes it is nice to use the native debugging 
-support in BOCHS. We've used BOCHS successfully with version 2.6.8. You must have
-a version of BOCHS that is built with x86_64 support, which does not seem to be the
-default in a lot of package repos. We had to build it manually. You probably also 
-want to enable the native debugger.
-
-Here is a BOCHS config file (`~/.bochsrc`) that we used successfully:
-
-```
-ata0-master: type=cdrom, path=nautilus.iso, status=inserted
-boot: cdrom
-com1: enabled=1, mode=file, dev=serial.out
-cpu: count=2
-cpuid: level=6, mmx=1, level=6, x86_64=1, 1g_pages=1
-megs: 2048
-```
 
 # Resources
 
