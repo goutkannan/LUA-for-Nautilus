@@ -66,11 +66,11 @@ Nautilus has multicore support, so this will also work just fine:
 
 The shell will load with Lua interpreter waiting for input. 
 
-[https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init.JPG]
+![init screen](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init.JPG)
 
 In the below sample, we show how to call a math function viz. abs() 
 
-[https://github.com/goutkannan/LUA-for-Nautilus/blob/master/sample_math.JPG]
+![sample math](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/sample_math.JPG)
 
 
 
