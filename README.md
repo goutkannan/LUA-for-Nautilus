@@ -93,7 +93,7 @@ Use the command line option -i to execute a preloaded script and the return back
 
 The shell will load with Lua interpreter waiting for input. 
 
-![init screen](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init.JPG)
+![init screen](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init_1.JPG)
 
 In the below sample, we show how to call a math function viz. abs() 
 
