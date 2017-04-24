@@ -94,7 +94,7 @@ We have implemented the nautilus test framework in the similar manner.
 
 
 Inorder to execute a pre-loaded lua script use the command `lua -i scrip_name.lua` 
-![sample_script](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_execute.JPG)
+![sample_script](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/lua_execute.JPG)
 
 So a typical call to nautilus' function_to_test will look like `naut.function_to_test(**args)` 
 In order to get the return value back append the command with an '=' sign. 
@@ -103,7 +103,7 @@ In order to get the return value back append the command with an '=' sign.
 
 Here are few sample nautilus functions that can be tested using lua interpreter.
 
-![Sample Test] (https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_script.JPG)
+![Sample Test] (https://github.com/goutkannan/LUA-for-Nautilus/blob/master/lua_script.JPG)
 
 
 # Resources
