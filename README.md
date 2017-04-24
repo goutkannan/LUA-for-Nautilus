@@ -47,12 +47,23 @@ The main repo for Nautilus is at <https://bitbucket.org/kchale/nautilus>. Fetch 
 
 `$> git clone https://goutkannan@bitbucket.org/kchale/nautilus.git`
 
+
+## Make Menu Selection
+
 First, configure Nautilus by running
 
 `make menuconfig`
 
+In order to pre-load lua with Nautilus, choose the following options 
+Under the `Lua for Nautilus` categor, select the options 1.Lua Load 2.Lua to test by pressing the `y` button. After sleceting the desired configurations exit the menuconfig. In the prompt select `yes` to save the chosen configuration. 
+
+
 Select any options you require, then run `make` to build the HRT binary image. To make a bootable CD-ROM, 
-run `make lua`. If you see weird errors, chances are there is something wrong with your GRUB2 toolchain 
+run `make isoimage`. 
+
+
+
+If you see weird errors, chances are there is something wrong with your GRUB2 toolchain 
 (namely, `grub-mkrescue`). Make sure `grub-mkrescue` knows where its libraries are, especially if you've 
 installed the latest GRUB from source. Use `grub-mkrescue -d`. We've run into issues with naming of
 the GRUB2 binaries, in which case a workaround with symlinks was sufficient.
@@ -70,6 +81,16 @@ Nautilus has multicore support, so this will also work just fine:
 
 ## Interaction with the shell 
 
+Lua boots up with  `root-shell>` , Enter the command `lua` to invoke the Lua interpreter.
+
+![lua_init]
+
+Use the command line option -i to execute a preloaded script and the return back to the Lua interpreter. 
+
+![lua_script] 
+
+
+
 The shell will load with Lua interpreter waiting for input. 
 
 ![init screen](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init.JPG)
@@ -84,7 +105,9 @@ We have implemented the nautilus test framework in the similar manner.
 So a typical call to nautilus' function_to_test will look like `naut.function_to_test(**args)` 
 In order to get the return value back append the command with an '=' sign. 
 
+## Sample test for Nautilus functions
 
+Here are few sample nautilus functions that can be tested using lua interpreter.
 
 
 
