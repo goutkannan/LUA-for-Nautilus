@@ -92,6 +92,10 @@ In the below sample, we show how to call a math function viz. abs()
 From the command `math.abs(param)` we can understand that `abs` is a function in the library `math`. 
 We have implemented the nautilus test framework in the similar manner.
 
+
+Inorder to execute a pre-loaded lua script use the command `lua -i scrip_name.lua` 
+![sample_script]()
+
 So a typical call to nautilus' function_to_test will look like `naut.function_to_test(**args)` 
 In order to get the return value back append the command with an '=' sign. 
 
@@ -99,6 +103,7 @@ In order to get the return value back append the command with an '=' sign.
 
 Here are few sample nautilus functions that can be tested using lua interpreter.
 
+![Sample Test] ()
 
 
 # Resources
