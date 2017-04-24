@@ -103,7 +103,7 @@ In order to get the return value back append the command with an '=' sign.
 
 Here are few sample nautilus functions that can be tested using lua interpreter.
 
-![Sample Test] (https://github.com/goutkannan/LUA-for-Nautilus/blob/master/lua_script.JPG)
+![Sample Test](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/lua_script.JPG)
 
 
 # Resources
