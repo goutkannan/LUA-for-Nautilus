@@ -81,17 +81,7 @@ Nautilus has multicore support, so this will also work just fine:
 
 ## Interaction with the shell 
 
-Lua boots up with  `root-shell>` , Enter the command `lua` to invoke the Lua interpreter.
-
-![lua_init]
-
-Use the command line option -i to execute a preloaded script and the return back to the Lua interpreter. 
-
-![lua_script] 
-
-
-
-The shell will load with Lua interpreter waiting for input. 
+Lua boots up with  `root-shell>` , Enter the command `lua` to invoke the Lua interpreter.The shell will load with Lua interpreter waiting for input. 
 
 ![init screen](https://github.com/goutkannan/LUA-for-Nautilus/blob/master/Lua_init_1.JPG)
 
